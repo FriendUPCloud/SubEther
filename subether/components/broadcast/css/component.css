@@ -1,0 +1,208 @@
+
+#Broadcast .event
+{
+	position: relative;
+	float: left;
+	width: 173px;
+	height: 200px;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin: 10px;
+}
+
+#Broadcast .event.admin.closed
+{
+	width: 171px;
+	height: 198px;
+	border: 2px dashed #c0c0c0;
+	background: url('../../../../subether/gfx/cross.png') no-repeat scroll center center rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+#Broadcast .event .edit
+{
+    border: 1px solid transparent;
+    padding: 0 !important;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#Broadcast .event .edit > div.options
+{
+    background: url('./../../../gfx/downarrow.png') no-repeat scroll center center rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 16px;
+    padding: 0 !important;
+    width: 20px;
+}
+
+#Broadcast .event.admin.closed .information
+{
+	display: none;
+}
+
+#Broadcast .event .information
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+#Broadcast .event .information > div
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+#Broadcast .event .heading
+{
+	font-weight: bold;
+	/*text-transform: uppercase;*/
+	padding-top: 10px;
+}
+
+#Broadcast .event .time
+{
+	background: #dcdddd;
+	padding-top: 10px;
+}
+
+#Broadcast h4
+{
+	font-weight: bold;
+    padding: 5px;
+	padding-top: 0;
+	margin: 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#Broadcast .inner
+{
+	border-top: 1px solid #c0c0c0;
+    padding: 5px;
+	padding-top: 10px;
+}
+
+#Broadcast table
+{
+	width: 100%;
+}
+
+#Broadcast td.rightCol
+{
+	width: 180px;
+}
+
+#Broadcast td.leftCol
+{
+	padding-right: 10px;
+}
+
+#Broadcast .archive
+{
+	/*height: 500px;*/
+	height: 630px;
+	padding: 5px;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Broadcast .archive .thumb
+{
+	position: relative;
+	width: 100%;
+	height: 90px;
+	border: 1px solid #c0c0c0;
+}
+
+#Broadcast .archive .duration
+{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	padding: 2px 4px;
+	color: #ffffff;
+	background: #000000;
+}
+
+#Broadcast .broadcast
+{
+	min-height: 500px;
+}
+
+#Broadcast .broadcast .video
+{
+	/*height: 280px;*/
+	height: 420px;
+}
+
+#Broadcast .broadcast .video iframe
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Broadcast .buttons
+{
+	padding-top: 10px;
+}
+
+#Broadcast .chat > table > tbody > tr > td
+{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#Broadcast .broadcast .dialog
+{
+	padding: 5px;
+	height: 150px;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Broadcast .broadcast .participants
+{
+	padding: 5px;
+	height: 150px;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Broadcast .broadcast .publish
+{
+	height: 37px;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Broadcast #InfoPanel
+{
+	border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 5px;
+	margin-top: 10px;
+}
+
+#Broadcast #InfoPanel.closed
+{
+	visibility: hidden;
+	overflow: hidden;
+	height: 0px;
+	padding: 0px;
+	margin: 0px;
+}

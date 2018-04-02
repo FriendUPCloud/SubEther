@@ -1,0 +1,340 @@
+
+.ParseContent
+{
+	border: 1px solid #C0C0C0;
+    /*min-height: 147px;*/
+	/*min-height: 125px;*/
+    padding: 10px;
+    position: relative;
+	background-color: #ffffff;
+	min-height: 125px;
+}
+.ParseContent img
+{
+	width: 100% !important;
+	height: 100%;
+	display: block;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.ParseContent .image
+{
+	float: left;
+	cursor: pointer;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    position: relative;
+    width: 154px;
+	height: 154px;
+}
+.ParseContent .image > img
+{
+	width: 154px;
+	height: 154px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+}
+
+.ParseContent .image.video,
+.ParseContent .image.big
+{
+	float: none;
+	width: 100%;
+	height: 320px;
+	padding-right: 0;
+}
+
+.ParseContent .image.big
+{
+	cursor: pointer;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    position: relative;
+	overflow: hidden;
+}
+.ParseContent .image.big > .imagecontainer > a
+{
+	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+	display: block;
+	height: 320px;
+}
+.ParseContent .image.big > .imagecontainer > a > img
+{
+	visibility: hidden;
+}
+
+.ParseContent .image.album
+{
+	width: 100%;
+}
+
+.ParseContent .image.small .imagecontainer
+{
+	position: relative;
+	height: 154px;
+	overflow: hidden;
+}
+
+.ParseContent .image.small .imagecontainer > a
+{
+	position: absolute;
+	width: 154px;
+	height: 154px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+}
+.ParseContent .image.small .imagecontainer > a > img
+{
+	visibility: hidden;
+}
+
+#ParseContent .image.big img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ParseContent .image .arrows
+{
+	position: absolute;
+	left: 0;
+    top: 0;
+	padding: 5px;
+}
+
+.ParseContent .image em
+{
+	position: absolute;
+    right: 0;
+	left: 0;
+    top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 54px;
+    height: 54px;
+	background-image: url( '../gfx/play.png' );
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+.ParseContent .image:hover em
+{
+	background-position: 0 -55px;
+}
+
+.ParseContent .image .eventdate
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 15px;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+	font-size: 150%;
+}
+
+.ParseContent .image .eventdate .month
+{
+	font-size: 65%;
+}
+
+.ParseContent .image.small > .imagecontainer
+{
+	width: 150px;
+}
+
+.ParseContent .image > .imagecontainer img
+{
+	display: block;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.ParseContent > .text
+{
+	height: 133px;
+	margin-bottom: 21px;
+	overflow: hidden;
+	padding: 0;
+	text-overflow: ellipsis;
+}
+
+.ParseContent > .text > p
+{
+	padding-right: 0 !important;
+}
+
+.ParseContent > .text > p.url
+{
+	position: absolute;
+	padding: 7px !Important;
+	bottom: 0;
+	right: 0;
+	text-transform: uppercase;
+}
+
+.ParseContent > .text > p.button
+{
+	position: absolute;
+	padding: 7px !Important;
+	bottom: 0;
+	right: 0;
+}
+
+.ParseContent h3
+{
+	margin: 0;
+}
+
+.ParseContent a, .ParseContent a:hover
+{
+	text-decoration: none;
+	color: black;
+}
+
+.commentbox .html
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.commentbox .ParseContent
+{
+	min-height: 100px;
+}
+
+.commentbox .ParseContent .image
+{
+	width: 130px;
+	min-height: 100px;
+	height: 100%;
+}
+
+.commentbox .ParseContent .image.small img
+{
+	visibility: hidden;
+}
+.commentbox .ParseContent > .image.small > a
+{
+	display: block;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 130px;
+    height: 100px;
+}
+
+.commentbox .ParseContent .image.video,
+.commentbox .ParseContent .image.file,
+.ParseContent .image.video,
+.ParseContent .image.file
+{
+	width: 100%;
+	min-height: 480px;
+	float: none;
+}
+.ParseContent .image.file + .text
+{
+	display: none;
+}
+.commentbox .ParseContent .image.video iframe,
+.commentbox .ParseContent .image.video video,
+.commentbox .ParseContent .image.file object,
+.commentbox .ParseContent .image.file iframe,
+.ParseContent .image.video iframe,
+.ParseContent .image.video video,
+.ParseContent .image.file object,
+.ParseContent .image.file iframe
+{
+	width: 100% !important;
+	height: 480px !important;
+}
+
+.ParseContent > .image.file, 
+.ParseContent > .image.file > iframe
+{
+	/*height: 0 !important;
+	min-height: 0 !important;*/
+}
+
+.commentbox .ParseContent .image em
+{
+	position: absolute;
+	top: auto;
+	right: auto;
+	left: 5px;
+	bottom: 12px;
+	height: 26px;
+	width: 35px;
+	margin: 0;
+	background-image: url('../gfx/play_thumb.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+}
+
+.commentbox .ParseContent .image > img
+{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 100px;
+}
+
+.commentbox .ParseContent > .text
+{
+	height: 80px;
+	margin-bottom: 21px;
+	padding: 0;
+}
+
+#ParseContent
+{
+	position: relative;
+}
+
+#ParseContent .Edit
+{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid transparent;
+}
+
+#Wall .Comment p
+{
+	clear: both;
+}
+
+
+#ParseContent .image .Edit
+{
+	margin-right: 7px;
+}
+
+#ParseContent .Edit:hover
+{
+	cursor: hand;
+	cursor: pointer;
+	border: 1px solid #C0C0C0;
+}
+
+#ParseContent .Edit > div
+{
+	width: 15px !important;
+	height: 15px !important;
+	background: url( '../gfx/x.png' ) center center;
+}

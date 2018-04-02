@@ -1,0 +1,732 @@
+#Group
+{
+	position: relative;
+}
+
+/* Toolbar above irc chat --------------------------------------------------- */
+
+.Box > .toolbar
+{
+	position: absolute;
+	right: 20px;
+	top: 255px;
+}
+
+.Box > .toolbar a
+{
+	display: block;
+	float: right;
+	border: 1px solid #c0c0c0;
+	border-radius: 2px;
+	text-decoration: none;
+	color: black;
+	padding: 4px 6px;
+}
+
+.Box > .toolbar a:hover
+{
+	background: #dcdddd;
+}
+
+.Box > .toolbar a > img
+{
+	float: left;
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+
+.Box > .toolbar a > span
+{
+	float: right;
+}
+
+#creategroup table,
+#groupinvite table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#creategroup table tbody, #creategroup table td,
+#groupinvite table tbody, #groupinvite table td
+{
+	padding: 0;
+	vertical-align: top;
+}
+
+#creategroup table td,
+#groupinvite table td
+{
+	text-align: right;
+	padding: 4px;
+}
+
+#creategroup table td + td,
+#groupinvite table td + td
+{
+	text-align: left;
+}
+
+#creategroup input[type="text"]
+{
+	width: 98%;
+}
+
+#creategroup ul, #creategroup li,
+#groupinvite ul, #groupinvite li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#creategroup .head,
+#groupinvite .head
+{
+	background-color: #006600;
+	color: #ffffff;
+	padding: 10px;
+}
+
+#creategroup .head > h1,
+#groupinvite .head > h1
+{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#creategroup .content,
+#groupinvite .content
+{
+	padding: 10px;
+}
+
+#creategroup .buttons,
+#groupinvite .buttons
+{
+	padding: 10px;
+	text-align: right;
+	background-color: #DCDDDD;
+	border-top: 1px solid #C0C0C0;
+}
+
+/* --- Group --- */
+
+#Group table, #Group table > tbody, #Group table > tbody > tr > td
+{
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+}
+
+#Group .coverimage
+{
+	position: relative;
+	width: 100%;
+	height: 338px;
+	bottom: -38px;
+	margin-top: -38px;
+}
+
+#Group .slideshow
+{
+	position: relative;
+}
+
+#Group .coverimage #MainImage
+{
+	position: relative;
+	/*width: 814px;*/
+	/*width: 100%;*/
+	height: 338px;
+	margin-left: -1px;
+	margin-right: -1px;
+	overflow: hidden;
+}
+
+#Group .coverimage #MainImage img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+	height: auto !important;
+}
+
+#Group .coverimage .Navigation
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#Group .coverimage .Navigation .ArrowPrev
+{
+	height: 300px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 400px;
+	z-index: 10;
+}
+
+#Group .coverimage .Navigation .ArrowNext
+{
+	height: 300px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 400px;
+	z-index: 10;
+}
+
+#Group .coverimage .Navigation .ArrowPrev span,
+#Group .coverimage .Navigation .ArrowNext span
+{
+	display: none;
+}
+
+#Group .coverimage .Navigation .ArrowPrev:hover 
+{
+    background: url('../../../../subether/gfx/arrow_overlay_left_white.png') no-repeat left center;
+	cursor: pointer;
+}
+
+#Group .coverimage .Navigation .ArrowNext:hover 
+{
+    background: url('../../../../subether/gfx/arrow_overlay_right_white.png') no-repeat right center;
+	cursor: pointer;
+}
+
+#Group .coverimage #CoverPages
+{
+	position: absolute;
+	bottom: 38px;
+	right: 0;
+	z-index: 20;
+	padding-right: 20px;
+}
+
+#Group .coverimage #CoverPages > .Page
+{
+	float: right;
+	background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    height: 10px;
+    margin: 20px 5px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 1.5s ease 0s;
+    width: 10px;
+	cursor: pointer;
+}
+
+#Group .coverimage #CoverPages > .Page:hover,
+#Group .coverimage #CoverPages > .Page.Current
+{
+	background-color: #006600;
+}
+
+#Group .coverimage #CoverPages > .Page span
+{
+	display: none;
+}
+
+#Group .coverimage .edit_btn_cover
+{
+	position: absolute;
+	bottom: 38px;
+	left: 0;
+	z-index: 30;
+	width: 122px;
+	/*height: auto;*/
+	height: 25px;
+	display: none;
+	margin: 12px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+#Group .coverimage .uploadfile
+{
+	visibility: hidden;
+}
+
+#Group .coverimage:hover .edit_btn_cover
+{
+	display: block;
+}
+
+#Group .coverimage .edit_btn_cover > div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#Group .coverimage .edit_btn_cover > div > span
+{
+	display: block;
+	padding: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Group .coverimage .view_btn_cover
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 30;
+	width: 110px;
+	height: auto;
+	display: none;
+	margin: 12px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+#Group .coverimage:hover .view_btn_cover
+{
+	display: block;
+}
+
+#Group .coverimage .view_btn_cover > div > span
+{
+	display: block;
+	padding: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Group #Content > .Box
+{
+	padding: 20px;
+}
+
+#Group #Tabs ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Group #Tabs ul li
+{
+	float: left;
+}
+
+#Group #Tabs
+{
+	background-color: rgba(255, 255, 255, 0.4);
+	border-bottom: 1px solid #C0C0C0;
+	border-left: 1px solid #C0C0C0;
+	margin-left: -1px;
+	margin-right: -1px;
+	position: relative;
+	z-index: 300;
+}
+
+#Group #Tabs .buttons
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 7px;
+}
+
+#Group #Tabs a
+{
+	display: block;
+	background: #DCDDDD;
+	border-right: 1px solid #C0C0C0;
+	color: #000000;
+	text-decoration: none;
+	padding: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+#Group #Tabs a:hover
+{
+	text-decoration: underline;
+}
+
+#Group #Tabs .current a
+{
+	background: #ffffff;
+	border-right: 1px solid #C0C0C0;
+	padding-bottom: 11px;
+	margin-bottom: -1px;
+}
+
+#Group #Tabs #GroupOptionsBox
+{
+	position: absolute;
+	width: 120px;
+	top: 45px;
+	right: 7px;
+	z-index: 200;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+#Group #Tabs #GroupOptionsBox .toparrow
+{
+	position: absolute;
+	top: -12px;
+	right: 12px;
+	background: url('./../../../gfx/toparrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+#Group #Tabs #GroupOptionsBox .inner
+{
+	float: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Group #Tabs #GroupOptionsBox ul, #Group #Tabs #GroupOptionsBox li
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Group #Tabs #GroupOptionsBox ul li
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#Group #Tabs #GroupOptionsBox ul li:hover
+{
+	background: #DCDDDD;
+	cursor: pointer;
+}
+
+#Group #Tabs #GroupOptionsBox a
+{
+	color: #000000;
+	line-height: 20px;
+}
+
+#Group #Tabs #GroupOptionsBox.open
+{
+	visibility: visible;
+}
+
+/* --- Group Messages --- */
+
+#Group #MainIM
+{
+	/*font-family: 'Times New Roman';
+	font-size: 14px;
+    background-color: #FFFFFF;*/
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    position: relative;
+	height: 510px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	background: #1f1f2f;
+	color: #54a000;
+	text-shadow: 0px 0px 2px rgbs(60,100,0);
+	font-family: monospace;
+	font-size: 14px;
+}
+
+#Group #MainIM table
+{
+	width: 100%;
+	color: #54a000;
+}
+
+#Group #MainIM td.rightCol
+{
+	width: 150px;
+}
+
+#Group #MainIM #ListIM
+{
+	padding: 5px;
+	height: 500px;
+	/*max-width: 640px;*/
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#Group #MainIM #RightIM
+{
+	padding: 5px;
+	height: 500px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#Group #MainIM #RightIM .onlineuser
+{
+	/*padding-left: 5px;
+	padding-right: 5px;*/
+}
+
+#Group #MainIM .admin
+{
+	/*color: #006600;*/
+}
+
+#Group #ListIM .joins span, #Group #ListIM .quits span
+{
+	/*color: #006600;*/
+	color: #C0C0C0;
+}
+
+#Messages .post
+{
+	display: block;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: white;
+	padding: 0px;
+}
+
+#Messages .post input
+{
+	width: 100%;
+	background: white;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin: 0;
+}
+
+#Messages .post input:focus
+{
+	outline: none;
+	background: #e0e0e0;
+}
+
+/* --- Group Members --- */
+
+#Group .members > table.panel
+{
+	width: 100%;
+}
+
+#Group .members > table.panel td
+{
+	padding-bottom: 20px;
+}
+
+#Group .members table div
+{
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#Group .members table .image 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 50px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 50px;
+}
+
+#Group .members table a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+#groupinvite .inputfield,
+#creategroup .inputfield
+{
+	position: relative;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 2px;
+	padding-left: 6px;
+}
+
+#groupinvite .inputfield input,
+#creategroup .inputfield input
+{
+	border: 0;
+	background: transparent;
+	width: 240px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#groupinvite #FindMembers span,
+#creategroup #FindMembers span
+{
+	background: #DCDDDD;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+#groupinvite #FindMembers span a,
+#creategroup #FindMembers span a
+{
+	color: #000000;
+	text-decoration: none;
+	margin-left: 1px;
+	margin-right: 3px;
+}
+
+#groupinvite #ListFoundMembers,
+#creategroup #ListFoundMembers
+{
+	position: relative;
+}
+
+#groupinvite #ListFoundMembers > div,
+#creategroup #ListFoundMembers > div
+{
+	position: absolute;
+	top: -2px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 5px;
+}
+
+#groupinvite #ListFoundMembers > div > table > tbody > tr,
+#creategroup #ListFoundMembers > div > table > tbody > tr
+{
+	cursor: pointer;
+}
+
+#groupinvite #ListFoundMembers > div > table > tbody > tr:hover,
+#creategroup #ListFoundMembers > div > table > tbody > tr:hover
+{
+	background: #DCDDDD;
+}
+
+#groupinvite #ListFoundMembers .image,
+#creategroup #ListFoundMembers .image
+{
+	border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+}
+
+#Group .Box > table
+{
+	width: 100%;
+}
+
+#Group > .Box > table > tbody > tr > td
+{
+	width: 50%;
+}
+
+#Group table.group table > tbody > tr > td
+{
+	width: 60px;
+}
+
+#Group table.group table > tbody > tr > td + td
+{
+	text-align: left;
+	width: auto;
+}
+
+#Group table.group
+{
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#Group table.group .image 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    height: 100px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 100px;
+	background-color: #ffffff;
+}
+
+#Group table.group a
+{
+	color: #000000;
+	text-decoration: underline;
+}
+
+#Group #About .textarea
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 7px;
+	min-height: 50px;
+}
+
+#Group #About .hidden
+{
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#Group .show-menu, 
+#Group #show-menu
+{
+	display: none;
+}

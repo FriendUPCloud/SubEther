@@ -1,0 +1,120 @@
+
+.emoticon
+{
+	background-image: url( '../gfx/emoticons.png' );
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+
+.emoticon_angel
+{
+	background-position: -23px -32px;
+}
+
+.emoticon_confused
+{
+	background-position: -40px -32px;
+}
+
+.emoticon_cry
+{
+	background-position: -74px -32px;
+}
+
+.emoticon_devil
+{
+	background-position: -91px -32px;
+}
+
+.emoticon_glasses
+{
+	background-position: -108px -32px;
+}
+
+.emoticon_grumpy
+{
+	background-position: -125px -32px;
+}
+
+.emoticon_kiki
+{
+	background-position: -142px -32px;
+}
+
+.emoticon_pacman
+{
+	background-position: -159px -32px;
+}
+
+.emoticon_squint
+{
+	background-position: -175px -32px;
+}
+
+.emoticon_sunglasses
+{
+	background-position: -192px -32px;
+}
+
+.emoticon_upset
+{
+	background-position: -209px -32px;
+}
+
+.emoticon_colonthree
+{
+	background-position: -23px -48px;
+}
+
+.emoticon_frown
+{
+	background-position: -40px -48px;
+}
+
+.emoticon_gasp
+{
+	background-position: -57px -48px;
+}
+
+.emoticon_gasp
+{
+	background-position: -57px -48px;
+}
+
+.emoticon_grin
+{
+	background-position: -74px -48px;
+}
+
+.emoticon_heart
+{
+	background-position: -91px -48px;
+}
+
+.emoticon_smile
+{
+	background-position: -125px -48px;
+}
+
+.emoticon_tongue
+{
+	background-position: -142px -48px;
+}
+
+.emoticon_unsure
+{
+	background-position: -159px -48px;
+}
+
+.emoticon_wink
+{
+	background-position: -176px -48px;
+}
+
+.emoticon_like
+{
+	background-position: -56px -67px;
+}

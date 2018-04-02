@@ -1,0 +1,171 @@
+
+.chatwindow #InnerPopupWindow__
+{
+	top: 120px;
+	left: 93px;
+	width: 782px;
+}
+
+#chatwindow
+{
+	background-color: #ffffff;
+	height: 100%;
+}
+
+#chatwindow .head
+{
+    background-color: #006600;
+    color: #FFFFFF;
+}
+
+#chatwindow .head > .buttons
+{
+	float: right;
+}
+
+#chatwindow .head > .buttons > span
+{
+	padding: 4px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#chatwindow .head > .name
+{
+    text-transform: uppercase;
+}
+
+#chatwindow .head
+{
+	border-bottom: 1px solid #C0C0C0;
+	padding: 10px;
+}
+
+#chatwindow.fullscreen .content
+{
+	height: 72%;
+}
+
+#chatwindow .content .open,
+#chatwindow .content .open > div
+{
+	height: 100%;
+}
+
+#chatwindow .editor
+{
+    border: 1px solid #C0C0C0;
+    position: relative;
+    overflow: hidden;
+	margin: 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#chatwindow .editor .textarea
+{
+	min-height: 50px;
+}
+
+#chatwindow .editor > .text
+{
+	padding: 7px;
+}
+
+#chatwindow .editor .toolbar
+{
+	border-top: 1px solid #C0C0C0;
+    height: 32px;
+    overflow: hidden;
+    width: 100%;
+	background-color: #DCDDDD;
+}
+
+#chatwindow .editor .toolbar .publish
+{
+	float: right;
+	padding: 4px;
+}
+
+#chatwindow .editor .toolbar .icons
+{
+	float: left;
+	padding: 4px;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 10px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#chatwindow #ChatContent .messages
+{
+	padding: 5px;
+	height: 250px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border: 1px solid #C0C0C0;
+    position: relative;
+	margin: 10px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#chatwindow.fullscreen #ChatContent .messages
+{
+	height: 93%;
+}
+
+#chatwindow #ChatContent ul, #chatwindow #ChatContent ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+#chatwindow #ChatContent li > div
+{
+	height: auto;
+	padding: 5px;
+}
+
+#chatwindow #ChatContent .image
+{
+	float: left;
+    border: 1px solid #C0C0C0;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+	margin-right: 5px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#chatwindow #ChatContent .image > img
+{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+	border: 0px !important;
+	border-color: transparent !important;
+}
+
+#chatwindow #ChatContent .time
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#chatwindow #ChatContent div.inner
+{
+	position: relative;
+}

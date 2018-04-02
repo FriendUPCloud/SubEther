@@ -1,0 +1,1840 @@
+#Panel .list.favorites li, #Panel .list.groups li, #Panel .list.bank li, #Panel .list.profile li, #Panel .list.events li {
+	padding: 3px 3px 0;
+}
+
+.Panel div .name, .Panel div li .create {
+	position: relative;
+	top: -2px;
+}
+
+/*
+
+.Panel div .heading.favorites {
+	background-image: url(img/favorites.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+}
+
+.Panel div .heading.bank {
+	background-image: url(img/bank.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+*/
+
+.Panel div .heading.groups {
+	margin-top: 10px;
+}
+
+.Panel div .heading.bank {
+	margin-top: 10px;
+}
+
+.Panel div a .icon
+{
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.Panel div .wall .icon, #UserMenu .wall .icon {
+	background-image: url("@url/img/news.png");
+}
+
+.Panel div .wall:hover .icon, #UserMenu .wall:hover .icon {
+	background-image: url("@url/img/news_current.png");
+}
+
+.Panel div .wall.current .icon, #UserMenu .wall.current .icon {
+	background-image: url("@url/img/news_current.png");
+}
+
+.Panel div .messages .icon, #UserMenu .messages .icon {
+	background-image: url("@url/img/messages.png");
+}
+
+.Panel div .messages:hover .icon, #UserMenu .messages:hover .icon {
+	background-image: url("@url/img/messages_current.png");
+}
+
+.Panel div .messages.current .icon, #UserMenu .messages.current .icon {
+	background-image: url("@url/img/messages_current.png");
+}
+
+#UserMenu .events .icon, .Panel .list.events .create .icon, .Panel .list.favorites .events .icon {
+	background-image: url("@url/img/event.png");
+}
+
+.Panel .list.events .create:hover .icon, .Panel .list.favorites .events:hover .icon, #UserMenu .events:hover .icon {
+	background-image: url("@url/img/event_current.png");
+}
+
+.Panel li.events.current .icon, #UserMenu .events.current .icon {
+	background-image: url("@url/img/event_current.png");
+}
+
+.Panel li.events.events .icon, .Panel .upcoming.events .booking .icon,
+.hours .datefield .icon
+{
+	background-image: url("@url/img/event_empty.png");
+}
+
+.Panel li.events.events:hover .icon, .Panel .upcoming.events .booking:hover .icon,
+.hours .datefield .icon:hover
+{
+	background-image: url("@url/img/event_empty_current.png");
+}
+
+.upcoming.events .one .icon:after,
+.hours .datefield.one .icon:after
+{
+	content: "01";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .two .icon:after,
+.hours .datefield.two .icon:after
+{
+	content: "02";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .three .icon:after,
+.hours .datefield.three .icon:after
+{
+	content: "03";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .four .icon:after,
+.hours .datefield.four .icon:after
+{
+	content: "04";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+.upcoming.events .five .icon:after,
+.hours .datefield.five .icon:after
+{
+	content: "05";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .six .icon:after,
+.hours .datefield.six .icon:after
+{
+	content: "06";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .seven .icon:after,
+.hours .datefield.seven .icon:after
+{
+	content: "07";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .eight .icon:after,
+.hours .datefield.eight .icon:after
+{
+	content: "08";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .nine .icon:after,
+.hours .datefield.nine .icon:after
+{
+	content: "09";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .ten .icon:after,
+.hours .datefield.ten .icon:after
+{
+	content: "10";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .eleven .icon:after,
+.hours .datefield.eleven .icon:after
+{
+	content: "11";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twelve .icon:after,
+.hours .datefield.twelve .icon:after
+{
+	content: "12";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .thirteen .icon:after,
+.hours .datefield.thirteen .icon:after
+{
+	content: "13";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .fourteen .icon:after,
+.hours .datefield.fourteen .icon:after
+{
+	content: "14";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .fifteen .icon:after,
+.hours .datefield.fifteen .icon:after
+{
+	content: "15";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .sixteen .icon:after,
+.hours .datefield.sixteen .icon:after
+{
+	content: "16";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .seventeen .icon:after,
+.hours .datefield.seventeen .icon:after
+{
+	content: "17";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .eighteen .icon:after,
+.hours .datefield.eighteen .icon:after
+{
+	content: "18";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .nineteen .icon:after,
+.hours .datefield.nineteen .icon:after
+{
+	content: "19";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twenty .icon:after,
+.hours .datefield.twenty .icon:after
+{
+	content: "20";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentyone .icon:after,
+.hours .datefield.twentyone .icon:after
+{
+	content: "21";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentytwo .icon:after,
+.hours .datefield.twentytwo .icon:after
+{
+	content: "22";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentythree .icon:after,
+.hours .datefield.twentythree .icon:after
+{
+	content: "23";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentyfour .icon:after,
+.hours .datefield.twentyfour .icon:after
+{
+	content: "24";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentyfive .icon:after,
+.hours .datefield.twentyfive .icon:after
+{
+	content: "25";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentysix .icon:after,
+.hours .datefield.twentysix .icon:after
+{
+	content: "26";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentyseven .icon:after,
+.hours .datefield.twentyseven .icon:after
+{
+	content: "27";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentyeight .icon:after,
+.hours .datefield.twentyeight .icon:after
+{
+	content: "28";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .twentynine .icon:after,
+.hours .datefield.twentynine .icon:after
+{
+	content: "29";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .thirty .icon:after,
+.hours .datefield.thirty .icon:after
+{
+	content: "30";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.upcoming.events .thirtyone .icon:after,
+.hours .datefield.thirtyone .icon:after
+{
+	content: "31";
+	font-size: 10px;
+    position: relative;
+    top: -2px;
+	display: block;
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.Panel li.events.events:hover .icon:after,
+.Panel .upcoming .booking:hover .icon:after,
+.hours .datefield .icon:hover:after
+{
+	color: #686868;
+}
+
+.Panel div .library .icon, #UserMenu .library .icon {
+	background-image: url("@url/img/library.png");
+}
+
+.Panel div .library:hover .icon, #UserMenu .library:hover .icon {
+	background-image: url("@url/img/library_current.png");
+}
+
+.Panel div .library.current .icon, #UserMenu .library.current .icon {
+	background-image: url("@url/img/library_current.png");
+}
+
+.Panel div .browse .icon, #UserMenu .browse .icon {
+	background-image: url("@url/img/browse.png");
+}
+
+.Panel div .browse:hover .icon, #UserMenu .browse:hover .icon {
+	background-image: url("@url/img/browse_current.png");
+}
+
+.Panel div .browse.current .icon, #UserMenu .browse.current .icon {
+	background-image: url("@url/img/browse_current.png");
+}
+
+.Panel div .maps .icon, #UserMenu .maps .icon {
+	background-image: url("@url/img/maps.png");
+}
+
+.Panel div .maps:hover .icon, #UserMenu .maps:hover .icon {
+	background-image: url("@url/img/maps_current.png");
+}
+
+.Panel div .maps.current .icon, #UserMenu .maps.current .icon {
+	background-image: url("@url/img/maps_current.png");
+}
+
+.Panel div .bookmarks .icon, #UserMenu .bookmarks .icon{
+	background-image: url("@url/img/bookmark.png");
+}
+
+.Panel div .bookmarks:hover .icon, #UserMenu .bookmarks:hover .icon{
+	background-image: url("@url/img/bookmark_current.png");
+}
+
+.Panel div .bookmarks.current .icon, #UserMenu .bookmarks.current .icon {
+	background-image: url("@url/img/bookmark_current.png");
+}
+
+.Panel div .orders .icon, #UserMenu .orders .icon{
+	background-image: url("@url/img/group.png");
+}
+
+.Panel div .orders:hover .icon, #UserMenu .orders:hover .icon{
+	background-image: url("@url/img/group.png");
+}
+
+.Panel div .orders.current .icon, #UserMenu .orders.current .icon {
+	background-image: url("@url/img/group.png");
+}
+
+.Panel div .list.groups .icon, #UserMenu .list.groups .icon {
+	background-image: url("@url/img/group.png");
+}
+
+.Panel div .list.groups .current > div > a > span.icon, #UserMenu .list.groups .current > div > a > span.icon {
+	background-image: url("@url/img/group_current.png");
+}
+
+.Panel div .list.groups .create .icon, #UserMenu .list.groups .create .icon {
+	background-image: url("@url/img/create.png");
+}
+
+.Panel div .list.groups .create:hover .icon, #UserMenu .list.groups .create:hover .icon {
+	background-image: url("@url/img/create_current.png");
+}
+
+.Panel div .list.groups .create.current .icon, #UserMenu .list.groups .create.current .icon  {
+	background-image: url("@url/img/create_current.png");
+}
+
+.Panel div .list.bank .create .icon, #UserMenu .list.bank .create .icon {
+	background-image: url("@url/img/bank.png");
+}
+
+.Panel div .list.bank .create:hover .icon, #UserMenu .list.bank .create:hover .icon {
+	background-image: url("@url/img/bank_current.png");
+}
+
+.Panel div .list.bank .create.current .icon, #UserMenu .list.bank .create.current .icon {
+	background-image: url("@url/img/bank_current.png");
+}
+
+.Panel div .list.profile .about .icon, #UserMenu .list.profile .about .icon {
+	background-image: url("@url/img/about.png");
+}
+
+.Panel div .list.profile .about:hover .icon, #UserMenu .list.profile .about:hover .icon {
+	background-image: url("@url/img/about_current.png");
+}
+
+.Panel div .list.profile .about.current .icon, #UserMenu .list.profile .about.current .icon {
+	background-image: url("@url/img/about_current.png");
+}
+
+.Panel div .list.profile .contacts .icon, #UserMenu .list.profile .contacts .icon {
+	background-image: url("@url/img/contacts.png");
+}
+
+.Panel div .list.profile .contacts:hover .icon, #UserMenu .list.profile .contacts:hover .icon {
+	background-image: url("@url/img/contacts_current.png");
+}
+
+.Panel div .list.profile .contacts.current .icon, #UserMenu .list.profile .contacts.current .icon {
+	background-image: url("@url/img/contacts_current.png");
+}
+
+.Panel div .list.profile .groups .icon, #UserMenu .list.profile .groups .icon{
+	background-image: url("@url/img/groups.png");
+}
+
+.Panel div .list.profile .groups:hover .icon, #UserMenu .list.profile .groups:hover .icon{
+	background-image: url("@url/img/groups_current.png");
+}
+
+.Panel div .list.profile .groups.current .icon, #UserMenu .list.profile .groups.current .icon {
+	background-image: url("@url/img/groups_current.png");
+}
+
+.Panel div .list.pages .create .icon, #UserMenu .list.pages .create .icon{
+	background-image: url("@url/img/page.png");
+}
+
+.Panel div .list.pages .create:hover .icon, #UserMenu .list.pages .create:hover .icon{
+	background-image: url("@url/img/page_current.png");
+}
+
+.Panel div .list.pages .create.current .icon, #UserMenu .list.pages .create.current .icon {
+	background-image: url("@url/img/page_current.png");
+}
+
+#UserMenu ul li ul li ul li:hover {
+    cursor: pointer;
+	background-color: #dddddd;
+}
+
+#UserMenu .maincategory.main .maincategory.main {
+	background-image: url("@url/img/home.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+	padding-left: 20px;
+	padding-top: 4px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #cacaca;
+}
+
+#UserMenu .maincategory.main .maincategory.main:hover {
+	background-image: url("@url/img/home_current.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	cursor: pointer;
+	background-color: #dddddd;
+}
+
+#UserMenu .maincategory.profile .maincategory.profile {
+	background-image: url("@url/img/profile.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+	padding-left: 20px;
+	padding-top: 4px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #cacaca;
+}
+
+#UserMenu .maincategory.profile .maincategory.profile:hover {
+	background-image: url("@url/img/profile_current.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+	background-color: #dddddd;
+}
+
+#UserMenu .maincategory.main, #UserMenu .maincategory.profile {
+	padding-bottom: 5px;
+}
+
+#UserMenu .maincategory.account:hover, #UserMenu .maincategory.global:hover, #UserMenu .maincategory.report:hover, #UserMenu .maincategory.logout:hover {
+	background-color: #dddddd;
+}
+
+#UserMenu .maincategory.account .maincategory.account {
+	background-image: url("@url/img/accsettings.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.account .maincategory.account:hover {
+	background-image: url("@url/img/accsettings_current.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.global a {
+	background-image: url("@url/img/globalsettings.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.global:hover a {
+	background-image: url("@url/img/globalsettings_current.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.logout a {
+	background-image: url("@url/img/unlock.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.logout:hover a {
+	background-image: url("@url/img/unlock_current.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.report a {
+	background-image: url("@url/img/report.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.report:hover a {
+	background-image: url("@url/img/report_current.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+}
+
+#UserMenu .maincategory.account span, #UserMenu .maincategory.global span, #UserMenu .maincategory.logout span, #UserMenu .maincategory.report span  {
+	padding-left: 20px;
+}
+
+#UserMenu .subcategory.bank {
+	padding-bottom: 10px !important;
+}
+
+#UserMenu .subcategory.profile {
+	margin-top: 0 !important;
+}
+
+#UserMenu .subcategory.favorites, #UserMenu .subcategory.groups, #UserMenu .subcategory.bank, #UserMenu .subcategory.profile, #UserMenu .subcategory.pages  {
+	margin-top: 3px;
+	padding-bottom: 3px;
+}
+
+#UserMenu .subcategory.favorites h4, #UserMenu .subcategory.groups h4, #UserMenu .subcategory.bank h4, #UserMenu .subcategory.profile h4, #UserMenu .subcategory.pages h4 {
+	margin-bottom: 5px;
+}
+
+#Directory .edit_icons .sharefolder {
+	background-image: url("@url/img/folderurl.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+#Directory .edit_icons .newfile {
+	background-image: url("@url/img/fileadd.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+#Directory .edit_icons .parsefile {
+	background-image: url("@url/img/fileurl.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+#Directory .edit_icons .newfolder {
+	background-image: url("@url/img/folderadd.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#Directory .edit_icons .editfolder {
+	background-image: url("@url/img/editfolder.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#Directory .edit_icons .deletefolder {
+	background-image: url("@url/img/deletefolder.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#Directory .edit_icons .editfile {
+	background-image: url("@url/img/fileedit.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#Directory .edit_icons .deletefile {
+	background-image: url("@url/img/filedelete.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#Directory .edit_icons .fileupload {
+	background-image: url("@url/img/upload.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#AdminContent .case .EditCase {
+	background-image: url("@url/img/editfolder.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+#AdminContent .case .EditCase img {
+	display: none;
+}
+
+#AdminContent .case .NewCase {
+	background-image: url("@url/img/folderadd.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#AdminContent .case .NewCase img {
+	display: none;
+}
+
+#AdminContent .case .DeleteCase {
+	background-image: url("@url/img/deletefolder.png");
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#AdminContent .case .DeleteCase img {
+	display: none;
+}
+
+#AdminContent .case .tasks .EditTask {
+	background-image: url("@url/img/fileadd.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#AdminContent .case .tasks .EditTask img {
+	display: none;
+}
+
+#AdminContent .case .tasks .DeleteTask {
+	background-image: url("@url/img/filedelete.png");
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#AdminContent .case .tasks .DeleteTask img {
+	display: none;
+}
+
+#AdminContent .case .sw2 .image, #AdminContent .case .sw1 .image  {
+	background-image: url("@url/img/bullet_toggle_plus.png");
+	width: 12px;
+	height: 8px;
+	display: inline-block;
+}
+
+#AdminContent .case .sw2 .image img, #AdminContent .case .sw1 .image img {
+	display: none;
+}
+
+#AdminContent .case .open .image {
+	background-image: url("@url/img/bullet_toggle_minus.png");
+	width: 12px;
+	height: 8px;
+	display: inline-block;
+}
+
+#AdminContent .case .open .image img {
+	display: none;
+}
+
+.listview .file .filetype {
+	top: 5px !important;
+}
+
+.listview .file .filename {
+	margin-left: 2px;
+}
+
+.file.pdf .filetype, .file.pdf .filetype {
+	background-image: url("@url/img/file_pdf.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.pdf .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_pdf.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.pdf .filetype img, .file.pdf .filetype img {
+	display: none;
+}
+
+.file.msword .filetype, .file.msword .filetype{
+	background-image: url("@url/img/file_doc.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.msword .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_doc.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.msword .filetype img, .file.msword .filetype img {
+	display: none;
+}
+
+.file.jpg .filetype, .file.jpg .filetype {
+	background-image: url("@url/img/file_jpg.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.jpg .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_jpg.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.jpg .filetype img, .file.jpg .filetype img {
+	display: none;
+}
+
+.file.png .filetype, .file.png .filetype {
+	background-image: url("@url/img/file_png.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.png .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_png.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.png .filetype img, .file.png .filetype img {
+	display: none;
+}
+
+.file.gif .filetype, .file.gif .filetype {
+	background-image: url("@url/img/file_gif.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.gif .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_gif.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.gif .filetype img, .file.gif .filetype img {
+	display: none;
+}
+
+.file.mp4 .filetype, .file.mp4 .filetype {
+	background-image: url("@url/img/file_mp4.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.mp4 .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_mp4.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.mp4 .filetype img, .file.mp4 .filetype img {
+	display: none;
+}
+
+.file.avi .filetype, .file.avi .filetype {
+	background-image: url("@url/img/file_avi.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.avi.filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_avi.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.avi .filetype img, .file.avi .filetype img {
+	display: none;
+}
+
+.file.mpeg .filetype, .file.mpeg .filetype {
+	background-image: url("@url/img/file_mp3.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.mpeg .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_mp3.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.mpeg .filetype img, .file.mpeg .filetype img {
+	display: none;
+}
+
+.file.swf .filetype, .file.swf .filetype {
+	background-image: url("@url/img/file_swf.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.swf .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_swf.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.swf .filetype img, .file.swf .filetype img {
+	display: none;
+}
+
+.file.ogg .filetype, .file.ogg .filetype{
+	background-image: url("@url/img/file_ogg.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.ogg .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_ogg.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.ogg .filetype img, .file.ogg .filetype img {
+	display: none;
+}
+
+.file.plain .filetype, .file.txt .filetype  {
+	background-image: url("@url/img/file_text.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file.txt .filetype, #Files.mobileview .file.plain .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_txt.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file.plain .filetype img, .file.txt .filetype img {
+	display: none;
+}
+
+.file .filetype  {
+	background-image: url("@url/img/file_blank.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+    height: 16px;
+	width: 16px;
+}
+
+#Files.mobileview .file .filetype {
+	background: rgba(0, 0, 0, 0) url("@url/img/thumb_blank.png") no-repeat scroll left center;
+	background-size: 26px 33px;
+	height: 33px;
+	width: 26px;
+}
+
+.file .filetype img {
+	display: none;
+}
+
+.thumbview .thumbs {
+	background-size: inherit !important;
+}
+
+.thumbview .thumbs .filename {
+	line-height: 240px;
+	display: block;
+	height: 140px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thumbview .thumbs .Download a, .listview .download a{
+	background-image: url("@url/img/save.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+
+.thumbview .thumbs .Download a img, .listview .download a img {
+	display: none;
+}
+
+.thumbview .thumbs.mpeg {
+	background-image: url("@url/img/thumb_mp3.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.mpeg .icon {
+	display: none;
+}
+
+.thumbview .thumbs.gif {
+	background-image: url("@url/img/thumb_gif.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.gif img {
+	display: none;
+}
+
+.thumbview .thumbs.png {
+	background-image: url("@url/img/thumb_png.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.png img {
+	display: none;
+}
+
+.thumbview .thumbs.jpg {
+	background-image: url("@url/img/thumb_jpg.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.jpg img {
+	display: none;
+}
+
+.thumbview .thumbs.swf {
+	background-image: url("@url/img/thumb_swf.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.swf img {
+	display: none;
+}
+
+.thumbview .thumbs.mp4 {
+	background-image: url("@url/img/thumb_mp4.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.mp4 img {
+	display: none;
+}
+
+.thumbview .thumbs.ogg{
+	background-image: url("@url/img/thumb_ogg.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.ogg img {
+	display: none;
+}
+
+.thumbview .thumbs.msword{
+	background-image: url("@url/img/thumb_doc.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.msword img {
+	display: none;
+}
+
+.thumbview .thumbs.msword{
+	background-image: url("@url/img/thumb_doc.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.msword img {
+	display: none;
+}
+
+.thumbview .thumbs.pdf{
+	background-image: url("@url/img/thumb_pdf.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.pdf img {
+	display: none;
+}
+
+.thumbview .thumbs.plain{
+	background-image: url("@url/img/thumb_plain.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.plain img {
+	display: none;
+}
+
+.thumbview .thumbs.txt{
+	background-image: url("@url/img/thumb_plain.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs.txt img {
+	display: none;
+}
+
+.thumbview .thumbs{
+	background-image: url("@url/img/thumb_blank.png");
+	background-repeat: no-repeat;
+	background-position: 50% 10%;
+	background-size: 71px 90px;
+	margin-top: 2px;
+}
+
+.thumbview .thumbs img {
+	display: none;
+}
+
+#Directory .edit_icons .newfile:hover, #Directory .edit_icons .parsefile:hover, #Directory .edit_icons .newfolder:hover, #Directory .edit_icons .editfolder:hover, #Directory .edit_icons .deletefolder:hover, #Directory .edit_icons .editfile:hover, #Directory .edit_icons .deletefile:hover, #Directory .edit_icons .fileupload:hover, #Directory .edit_icons .sharefolder:hover{
+	opacity: 0.5;
+}
+
+#Directory .edit_icons .sharefolder img, #Directory .edit_icons .newfile img, #Directory .edit_icons .parsefile img, #Directory .edit_icons .newfolder img, #Directory .edit_icons .editfolder img, #Directory .edit_icons .deletefolder img, #Directory .edit_icons .editfile img, #Directory .edit_icons .deletefile img, #Directory .edit_icons .fileupload img {
+	display: none;
+}
+
+.infobox .info.display .work .icon {
+	background-image: url("@url/img/work_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .highschool .icon, .infobox .info.display .college .icon {
+	background-image: url("@url/img/school_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .philosophy .icon {
+	background-image: url("@url/img/philosophy_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .political .icon {
+	background-image: url("@url/img/political_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .languages .icon {
+	background-image: url("@url/img/languages_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 14px;
+	width: 16px;
+    padding-right: 5px;
+	padding-top: 2px;
+}
+
+.infobox .info.display .interests .icon {
+	background-image: url("@url/img/interests_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .email .icon {
+	background-image: url("@url/img/email_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .website .icon {
+	background-image: url("@url/img/earth_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .mobile .icon {
+	background-image: url("@url/img/mobile_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .address .icon {
+	background-image: url("@url/img/address_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .screenname .icon {
+	background-image: url("@url/img/screenname_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .gender .icon {
+	background-image: url("@url/img/gender_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.infobox .info.display .religion .icon {
+	background-image: url("@url/img/religion_icon.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+    float: left;
+    height: 16px;
+	width: 16px;
+    padding-right: 5px;
+}
+
+.ParseContent.File .image img {
+	display: none;
+}
+
+.ParseContent .image.pdf{
+	background-image: url("@url/img/thumb_pdf.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.mpeg, .ParseContent .image.mp3{
+	background-image: url("@url/img/thumb_mp3.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.gif {
+	background-image: url("@url/img/thumb_gif.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.png {
+	background-image: url("@url/img/thumb_png.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.jpg {
+	background-image: url("@url/img/thumb_jpg.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.swf {
+	background-image: url("@url/img/thumb_swf.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.mp4, .ParseContent .image.mov {
+	background-image: url("@url/img/thumb_mp4.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.ogg {
+	background-image: url("@url/img/thumb_ogg.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.msword{
+	background-image: url("@url/img/thumb_doc.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.plain, .ParseContent .image{
+	background-image: url("@url/img/thumb_plain.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+.ParseContent .image.txt{
+	background-image: url("@url/img/thumb_plain.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+}
+
+#Browse #Content .network .file .image img, #Browse #Content .network .wall .image img {
+	display: none;
+}
+
+#Browse #Content .network .file .image.pdf, #Browse #Content .network .wall .image.pdf {
+	background-image: url("@url/img/thumb_pdf.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.mpeg, #Browse #Content .network .file .image.mp3, #Browse #Content .network .wall .image.mpeg, #Browse #Content .network .wall .image.mp3{
+	background-image: url("@url/img/thumb_mp3.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.gif, #Browse #Content .network .wall .image.gif  {
+	background-image: url("@url/img/thumb_gif.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.png, #Browse #Content .network .wall .image.png {
+	background-image: url("@url/img/thumb_png.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.jpg {
+	background-image: url("@url/img/thumb_jpg.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+
+
+#Browse #Content .network .file .image.swf, #Browse #Content .network .wall .image.swf {
+	background-image: url("@url/img/thumb_swf.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.mp4, #Browse #Content .network .wall .image.mp4  {
+	background-image: url("@url/img/thumb_mp4.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.ogg, #Browse #Content .network .wall .image.ogg {
+	background-image: url("@url/img/thumb_ogg.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.msword, #Browse #Content .network .wall .image.msword {
+	background-image: url("@url/img/thumb_doc.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.plain, #Browse #Content .network .wall .image.plain {
+	background-image: url("@url/img/thumb_plain.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+
+#Browse #Content .network .file .image.txt, #Browse #Content .network .wall .image.txt {
+	background-image: url("@url/img/thumb_plain.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	width: 90px;
+	height: 100px;
+}
+#Browse #Content .filebox .thumb a > img {
+	display: none;
+}
+
+#Browse #Content .filebox .thumb.pdf {
+	background-image: url("@url/img/thumb_pdf.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.mpeg, #Browse #Content .filebox .thumb.mp3{
+	background-image: url("@url/img/thumb_mp3.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.gif {
+	background-image: url("@url/img/thumb_gif.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.png {
+	background-image: url("@url/img/thumb_png.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.jpg {
+	background-image: url("@url/img/thumb_jpg.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.swf {
+	background-image: url("@url/img/thumb_swf.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.mp4 {
+	background-image: url("@url/img/thumb_mp4.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.ogg {
+	background-image: url("@url/img/thumb_ogg.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.msword, #Browse #Content .filebox .thumb.docx {
+	background-image: url("@url/img/thumb_doc.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.plain, #Browse #Content .filebox .thumb.octet-stream {
+	background-image: url("@url/img/thumb_plain.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.txt, #Browse #Content .filebox .thumb {
+	background-image: url("@url/img/thumb_plain.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.parse, #Browse #Content .filebox .thumb.html  {
+	background-image: url("@url/img/thumb_parse.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.apk {
+	background-image: url("@url/img/thumb_apk.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.zip {
+	background-image: url("@url/img/thumb_archive.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.eps {
+	background-image: url("@url/img/thumb_eps.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}
+
+#Browse #Content .filebox .thumb.blend {
+	background-image: url("@url/img/thumb_blend.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 71px 90px;
+	width: 100%;
+	height: 100px;
+}

@@ -1,0 +1,45 @@
+
+
+/* Top ---------------------------------------------------------------------- */
+
+.home #Notification
+{
+	float: left;
+	line-height: 46px;
+}
+
+/* Middle ------------------------------------------------------------------- */
+
+.home #Table_Fields > tbody > tr > td > div
+{
+	min-height: 780px;
+}
+
+.home #Table_Fields td.Col1
+{
+	width: 185px;
+	border-left: 1px solid #C0C0C0;
+}
+
+.home #Table_Fields td.Col2
+{
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+}
+
+.home #Table_Fields td.Col3
+{
+	width: 185px;
+	border-right: 1px solid #C0C0C0;
+}
+
+/* Bottom ------------------------------------------------------------------- */
+
+.home #Footer__ #BottomLinks
+{
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+}

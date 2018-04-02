@@ -1,0 +1,462 @@
+
+#Store .Box
+{
+	padding: 15px 5px;
+}
+
+#Store .clearboth
+{
+    clear: both;
+    float: none;
+}
+
+#Store .product
+{
+    /*border: 1px solid #cacaca;
+    border-radius: 5px;*/
+	border: 0;
+	border-radius: 0;
+    float: left;
+    height: 300px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 228px;
+	box-sizing: border-box;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Store .product.open
+{
+	border: 1px solid #cacaca;
+	padding: 10px;
+	cursor: auto;
+}
+
+#Store .edit_btn_product
+{
+	background: url("@url/img/edit16.png") no-repeat center center;
+	background-color: black;
+	position: absolute;
+	display: none;
+	top: 10px;
+	right: 10px;
+	z-index: 5;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Store .product:hover .edit_btn_product
+{
+	display: block;
+}
+
+#Store .product.open:hover .edit_btn_product
+{
+	display: none;
+}
+
+#Store .upload_btn
+{
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    z-index: 3;
+}
+
+#Store .upload_btn
+{
+    background: rgba(0, 0, 0, 0) url("@url/img/upload_big.png") no-repeat center center;
+}
+
+#Store .product.open.edit .upload_btn,
+#Store .product.open:hover .upload_btn,
+#Store .product .mainimage .thumb:hover .upload_btn
+{
+    display: block;
+}
+
+#Store .upload_btn > div
+{
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+}
+
+#Store .product .image
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 180px;
+	box-sizing: border-box;
+}
+
+#Store .product .image > div
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Store .product.open .image
+{
+	padding: 10px;
+}
+
+#Store .product .image .thumb,
+#Store .product .image .thumb > div
+{
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#Store .product .image img
+{
+	visibility: hidden;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#Store .product .information
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 110px;
+}
+
+#Store .product .information .info
+{
+	height: 40px;
+	overflow: hidden;
+}
+
+#Store .product .information .rating
+{
+	min-height: 25px;
+}
+
+#Store .product.open .information .rating
+{
+	min-height: 0;
+}
+
+#Store .product .information .price
+{
+	font-weight: bold;
+	position: absolute;
+	bottom: 0;
+}
+
+#Store .product .information .inputs
+{
+	/*padding: 10px;*/
+}
+
+#Store .product.open .information .inputs
+{
+	padding: 10px;
+}
+
+#Store .product.open .information .inputs > div
+{
+	position: relative;
+}
+
+#Store .product .information input
+{
+    border-bottom: 1px solid #cacaca;
+    padding: 5px;
+    width: 100%;
+	box-sizing: border-box;
+}
+
+#Store .product .information textarea
+{
+	background: transparent;
+	border: 0;
+	margin: 0;
+	border-bottom: 1px solid #cacaca;
+    padding: 5px;
+    width: 100%;
+	height: 42px;
+	box-sizing: border-box;
+	resize: none;
+	color: #777777;
+	font-family: Raleway;
+	font-size: 12px;
+}
+
+#Store .product.admin.closed
+{
+    background: rgba(0, 0, 0, 0) url("@url/img/cross.png") no-repeat scroll center center;
+    border: 2px dashed #cacaca;
+    cursor: pointer;
+    height: 300px;
+    width: 226px;
+}
+
+#Store .product.admin.closed > div
+{
+	display: none;
+}
+
+#Store .product.admin.closed .information
+{
+	display: block;
+	height: 100%;
+}
+
+#Store .product.nr1,
+#Store .product.nr2
+{
+	width: 48%;
+	height: 300px;
+}
+
+#Store .product .image
+{
+	height: 130px;
+}
+
+#Store .product.nr1 .image,
+#Store .product.nr2 .image
+{
+	height: 100%;
+}
+
+#Store .product .information .price
+{
+	font-weight: normal;
+}
+
+#Store .product.nr1 .information .price,
+#Store .product.nr2 .information .price
+{
+	right: 0;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: black;
+	color: #e0e0e0;
+	/*background-color: #e0e0e0;
+	color: #444444;*/
+	width: 100%;
+	box-sizing: border-box;
+	text-align: right;
+	font-weight: normal;
+}
+
+#Store .product.nr1 .information .heading, #Store .product.nr1 .information .info, #Store .product.nr1 .information .rating,
+#Store .product.nr2 .information .heading, #Store .product.nr2 .information .info, #Store .product.nr2 .information .rating
+{
+	display: none;
+}
+
+
+#Store .product .information .info
+{
+	display: none;
+}
+
+#Store .product.details .information .info
+{
+	display: block;
+	overflow: visible;
+	white-space: normal;
+}
+
+#Store .product .information
+{
+	/*height: auto;*/
+	height: 65px;
+}
+
+#Store .product .information .inputs > div,
+#Store .product .information .inputs h3
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#Store .product .information .inputs > div.heading
+{
+	padding-bottom: 5px;
+}
+
+#Store .product,
+#Store .product.admin.closed
+{
+	height: 200px;
+}
+
+/*
+#Store .product.nr1 .information,
+#Store .product.nr2 .information
+{
+	display: none;
+}*/
+
+#Store .product.details
+{
+	width: 99%;
+	/*height: 410px;*/
+	height: auto;
+}
+
+#Store .product.details .media
+{
+	width: 60%;
+	/*height: 350px;*/
+	height: auto;
+}
+
+#Store .product.details .image
+{
+	/*height: 350px;*/
+	height: auto;
+	position: relative;
+}
+
+#Store .product.details .mainimage .thumb
+{
+	width: 100%;
+	height: 350px;
+}
+
+#Store .product.details .topbox
+{
+	/*padding-bottom: 15px;*/
+}
+
+#Store .product.details h3
+{
+	padding-bottom: 10px;
+}
+
+#Store .product.details .media
+{
+	position: relative;
+	float: left;
+}
+
+#Store .product.details .information
+{
+	/*display: none;*/
+	position: relative;
+	float: left;
+	left: auto;
+	bottom: auto;
+	width: 38%;
+	padding-left: 10px;
+}
+
+#Store .product.details .image > .thumbs
+{
+	width: 100%;
+	height: 135px;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+#Store .product.details .image > .thumbs > div
+{
+	width: auto;
+	height: 100%;
+}
+
+#Store .product.details .thumbs .edit_btn.thumb
+{
+	background: rgba(0, 0, 0, 0) url("@url/img/cross.png") no-repeat scroll center center;
+    border: 2px dashed #cacaca;
+    cursor: pointer;
+	border-radius: 0;
+    float: left;
+    overflow: hidden;
+    position: relative;
+	box-sizing: border-box;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Store .product.details .thumbs .edit_btn.thumb > div
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Store .product.details .thumbs .thumb
+{
+	float: left;
+	height: 100px;
+    width: 144px;
+	margin: 10px;
+	margin-right: 0;
+}
+
+#Store .product.details .thumbs .thumb:first-child
+{
+	margin-left: 0;
+}
+
+#Store .product.details .information .artnr,
+#Store .product.details .information .instock
+{
+	padding-bottom: 10px;
+}
+
+#Store .product.details .information .info
+{
+	height: auto;
+	overflow: visible;
+}
+
+#Store .product.details .information .price
+{
+	position: relative;
+	bottom: auto;
+	margin-bottom: 10px;
+	font-size: 200%;
+}
+
+#Store .product .ratebox
+{
+    background-color: transparent;
+    background-image: url("@url/img/star.png");
+    background-repeat: repeat-x;
+    float: left;
+    height: 12px;
+    /*margin-top: 10px;*/
+	margin-bottom: 10px;
+    width: 70px;
+}
+
+#Store .product .ratebox > div
+{
+    background-color: transparent;
+    background-image: url("@url/img/star-full.png");
+    background-repeat: repeat-x;
+    height: 100%;
+}

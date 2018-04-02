@@ -1,0 +1,1466 @@
+#CalendarContent .tooltips
+{
+	bottom: auto;
+    height: auto;
+    left: auto;
+    right: 24px;
+    top: -17px;
+	line-height: normal;
+	padding: 10px;
+	/*box-shadow: 0 0 0 1px rgba(41, 42, 51, 0.7) inset;*/
+}
+
+#CalendarContent button
+{
+	margin-left: 4px;
+}
+
+#CalendarContent .month .prevYear,
+#CalendarContent .month .nextYear
+{
+	display: none;
+}
+
+#CalendarContent .tooltips .image
+{
+	position: relative;
+	width: 100%;
+	height: 80px;
+	margin-bottom: 5px;
+}
+
+#CalendarContent .EventList .heading
+{
+	height: 40px;
+	line-height: 40px;
+}
+
+#CalendarContent .tooltips .image .eventdate, #CalendarContent .EventList .eventdate {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+    color: #343434;
+    font-size: 150%;
+    font-weight: bold;
+    left: 10px;
+    padding: 15px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+}
+#CalendarContent .tooltips .image .eventdate .month, #CalendarContent .EventList .eventdate .month {
+    font-size: 65%;
+}
+
+/*#CalendarContent .tooltips .bottomarrow {
+	bottom: auto;
+    height: 24px;
+    position: absolute;
+    right: -12px;
+    top: 20px;
+    width: 12px;
+}
+#CalendarContent .tooltips .bottomarrow:after, #CalendarContent .tooltips .bottomarrow:before {
+    border-bottom: 0 none;
+    border-color: transparent transparent -moz-use-text-color;
+    border-style: solid solid none;
+    content: "";
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+#CalendarContent .tooltips .bottomarrow:after {
+    border-left-color: #e7e7e7;
+    border-width: 9px;
+    top: 1px;
+    left: 0;
+}
+#CalendarContent .tooltips .bottomarrow:before {
+    border-left-color: #cacaca;
+    border-width: 10px;
+}*/
+
+#CalendarContent .tooltips:after, #CalendarContent .tooltips:before {
+    left: 100%;
+	top: 12px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+#CalendarContent .tooltips:after {
+    border-color: rgba(136, 183, 213, 0);
+	border-left-color: #e7e7e7;
+	border-width: 9px;
+	margin-top: 0;
+}
+#CalendarContent .tooltips:before {
+    border-color: rgba(194, 225, 245, 0);
+	border-left-color: #cacaca;
+	border-width: 10px;
+	margin-top: -1px;
+}
+
+
+#CalendarContent .EventList .event
+{
+	float: left;
+	border-top: 1px solid #d4d4d4;
+	margin-top: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+	width: 50%;
+}
+
+#CalendarContent .EventList .event.editor
+{
+	float: none;
+}
+
+#CalendarContent .EventList .event.open,
+#CalendarContent .EventList .event.editor
+{
+	padding-right: 0;
+	width: 100%;
+}
+
+#CalendarContent .EventList .event:first-child
+{
+	border: 0;
+	margin: 0;
+}
+
+
+#CalendarContent .EventList .image
+{
+	float: left;
+	position: relative;
+	/*width: 150px;
+	height: 90px;*/
+	width: 200px;
+	height: 150px;
+	margin-right: 0;
+}
+
+#CalendarContent .EventList .text
+{
+	float: left;
+	padding-left: 10px;
+	box-sizing: border-box;
+	max-width: calc(100% - 200px);
+	min-width: 200px;
+}
+
+#Calendar table {
+    margin: auto;
+    padding-top: 10px;
+}
+#Calendar .prevYear, #Calendar .nextYear {
+    display: none;
+}
+#Calendar .nav a {
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#Calendar .nav .Left {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#Calendar .nav .Right {
+    float: right;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#Calendar .hd th {
+    font-weight: normal;
+}
+#Calendar th .nav {
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    height: 16px;
+    line-height: 14px;
+    text-align: center;
+    width: 100%;
+}
+#Calendar td div {
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    height: 16px;
+    line-height: 14px;
+    text-align: center;
+    width: 17px;
+}
+#Calendar td div.Week, #Calendar td div.Space {
+    border: 1px solid transparent;
+}
+#Calendar td div.Selected {
+    background-color: #0f75bd;
+}
+
+#CalendarContent > div > .CalendarYear > tbody > tr > td > div.Selected, #CalendarContent > div > .CalendarYear td > div.Day:hover,
+#CalendarContent > div > .CalendarMonth > tbody > tr > td > div.Selected, #CalendarContent > div > .CalendarMonth td > div.Day:hover
+{
+	/*background: #e0e0e0;
+	background-color: #003629 !important;*/
+	background-color: $colorDefault;
+}
+
+#CalendarContent > div > .CalendarYear td > div.Selected > div.number, #CalendarContent > div > .CalendarYear td > div.Day:hover > div.number,
+#CalendarContent > div > .CalendarMonth td > div.Selected > div.number, #CalendarContent > div > .CalendarMonth td > div.Day:hover > div.number
+{
+	/*color: white !important;*/
+}
+
+#CalendarContent {
+    padding: 15px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#CalendarContent table {
+    width: 100%;
+}
+
+/*
+#CalendarContent .week table:first-child
+{
+	border-bottom: 1px solid #d4d4d4;
+}
+*/
+#CalendarContent .CalendarYear th, #CalendarContent .CalendarYear td {
+    width: 10%;
+}
+#CalendarContent .CalendarYear th + th, #CalendarContent .CalendarYear td + td {
+    width: 12.9%;
+}
+#CalendarContent table.CalendarMonth th, #CalendarContent table.CalendarMonth td, #CalendarContent table.CalendarWeek th, #CalendarContent table.CalendarWeek td {
+    width: 8%;
+}
+#CalendarContent table.CalendarMonth th + th, #CalendarContent table.CalendarMonth td + td, #CalendarContent table.CalendarWeek th + th, #CalendarContent table.CalendarWeek td + td {
+    width: 12.9%;
+}
+#CalendarContent table.CalendarDay th, #CalendarContent table.CalendarDay td {
+    width: 10%;
+}
+#CalendarContent table.CalendarDay th + th, #CalendarContent table.CalendarDay td + td {
+    width: 90%;
+}
+
+#CalendarContent .hd th {
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+	font-size: 12px;
+}
+
+#CalendarContent .hd th > div {
+    height: 20px;
+    line-height: 20px;
+    padding: 10px;
+}
+#CalendarContent table tbody tr td {
+    padding: 2px !important;
+}
+#CalendarContent td > div.Selected, #CalendarContent td > div:hover {
+    cursor: pointer;
+}
+#CalendarContent td > div.Selected > div.number,
+#CalendarContent td > div > div.number:hover
+{
+
+}
+#CalendarContent td > div.Selected > div.number,
+#CalendarContent td > div > div.number:hover
+{
+    color: #747474;
+    display: block;
+	transform: scale(1.5);
+	font-weight: 600;
+}
+
+#CalendarContent td > div.Space > div.number:hover
+{
+	color: #c0c0c0;
+	font-weight: normal;
+	transform: none;
+}
+
+#CalendarContent td > div.Week > div.number:hover {
+    color: #747474;
+	transform: scale(1.5);
+}
+
+#CalendarContent > div > .CalendarYear td > div,
+#CalendarContent > div > .CalendarMonth td > div,
+#CalendarContent > div > .CalendarWeek td > div
+{
+    background-color: #e7e7e7;
+    border-bottom: medium none;
+    /*border-radius: 8px;*/
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+    height: 85px;
+	line-height: 85px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+}
+
+#CalendarContent > div > .CalendarYear td.ch2 > div,
+#CalendarContent > div > .CalendarMonth td.ch2 > div,
+#CalendarContent > div > .CalendarWeek td.ch2 > div
+{
+	background-color: #dbdbdb;
+}
+
+#CalendarContent > div > .CalendarYear td > div.Space,
+#CalendarContent > div > .CalendarMonth td > div.Space,
+#CalendarContent > div > .CalendarWeek td > div.Space
+{
+	background-color: #e7e7e7;
+	/*background-color: white;*/
+}
+
+#CalendarContent td > div > div.number {
+    border-radius: 30px;
+    text-align: center;
+	transition: all .1s ease-in-out;
+}
+
+#CalendarContent table.CalendarWeek .Selected
+{
+	font-weight: 600;
+}
+#CalendarContent table.CalendarWeek div.Event
+{
+    background-color: #dcdddd;
+}
+
+#CalendarContent table.CalendarWeek div.Pending.Event
+{
+    background-color: #ffc62d;
+    color: black;
+	line-height: inherit;
+	text-align: left;
+	font-weight: normal;
+}
+
+#CalendarContent table.CalendarWeek div.Available.Event
+{
+    background-color: #af0300;
+    color: white;
+	line-height: inherit;
+	text-align: left;
+	font-weight: normal;
+}
+
+#CalendarContent table.CalendarWeek div.Accepted.Event
+{
+    background-color: $colorDefault;
+    color: white;
+	line-height: inherit;
+	text-align: left;
+	font-weight: normal;
+}
+
+#CalendarContent .CalendarMonth div.create
+{
+	position: absolute;
+	z-index: 2;
+	width: 16px;
+	height: 16px;
+	top: 10px;
+	left: 10px;
+}
+
+#CalendarContent .CalendarMonth div.create > div.icon
+{
+	background-image: url("@url/img/event.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#CalendarContent .EventList .buttons
+{
+	float: right;
+	width: 100%;
+	text-align: right;
+	padding-top: 10px;
+}
+
+#CalendarContent .EventList .buttons .edit
+{
+	float: left;
+}
+
+#CalendarContent .EventList .buttons .edit
+{
+	background-image: url("@url/img/edit16.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 20px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#CalendarContent .CalendarMonth div.events {
+    width: 50%;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+
+#CalendarContent .CalendarMonth div.events > span
+{
+	position: relative;
+	/*z-index: 3;*/
+    background-color: #dcdddd;
+    border-radius: 10px;
+    /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 2px;
+    width: 10px;
+	border: 2px solid #747474;
+}
+
+#CalendarContent .CalendarYear div.events > span,
+#CalendarContent .CalendarMonth div.events > span
+{
+	box-shadow: none;
+	border: 1px solid #747474;
+}
+
+#CalendarContent .CalendarMonth div.events > span
+{
+    background-color: $colorDefault;
+}
+
+#CalendarContent > div > .CalendarMonth .sw1 div.number,
+#CalendarContent > div > .CalendarMonth .sw2 div.number
+{
+    line-height: 85px;
+}
+
+#CalendarContent > div > .CalendarWeek .sw1 div.Hour,
+#CalendarContent > div > .CalendarWeek .sw2 div.Hour
+{
+    line-height: 85px;
+	text-align: center;
+}
+
+#CalendarContent td > div.Week, #CalendarContent td > div.Space {
+}
+#CalendarContent td > div.Space {
+	cursor: auto;
+    color: #c0c0c0;
+}
+#CalendarContent td > div.Week,
+#CalendarContent td > div.Hour
+{
+    background: #e0e0e0 !important;
+    border: medium none;
+    /*border-radius: 8px;*/
+    color: #787878;
+    cursor: pointer;
+    font-family: Raleway;
+    font-weight: 700;
+}
+
+#CalendarContent .CalendarDay td + td > div {
+    background-color: transparent !important;
+}
+#CalendarContent .CalendarYear > div {
+    width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding: 10px 0;
+	padding-top: 0;
+}
+
+#CalendarContent .nav {
+    text-transform: uppercase;
+	cursor: pointer;
+}
+
+#CalendarContent .CalendarYear .nav span.Left,
+#CalendarContent .CalendarYear .nav span.Right
+{
+	display: none;
+}
+
+#CalendarContent .CalendarYear .Week .heading {
+	text-align: center;
+	border: none;
+}
+#CalendarContent .CalendarYear .Week, #CalendarContent .CalendarYear .Week .heading, #CalendarContent .Monday .heading , #CalendarContent .Tuesday .heading, #CalendarContent .Wednesday .heading, #CalendarContent .Thursday .heading , #CalendarContent .Friday .heading , #CalendarContent .Saturday .heading , #CalendarContent .Sunday .heading  {
+    text-align: center;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+#CalendarContent .CalendarYear table > tbody > tr > td > div {
+    border: 1px solid transparent;
+    padding: 0;
+	box-shadow: none;
+	font-size: 12px;
+	height: 50px;
+	line-height: 50px;
+}
+#CalendarContent .CalendarYear table > tbody > tr > td > div > div {
+}
+#CalendarContent .CalendarYear div.number {
+    float: none;
+}
+
+#CalendarContent .CalendarYear div.events {
+    left: 4px;
+    position: absolute;
+    top: 35px;
+}
+
+#CalendarContent .CalendarYear div.events > span {
+	position: relative;
+	/*z-index: 3;*/
+    background-color: #dcdddd;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 6px;
+    margin: 1px;
+    width: 6px;
+}
+#CalendarContent .CalendarYear div.events > span {
+    background-color: $colorDefault;
+}
+
+
+#CalendarContent .CalendarYear div.events > span.meeting,
+#CalendarContent .CalendarMonth div.events > span.meeting
+{
+	background-color: #c3e4fa;
+}
+
+#CalendarContent .CalendarYear div.events > span.notification,
+#CalendarContent .CalendarMonth div.events > span.notification
+{
+	background-color: #d47372;
+}
+
+#CalendarContent .CalendarYear div.events > span.vacation,
+#CalendarContent .CalendarMonth div.events > span.vacation
+{
+	background-color: #faebb2;
+}
+
+#CalendarContent .CalendarYear div.events > span.other,
+#CalendarContent .CalendarYear div.events > span,
+#CalendarContent .CalendarMonth div.events > span.other,
+#CalendarContent .CalendarMonth div.events > span
+{
+	background-color: #f8f8f8;
+}
+
+
+#CalendarContent .event {
+	position: relative;
+    padding-top: 10px;
+}
+#CalendarContent .event:first-child {
+    padding: 0;
+}
+#CalendarContent .heading {
+	border-bottom: 1px solid #d4d4d4;
+    color: #686868;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    text-align: left;
+    text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+#CalendarContent .week .heading
+{
+	height: 40px;
+	line-height: 40px;
+}
+
+#CalendarContent .fileupload {
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+    height: 30px;
+    margin: 10px;
+    overflow: hidden;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 30px;
+}
+
+
+#CalendarContent .EventList .event.editor.closed
+{
+	/*border: 2px dashed #c0c0c0;*/
+	border: 2px dashed #cacaca;
+    /*border-radius: 3px;*/
+    height: 35px;
+	border-sizing: border-box;
+}
+
+#CalendarContent .EventList .event.editor .description
+{
+	background: url("@url/img/cross.png") no-repeat scroll 10px center / 12px auto rgba(0, 0, 0, 0);
+    color: #c0c0c0;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 8px 8px 8px 33px;
+}
+
+#CalendarContent .EventList .event.editor #EventEditorWrapper,
+#CalendarContent .EventList .event .inner
+{
+	position: relative;
+}
+
+#CalendarContent .EventList .event.editor.open #EventEditorWrapper,
+#CalendarContent .day .event.open > div:first-child,
+#CalendarContent .EventList .event.open .inner
+{
+	/*border: 2px dashed #c0c0c0;*/
+	border: 2px dashed #cacaca;
+    /*border-radius: 3px;*/
+    height: auto;
+	padding: 5px;
+	border-sizing: border-box;
+}
+
+#CalendarContent .EventList .event.open > div
+{
+	display: none;
+}
+#CalendarContent .EventList .event.editor.open > div,
+#CalendarContent .EventList .event.open > div.inner,
+#CalendarContent .EventList .event.open > div.upload_btn
+{
+	display: block;
+}
+
+#CalendarContent #Wall > div
+{
+	padding-left: 0px;
+}
+
+#CalendarContent #WallTabs .tabs > table
+{
+	width: auto;
+}
+
+#createevent .content #EventEditor > div table > tbody > tr > td
+{
+	padding: 2px;
+}
+
+#createevent .content #EventEditor
+{
+	box-sizing: border-box;
+	/*padding-left: 10px;*/
+	padding-right: 10px;
+}
+
+#CalendarContent .event #EventEditor > div, #createevent .content #EventEditor > div
+{
+	float: left;
+}
+
+#CalendarContent .event #EventEditor > .image
+{
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	width: 200px;
+	height: 150px;
+	margin-right: 0;
+}
+
+#CalendarContent .event #EventEditor .customfield, #createevent .content #EventEditor .customfield
+{
+	background-color: #eeeeee !important;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+#CalendarContent .event #EventEditor .customfield input, #createevent .content #EventEditor .customfield input
+{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+#CalendarContent .event #EventEditor .field, #createevent .content #EventEditor .field
+{
+	box-sizing: border-box;
+	width: 50%;
+}
+
+#CalendarContent .event #EventEditor .field.nr1,
+#CalendarContent .event #EventEditor .field.nr2,
+#CalendarContent .event #EventEditor .field.nr3
+{
+	padding-left: 210px;
+}
+
+#CalendarContent .event.editor #EventEditor .field, #createevent .content #EventEditor .field
+{
+	padding-left: 0;
+}
+
+#CalendarContent .event #EventEditor .field.nr1, #createevent .content #EventEditor .field.nr1,
+#CalendarContent .event #EventEditor .field.nr2, #createevent .content #EventEditor .field.nr2,
+#CalendarContent .event #EventEditor .field.nr3, #createevent .content #EventEditor .field.nr3,
+#CalendarContent .event #EventEditor .field.nr4, #createevent .content #EventEditor .field.nr4,
+#CalendarContent .event #EventEditor .field.nr5, #createevent .content #EventEditor .field.nr5,
+#CalendarContent .event #EventEditor .field.nr6, #createevent .content #EventEditor .field.nr6
+{
+	width: 100%;
+}
+
+#CalendarContent .event #EventEditor .field.nr5, #createevent .content #EventEditor .field.nr5,
+#CalendarContent .event #EventEditor .field.nr6, #createevent .content #EventEditor .field.nr6
+{
+	width: 50%;
+	border-sizing: border-box;
+}
+
+#CalendarContent .event #EventEditor .field.nr5, #createevent .content #EventEditor .field.nr1 td.value,
+#CalendarContent .event #EventEditor .field.nr6, #createevent .content #EventEditor .field.nr2 td.value,
+#CalendarContent .event #EventEditor .field.nr6, #createevent .content #EventEditor .field.nr3 td.value,
+#CalendarContent .event #EventEditor .field.nr6, #createevent .content #EventEditor .field.nr4 td.value
+{
+	position: relative;
+}
+
+#CalendarContent .event #EventEditor .field .label, #createevent .content #EventEditor .field .label
+{
+	vertical-align: middle;
+	padding-right: 10px !important;
+	padding-left: 10px !important;
+	/*width: 125px;*/
+	width: 70px;
+}
+
+#CalendarContent .event #EventEditor .field .value input, #createevent .content #EventEditor .field .value input
+{
+	background-color: #eeeeee;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 10px;
+	width: 100%;
+}
+
+#CalendarContent .event #EventEditor .field .value textarea, #createevent .content #EventEditor .field .value textarea
+{
+	font-size: 13px;
+	background-color: #eeeeee;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 10px;
+	width: 100%;
+	height: auto;
+	color: #777777 !important;
+}
+
+#CalendarContent .event #EventEditor .field .value select, #createevent .content #EventEditor .field .value select
+{
+	background-color: #eeeeee;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 5px;
+	width: 100%;
+	height: auto;
+}
+
+#CalendarContent .event #EventEditor .field .value select > option, #createevent .content #EventEditor .field .value select > option
+{
+	border: 0 none;
+    box-sizing: border-box;
+    margin: 0;
+	padding: 3px;
+}
+
+#CalendarContent .event #EventEditor .buttons, #createevent .content #EventEditor .buttons
+{
+	padding-top: 5px;
+	text-align: right;
+	width: 100%;
+}
+
+#CalendarContent .event #EventEditor .buttons > button, #createevent .content #EventEditor .buttons > button
+{
+	float: none;
+}
+
+
+
+#CalendarContent .image.edit .fileupload, #CalendarContent .image:hover .fileupload {
+    display: block;
+}
+
+#CalendarContent .fileupload > div {
+    background: rgba(0, 0, 0, 0) url("@url/img/upload.png") no-repeat scroll center center;
+}
+#CalendarContent .fileupload > div {
+    border-radius: 3px;
+    height: 30px;
+}
+#CalendarContent .upload_btn {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+}
+
+#CalendarContent .CalendarDay .image {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+	border: 1px solid #ffffff;
+}
+
+#CalendarContent .image.edit {
+	border: 2px dashed #cacaca;
+}
+
+#CalendarContent .CalendarDay .image .imagecontainer {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+	border: 1px solid #cacaca;
+}
+
+#CalendarContent .CalendarDay .image.edit .eventdate {
+	color: #686868;
+}
+
+#CalendarContent .CalendarDay .image .eventdate {
+    color: #343434;
+    font-size: 150%;
+    font-weight: bold;
+    left: 10px;
+    padding: 15px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+	background: rgba(255,255,255,0.6);
+}
+
+#CalendarContent .CalendarDay .image .eventdate .month {
+    font-size: 65%;
+}
+
+#CalendarContent .CalendarDay .image, #CalendarContent .wrapper {
+    float: left;
+}
+
+#CalendarContent .wrapper {
+    margin-left: 10px;
+    position: relative;
+	height: 150px;
+}
+
+#CalendarContent .eventview .CalendarDay .image
+{
+	width: 100%;
+	float: none;
+	height: 317px;
+}
+
+div#CalendarContent div.CalendarDay div.event div.wrapper div h3 {
+	cursor: pointer;
+}
+
+#CalendarContent .event .button {
+	position: absolute;
+	bottom: 0;
+}
+
+/*#CalendarContent .event .button button {
+	background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+	text-decoration: none;
+}*/
+
+#EventAccess {
+	-moz-appearance: none;
+    background: url("@url/img/dropdown.png") no-repeat;
+	background-position: center right;
+    border: medium none;
+    color: #515461;
+    font-family: Raleway;
+    font-size: 13px;
+	width: 30px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+#EventDetails {
+	background: none;
+	border: none;
+	color: #777777;
+	font-family: Raleway;
+}
+
+#CalendarContent #EditEvent {
+    background-color: #e7e7e7;
+    box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.8);
+	border: #b9b9b9;
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    border-radius: 8px;
+	font-family: Raleway;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 12px;
+    color: #7a7d88;
+    left: 0;
+    margin: -1px;
+    padding: 5px;
+    position: absolute !important;
+    top: 0;
+    z-index: 5 !important;
+	overflow: visible;
+	width: 210px !important;
+	height: auto !important;
+	text-align: center;
+}
+
+#CalendarContent #EditEvent.extended {
+	width: 420px !important;
+	margin: 0 !important;
+}
+
+#CalendarContent #EditEvent.extended td
+{
+	position: relative;
+	width: 60px !important;
+	text-align: left;
+	vertical-align: top;
+}
+
+#CalendarContent #EditEvent.extended td + td
+{
+	width: auto !important;
+}
+
+#CalendarContent #EditEvent.extended td span
+{
+	line-height: 20px;
+}
+
+#CalendarContent #EditEvent input#EventStart,
+#CalendarContent #EditEvent input#EventEnd
+{
+	width: 44% !important;
+}
+
+#CalendarContent #EditEvent.extended input#EventStartDate,
+#CalendarContent #EditEvent.extended input#EventStart,
+#CalendarContent #EditEvent.extended input#EventEndDate,
+#CalendarContent #EditEvent.extended input#EventEnd
+{
+	width: 45.5% !important;
+}
+
+#CalendarContent #EditEvent input {
+	margin: 5px 0;
+	border: none;
+	border-bottom: 1px solid #cacaca;
+	background: none;
+	outline: none;
+}
+
+#CalendarContent #EditEvent > div,
+#CalendarContent #EventEditor td.value
+{
+    position: relative;
+}
+
+#EditEvent #FindEvents,
+#EventEditor #FindEvents
+{
+    min-width: 100%;
+	height: auto;
+    position: absolute;
+    z-index: 6;
+	line-height: normal;
+	text-align: left;
+	padding: 0;
+}
+
+#EditEvent #FindEvents > div,
+#EventEditor #FindEvents > div
+{
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    display: none;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    position: relative;
+	box-sizing: border-box;
+}
+
+#EditEvent #FindEvents.open > div,
+#EventEditor #FindEvents.open > div
+{
+    display: block;
+}
+
+#EditEvent #FindEvents > div > ul, #EditEvent #FindEvents > div > ul > li,
+#EventEditor #FindEvents > div > ul, #EventEditor #FindEvents > div > ul > li
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#EditEvent #FindEvents > div > ul > li,
+#EventEditor #FindEvents > div > ul > li
+{
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#EditEvent #FindEvents > div > ul > li:hover,
+#EventEditor #FindEvents > div > ul > li:hover
+{
+    background: none repeat scroll 0 0 #dcdddd;
+    cursor: pointer;
+}
+
+#EventDate .info {
+	color: #686868;
+	padding: 2px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+#EventDate .nav {
+	cursor: pointer;
+}
+
+ul.EventDateTable {
+	list-style-type:none;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 39px;
+	padding-left: 15px;
+	border-bottom: 1px solid #cacaca;
+}
+
+ul.EventDateTable li {
+	float: left;
+	margin-right: 20px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border-color: #cacaca;
+}
+
+ul.EventDateTable li a span {
+}
+
+ul.EventDateTable li a {
+	color: #686868;
+	font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+	text-decoration: none;
+    text-transform: uppercase;
+	padding-bottom: 20px;
+}
+
+ul.EventDateTable li a:hover {
+	color: $colorDefault;
+}
+
+ul.EventDateTable li:hover, ul.EventDateTable .current {
+	padding-bottom: 19px;
+	border-bottom: 3px solid $colorDefault;
+}
+
+ul.EventDateTable .datenavigate {
+	float: right;
+}
+
+/* Calendar */
+
+.datetimefield
+{
+	position: relative;
+}
+
+.datetimefield input
+{
+	cursor: hand;
+	cursor: pointer;
+}
+
+.datetimefield.closed .calendar
+{
+	display: none;
+}
+
+.datetimefield .icon
+{
+	background: url("@url/img/booking_calendar.png") no-repeat center center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 5;
+	height: 100%;
+	width: 40px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.datetimefield input.dateinput
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	padding-left: 55px !important;
+	padding-right: 40px !important;
+	box-sizing: border-box;
+}
+
+.datetimefield input.timeinput
+{
+	position: relative;
+	z-index: 3;
+	width: 55px !important;
+	cursor: auto;
+}
+
+.datetimefield .calendar
+{
+	background-color: #f5f5f5;
+    border: 1px solid #cacaca;
+    
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+	left: -35px;
+    width: auto !important;
+    z-index: 5;
+}
+
+.datetimefield .calendar a
+{
+	text-decoration: none;
+	color: $colorDark;
+}
+
+.datetimefield .calendar table
+{
+    width: 100% !important;
+	border-collapse: collapse;
+}
+
+.datetimefield .calendar table > tbody > tr.sw1,
+.datetimefield .calendar table > tbody > tr.sw2
+{
+	background-color: transparent !important;
+}
+
+.datetimefield .calendar table th
+{
+    text-align: center;
+}
+
+.datetimefield .calendar table td
+{
+    text-align: left;
+}
+
+.datetimefield .calendar table tbody tr th,
+.datetimefield .calendar table tbody tr td
+{
+    border-collapse: collapse;
+}
+
+.datetimefield .calendar table tbody tr.hd th:first-child,
+.datetimefield .calendar table tbody tr.hd td:first-child,
+.datetimefield .calendar table tbody tr.sw1 th:first-child,
+.datetimefield .calendar table tbody tr.sw1 td:first-child,
+.datetimefield .calendar table tbody tr.sw2 th:first-child,
+.datetimefield .calendar table tbody tr.sw2 td:first-child
+{
+	display: none;
+}
+
+.datetimefield .calendar .nav
+{
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.datetimefield .calendar .nav .Left
+{
+    left: 10px;
+    position: absolute;
+    top: 0;
+}
+
+.datetimefield .calendar .nav .Right
+{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.datetimefield .calendar .nav .Center
+{
+    display: block;
+    text-align: center;
+}
+
+.datetimefield .calendar .Week,
+.datetimefield .calendar .prevYear,
+.datetimefield .calendar .nextYear
+{
+    display: none;
+}
+
+.datetimefield .calendar td > div
+{
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 5px 10px;
+	text-align: center;
+}
+
+.datetimefield .calendar .Selected
+{
+    background-color: #eeeeee;
+}
+
+.datetimefield .calendar .Reserved
+{
+    background-color: #0f75bd;
+    color: white;
+}
+
+.datetimefield .calendar .Space
+{
+    color: #cacaca;
+}
+
+.datetimefield .calendar .Available
+{
+    cursor: pointer;
+}
+
+/* --- CalendarMini --- */
+
+#CalendarMini table
+{
+	width: 100%;
+}
+
+#CalendarMini table,
+#CalendarMini table > tbody,
+#CalendarMini table > tbody > tr
+{
+	border-collapse: collapse;
+}
+
+#CalendarMini table tr.nv div.nav
+{
+	position: relative;
+}
+
+#CalendarMini table tr.nv div.nav a
+{
+	text-decoration: none;
+	color: inherit;
+	display: inline;
+	margin: 5px;
+}
+
+#CalendarMini table tr.nv div.nav .Left
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	z-index: 3;
+}
+
+#CalendarMini table tr.nv div.nav .Center
+{
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	padding-top: 2px;
+	z-index: 2;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#CalendarMini table tr.nv div.nav .Right
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 3;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+#CalendarMini table tr.nv,
+#CalendarMini table tr + tr th:first-child,
+#CalendarMini table tr + tr td:first-child
+{
+	display: none;
+}
+
+#CalendarMini table tr th,
+#CalendarMini table tr td
+{
+	font-size: 12px;
+	font-weight: normal;
+	/*padding: 0;*/
+}
+
+#CalendarMini table tr th
+{
+	text-transform: uppercase;
+}
+
+#CalendarMini table tr + tr th
+{
+	padding-bottom: 5px;
+}
+
+#CalendarMini table tr td > div
+{
+	box-sizing: border-box;
+	background-color: #e7e7e7;
+	position: relative;
+    text-align: center;
+	transition: all 0.1s ease-in-out 0s;
+	height: 100%;
+}
+
+#CalendarMini table tr td.ch2 > div
+{
+	background-color: #dbdbdb;
+}
+
+#CalendarMini table tr td > div > div.number
+{
+	position: relative;
+	padding: 7px;
+	box-sizing: border-box;
+	line-height: 20px;
+	z-index: 1;
+}
+
+/*#CalendarMini table tr td > div:hover,*/
+#CalendarMini table tr td > div.Selected
+{
+	cursor: pointer;
+	background-color: $colorDefault;
+	/*color: white;*/
+}
+
+#CalendarMini table tr td > div.Space,
+#CalendarMini table tr td > div.Space:hover
+{
+	background-color: #e7e7e7;
+	color: #c0c0c0;
+	cursor: auto;
+}
+
+#CalendarMini table tr td > div.Space > div.number
+{
+	display: none;
+}
+
+#CalendarMini table tr td > div div.events > span
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	border: 1px solid $colorDefault;
+}
+
+#CalendarMini table tr td > div div.events > span + span,
+#CalendarMini table tr td > div div.events .tooltips
+{
+	display: none;
+}
+
+#CalendarMini table tr td > div .toolnum
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 8px;
+	border-left: 1px solid $colorDefault;
+	border-bottom: 1px solid $colorDefault;
+	background-color: white;
+	padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 3px;
+	color: black;
+	line-height: normal;
+}

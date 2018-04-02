@@ -1,0 +1,129 @@
+
+#Wall .editor
+{
+    border: 1px solid #C0C0C0;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+#Wall .editor .textarea
+{
+	min-height: 50px;
+}
+
+#Wall .editor.closed
+{
+	overflow: hidden;
+	height: 30px;
+}
+
+#Wall .editor.closed .textarea
+{
+	min-height: 16px;
+}
+
+#Wall .editor.article .textarea
+{
+    border-top: 1px solid #C0C0C0;
+    position: relative;
+}
+
+#Wall .editor.article .textarea.extrafield,
+#Wall .editor.article .input.heading,
+#Wall .editor > .text
+{
+	padding: 7px;
+}
+
+#Wall .editor.article .textarea.leadin
+{
+	min-height: 100px;
+}
+
+#Wall .editor.article .textarea.article
+{
+	min-height: 150px;
+}
+
+#Wall .editor .input
+{
+	min-height: 16px;
+}
+
+#Wall .editor.article .text
+{
+	padding: 0;
+}
+
+#Wall .editor .toolbar
+{
+	border-top: 1px solid #C0C0C0;
+    height: 32px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#Wall .editor .toolbar .publish
+{
+	float: right;
+	padding: 4px;
+}
+
+#Wall .editor .toolbar .icons
+{
+	float: left;
+	padding: 4px;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 10px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Wall pre
+{
+    word-wrap: normal;
+}
+
+#Wall pre code
+{
+    padding: 0;
+    white-space: inherit;
+}
+
+#Wall pre
+{	
+    background-color: #DCDDDD;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    margin-bottom: 10px;
+    max-height: 600px;
+    overflow: auto;
+    padding: 5px;
+    width: auto;
+}
+
+#Wall pre code
+{
+    background-color: #DCDDDD;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+}
+
+#Wall pre code .kwd
+{
+    color: #00008B;
+}
+
+#Wall pre code .lit
+{
+    color: #800000;
+}
+
+#Wall pre code .str
+{
+    color: #800000;
+}
+
+#Wall pre code .com
+{
+    color: #808080;
+}

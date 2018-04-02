@@ -1,0 +1,1663 @@
+#Panel .profile.thumb {
+	display: block;
+	margin-bottom: 5px;
+}
+#WallTabs #AjaxLoader  {
+  float: right;
+  visibility: hidden;
+}
+
+#WallTabs #AjaxLoader  > div {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#WallTabs #AjaxLoader  .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+#WallTabs #AjaxLoader  .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+#WallTabs #AjaxLoader.loading {
+    visibility: visible;
+}
+#WallTabs .page {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+#WallTabs .active {
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+}
+#Wall .Box {
+    padding: 10px 0px 15px 15px;
+}
+#Wall .Box div.tabs a {
+	color: #d6d8ec;
+    display: block;
+    height: 25px;
+    line-height: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+#Wall .Box div.tabs a:hover, #Wall .Box div.tabs a.current {
+	color: #15649e;
+	/*display: none;*/
+}
+#Wall p.Buttons {
+    text-align: right;
+}
+
+#Wall .Comment {
+    position: relative;
+}
+
+.post .edit {
+	border: 1px solid transparent;
+    padding-left: 5px;
+	float: right;
+}
+
+.post .options {
+    background: url("img/dropdown.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 16px;
+    padding: 0 !important;
+    width: 20px;
+}
+
+.comment .options {
+    background: none;
+    cursor: pointer;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+}
+
+.comment:hover > .edit {
+    background: url("img/edit.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	cursor: pointer;
+    height: 10px;
+    width: 10px;
+	position: absolute;
+    right: 30px;
+    top: 65px;
+}
+
+#Wall .Comment > .Box > .Edit.comment > div.options {
+    background: none repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 20px;
+    padding: 0 !important;
+    width: 20px;
+}
+
+.comment {
+	background-color: #2d313d;
+	position: relative;
+	border-bottom: 1px solid #272831;
+}
+
+.replybox {
+	background-color: #2d313d;
+	padding: 5px 20px;
+	padding-bottom: 18px;
+	padding-top: 0;
+	border-radius: 0 0 8px 8px;
+}
+
+.replybox .avatar {
+	position: relative;
+	z-index: 1;
+	border: 4px solid #cacaca;
+	border-radius: 100%;
+    height: 28px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 28px;
+	float: left;
+	margin-top: -2px;
+}
+
+.replybox .avatar div {
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+#Wall #WallOptions {
+    height: auto;
+    min-width: 100px;
+    padding: 6px;
+    position: absolute;
+    right: -7px;
+    top: 23px;
+    z-index: 200;
+	background-color: #313541;
+    border-radius: 8px;
+	border: 1px solid #53565d;
+    color: #7a7d88;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+}
+#Wall #WallOptions .toparrow {
+    height: 10px;
+    left: 85px;
+    position: absolute;
+    top: -10px;
+    width: 21px;
+}
+
+#Wall #WallOptions .toparrow:before, #Wall #WallOptions .toparrow:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top: 0;
+}
+
+#Wall #WallOptions .toparrow:before {
+    border-bottom-color: #464a54;
+    border-width: 10px;
+}
+
+#Wall #WallOptions .toparrow:after {
+    bottom: 0;
+    left: 1px;
+    border-bottom-color: #313541;
+    border-width: 9px;
+}
+
+#Wall #WallOptions .inner {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+#Wall #WallOptions ul, #Wall #WallOptions li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#Wall #WallOptions ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#Wall #WallOptions ul li:hover {
+    cursor: pointer;
+	background-color: #2c2f38;
+}
+#Wall #WallOptions a {
+    color: #979bb7;
+    line-height: 20px;
+}
+
+#Wall .Comment .name {
+	float: left;
+	position: relative;
+	top: 23px;
+}
+
+#Wall .Comment .name a u {
+	text-decoration: none;
+	position: relative;
+	top: -6px;
+	font-size: 14px;
+	color: #585a66;
+}
+
+.floatleft .date {
+	color: #656a77;
+    float: right;
+    font-size: 14px;
+    left: -43px;
+    position: relative;
+    text-align: right;
+    top: -57px;
+    width: 100%;
+}
+
+.floatleft .date .voteimg {
+	position: relative;
+	left: 50px;
+}
+
+.nickname {
+    left: 5px;
+    position: relative;
+    top: 13px;
+}
+
+.comment .nickname {
+	float: left;
+}
+
+.comment .posted {
+	padding: 20px 20px;
+}
+
+.messagebox .edit {
+	position: relative;
+}
+
+.access {
+	float: right;
+}
+
+.access > select {
+    float: left;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+    background: url("img/dropdown.png") no-repeat scroll 100% center / 15% auto #313541;
+    border: medium none;
+    color: #515461;
+    font-family: Raleway;
+    font-size: 13px;
+    position: relative;
+    width: 70px;
+	margin-right: 10px;
+}
+
+.access > .custom.select
+{
+	border: 1px solid transparent;
+	float: left;
+	margin-right: 10px;
+	margin-top: -5px;
+	height: 28px;
+}
+
+.access > .custom.select ul
+{
+	margin-top: -1px;
+	margin-left: -1px;
+}
+
+.access > .custom.select ul li
+{
+	line-height: 28px;
+	padding-left: 8px;
+}
+
+.access > .custom.select:hover
+{
+	border: 1px solid #cacaca;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.comment .buttons {
+	display: none;
+}
+
+.post .date {
+	float: right;
+	position: relative;
+	color: #656a77;
+    font-size: 14px;
+	padding-right: 41px;
+	padding-right: 15px;
+}
+
+/*
+
+.post .bookmark {
+	float: right;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0;
+	margin-left: 10px;
+}
+
+.post .bookmark > div
+{
+	background: url("img/bookmark_like.png") center center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+*/
+
+.post .bookmark {
+	display: block;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	float: right;
+	z-index: auto;
+	width: 0;
+	height: 65px;
+	position: static;
+	cursor: hand;
+	cursor: pointer;
+	opacity: 1;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	border: 12px solid #91929f;
+	border-top: 0 solid;
+	border-bottom: 10px solid rgba(0,0,0,0);
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	-webkit-transform: none;
+	transform: none;
+	-webkit-transform-origin: 50% 50% 0;
+	transform-origin: 50% 50% 0;
+	position: relative;
+	top: 0;
+	right: 0;
+	margin-top: -40px;
+}
+
+.post .bookmark:hover > div, .post .bookmark > div:hover {
+	background: url("img/star_full.png") center center no-repeat;
+	width: 16px;
+	height: 15px;
+	display: block;
+	position: absolute;
+	top: 40px;
+	left: -8px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.post .bookmark.marked, .post .bookmark:hover {
+	height: 65px;
+	display: block;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	float: right;
+	z-index: auto;
+	width: 0;
+	position: static;
+	opacity: 1;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	border: 12px solid #d6d8ec;
+	border-top: 0 solid;
+	border-bottom: 10px solid rgba(0,0,0,0);
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	-webkit-transform: none;
+	transform: none;
+	-webkit-transform-origin: 50% 50% 0;
+	transform-origin: 50% 50% 0;
+	position: relative;
+	top: 0;
+	right: 0;
+	margin-top: -40px;
+}
+
+.post .bookmark > div {
+	background: url("img/star_white.png") center center no-repeat;
+	width: 16px;
+	height: 15px;
+	display: block;
+	position: absolute;
+	top: 40px;
+	left: -8px;
+}
+
+.post .bookmark.marked > div {
+	background: url("img/star_full.png") center center no-repeat;
+	width: 16px;
+	height: 15px;
+	display: block;
+	position: absolute;
+	top: 40px;
+	left: -8px;
+}
+
+.comment .date {
+	float: right;
+	position: relative;
+	right: 5px;
+	top: 12px;
+	color: #656a77;
+    font-size: 14px;
+}
+
+.comment .vote {
+	position: relative;
+	left: 14px;
+	top: 12px;
+	
+}
+
+.comment .rate {
+	position: relative;
+	top: 12px;
+}
+
+/*
+#Wall .Comment .date {
+	float: right;
+	position: relative;
+	right: 12px;
+	top: -27px;
+	color: #656a77;
+    font-size: 14px;
+}
+*/
+
+.posted table {
+	width: 100%;
+}
+
+.posted table tr td:first-child {
+	width: 37px;
+	vertical-align: top;
+}
+
+.commentbox table tr td:first-child {
+	vertical-align: top;
+}
+
+
+.date > select {
+    float: left;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+    background: url("img/dropdown.png") no-repeat scroll 100% center / 15% auto rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #515461;
+    font-family: Raleway;
+    font-size: 13px;
+    position: relative;
+    width: 70px;
+	margin-right: 10px;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  color: #d6d8ec;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > .Buttons {
+    margin-top: 20px;
+}
+#Wall .Comment.Article > .Box > .messagebox > .posted {
+    float: right;
+    padding: 10px 0 5px 10px;
+}
+#Wall .Comment.Article > .Box > .messagebox > .posted .image {
+    border: 1px solid #c0c0c0;
+    height: 28px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 30px;
+}
+#Wall .Comment.Article > .Box > .messagebox > h2 {
+    margin: 0;
+    padding: 15px 10px 5px;
+}
+#Wall .Comment.Article > .Box > .messagebox > h2 > a {
+    text-decoration: none;
+}
+#Wall .Comment.Article > .Box > .messagebox > h2 > a:hover {
+    text-decoration: underline;
+}
+#ShareContent {
+    padding: 15px 0 15px 15px;
+}
+#ShareContent table {
+    border-collapse: collapse;
+}
+#ShareContent .commentbox table {
+    width: 100%;
+}
+#ShareContent .nickname a {
+    color: #979bb7;
+	text-decoration: none;
+	font-weight: 600;
+	position: relative;
+}
+#ShareContent .ReplyBox {
+    padding: 0 10px 10px;
+}
+#ShareContent .ReplyBox table {
+    width: 100%;
+}
+#ShareContent .ReplyBox .image {
+    border: 1px solid #125e93;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+    height: 28px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 30px;
+}
+.replybox .textarea.post {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-height: 26px;
+    padding-bottom: 4px;
+    padding-right: 70px;
+    padding-top: 4px;
+}
+
+.messagebox:focus {
+	border: 1px solid #1568a4 !important;
+}
+
+.focus  {
+    border: 1px solid #1568a4 !important;
+}
+
+.replybox button {
+    bottom: 4px;
+    position: absolute;
+    right: 4px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	background: #871414;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg3MTQxNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZDBmMGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #871414 0%, #bd0f0f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#871414), color-stop(100%,#bd0f0f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #871414 0%,#bd0f0f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #871414 0%,#bd0f0f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #871414 0%,#bd0f0f 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #871414 0%,#bd0f0f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#871414', endColorstr='#bd0f0f',GradientType=0 ); /* IE6-8 */
+	padding: 3px 7px;
+}
+.replybox div.reply {
+    background-color: #17181d;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+    padding: 2px 2px 2px 8px;
+    position: relative;
+	width: 93%;
+	float: right;
+}
+#ShareContent > div.messagebox {
+    border: 1px solid #262932;
+	background-color: #313541;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+	color: #d6d8ec;
+	overflow: hidden;
+}
+
+#ShareContent .seen {
+    float: right;
+	position: relative;
+}
+
+#ShareContent .seen span, #ShareContent .rate .amount {
+	color: #5b5f6d;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+	position: relative;
+}
+
+.post .posted {
+	padding: 20px;
+}
+
+#ShareContent .post .content {
+
+}
+
+#ShareContent .content {
+	padding: 20px 20px;
+	padding-top: 0;
+	font-size: 14px;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+.content a {
+	color: #40B0FF;
+	text-decoration: none;
+}
+	
+.replycontent {
+	width: 100%;
+	float: left;
+}
+
+.Buttons > .floatleft {
+	width: 100px;
+	display: inline-flex;
+}
+
+.vote:hover {
+	cursor: pointer;
+}
+.vote .voteimg.up {
+	background: url("img/like.png");
+	width: 13px;
+	height: 12px;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.vote .voteimg.up.marked, .vote .voteimg.up:hover {
+	background: url("img/like_m.png");
+}
+
+.vote .voteimg.down {
+	background: url("img/dislike.png");
+	width: 13px;
+	height: 11px;
+	display: block;
+	float: left;
+	margin-top: 5px;
+}
+
+.vote .voteimg.down.marked, .vote .voteimg.down:hover {
+	background: url("img/dislike_m.png");
+}
+
+#ShareContent .buttons .reply {
+    float: left;
+	padding-right: 10px;
+}
+
+#ShareContent .buttons .vote {
+    float: left;
+}
+
+#ShareContent .rate {
+    float: right;
+	position: relative;
+}
+
+#ShareContent .ratebox {
+    background-color: transparent;
+    background-image: url("img/star.png");
+    background-repeat: repeat-x;
+    height: 12px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 4px;
+    width: 70px;
+	float: left;
+}
+
+#ShareContent .ratebox > div {
+    background-color: transparent;
+    background-image: url("img/star-full.png");
+    background-repeat: repeat-x;
+    height: 100%;
+}
+
+.floatright > a {
+	font-size: 13px;
+	color: #5b5f6d;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.Buttons .voteimg.up {
+	background: url("img/like.png") !important;
+	width: 13px !important;
+	height: 12px !important;
+	float: right !important;
+	position: relative;
+	top: 3px;
+}
+
+.Buttons .voteimg.down{
+	background: url("img/dislike.png") !important;
+	width: 13px !important;
+	height: 11px !important;
+	float: right !important;
+	position: relative;
+	top: 3px;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .posted {
+    padding-bottom: 0;
+}
+
+.post .avatar {
+    border: 4px solid #121317;
+	border-radius: 100%;
+    height: 40px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 40px;
+	float: left;
+}
+
+.post .avatar div {
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.posted .avatar {
+    border: 4px solid #121317;
+	border-radius: 100%;
+    height: 40px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 40px;
+	float: left;
+}
+
+.posted .avatar:hover {
+	box-shadow: 0 0 4px #3E4250;
+	border: 4px solid #3E4250;
+}
+
+.posted .avatar div {
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+#ShareContent .buttons {
+	background-color: #2d313d;
+	padding: 20px;
+}
+
+#ShareContent > .messagebox .post .buttons div.result
+{
+    float: right;
+}
+#ShareContent > .messagebox .post .buttons span.result
+{
+    cursor: pointer;
+}
+
+#ShareContent .buttons .reply button{
+	background: none;
+	border: none;
+	font-size: 13px;
+	color: #5b5f6d;
+	font-family: Raleway;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+#ShareContent .Comment .Comment {
+    border: 0 none;
+    padding: 0 10px 10px;
+}
+#ShareContent .Comment .Comment > .Box {
+    border-top: 1px solid #272831;
+}
+#ShareContent .Comment .Comment > .Box > p, #ShareContent .Comment .Comment > .Box > div {
+    padding-top: 10px;
+}
+#ShareContent .Comment .Comment .Box .commentbox > table > tbody > tr > td > .image {
+    border: 1px solid #125e93;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+    height: 28px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 30px;
+}
+
+#ShareContent .messagebox .post > .voteoptions
+{
+    padding: 20px;
+}
+#ShareContent .messagebox .post > .voteoptions input
+{
+    width: auto;
+}
+#ShareContent .messagebox .post > .voteoptions .option > div.result
+{
+    display: none;
+}
+#ShareContent .messagebox .post > .voteoptions.showresult .option > div.result
+{
+    display: block;
+}
+#ShareContent .messagebox .post > .voteoptions.showresult .option > div.input
+{
+    display: none;
+}
+#ShareContent .messagebox .voteoptions .option
+{
+    margin-top: 5px;
+    position: relative;
+}
+#ShareContent .messagebox .voteoptions .option:first-child
+{
+    margin: 0;
+}
+#ShareContent .messagebox .voteoptions .option .info
+{
+    padding: 5px 10px;
+    position: relative;
+    z-index: 1;
+}
+#ShareContent .messagebox .voteoptions .option .rate
+{
+    background-color: #2d313d;
+    height: 100%;
+    left: 0;
+    position: absolute;
+}
+
+.floatright {
+    float: right;
+    position: relative;
+}
+
+.tooltips {
+	background-color: #313541;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    color: #7a7d88;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    text-align: left;
+    bottom: 25px;
+    visibility: hidden;
+    width: auto;
+	white-space: nowrap;
+	padding: 6px;
+	right: -15px;
+}
+
+.tooltips.open {
+    visibility: visible;
+    z-index: 99;
+}
+.tooltips .bottomarrow {
+    bottom: -12px;
+    height: 12px;
+    position: absolute;
+    right: 8px;
+    width: 24px;
+}
+
+.tooltips .bottomarrow:before, .tooltips .bottomarrow:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom: 0;
+}
+
+.tooltips .bottomarrow:before {
+    border-top-color: #464a54;
+    border-width: 10px;
+}
+
+.tooltips .bottomarrow:after {
+    top: 0px;
+    left: 1px;
+    border-top-color: #313541;
+    border-width: 9px;
+}
+
+.tooltips .inner {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+.tooltips ul, .tooltips li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+#ListFoundContacts {
+    position: relative;
+}
+#ListFoundContacts > div {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 5px;
+    position: absolute;
+    top: 4px;
+    z-index: 3;
+}
+#ListFoundContacts > div > table {
+    border-collapse: collapse;
+}
+#ListFoundContacts > div > table > tbody > tr {
+    cursor: pointer;
+}
+#ListFoundContacts > div > table > tbody > tr:hover {
+    background: none repeat scroll 0 0 #dcdddd;
+}
+#ListFoundContacts > div > table > tbody > tr > td {
+    padding: 4px;
+}
+#ListFoundContacts .image {
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+}
+#ShareBox span.contact {
+    background: none repeat scroll 0 0 #dcdddd;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+#ShareBox span.contact a {
+    color: #000000;
+    margin-left: 1px;
+    margin-right: 3px;
+    text-decoration: none;
+}
+#Wall .content a, #Wall .replycontent a {
+    text-decoration: underline;
+}
+
+/* Editor */
+
+#Wall .editor {
+    background-color: #17181d;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+    position: relative;
+	overflow: hidden;
+}
+#Wall .editor .textarea {
+    min-height: 28px;
+}
+#Wall .editor.closed {
+    height: 37px;
+	overflow: hidden;
+}
+#Wall .editor.open .textarea {
+    padding: 10px;
+}
+#Wall .editor.article .textarea {
+    border-top: 1px solid #c0c0c0;
+    position: relative;
+}
+#Wall .editor.article .textarea.extrafield, #Wall .editor.article .input.heading, #Wall .editor > .text {
+    padding: 10px;
+}
+#Wall .editor.article .textarea.leadin {
+    min-height: 100px;
+}
+#Wall .editor.article .textarea.article {
+    min-height: 150px;
+}
+#Wall .editor .input {
+    min-height: 16px;
+}
+#Wall .editor.article .text {
+    padding: 0;
+}
+#Wall .editor .toolbar {
+	background: #313541;
+    height: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#Wall .comment .editor .toolbar
+{
+	background-color: #464a54;
+}
+#Wall .editor .toolbar .publish {
+    float: right;
+    padding-right: 15px;
+	position: relative;
+	top: 12px;
+}
+
+#Wall .editor .toolbar .publish button {
+	font-size: 13px;
+	font-weight: 700;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	background: #871414;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg3MTQxNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZDBmMGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #871414 0%, #bd0f0f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#871414), color-stop(100%,#bd0f0f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #871414 0%,#bd0f0f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #871414 0%,#bd0f0f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #871414 0%,#bd0f0f 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #871414 0%,#bd0f0f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#871414', endColorstr='#bd0f0f',GradientType=0 ); /* IE6-8 */
+	padding: 5px 10px;
+}
+
+#Wall .editor .toolbar .publish button.cancel_btn
+{
+	background: linear-gradient(to bottom,  #871414 0%,#bd0f0f 100%) repeat scroll 0 0 #dcdcdc;
+}
+#Wall .editor .toolbar .publish select {
+	width: 70px;
+    border: medium none;
+    color: #515461;
+	font-family: Raleway;
+	font-size: 13px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	background: url("img/dropdown.png") 100% / 15% no-repeat;
+	position: relative;
+	margin-right: 5px;
+}
+
+
+#Wall .editor .toolbar .icons {
+    cursor: pointer;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px 4px 4px 10px;
+}
+#Wall pre {
+    word-wrap: normal;
+}
+#Wall pre code {
+    padding: 0;
+    white-space: inherit;
+}
+#Wall pre {
+    background-color: #dcdddd;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    margin-bottom: 10px;
+    max-height: 600px;
+    overflow: auto;
+    padding: 5px;
+    width: auto;
+}
+#Wall pre code {
+    background-color: #dcdddd;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+}
+#Wall pre code .kwd {
+    color: #00008b;
+}
+#Wall pre code .lit {
+    color: #800000;
+}
+#Wall pre code .str {
+    color: #800000;
+}
+#Wall pre code .com {
+    color: #808080;
+}
+
+/* Media */
+
+
+#Wall div.fileupload {
+    height: 100px;
+    position: relative;
+}
+#Wall div.fileupload .edit_btn {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+}
+#Wall div.fileupload .edit_btn:hover {
+    background: none repeat scroll 0 0 #dcdddd;
+}
+#Wall div.fileupload .edit_btn > div {
+    display: table;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#Wall div.fileupload .edit_btn > div > span {
+    cursor: pointer;
+    display: table-cell;
+    padding: 4px 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+#Wall div.fileupload .edit_btn form, #Wall div.fileupload .edit_btn input {
+    height: 100%;
+    width: 100%;
+}
+#Wall div.postmedia {
+    float: left;
+    position: relative;
+	top: 17px;
+	left: 15px;
+}
+#Wall div.postmedia .edit_btn {
+	background-image: url("img/upload.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+    cursor: pointer;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+#Wall div.postmedia .edit_btn:hover {
+}
+#Wall div.postmedia .edit_btn > div {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#Wall div.postmedia .edit_btn > div > span {
+    display: none;
+}
+#Wall div.postmedia .edit_btn form, #Wall div.fileupload .edit_btn input {
+    height: 100%;
+    width: 100%;
+}
+#Wall .ParseContent .image.album {
+    float: left;
+    height: auto;
+    padding: 2px;
+    position: relative;
+	width: 100%;
+}
+#Wall #WallEditor .ParseContent .image.album {
+    float: left;
+    height: 120px;
+    padding: 2px;
+    position: relative;
+    width: 120px;
+}
+
+#Wall #WallEditor .poll
+{
+	padding: 10px;
+	padding-top: 0;
+}
+
+#Wall #WallEditor .voteoptions .options
+{
+	border-top: 1px solid #cacaca;
+	padding: 5px;
+}
+
+#Wall #WallEditor .voteoptions .options:last-child
+{
+	padding-bottom: 0;
+}
+
+#Wall #WallEditor .voteoptions input
+{
+	width: 100%;
+	border: 0;
+}
+#ParseContent .image.album .Edit {
+    margin: 0;
+}
+.clearboth {
+    clear: both;
+}
+#WallEditor .ParseContent .fileupload {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+    height: 120px;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    width: 120px;
+}
+#WallEditor .ParseContent .fileupload > div {
+    border-radius: 3px;
+    height: 116px;
+}
+#WallEditor .ParseContent .fileupload > div {
+    background: url("../../../../subether/gfx/cross.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border: 2px dashed #c0c0c0;
+}
+
+/* Parse */
+
+.ParseContent {
+	position: relative;
+	padding: 20px;
+	padding-top: 0;
+    position: relative;
+}
+
+#WallEditor .ParseContent
+{
+	padding: 10px;
+}
+
+.ParseContent.Site,.ParseContent.File, .ParseContent.Video, .ParseContent.Audio {
+	padding-top: 20px;
+	border-top: 1px solid #cacaca;
+}
+.ParseContent img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100% !important;
+}
+
+.ParseContent .image > iframe
+{
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+
+.ParseContent .image {
+    cursor: pointer;
+    position: relative;
+	background-position: center center;
+    background-size: cover;
+    height: 154px;
+    width: 154px;
+}
+
+.ParseContent .image.small {
+	float: left;
+	margin-right: 20px;
+}
+
+.ParseContent .image.site.small {
+    background-position: center center;
+    background-size: auto;
+    height: 154px;
+    width: 154px;
+}
+
+.ParseContent .image.big {
+    background-position: center center;
+    background-size: auto;
+	height: auto;
+    width: 100%;
+	min-height: 154px;
+	max-height: 500px;
+}
+.ParseContent .image.event.big {
+	max-height: 320px;
+}
+
+.ParseContent .image.event.big img
+{
+	max-height: 320px !important;
+}
+
+.ParseContent .image.big img
+{
+	max-height: 500px !important;
+}
+
+.ParseContent .image.big .imagecontainer
+{
+	height: 100%;
+}
+
+.ParseContent.Video .image {
+    background-position: center center;
+    background-size: cover;
+    height: 154px;
+    width: 154px;
+}
+
+.ParseContent .image > img {
+    background-position: center center;
+    background-size: cover;
+    height: 154px;
+    width: 154px;
+}
+.ParseContent .image.video {
+    float: none;
+    height: auto;
+    padding-right: 0;
+    width: 100%;
+}
+.ParseContent .image.big {
+    cursor: pointer;
+    overflow: hidden;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    position: relative;
+}
+.ParseContent .image.big > .imagecontainer > a {
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    height: 100%;
+}
+.ParseContent .image.big > .imagecontainer > a > img {
+    visibility: hidden;
+}
+.ParseContent .image.album {
+    width: 100%;
+}
+.ParseContent .image.small .imagecontainer {
+    height: 154px;
+    overflow: hidden;
+    position: relative;
+}
+.ParseContent .image.small .imagecontainer > a {
+    background-position: center center;
+    background-size: cover;
+    height: 154px;
+    position: absolute;
+    width: 154px;
+}
+.ParseContent .image.small .imagecontainer > a > img {
+    visibility: hidden;
+}
+#ParseContent .image.big img {
+    height: 100%;
+    width: 100%;
+}
+.ParseContent .image .arrows {
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+}
+.ParseContent .image em {
+	background-image: url("../../gfx/play.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+	width: 54px;
+	height: 54px;
+}
+
+.comment .ParseContent .image em {
+    background-image: url("../../gfx/play_thumb.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    bottom: 12px;
+    height: 26px;
+    left: 12px;
+    margin: 0;
+    position: absolute;
+    right: auto;
+    top: auto;
+    width: 35px;
+}
+.ParseContent .image:hover em {
+    background-position: 0 -55px;
+}
+.comment .ParseContent .image em {
+	background-position: 0 0;
+}
+.ParseContent .image.small > .imagecontainer {
+    width: 150px;
+}
+.ParseContent .image > .imagecontainer img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+.ParseContent .image .eventdate {
+    color: white;
+    font-size: 150%;
+    font-weight: bold;
+    left: 0;
+    padding: 15px;
+    position: absolute;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    top: 0;
+}
+
+.ParseContent .image .eventdate .month {
+	font-size: 65%;
+}
+
+.ParseContent .text > p.button {
+    bottom: 0;
+    position: absolute;
+    right: 20px;
+}
+
+.ParseContent .text > p.button button {
+	background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+	text-decoration: none;
+}
+
+.ParseContent .text {
+	position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ParseContent > .text > p {
+	max-height: 75px;
+    padding-right: 0 !important;
+	margin-top: 0;
+	margin-bottom: 35px;
+	color: #d6d8ec;
+}
+
+.ParseContent .text > p > a {
+	display: block;
+	max-height: 75px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ParseContent .text > p.url {
+    bottom: 0;
+    /*padding: 12px !important;*/
+	padding: 0;
+	margin: 0;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+/* Edit: Chris edited 25.09.15 */
+.ParseContent .text > h3 {
+	line-height: 40px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 50px;
+}
+.ParseContent h3 {
+    margin: 0;
+}
+.ParseContent a, .ParseContent a:hover {
+    color: #d6d8ec;
+    text-decoration: none;
+}
+.commentbox .html {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.commentbox .ParseContent {
+    min-height: 100px;
+}
+.commentbox .ParseContent .image {
+    height: 100%;
+    min-height: 100px;
+    width: 130px;
+}
+.commentbox .ParseContent .image.small img {
+    visibility: hidden;
+}
+.commentbox .ParseContent > .image.small > a {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100px;
+    width: 130px;
+}
+.commentbox .ParseContent .image.video, .commentbox .ParseContent .image.file, .ParseContent .image.video, .ParseContent .image.file {
+    float: none;
+    width: 100%;
+}
+.ParseContent .image.file + .text {
+    display: none;
+}
+.commentbox .ParseContent .image.video iframe, .commentbox .ParseContent .image.video video, .commentbox .ParseContent .image.file object, .commentbox .ParseContent .image.file iframe, .ParseContent .image.video iframe, .ParseContent .image.video video, .ParseContent .image.file object, .ParseContent .image.file iframe {
+    width: 100% !important;
+}
+.ParseContent > .image.file, .ParseContent > .image.file > iframe {
+}
+.commentbox .ParseContent .image em {
+    background-image: url("../gfx/play_thumb.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    bottom: 12px;
+    height: 26px;
+    left: 5px;
+    margin: 0;
+    position: absolute;
+    right: auto;
+    top: auto;
+    width: 35px;
+}
+.commentbox .ParseContent .image > img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+}
+.commentbox .ParseContent > .text {
+    height: 80px;
+    margin-bottom: 21px;
+    padding: 0;
+}
+#ParseContent {
+    position: relative;
+}
+#ParseContent .Edit {
+    border: 1px solid transparent;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+}
+#Wall .Comment p {
+    clear: both;
+}
+#ParseContent .image .Edit {
+    margin-right: 7px;
+}
+#ParseContent .Edit:hover {
+    border: 1px solid #c0c0c0;
+    cursor: pointer;
+}
+#ParseContent .Edit > div {
+    background: url("../../gfx/x.png") repeat scroll center center rgba(0, 0, 0, 0);
+    height: 15px !important;
+    width: 15px !important;
+}
+/* Edit: Chris edited 08.09.15 (temporary) */
+#Wall .messagebox.events .bookmark,
+#Wall .messagebox.events .buttons,
+#Wall .messagebox.events .replybox
+{
+	display: none;
+}

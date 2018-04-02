@@ -1,0 +1,157 @@
+
+/* --- wall --- */
+
+#Wall .editor
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Wall .editor .toolbar
+{
+	background-color: #DCDDDD;
+}
+
+#Wall .ParseContent
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Wall .Edit
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Wall .Edit:hover
+{
+	background-color: #FFFFFF;
+}
+
+#Wall .posted .image,
+#Wall .posted .avatar
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > h2
+{
+	text-transform: uppercase;
+}
+
+#Wall .Comment .messagebox .ParseContent h3
+{
+	margin-bottom: 5px;
+}
+
+//#ShareContent .messagebox .voteoptions .option .rate
+//{
+//	background-color: #0f75bd !important;
+//}
+
+#ShareContent .ReplyBox
+{
+	background-color: #DCDDDD;
+}
+
+#ShareContent .ReplyBox .image
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#ShareContent .ReplyBox div.reply
+{
+	background-color: #FFFFFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#ShareContent > .Comment,
+#ShareContent > .messagebox
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#ShareContent > .Comment .Comment
+{
+	background: #DCDDDD;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .Buttons
+{
+	background: #DCDDDD;
+}
+
+#ShareContent .Comment .Comment .Box .commentbox > table > tbody > tr > td > .image
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#share .head
+{
+	background-color: #006600;
+	color: #ffffff;
+}
+
+#share .head > h1
+{
+	text-transform: uppercase;
+}
+
+#share .buttons 
+{
+	background-color: #DCDDDD;
+}
+
+/* --- messages --- */
+
+#Messages .post > input
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Messages #MainIM #ListIM,
+#Messages #ListIM_inner
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Messages #MainIM #RightIM,
+#Messages #RightIM_inner .messages
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Messages #MainIM #ListIM .image
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Messages #MainIM #RightIM .image,
+#Messages #MainIM #RightIM .Image
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}

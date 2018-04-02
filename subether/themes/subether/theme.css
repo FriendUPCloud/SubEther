@@ -1,0 +1,51 @@
+/* import css styles */
+
+@append url(main.css);
+@append url(authentication.css);
+@append url(profile.css);
+@append url(popup.css);
+@append url(wall.css);
+@append url(chat.css);
+@append url(emoticons.css);
+@append url(events.css);
+@append url(files.css);
+@append url(groups.css);
+@append url(booking.css);
+@append url(admin.css);
+@append url(browse.css);
+@append url(icons.css);
+@append url(store.css);
+@append url(crowdfunding.css);
+@append url(case.css);
+@append url(orders.css);
+@append url(members.css);
+@append url(album.css);
+@append url(global.css);
+@append url(mobile.css);
+@append url(presentation.css);
+
+@declaration
+{
+	/* Fonts */
+	/*$fontDefault: 'Open Sans', sans-serif;
+	$fontMonospace: monospace, courier, courier new;
+	$fontSizeBase: 14px;*/
+	
+	/* Colors */
+	/*$colorBody: #ffffff;*/
+	
+	/* Margins */
+	/*$marginBody: 0px;*/
+	
+	/* Paddings */
+	/*$paddingBody: 50px 0 0 0;
+	
+	$defaultLinkColor: #0f75bd;*/
+	
+	/* Colors */
+	
+	$colorDark: #00261D;
+	$colorDefault: #003629;
+	$colorLight: #006655;
+	$colorLighter: #008E77;
+}

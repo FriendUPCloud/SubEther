@@ -1,0 +1,330 @@
+
+#Admin .Box
+{
+	padding-top: 0 !important;
+}
+
+#Admin .Box .tabs
+{
+	margin-bottom: 0 !important;
+}
+
+#Admin .Box .mailing
+{
+	padding-top: 15px;
+}
+
+#Admin div.checkbox input
+{
+	display: block !important;
+}
+
+#Admin .clearboth
+{
+    clear: both;
+    float: none;
+}
+
+#Admin .navigator
+{
+    /*margin-bottom: 10px;
+    padding-bottom: 20px;*/
+	padding-bottom: 8px;
+	border-bottom: 1px solid #cacaca;
+	padding-top: 15px;
+    width: 100%;
+}
+
+#Admin .navigator .wrapper
+{
+    float: left;
+}
+
+#Admin .navigator .wrapper .container
+{
+    padding-right: 10px;
+	position: relative;
+}
+
+#Admin .navigator .wrapper .container.children
+{
+    padding-right: 0;
+}
+
+#Admin .navigator .wrapper .container > div
+{
+    width: 100%;
+}
+
+#Admin .navigator .wrapper.placename
+{
+    width: 42%;
+	/*width: 66%;*/
+}
+
+#Admin .navigator .wrapper.fromdate, #Admin .navigator .wrapper.todate
+{
+    width: 13%;
+}
+
+#Admin .navigator .wrapper.number, #Admin .navigator .wrapper.adults, #Admin .navigator .wrapper.children
+{
+    width: 8%;
+}
+
+#Admin .navigator .wrapper.buttons
+{
+    width: 31%;
+	text-align: right;
+}
+
+#Admin .navigator .heading
+{
+    padding-bottom: 5px;
+}
+
+#Admin .navigator .heading.placename
+{
+    padding-left: 15px;
+}
+
+#Admin .navigator .input
+{
+    position: relative;
+	/*border-bottom: 1px solid #cacaca;*/
+}
+
+#Admin .navigator .input > div
+{
+    padding-right: 10px;
+    position: relative;
+}
+
+#Admin .navigator .input.placename > div
+{ 
+	padding-left: 15px; 
+}
+
+#Admin .navigator input
+{
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#Admin .navigator .placename button, #Admin .navigator .fromdate button, #Admin .navigator .todate button
+{
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: black;
+    line-height: 27px;
+    margin: 0;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#Admin .navigator .buttons button
+{
+	width: 70px;
+	margin: 0 5px 0 0;
+    padding: 4px 3px;
+	line-height: 25px;
+}
+
+#Admin .navigator .buttons button > img
+{
+	margin: 0 2px 0 0;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+}
+
+#Admin .navigator .placename button
+{
+    background: transparent url("@url/img/booking_search.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 16px;
+}
+
+#Admin .navigator .fromdate button, #Admin .navigator .todate button
+{
+    background: transparent url("@url/img/booking_calendar.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 16px;
+}
+
+#Admin .navigator .calendar
+{
+	background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+    border-radius: 8px;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 62px;
+	right: 10px;
+    width: auto !important;
+    z-index: 5;
+}
+
+#Admin .navigator .calendar a
+{
+	text-decoration: none;
+}
+
+#Admin .navigator .calendar.open
+{
+    display: block;
+}
+
+#Admin .navigator .calendar table
+{
+    width: 100%;
+}
+
+#Admin .navigator .calendar table th
+{
+    text-align: center;
+}
+
+#Admin .navigator .calendar table td
+{
+    text-align: left;
+}
+
+#Admin .navigator .calendar table tbody tr th, #Admin .navigator .calendar table tbody tr td
+{
+    border-collapse: collapse;
+}
+
+#Admin .navigator .calendar .nav
+{
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#Admin .navigator .calendar .nav .Left
+{
+    left: 10px;
+    position: absolute;
+    top: 0;
+}
+
+#Admin .navigator .calendar .nav .Right
+{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+#Admin .navigator .calendar .nav .Center
+{
+    display: block;
+    text-align: center;
+}
+
+#Admin .navigator .calendar .Week, #Admin .navigator .calendar .prevYear, #Admin .navigator .calendar .nextYear
+{
+    display: none;
+}
+
+#Admin .navigator .calendar td > div
+{
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 5px 10px;
+	text-align: center;
+}
+
+#Admin .navigator .calendar .Selected
+{
+    background-color: #eeeeee;
+}
+
+#Admin .navigator .calendar .Reserved
+{
+    background-color: #0f75bd;
+    color: white;
+}
+
+#Admin .navigator .calendar .Space
+{
+    color: #cacaca;
+}
+
+#Admin .navigator .calendar .Available
+{
+    cursor: pointer;
+}
+
+#Admin #Accounting input[type="text"]
+{
+	width: 90%;
+}
+
+#Admin #Accounting td.c1
+{
+	width: 40px;
+}
+
+#Admin #Accounting td.c2
+{
+	width: 100px;
+}
+
+#Admin #Accounting td.c3
+{
+	width: 80px;
+}
+
+#Admin #Accounting td.c5
+{
+	width: 100px;
+}
+
+#Admin #Accounting td.c6
+{
+	width: 40px;
+}
+
+#Admin #Members input[type="text"]
+{
+	width: 85%;
+}
+
+#Admin #Members td.col1
+{
+	width: 40px !important;
+}
+
+#Admin #Members td.col2
+{
+	width: 100px !important;
+}
+
+#Admin #Members td.col3
+{
+	width: auto !important;
+}
+
+#Admin #Members td.col4
+{
+	width: 200px !important;
+}
+
+#Admin #Members td.col5
+{
+	width: 100px !important;
+}
+
+#Admin #Members td.col6
+{
+	width: 200px !important;
+}
+

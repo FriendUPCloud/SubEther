@@ -1,0 +1,1483 @@
+#Group {
+    position: relative;
+}
+
+#Group .slideshow {
+    padding-top: 20px;
+	padding-left: 15px;
+}
+.Box > .toolbar {
+    position: absolute;
+    right: 20px;
+    top: 255px;
+}
+.Box > .toolbar a {
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+    color: black;
+    display: block;
+    float: right;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+.Box > .toolbar a:hover {
+    background: none repeat scroll 0 0 #dcdddd;
+}
+.Box > .toolbar a > img {
+    float: left;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+.Box > .toolbar a > span {
+    float: right;
+}
+#creategroup table, #groupinvite table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#creategroup table tbody, #creategroup table td, #groupinvite table tbody, #groupinvite table td {
+    padding: 0;
+    vertical-align: top;
+}
+#creategroup table td, #groupinvite table td {
+    padding: 4px;
+    text-align: right;
+}
+#creategroup table td + td, #groupinvite table td + td {
+    text-align: left;
+}
+#creategroup input[type="text"] {
+    width: 98%;
+}
+#creategroup ul, #creategroup li, #groupinvite ul, #groupinvite li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#creategroup .head, #groupinvite .head {
+    color: #7a7d88;
+    padding: 10px;
+}
+#creategroup .head > h1, #groupinvite .head > h1 {
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+}
+#creategroup .content, #groupinvite .content {
+    padding: 10px;
+}
+#creategroup .buttons, #groupinvite .buttons {
+    padding: 10px;
+    text-align: right;
+}
+#Group table, #Group table > tbody, #Group table > tbody > tr > td {
+    border-collapse: separate;
+    margin: 0;
+    padding: 0;
+	font-size: 15px;
+	vertical-align: top;
+}
+#Group .coverimage {
+    height: 348px;
+    position: relative;
+    width: 100%;
+}
+#Group .slideshow {
+    position: relative;
+}
+#Group .coverimage #MainImage {
+    height: 317px;
+    margin-left: -1px;
+    margin-right: -1px;
+    overflow: hidden;
+    position: relative;
+}
+#Group .coverimage #MainImage img {
+    height: auto !important;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+}
+#Group .coverimage .Navigation {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#Group .coverimage .Navigation .ArrowPrev {
+    height: 300px;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 400px;
+    z-index: 10;
+}
+#Group .coverimage .Navigation .ArrowNext {
+    height: 300px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 400px;
+    z-index: 10;
+}
+#Group .coverimage .Navigation .ArrowPrev span, #Group .coverimage .Navigation .ArrowNext span {
+    display: none;
+}
+#Group .coverimage .Navigation .ArrowPrev:hover {
+    background: url("../../../../subether/gfx/arrow_overlay_left_white.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+#Group .coverimage .Navigation .ArrowNext:hover {
+    background: url("../../../../subether/gfx/arrow_overlay_right_white.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+#Group .coverimage #CoverPages {
+    bottom: 38px;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+}
+#Group .coverimage #CoverPages > .Page {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    height: 10px;
+    margin: 20px 5px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 1.5s ease 0s;
+    width: 10px;
+}
+#Group .coverimage #CoverPages > .Page:hover, #Group .coverimage #CoverPages > .Page.Current {
+    background-color: #006600;
+}
+#Group .coverimage #CoverPages > .Page span {
+    display: none;
+}
+#Group .coverimage .edit_btn_cover {
+    background: #0f1013;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBmMTAxMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIzMjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #0f1013 0%, #222326 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f1013), color-stop(100%,#222326)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0f1013 0%,#222326 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0f1013 0%,#222326 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1013', endColorstr='#222326',GradientType=0 ); /* IE6-8 */
+	color: #ffffff;
+    border-radius: 8px;
+	-webkit-border-radius: 8px;
+    top: 274px;
+    display: none;
+    height: 40px;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+    right: 130px;
+    margin: 12px;
+    overflow: hidden;
+    position: absolute;
+    width: 122px;
+    z-index: 120;
+}
+#Group .coverimage .uploadfile {
+    visibility: hidden;
+}
+#Group .coverimage:hover .edit_btn_cover {
+    display: block;
+}
+#Group .coverimage .edit_btn_cover > div {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#Group .coverimage .edit_btn_cover > div > span {
+    cursor: pointer;
+    display: block;
+    padding: 12px 6px;
+    text-align: center;
+}
+#Group .coverimage .view_btn_cover {
+    background: #0f1013;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBmMTAxMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIzMjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #0f1013 0%, #222326 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f1013), color-stop(100%,#222326)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0f1013 0%,#222326 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0f1013 0%,#222326 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1013', endColorstr='#222326',GradientType=0 ); /* IE6-8 */
+	color: #ffffff;
+    border-radius: 8px;
+	-webkit-border-radius: 8px;
+    top: 274px;
+    display: none;
+    height: 40px;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+    right: 0;
+    margin: 12px;
+    overflow: hidden;
+    position: absolute;
+    width: 122px;
+    z-index: 120;
+}
+#Group .coverimage:hover .view_btn_cover {
+    display: block;
+}
+#Group .coverimage .view_btn_cover > div > span {
+    cursor: pointer;
+    display: block;
+    padding: 12px 6px;
+    text-align: center;
+}
+#Group #Content > .Box {
+    padding: 20px;
+}
+
+#Group #Tabs {
+    margin-left: -1px;
+    margin-right: -1px;
+    position: relative;
+}
+
+#Group #Tabs .buttons {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+#Group #Tabs ul {
+	list-style-type:none;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 39px;
+	padding-left: 15px;
+	border-bottom: 1px solid #53565d;
+}
+
+#Group #Tabs ul li {
+	float: left;
+	margin-right: 20px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border-color: #282c35;
+}
+
+#Group ul li a span {
+}
+
+#Group ul li a {
+	color: #d6d8ec;
+	font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+	text-decoration: none;
+    text-transform: uppercase;
+	padding-bottom: 20px;
+}
+
+#Group ul li a:hover {
+	color: #15649e;
+}
+
+#Group #Tabs .buttons button{
+	border: medium none;
+    cursor: pointer;
+    color: #d6d8ec;
+	font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+	text-decoration: none;
+    text-transform: uppercase;
+	background-color: Transparent;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+#Group #Tabs .buttons button:hover {
+	padding-bottom: 19px;
+	border-bottom: 3px solid #15649e;
+
+}
+
+#Group #Tabs ul li:hover, #Group #Tabs ul .current {
+	padding-bottom: 19px;
+	border-bottom: 3px solid !important;
+	border-color: #15649e !important;
+}
+
+#Group #Tabs .buttons ul li:hover {
+	padding-bottom: none !important;
+	border-bottom: none !important;
+	border-color: none !important;
+}
+
+#Group #Tabs .buttons ul {
+	border: none !important;
+}
+
+.show-menu {
+	background-image: url("img/toggle.png");
+	background-repeat: no-repeat;
+	width: 39px;
+	height: 35px;
+	display: none;
+}
+
+
+#Group #Tabs input[type=checkbox]{
+    display: none;
+}
+
+#Group #Tabs input[type=checkbox]:checked ~ #GroupMenu{
+    display: block;
+}
+#Group #Tabs table td a {
+    background: linear-gradient(to bottom, #0f1013 0%, #222326 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 120;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+#Group #Tabs table td a:hover {
+    text-decoration: underline;
+}
+#Group #Tabs table td.current a {
+    color: #ffff00;
+}
+#Group #Tabs #GroupOptionsBox {
+    background-color: #313541;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    color: #7a7d88;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 6px;
+    position: absolute;
+    right: -10px;
+    text-align: left;
+    top: 29px;
+    visibility: hidden;
+    width: 120px;
+    z-index: 200;
+}
+#Group #Tabs #GroupOptionsBox .toparrow {
+    height: 12px;
+    position: absolute;
+    right: 12px;
+    top: -10px;
+    width: 24px;
+}
+
+#Group #Tabs #GroupOptionsBox .toparrow:before, #Group #Tabs #GroupOptionsBox .toparrow:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top: 0;
+}
+
+#Group #Tabs #GroupOptionsBox .toparrow:before {
+    border-bottom-color: #464a54;
+    border-width: 11px;
+}
+
+#Group #Tabs #GroupOptionsBox .toparrow:after {
+    bottom: 0px;
+    left: 1px;
+    border-bottom-color: #313541;
+    border-width: 10px;
+}
+
+#Group #Tabs #GroupOptionsBox .inner {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+#Group #Tabs #GroupOptionsBox ul, #Group #Tabs #GroupOptionsBox li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#Group #Tabs #GroupOptionsBox ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#Group #Tabs #GroupOptionsBox ul li:hover {
+    background-color: #282c35;
+    cursor: pointer;
+}
+#Group #Tabs #GroupOptionsBox a {
+    color: #000000;
+    line-height: 20px;
+}
+#Group #Tabs #GroupOptionsBox.open {
+    visibility: visible;
+}
+#Group #MainIM {
+    background: none repeat scroll 0 0 #1f1f2f;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    color: #54a000;
+    font-family: monospace;
+    font-size: 14px;
+    height: 510px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+#Group #MainIM table {
+    color: #54a000;
+    width: 100%;
+}
+#Group #MainIM td.rightCol {
+    width: 150px;
+}
+#Group #MainIM #ListIM {
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 5px;
+}
+#Group #MainIM #RightIM {
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 5px;
+}
+#Group #MainIM #RightIM .onlineuser {
+}
+#Group #MainIM .admin {
+}
+#Group #ListIM .joins span, #Group #ListIM .quits span {
+    color: #c0c0c0;
+}
+
+#Group #thirdparty h4 {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(129, 131, 143, 0.7);
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+#Group #thirdparty .label {
+	color: #d6d8ec;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#Group #thirdparty table {
+	width: 100%;
+}
+
+#Group #thirdparty input {
+	background: none;
+	border: none;
+	border-bottom: 1px solid rgba(129, 131, 143, 0.7);
+	font-family: Raleway;
+}
+
+#Group #thirdparty table td:first-child {
+	width: 15%;
+}
+
+#Group #GroupDescription h4 {
+    background-image: url("img/desc.png");
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(129, 131, 143, 0.7);
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+#Group #GroupPrivacySettings h4 {
+    background-image: url("img/privacy.png");
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(129, 131, 143, 0.7);
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+#Group #GroupPrivacySettings button {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    color: #d6d8ec;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+	margin-right: 20px;
+}
+
+#Group #Admin .Box {
+	padding: 15px 0;
+}
+
+#Group #Admin .Box .tabs {
+	border-bottom: 1px solid #53565d;
+    margin: 0;
+    padding-bottom: 19px;
+    padding-top: 15px;
+	margin-bottom: 15px;
+}
+
+#Group #Admin .Box .tabs a {
+	text-decoration: none;
+}
+
+#Group #Admin .Box .tabs a span+span {
+	color: #d6d8ec;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+#Group #Admin .Box .tabs a span+span:hover, #Group #Admin .Box .tabs a.current span+span {
+	padding-bottom: 19px;
+	border-bottom: 3px solid !important;
+	border-color: #15649e !important;
+	cursor: pointer;
+}
+
+#Admin .mailing #MainBox > table {
+    width: 100%;
+}
+
+#Admin #AdminContent .mailing table {
+	table-layout: fixed;
+}
+
+#Admin .mailing #MainBox td.leftCol {
+    width: 330px;
+	vertical-align: top;
+}
+#Admin .mailing #MainBox #MailList {
+    border-radius: 8px;
+    border: 1px solid #53565d;
+    color: #7a7d88;
+    height: 522px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    position: relative;
+}
+#Admin .mailing #MainBox #MessageBox {
+	border-radius: 8px;
+    border: 1px solid #53565d;
+    height: 485px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    position: relative;
+}
+#Admin .mailing #MainBox ul, #Admin .mailing #MainBox ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#Admin .mailing #MainBox #MailList li > div {
+    border-bottom: 1px solid #53565d;
+    height: 37px;
+    padding: 5px;
+}
+
+#Admin .mailing #MainBox #MailList li:hover {
+	background-color: #2c2f38;
+}
+
+#Admin .mailing #MainBox #MailList li:last-child > div {
+    border-bottom: 0 none;
+}
+#Admin .mailing #MainBox #MailList li td.first {
+    width: 13%;
+}
+#Admin .mailing #MainBox #MailList li td.last {
+    vertical-align: middle;
+    width: 6%;
+}
+#Admin .mailing #MainBox #MailList .image {
+    border-radius: 100%;
+    height: 35px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 35px;
+}
+#Admin .mailing #MainBox #MessageContent {
+    min-height: 458px;
+    width: 100%;
+}
+#Admin .mailing #PostBox .publish {
+    float: right;
+}
+
+#Admin .mailing #PostBox .publish button {
+	background: none;
+	border: 0;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #d6d8ec;
+}
+
+#Admin .mailing #PostBox .check input {
+    display: inline-block !important;
+	width: inherit;
+}
+
+#Admin .mailing #MailList .second {
+	color: #d6d8ec;
+	font-size: 13px;
+	overflow: hidden;
+	width: 81%;
+	text-align: left;
+}
+
+#Messages .post {
+    display: block;
+    padding: 0;
+}
+#Messages .post input {
+    background-color: #17181d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+#Group .members > table.panel {
+    width: 100%;
+}
+#Group .members > table.panel td {
+    padding-bottom: 20px;
+}
+#Group .members table div {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+#Group .members table .image {
+    border-radius: 100%;
+    height: 50px;
+    margin-right: 6px;
+    overflow: hidden;
+    width: 50px;
+	border: 4px solid #53565d;
+}
+#Group .members table a {
+    color: #d6d8ec;
+    text-decoration: none;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+#Group .members .member {
+    float: left;
+	width: 24%;
+	height: 70px;
+	margin: 0.5%;
+	overflow: hidden;
+}
+
+#groupinvite .inputfield, #creategroup .inputfield {
+    padding: 2px 2px 2px 6px;
+    position: relative;
+}
+#groupinvite .inputfield input, #creategroup .inputfield input {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    width: 240px;
+}
+#groupinvite #FindMembers span, #creategroup #FindMembers span {
+    background: none repeat scroll 0 0 #dcdddd;
+    border: 1px solid #53565d;
+    border-radius: 3px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+#groupinvite #FindMembers span a, #creategroup #FindMembers span a {
+    color: #000000;
+    margin-left: 1px;
+    margin-right: 3px;
+    text-decoration: none;
+}
+#groupinvite #ListFoundMembers, #creategroup #ListFoundMembers {
+    position: relative;
+}
+#groupinvite #ListFoundMembers > div, #creategroup #ListFoundMembers > div {
+    background-color: #313541;
+    border-radius: 8px;
+    /* box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset; */
+	box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.8);
+	border: 1px solid #53565d;
+    color: #7a7d88;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 400;
+	padding: 5px;
+    position: absolute;
+    top: -2px;
+}
+#groupinvite #ListFoundMembers > div > table > tbody > tr, #creategroup #ListFoundMembers > div > table > tbody > tr {
+    cursor: pointer;
+}
+#groupinvite #ListFoundMembers > div > table > tbody > tr:hover, #creategroup #ListFoundMembers > div > table > tbody > tr:hover {
+    background-color: #282c35;
+}
+#groupinvite #ListFoundMembers .image, #creategroup #ListFoundMembers .image {
+    border-radius: 100%;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+}
+#Group .Box > table {
+    width: 100%;
+}
+#Group > .Box > table > tbody > tr > td {
+    width: 50%;
+}
+#Group table.group table > tbody > tr > td {
+    width: 60px;
+}
+#Group table.group table > tbody > tr > td + td {
+    text-align: left;
+    width: auto;
+}
+#Group table.group {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+#Group table.group .image {
+    border-radius: 100%;
+    height: 100px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 100px;
+	margin-right: 10px;
+}
+#Group table.group a {
+    text-decoration: none;
+}
+
+#Group div.group
+{
+	float: left;
+	width: 32.3%;
+	height: 130px;
+	margin: 0.5%;
+	overflow: hidden;
+}
+#Group #About .textarea {
+    border: 1px solid #53565d;
+    border-radius: 3px;
+    min-height: 50px;
+    padding: 7px;
+}
+#Group #About .hidden {
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.members .panel button {
+	background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.group button {
+	background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+	margin-top: 5px;
+}
+
+#Booking .Box {
+	padding: 15px 0;
+}
+
+#Booking div.checkbox input {
+	display: block !important;
+}
+
+#Booking .clearboth {
+    clear: both;
+    float: none;
+}
+#Booking .event {
+    border: 1px solid #53565d;
+    border-radius: 5px;
+    float: left;
+    height: 242px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 228px;
+}
+#Booking .event.admin.closed {
+    background: rgba(0, 0, 0, 0) url("../../../../subether/gfx/cross.png") no-repeat scroll center center;
+    border: 1px dashed #53565d;
+    cursor: pointer;
+    height: 240px;
+    width: 226px;
+}
+#Booking .event > .checkbox {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+}
+#Booking .event > .checkbox > input {
+    cursor: pointer;
+}
+#Booking .event > .edit {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0 !important;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+}
+#Booking .event > .edit > div.options {
+    background: rgba(0, 0, 0, 0) url("./../../../gfx/downarrow.png") no-repeat scroll center center;
+    cursor: pointer;
+    height: 16px;
+    padding: 0 !important;
+    width: 20px;
+}
+#Booking .event.admin.closed .information {
+}
+#Booking .event .information {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+#Booking .event .information .inputs {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    bottom: 0;
+    color: white;
+    left: 0;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+}
+#Booking .event .information .inputs a {
+    color: white;
+}
+#Booking .event.admin .information .inputs, #Booking .event.open .information .inputs, #Booking .event.edit .information .inputs {
+    background-color: transparent;
+    color: black;
+}
+#Booking .event.edit .information .inputs a {
+    color: black;
+}
+#Booking .event .information > div.inputs > div {
+    overflow: hidden;
+    padding: 0 10px 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#Booking .event .information .inputs .place, #Booking .event .information .inputs .description {
+    font-size: 80%;
+}
+#Booking .event .information .inputs .price {
+    font-weight: bold;
+}
+#Booking .event .information input {
+    border-bottom: 1px solid #53565d;
+    padding: 5px;
+    width: 96%;
+}
+#Booking .event .heading {
+    font-weight: bold;
+    padding-top: 10px;
+}
+#Booking .event .time {
+    background: #dcdddd none repeat scroll 0 0;
+    padding-top: 10px;
+}
+#Booking h4 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0 5px 5px;
+    position: relative;
+    text-transform: uppercase;
+}
+#Booking .inner {
+    border-top: 1px solid #c0c0c0;
+    padding: 10px 5px 5px;
+}
+#Booking .fileupload {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    z-index: 3;
+}
+#Booking .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+#Booking .event.edit .fileupload, #Booking .event:hover .fileupload {
+    display: block;
+}
+#Booking .fileupload > div {
+    background: rgba(0, 0, 0, 0) url("img/upload_big.png") no-repeat scroll center center;
+}
+#Booking .fileupload > div {
+    border-radius: 3px;
+    height: 46px;
+}
+#Booking .upload_btn {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+}
+#Booking .navigator {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+#Booking .navigator .wrapper {
+    float: left;
+}
+#Booking .navigator .wrapper .container {
+    padding-right: 10px;
+}
+#Booking .navigator .wrapper .container.children {
+    padding-right: 0;
+}
+#Booking .navigator .wrapper .container > div {
+    width: 100%;
+}
+#Booking .navigator .wrapper.placename {
+    width: 42%;
+}
+#Booking .navigator .wrapper.fromdate, #Booking .navigator .wrapper.todate {
+    width: 17%;
+}
+#Booking .navigator .wrapper.number, #Booking .navigator .wrapper.adults, #Booking .navigator .wrapper.children {
+    width: 8%;
+}
+#Booking .navigator .heading {
+    padding-bottom: 5px;
+}
+#Booking .navigator .heading.placename {
+    padding-left: 15px;
+}
+#Booking .navigator .input {
+    position: relative;
+	border-bottom: 1px solid #53565d;
+}
+#Booking .navigator .input > div {
+    padding-right: 10px;
+    position: relative;
+}
+
+#Booking .navigator .input.placename > div { 
+	padding-left: 15px; 
+}
+
+#Booking .navigator input {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#Booking .navigator button {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: black;
+    line-height: 27px;
+    margin: 0;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#Booking .navigator .placename button {
+    background: transparent url("img/booking_search.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 16px;
+}
+#Booking .navigator .fromdate button, #Booking .navigator .todate button {
+    background: transparent url("img/booking_calendar.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 16px;
+}
+#Booking .navigator .number button, #Booking .navigator .adults button, #Booking .navigator .children button {
+    background: transparent url("img/select.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 28px;
+}
+
+#Booking .navigator .calendar {
+	background-color: #313541;
+    border: 1px solid #53565d;
+    border-radius: 8px;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 485px;
+    width: auto !important;
+    z-index: 5;
+}
+
+#Booking .navigator .calendar a {
+	text-decoration: none;
+}
+
+#Booking .navigator .calendar.open {
+    display: block;
+}
+#Booking .navigator .calendar table {
+    width: 100%;
+}
+#Booking .navigator .calendar table th {
+    text-align: center;
+}
+#Booking .navigator .calendar table td {
+    text-align: left;
+}
+#Booking .navigator .calendar table tbody tr th, #Booking .navigator .calendar table tbody tr td {
+    border-collapse: collapse;
+}
+#Booking .navigator .calendar .nav {
+    padding-bottom: 10px;
+    position: relative;
+}
+#Booking .navigator .calendar .nav .Left {
+    left: 10px;
+    position: absolute;
+    top: 0;
+}
+#Booking .navigator .calendar .nav .Right {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+#Booking .navigator .calendar .nav .Center {
+    display: block;
+    text-align: center;
+}
+#Booking .navigator .calendar .Week, #Booking .navigator .calendar .prevYear, #Booking .navigator .calendar .nextYear {
+    display: none;
+}
+#Booking .navigator .calendar td > div {
+    border: 1px solid #53565d;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 5px 10px;
+	text-align: center;
+}
+#Booking .navigator .calendar .Selected {
+    background-color: #313541;
+}
+#Booking .navigator .calendar .Reserved {
+    background-color: #0f75bd;
+    color: white;
+}
+#Booking .navigator .calendar .Space {
+    color: #53565d;
+}
+#Booking .navigator .calendar .Available {
+    cursor: pointer;
+}
+/* Admin */
+
+
+#Admin #AdminContent table {
+    width: 100%;
+}
+#Admin #AdminContent table tr.sw2 {
+    background-color: #2c2f38;
+}
+#Admin #AdminContent .budget th, #Admin #AdminContent .budget td {
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: left;
+    text-transform: uppercase;
+}
+#Admin #AdminContent .budget th + th, #Admin #AdminContent .budget td + td {
+    text-align: right;
+}
+#Admin #AdminContent .budget input {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-family: Raleway;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+#Admin #AdminContent .budget td + td input {
+    text-align: right;
+}
+#Admin #AdminContent .budget tr.head th + th {
+    border: 1px solid #c0c0c0;
+    width: 6.3%;
+}
+#Admin #AdminContent .budget tr.group td, #Admin #AdminContent .budget tr.group td input {
+    font-weight: bold;
+}
+#Admin #AdminContent .budget tr.sum td + td {
+    border-bottom: 1px solid #c0c0c0;
+    border-top: 1px solid #c0c0c0;
+}
+#Admin #AdminContent .shopdb table {
+    border: 1px solid #c0c0c0;
+}
+#Admin #AdminContent .shopdb tr.sort td {
+    border-bottom: 1px solid #c0c0c0;
+    border-top: 1px solid #c0c0c0;
+    height: 8px;
+}
+#Admin #AdminContent .shopdb th {
+    text-align: center;
+}
+#Admin #AdminContent .shopdb th, #Admin #AdminContent .shopdb td {
+    padding: 4px;
+}
+#Admin #AdminContent .shopdb tr.sort td {
+    padding: 0;
+    text-align: center;
+}
+#Admin #AdminContent .shopdb td + td, #Admin #AdminContent .shopdb th + th {
+    border-left: 1px solid #c0c0c0;
+}
+.case table {
+    width: 100%;
+}
+.case .col1 {
+    width: 60px;
+}
+.case .col3 {
+    width: 190px;
+}
+.case > table > tbody > tr > th, .case > table > tbody > tr > td {
+    line-height: 22px;
+    padding: 2px 10px !important;
+    text-align: left;
+}
+
+.case .newtask .col2, .case .newcase .col2 {
+	line-height: 22px;
+    padding: 2px 10px !important;
+    text-align: left;
+}
+
+.case > table > tbody > tr > th {
+    padding: 10px !important;
+}
+.case tr > td > .edit {
+    display: none;
+    float: right;
+}
+.case tr > td .ProgressNum {
+    display: block;
+    float: left;
+    text-align: right;
+    width: 35px;
+}
+.case tr:hover > td > .edit {
+    display: block;
+}
+.case tr > td > .edit > img {
+    cursor: pointer;
+    margin-bottom: -4px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.case .textarea {
+    margin-bottom: 5px;
+    min-height: 100px;
+    padding: 5px;
+}
+.case .task, .case .newcase, .case .newtask {
+}
+.case .task {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.case .task.open, .case .newcase.open, .case .newtask.open {
+    height: auto;
+    overflow: auto;
+    visibility: visible;
+	background-color: #2c2f38;
+	width: 96%;
+	margin: 0 auto;
+}
+.case .tasks > td, .case .inputs > td {
+    line-height: normal;
+    padding: 0;
+    width: auto;
+}
+.case .ratebar {
+    background-color: transparent;
+    float: right;
+    height: 2px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 75%;
+}
+.case .ratebar > div {
+    background-color: #006600;
+    height: 100%;
+}
+.case input[type="text"] {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #000000;
+    font-family: Raleway;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.case ul.checklist {
+    list-style-type: none;
+    position: relative;
+    z-index: 1;
+}
+.case ul.checklist li {
+    position: relative;
+    z-index: 2;
+}
+.case ul.checklist span {
+    left: -21px;
+    position: absolute;
+    z-index: 4;
+}
+.case ul.checklist input[type="checkbox"] {
+    left: 0;
+    position: relative;
+    z-index: 3;
+}
+
+/* Meeting */
+
+
+#Meeting > div > table {
+    width: 100%;
+}
+#Meeting .leftCol {
+    width: 250px;
+	vertical-align: top;
+}
+#Meeting img {
+    margin: 0;
+    padding: 0;
+}
+#Meeting h4 {
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+}
+#Meeting ul, #meeting ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#Meeting div ul li div {
+    display: block;
+    line-height: 28px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+#Meeting ul li > div {
+    height: 30px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+#Meeting ul li span + span {
+    font-size: 14px;
+    font-weight: 600;
+    left: 5px;
+    line-height: 28px;
+    position: relative;
+    top: -2px;
+}
+#Meeting .image {
+    border-radius: 100%;
+    float: left;
+    height: 28px;
+    overflow: hidden;
+    padding: 0;
+    width: 30px;
+	margin-right: 5px;
+}
+#Meeting .image img {
+    height: 28px;
+    width: 30px;
+}
+#Meeting #ParticipantBox {
+    height: 220px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    position: relative;
+}
+#Meeting #ParticipantBox > ul {
+    padding-top: 4px;
+}
+#Meeting #ChatBox {
+    height: 220px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    padding: 5px;
+    position: relative;
+	background-color: #313541;
+    border-bottom: medium none;
+    border-radius: 8px;
+    border: 1px solid #53565d;
+    color: #7a7d88;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 400;
+}
+#Meeting #ChatBox > div {
+    padding-top: 4px;
+}
+#Meeting #VideoBox {
+    border-radius: 3px;
+    height: 500px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    overflow-x: hidden;
+    padding: 5px;
+    position: relative;
+}
+#Meeting #VideoBox > div {
+    padding-top: 4px;
+}
+#Meeting #VideoBox .inner {
+    margin: auto;
+}
+#Meeting #VideoBox .webcam {
+    border-radius: 100%;
+    float: left;
+    height: 152px;
+    margin: 5px 5px 22px;
+    position: relative;
+    width: 152px;
+}
+#Meeting #VideoBox .webcam .username {
+    bottom: -20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+	font-size: 15px;
+	font-weight: 600;
+}
+#Meeting #VideoBox .clearboth {
+    clear: both;
+}
+
+#Meeting #PostBox input {
+	background-color: #17181d;
+    border-radius: 8px;
+	border-bottom: 1px solid #24262e;
+	border: none;
+	width: 100%;
+	height: 20px;
+	padding: 2px;
+}
+
+#ChatBox .chatmessage .user {
+	color: #ffff00;
+}
+
+#ChatBox .chatmessage .time {
+	color: #0f75bd;
+}

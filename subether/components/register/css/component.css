@@ -1,0 +1,58 @@
+.signupbox
+{
+	padding: 15px;
+}
+
+.signupbox table
+{
+	width: 100%;
+}
+
+.signupbox table > tbody > tr > td
+{
+	padding: 4px;
+    text-align: left;
+}
+
+.signupbox table tbody, .signupbox table tbody td
+{
+	vertical-align: top;
+}
+
+.signupbox table td.LeftCol
+{
+	width: 500px;
+	padding-right: 50px !important;
+}
+
+.signupbox input 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    padding: 6px;
+    width: 95%;
+}
+
+.signupbox td.buttons
+{
+	text-align: right !important;
+	padding: 10px;
+}
+
+.signupbox .disabled td
+{
+	visibility: hidden;
+	padding: 0px;
+	height: 0px;
+}
+
+.signupbox button.disabled
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	visibility: hidden;
+	padding: 0px;
+	height: 0px;
+	width: 0px;
+}

@@ -1,0 +1,571 @@
+
+#Crowdfunding .Box
+{
+	padding: 15px 5px;
+}
+
+#Crowdfunding .clearboth
+{
+    clear: both;
+    float: none;
+}
+
+#Crowdfunding .product
+{
+	border: 0;
+	border-radius: 0;
+    float: left;
+    height: 320px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    /*width: 228px;*/
+    width: 260px;
+	box-sizing: border-box;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Crowdfunding .product.open
+{
+	border: 1px solid #cacaca;
+	padding: 10px;
+	cursor: auto;
+}
+
+#Crowdfunding .edit_btn_product
+{
+	background: url("@url/img/edit16.png") no-repeat center center;
+	background-color: black;
+	position: absolute;
+	display: none;
+	top: 10px;
+	right: 10px;
+	z-index: 5;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Crowdfunding .product:hover .edit_btn_product
+{
+	display: block;
+}
+
+#Crowdfunding .product.open:hover .edit_btn_product
+{
+	display: none;
+}
+
+#Crowdfunding .upload_btn
+{
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    z-index: 3;
+}
+
+#Crowdfunding .upload_btn
+{
+    background: rgba(0, 0, 0, 0) url("@url/img/upload_big.png") no-repeat center center;
+}
+
+#Crowdfunding .product.open.edit .upload_btn,
+#Crowdfunding .product.open:hover .upload_btn,
+#Crowdfunding .product .mainimage .thumb:hover .upload_btn
+{
+    display: block;
+}
+
+#Crowdfunding .upload_btn > div
+{
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+}
+
+#Crowdfunding .product .image
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 180px;
+	box-sizing: border-box;
+}
+
+#Crowdfunding .product .image > div
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Crowdfunding .product.open .image,
+#Crowdfunding .product.open .detail
+{
+	padding: 10px;
+}
+
+#Crowdfunding .product .image .thumb,
+#Crowdfunding .product .image .thumb > div
+{
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#Crowdfunding .product .image img
+{
+	visibility: hidden;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#Crowdfunding .product .information
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	min-height: 110px;
+}
+
+#Crowdfunding .product.open .information
+{
+	position: relative;
+	height: auto;
+}
+
+#Crowdfunding .product .information .info
+{
+	height: 40px;
+	overflow: hidden;
+}
+
+#Crowdfunding .product .information .rating
+{
+	min-height: 20px;
+}
+
+#Crowdfunding .product.open .information .rating
+{
+	min-height: 0;
+}
+
+#Crowdfunding .product .information .price
+{
+	font-weight: bold;
+	position: absolute;
+	bottom: 0;
+}
+
+#Crowdfunding .product .information .funding > div
+{
+	float: left;
+	padding-right: 15px;
+}
+
+#Crowdfunding .product .information .funding > div > span
+{
+	display: block;
+}
+
+#Crowdfunding .product.open .information .inputs
+{
+	padding: 10px;
+}
+
+#Crowdfunding .product.open .information .inputs > div
+{
+	position: relative;
+}
+
+#Crowdfunding input
+{
+	/*border: 0;
+	background: none;
+    border-bottom: 1px solid #cacaca;
+    padding: 5px;
+    width: 100%;
+	box-sizing: border-box;*/
+	
+	background-color: #eeeeee;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+
+#Crowdfunding textarea
+{
+	/*background: transparent;
+	border: 0;
+	margin: 0;
+	border: 1px solid #cacaca;
+    padding: 5px;
+    width: 100%;
+	height: 42px;
+	box-sizing: border-box;
+	resize: none;
+	color: #777777;
+	font-family: Raleway;
+	font-size: 12px;*/
+}
+
+#Crowdfunding textarea
+{
+	/*border: 0;
+	border-bottom: 1px solid #cacaca;*/
+	
+    background-color: #eeeeee;
+    border: 0 none;
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+
+#Crowdfunding select
+{
+	background-color: #eeeeee;
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+}
+
+#Crowdfunding .product.admin.closed
+{
+    background: rgba(0, 0, 0, 0) url("@url/img/cross.png") no-repeat scroll center center;
+    border: 2px dashed #cacaca;
+    cursor: pointer;
+    height: 300px;
+    /*width: 226px;*/
+    width: 258px;
+}
+
+#Crowdfunding .product.admin.closed > div
+{
+	display: none;
+}
+
+#Crowdfunding .product.admin.closed .information
+{
+	display: block;
+	height: 100%;
+}
+
+#Crowdfunding .product.nr1,
+#Crowdfunding .product.nr2
+{
+	width: 48%;
+	height: 300px;
+}
+
+#Crowdfunding .product .image
+{
+	height: 150px;
+}
+
+#Crowdfunding .product.nr1 .image,
+#Crowdfunding .product.nr2 .image
+{
+	height: 100%;
+}
+
+#Crowdfunding .product .information .price
+{
+	font-weight: normal;
+}
+
+#Crowdfunding .product.nr1 .information .price,
+#Crowdfunding .product.nr2 .information .price
+{
+	right: 0;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: black;
+	color: #e0e0e0;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: right;
+	font-weight: normal;
+}
+
+#Crowdfunding .product.nr1 .information .heading, #Crowdfunding .product.nr1 .information .info, #Crowdfunding .product.nr1 .information .rating,
+#Crowdfunding .product.nr2 .information .heading, #Crowdfunding .product.nr2 .information .info, #Crowdfunding .product.nr2 .information .rating
+{
+	display: none;
+}
+
+
+#Crowdfunding .product .information .info
+{
+	display: none;
+}
+
+#Crowdfunding .product.details .information .info
+{
+	display: block;
+	overflow: visible;
+	white-space: normal;
+}
+
+#Crowdfunding .product .information
+{
+	/*height: 65px;*/
+	min-height: 170px;
+}
+
+#Crowdfunding .product .information .inputs > div,
+#Crowdfunding .product .information .inputs h3
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#Crowdfunding .product .information .inputs > div.heading
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#Crowdfunding .product,
+#Crowdfunding .product.admin.closed
+{
+	/*height: 200px;*/
+	height: 320px;
+}
+
+#Crowdfunding .product.open
+{
+	width: 100%;
+	/*min-height: 320px;*/
+	min-height: 1050px;
+	height: auto;
+	padding: 0;
+}
+
+#Crowdfunding .product.open > .image
+{
+	display: none;
+}
+
+#Crowdfunding .product.details
+{
+	width: 100%;
+	box-sizing: border-box;
+	height: auto;
+	margin: 0;
+	float: none;
+	overflow: visible;
+	cursor: default;
+}
+
+#Crowdfunding .product.details .media,
+#Crowdfunding .detail .maincontent
+{
+	position: relative;
+	float: left;
+	width: 60%;
+	height: auto;
+	box-sizing: border-box;
+}
+
+#Crowdfunding .product.details .image
+{
+	height: auto;
+	position: relative;
+	min-height: 400px;
+}
+
+#Crowdfunding .product.details .mainimage .thumb
+{
+	width: 100%;
+	height: 350px;
+}
+
+#Crowdfunding .product.details h3
+{
+	padding-bottom: 10px;
+}
+
+#Crowdfunding .product.details .media
+{
+	position: relative;
+	float: left;
+}
+
+#Crowdfunding .product.details .information,
+#Crowdfunding .detail .sidecontent
+{
+	position: relative;
+	float: left;
+	left: auto;
+	bottom: auto;
+	width: 38%;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+
+#Crowdfunding .product.details .image > .thumbs
+{
+	width: 100%;
+	height: 135px;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+#Crowdfunding .product.details .image > .thumbs > div
+{
+	width: auto;
+	height: 100%;
+}
+
+#Crowdfunding .product.details .thumbs .edit_btn.thumb
+{
+	background: rgba(0, 0, 0, 0) url("@url/img/cross.png") no-repeat scroll center center;
+    border: 2px dashed #cacaca;
+    cursor: pointer;
+	border-radius: 0;
+    float: left;
+    overflow: hidden;
+    position: relative;
+	box-sizing: border-box;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Crowdfunding .product.details .thumbs .edit_btn.thumb > div
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Crowdfunding .product.details .thumbs .thumb
+{
+	float: left;
+	height: 100px;
+    width: 144px;
+	margin: 10px;
+	margin-right: 0;
+}
+
+#Crowdfunding .product.details .thumbs .thumb:first-child
+{
+	margin-left: 0;
+}
+
+#Crowdfunding .product.details .information .artnr,
+#Crowdfunding .product.details .information .instock
+{
+	padding-bottom: 10px;
+}
+
+#Crowdfunding .product.details .information .info
+{
+	height: auto;
+	overflow: visible;
+}
+
+#Crowdfunding .product.details .information .price
+{
+	position: relative;
+	bottom: auto;
+	margin-bottom: 10px;
+	font-size: 200%;
+}
+
+#Crowdfunding .product.details .maincontent,
+#Crowdfunding .product.details .sidecontent
+{
+	/*padding: 10px;*/
+}
+
+#Crowdfunding .detail .maincontent .editor
+{
+	width: 100%;
+	height: 500px;
+	box-sizing: border-box;
+}
+
+#Crowdfunding .product .ratebox
+{
+    /*background-color: transparent;
+    background-image: url("@url/img/star.png");
+    background-repeat: repeat-x;*/
+    background: #f9faf5;
+    box-shadow: inset 0 1px 2px 1px rgba(0,0,0,.1);
+    border-radius: .625rem;
+    float: left;
+    height: 6px;
+	margin-bottom: 10px;
+    /*width: 70px;*/
+    width: 100%;
+}
+
+#Crowdfunding .product .ratebox > div
+{
+    /*background-color: transparent;
+    background-image: url("@url/img/star-full.png");
+    background-repeat: repeat-x;*/
+    background: $colorLight;
+    border-radius: .625rem;
+    height: 100%;
+}
+
+#Crowdfunding .donation.button
+{
+	position: relative;
+	overflow: visible !important;
+	box-sizing: border-box;
+}
+
+#Crowdfunding .donation.button input
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 80px;
+	padding-right: 120px;
+}
+
+#Crowdfunding .donation.button select
+{
+	position: relative;
+	top: 4px;
+	left: 4px;
+	width: 60px;
+	z-index: 1;
+}
+
+#Crowdfunding .donation.button button
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 1;
+}
+

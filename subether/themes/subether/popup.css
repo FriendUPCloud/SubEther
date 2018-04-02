@@ -1,0 +1,552 @@
+#PopupWindow__ {
+  visibility: hidden;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#PopupWindow__.open
+{
+	visibility: visible;
+	/*z-index: 99999;*/
+	z-index: 9999;
+}
+
+#PopupWindow__ .close
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px;
+	/*z-index: 9999;*/
+	z-index: 99;
+	cursor: pointer;
+	cursor: hand;
+	color: #ffffff;
+	background: rgba(0,0,0,0.7);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#PopupWindow__ .buttons .fullscreen
+{
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	padding: 5px;
+	/*z-index: 9999;*/
+	z-index: 998;
+	cursor: pointer;
+	cursor: hand;
+	color: #ffffff;
+}
+
+#PopupWindow__ ul, #PopupWindow__ ul li 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#PopupWindow__.avatar .bottom,
+#PopupWindow__.cover .bottom,
+#PopupWindow__.album .bottom
+{
+	position: absolute;
+	background-color: rgba( 0, 0, 0, 0.8 );
+	z-index: 60;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #ffffff;
+}
+
+#PopupWindow__.avatar .bottom .status,
+#PopupWindow__.cover .bottom .status,
+#PopupWindow__.album .bottom .status
+{
+	float: left;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#PopupWindow__.avatar .bottom .buttons,
+#PopupWindow__.cover .bottom .buttons,
+#PopupWindow__.album .bottom .buttons
+{
+	float: right;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#PopupWindow__.avatar .bottom > div > div,
+#PopupWindow__.cover .bottom > div > div,
+#PopupWindow__.album .bottom > div > div
+{
+	float: left;
+	padding: 5px;
+	margin: 5px;
+}
+
+#PopupWindow__.avatar .bottom .buttons > div:hover, #PopupWindow__.avatar .bottom .buttons > div.active,
+#PopupWindow__.cover .bottom .buttons > div:hover, #PopupWindow__.cover .bottom .buttons > div.active,
+#PopupWindow__.album .bottom .buttons > div:hover, #PopupWindow__.album .bottom .buttons > div.active
+{
+	background-color: #FFFFFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: black;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox,
+#PopupWindow__.cover .bottom #OptionsBox,
+#PopupWindow__.album .bottom #OptionsBox
+{
+	position: absolute;
+	width: 180px;
+	bottom: 60px;
+	right: 10px;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox .bottomarrow,
+#PopupWindow__.cover .bottom #OptionsBox .bottomarrow,
+#PopupWindow__.album .bottom #OptionsBox .bottomarrow
+{
+	position: absolute;
+	bottom: -22px;
+	right: 12px;
+	background: url('@url/img/bottomarrow_2.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox .inner,
+#PopupWindow__.cover .bottom #OptionsBox .inner,
+#PopupWindow__.album .bottom #OptionsBox .inner
+{
+	float: none;
+	padding: 0;
+	margin: 0;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox ul li,
+#PopupWindow__.cover .bottom #OptionsBox ul li,
+#PopupWindow__.album .bottom #OptionsBox ul li
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox ul li:hover,
+#PopupWindow__.cover .bottom #OptionsBox ul li:hover,
+#PopupWindow__.album .bottom #OptionsBox ul li:hover
+{
+	background: #DCDDDD;
+	cursor: pointer;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox a,
+#PopupWindow__.cover .bottom #OptionsBox a,
+#PopupWindow__.album .bottom #OptionsBox a
+{
+	color: #000000;
+	line-height: 20px;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox.open,
+#PopupWindow__.cover .bottom #OptionsBox.open,
+#PopupWindow__.album .bottom #OptionsBox.open
+{
+	visibility: visible;
+}
+
+#InnerPopupWindow__
+{
+	position: relative;
+	top: 150px;
+	width: 600px;
+	margin: auto;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	background-color: #e7e7e7;
+    -webkit-box-shadow:inset 0 0 0 1px #cacaca;
+	box-shadow:inset 0 0 0 1px rgba(41,42,51,0.7);
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    border-radius: 8px;
+	font-family: Raleway;
+	font-weight: 400;
+	font-size: 12px;
+    color: #7a7d88;
+    padding: 6px;
+}
+
+
+#InnerPopupWindow__ table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#InnerPopupWindow__ table tbody, #InnerPopupWindow__ table td
+{
+	padding: 0;
+	vertical-align: top;
+}
+
+#InnerPopupWindow__ table td
+{
+	text-align: left;
+	padding: 10px;
+	font-size: 13px;
+}
+
+#InnerPopupWindow__ table td + td
+{
+	text-align: left;
+}
+
+#InnerPopupWindow__ input[type="text"]
+{
+	width: 98%;
+	border: none;
+	border-bottom: 1px solid #cacaca;
+	background: none;
+	color: #cacaca;
+	font-size: 13px;
+}
+
+#InnerPopupWindow__ ul, #InnerPopupWindow__ li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#InnerPopupWindow__ .head
+{
+	color: #ffffff;
+	padding: 10px;
+}
+
+#InnerPopupWindow__ .head > h1
+{
+	font-size: 13px;
+	text-transform: uppercase;
+	margin: 0;
+	color: #7a7d88;
+	font-family: Raleway;
+}
+
+#InnerPopupWindow__ .content
+{
+	padding-top: 20px;
+}
+
+#InnerPopupWindow__ .buttons
+{
+	padding: 20px 10px 10px 10px;
+	text-align: right;
+}
+
+#InnerPopupWindow__ .inputfield
+{
+	position: relative;
+	border-bottom: 1px solid #cacaca;
+	padding: 2px;
+	padding-left: 6px;
+}
+
+#InnerPopupWindow__ .inputfield input
+{
+	border: 0;
+	background: transparent;
+	width: 240px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#InnerPopupWindow__ .textarea
+{
+	display: block;
+	width: 98%;
+	background-color: transparent;
+	position: relative;
+	border: 1px solid #cacaca;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 2px;
+	padding-left: 6px;
+	min-height: 50px;
+	color: #7a7d88;
+}
+
+/* Edit: Chris edited 27.09.15 */
+#InnerPopupWindow__ .submit, #InnerPopupWindow__  .cancel {
+	/*background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #0f75bd;*/
+	background: linear-gradient(to bottom, #003629 0%, #006655 100%) repeat scroll 0 0 #003629;
+	/*background: #141518;*/
+	-webkit-box-shadow:inset 0 0 0 1px #cacaca;
+	/*box-shadow:inset 0 0 0 1px rgba(41,42,51,0.7);*/
+	color: white;
+	font-weight: 700;
+	font-family: Raleway;
+	font-size: 13px;
+	text-transform: uppercase;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border: none;
+	padding: 5px 10px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+/* Edit: Chris edited 27.09.15 */
+#InnerPopupWindow__ .cancel
+{
+	background: linear-gradient(to bottom, #871414 0%, #bd0f0f 100%) repeat scroll 0 0 #bd0f0f;
+	/*background: #0f73ba;*/
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#ReportContent select {
+    float: left;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+    background: url("@url/img/dropdown.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+    border: medium none;
+    color: #515461;
+    font-family: Raleway;
+    font-size: 13px;
+    position: relative;
+    width: 55px;
+	margin-right: 10px;
+}
+
+/* Notification window */
+
+.inner u, .inner .name {
+    text-decoration: none;
+	font-family: Raleway;
+	font-weight: 700;
+	font-size: 13px;
+	color: #686868;
+}
+
+.inner::-webkit-scrollbar-track, #ListIM_inner::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #e7e7e7;
+}
+
+.inner::-webkit-scrollbar, #ListIM_inner::-webkit-scrollbar
+{
+	width: 1px;
+	background-color: #e7e7e7;
+}
+
+.inner::-webkit-scrollbar-thumb, #ListIM_inner::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 1px solid #555555;
+}
+
+.messages::-webkit-scrollbar-track, #Chat_list::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+	background-color: #e7e7e7;
+}
+
+.messages::-webkit-scrollbar, #Chat_list::-webkit-scrollbar
+{
+	width: 1px;
+	background-color: #e7e7e7;
+}
+
+.messages::-webkit-scrollbar-thumb, #Chat_list::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 1px solid #000000;
+}
+
+#Notification #NotificationBox.open {
+    visibility: visible;
+}
+
+
+#Notification #NotificationBox .toparrow {
+    height: 10px;
+    left: 182px;
+    position: absolute;
+    top: -12px;
+    width: 21px;
+}
+
+
+#Notification #NotificationBox .toparrow:before, #Notification #NotificationBox .toparrow:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top: 0;
+}
+
+#Notification #NotificationBox .toparrow:before {
+    border-bottom-color: #b9b9b9;
+    border-width: 12px;
+}
+
+#Notification #NotificationBox .toparrow:after {
+    bottom: -2px;
+    left: 1px;
+    border-bottom-color: #e7e7e7;
+    border-width: 11px;
+}
+
+#Notification #NotificationBox.messages .toparrow {
+    /*left: 132px;*/
+	/*left: 182px;*/
+	left: 132px;
+}
+
+#Notification #NotificationBox.contacts .toparrow {
+    /*left: 78px;*/
+	/*left: 133px;*/
+	left: 86px;
+}
+
+#Notification #NotificationBox.notices .toparrow {
+    /*left: 228px;*/
+	left: 182px;
+}
+
+#Notification #NotificationBox.cart .toparrow {
+    /*left: 78px;*/
+	left: 34px;
+}
+
+#Notification #NotificationBox div.all {
+    border-top: 1px solid #cacaca;
+    text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding-top: 6px;
+}
+
+#Notification #NotificationBox {
+    background-color: #e7e7e7;
+    box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.8);
+	border: #b9b9b9;
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    border-radius: 8px;
+	font-family: Raleway;
+	font-weight: 400;
+	font-size: 12px;
+    color: #7a7d88;
+    /*left: 25px;*/
+	left: -30px;
+    min-width: 230px;
+    padding: 6px;
+    position: absolute;
+    text-align: left;
+    /*top: 85px;*/
+	top: 60px;
+    visibility: hidden;
+}
+
+#Notification #NotificationBox div.inner {
+    max-height: 400px;
+    overflow-y: auto;
+    position: relative;
+}
+
+#Notification #NotificationBox ul, #Notification #NotificationBox ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#Notification #NotificationBox li:hover {
+    background-color: #eeeeee;
+}
+
+#Notification #NotificationBox li {
+	opacity: 0.5;
+}
+
+#Notification #NotificationBox li.NotRead{
+	opacity: 1;
+}
+
+#Notification #NotificationBox li > div {
+    cursor: pointer;
+    min-height: 42px;
+    padding: 5px;
+}
+
+#Notification #NotificationBox a {
+    color: #7a7d88;
+    display: block;
+    text-decoration: none;
+}
+
+#Notification #NotificationBox a span {
+    line-height: normal;
+}
+
+#Notification #NotificationBox .buttons {
+	float: right;
+}
+
+#Notification #NotificationBox.notices .time {
+    padding: 0;
+    position: relative;
+    right: auto;
+    top: auto;
+}
+
+#Notification #NotificationBox .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+	-moz-border-radius: 100%; 
+    -webkit-border-radius: 100%;
+	-webkit-box-shadow: 0 0 2px 2px rgba(255,255,255,0.1);
+	box-shadow: 0 0 2px 2px rgba(255,255,255,0.1);
+    float: left;
+    height: 35px;
+    margin-right: 10px;
+	margin-bottom: 10px;
+    overflow: hidden;
+    width: 35px;
+}

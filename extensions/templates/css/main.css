@@ -1,0 +1,41 @@
+
+#ModuleContainer:after
+{
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+#FileStructure
+{
+	width: 25%;
+	float: left;
+}
+
+#Preview
+{
+	width: 50%;
+	float: left;
+}
+
+#Properties
+{
+	width: 25%;
+	float: left;
+}
+
+#ModuleContainer > div > div
+{
+	margin: 0 4px 0 0;
+}
+
+#ModuleContainer > div + div > div
+{
+	margin: 0;
+}
+
+#ModuleContainer > div + div + div > div
+{
+	margin: 0 0 0 4px;
+}
+

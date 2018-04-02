@@ -1,0 +1,111 @@
+#Contacts div a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+#Contacts div h4
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+#Contacts div h4 span
+{
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#Contacts div ul, #Contacts div ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Contacts div ul li:hover, #Contacts div ul li.current
+{
+	background: #DCDDDD;
+}
+
+#Contacts div ul li a
+{
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+#Contacts ul li > div
+{
+	height: 30px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#Contacts ul li span
+{
+	float: left;
+}
+
+#Contacts ul li span + span
+{
+	width: 100px;
+	position: relative;
+	left: 5px;
+	line-height: 28px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#Contacts .image
+{
+	float: left;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+}
+
+/*#Contacts .contact
+{
+	float: left;
+}*/
+
+#Contacts > div > .Box > table > tbody > tr > td
+{
+	width: 50%;
+}
+
+#Contacts .contact table table
+{
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#Contacts .contact table .image 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 100px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 100px;
+}
+
+#Contacts .contact table a
+{
+	color: #000000;
+}
+
+#Contacts .Box > table
+{
+	width: 100%;
+}

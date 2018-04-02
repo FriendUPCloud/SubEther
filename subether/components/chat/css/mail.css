@@ -1,0 +1,97 @@
+
+#Messages #Accounts_inner h4
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: hand;
+	cursor: pointer;
+    font-weight: bold;
+    margin: 5px 0 5px 5px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#Messages #Mail_inner li
+{
+	padding: 5px;
+	padding-right: 10px;
+}
+
+#Messages #Accounts_inner li
+{
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*#Messages #Accounts_inner li > div
+{
+	cursor: hand;
+	cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    position: relative;
+}*/
+
+#Messages #Accounts_inner li.current,
+#Messages #Accounts_inner li:hover
+{
+	background: #dcdddd;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Messages #Mail_inner li:hover
+{
+	background: #dcdddd;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Messages #Mail_inner .Message
+{
+	width: 100%;
+}
+
+#Messages #Mail_inner .Message.NotRead
+{
+	font-weight: bold;
+}
+
+#Messages #Mail_inner .Message > div
+{
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#Messages #Mail_inner .Message .Mark
+{
+	width: 4%;
+}
+
+#Messages #Mail_inner .Message .From
+{
+	width: 30%;
+}
+
+#Messages #Mail_inner .Message .Subject
+{
+	width: 46%;
+}
+
+#Messages #Mail_inner .Message .Date
+{
+	text-align: right;
+	width: 20%;
+}
+
+#Messages .clearboth
+{
+	float: none !important;
+	clear: both !important;
+}

@@ -1,0 +1,1857 @@
+#Profile .slideshow {
+    padding-top: 30px;
+	margin-top: 70px;
+}
+
+.slideshow #MainImage {
+	background-color: transparent;
+	width: 100%;
+	height: 318px;
+	border: 1px hidden #0f1013;
+	border-radius: 16px;
+	-webkit-border-radius: 16px;
+	overflow: hidden;
+	margin-left: -1px;
+    margin-right: -1px;
+    position: relative;
+}
+
+.slideshow #MainImage .Pages, .slideshow #MainImage .ImageDescriptions
+{
+	display: none;
+}
+
+.slideshow #MainImage .ImageContainer, .slideshow #MainImage .ImageContainer div
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center center !important;
+}
+
+.slideshow > div > img {
+	border-radius: 16px;
+	-webkit-border-radius: 16px;
+}
+
+#Group .slideshow #MainImage {
+	border-radius: 16px 16px 0 0;
+	-webkit-border-radius: 16px 16px 0 0;
+}
+
+#Group .slideshow > div > img {
+	border-radius: 16px 16px 0 0;
+	-webkit-border-radius: 16px 16px 0 0;
+}
+
+#Profile table, #Profile table > tbody, #Profile table > tbody > tr > td {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+#Profile a {
+    color: #686868;
+    text-decoration: none;
+}
+
+#Profile .coverimage #MainImage img {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+	width: 100% !important;
+	height: auto !important;
+}
+
+#Profile .coverimage .Navigation {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#Profile .coverimage .Navigation .ArrowPrev {
+    height: 280px;
+    left: 0;
+    position: absolute;
+    top: 50px;
+    width: 450px;
+    z-index: 10;
+}
+#Profile .coverimage .Navigation .ArrowNext {
+    height: 230px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 450px;
+    z-index: 10;
+}
+#Profile .coverimage .Navigation .ArrowPrev span, #Profile .coverimage .Navigation .ArrowNext span {
+    display: none;
+}
+#Profile .coverimage .Navigation .ArrowPrev:hover {
+    background: url("@url/img/arrow_overlay_left_white.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+#Profile .coverimage .Navigation .ArrowNext:hover {
+    background: url("@url/img/arrow_overlay_right_white.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+#Profile .coverimage #CoverPages {
+    top: 30px;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+#Profile .coverimage #CoverPages > .Page {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    height: 10px;
+    margin: 20px 5px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 1.5s ease 0s;
+    width: 10px;
+}
+
+#Profile .coverimage #CoverPages > .Page:hover, #Profile .coverimage #CoverPages > .Page.Current {
+	background-color: $colorDefault;
+}
+#Profile .coverimage #CoverPages > .Page span {
+    display: none;
+}
+
+#Profile .coverimage .edit_wrapper
+{
+	position: absolute;
+	top: 281px;
+	z-index: 50;
+}
+
+
+#Profile .coverimage .edit_btn_cover {
+	background: #0f1013;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBmMTAxMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIzMjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #0f1013 0%, #222326 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f1013), color-stop(100%,#222326)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0f1013 0%,#222326 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0f1013 0%,#222326 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1013', endColorstr='#222326',GradientType=0 ); /* IE6-8 */
+	color: #ffffff;
+    border-radius: 8px;
+	-webkit-border-radius: 8px;
+    display: none;
+    height: 40px;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+    margin: 12px;
+    overflow: hidden;
+    width: 122px;
+    z-index: 120;
+	line-height: 40px;
+	position: relative;
+	float: left;
+}
+
+#Profile .coverimage .uploadfile, #Profile div.imagebox .uploadfile {
+    visibility: hidden;
+}
+#Profile .coverimage:hover .edit_btn_cover, #Profile .coverimage.display .edit_btn_cover {
+    display: block;
+}
+
+#Profile .coverimage:hover .background_layer, #Profile .coverimage.display .background_layer {
+    display: block;
+}
+
+#Profile .coverimage .edit_btn_cover > div {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#Profile .coverimage .edit_btn_cover > div > span {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+#Profile .coverimage .view_btn_cover {
+    background: #0f1013;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBmMTAxMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIzMjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #0f1013 0%, #222326 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f1013), color-stop(100%,#222326)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0f1013 0%,#222326 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0f1013 0%,#222326 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1013', endColorstr='#222326',GradientType=0 ); /* IE6-8 */
+	color: #ffffff;
+    border-radius: 8px;
+	-webkit-border-radius: 8px;
+    display: none;
+    height: 40px;
+    margin: 12px;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+    overflow: hidden;
+    left: 0;
+    width: 110px;
+    z-index: 30;
+	position: relative;
+	float: left;
+}
+#Profile .coverimage:hover .view_btn_cover {
+    display: block;
+}
+#Profile .coverimage .view_btn_cover > div > span {
+    cursor: pointer;
+    display: block;
+    padding: 13px 10px;
+    text-align: center;
+}
+
+.background_layer {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 70px;
+	border-radius: 0 0 16px 16px;
+    position: absolute;
+    top: 278px;
+    width: 100%;
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+	display: none;
+	z-index: 12;
+}
+
+.coverimage {
+	width: 100%;
+	max-height: 390px;
+}	
+#Profile div.imagebox table{
+    margin: 0 auto;
+	position: relative;
+	top: -125px;
+	z-index: 50;
+}
+
+#Profile div.name {
+    position: relative;
+	top: -15px;
+}
+
+/* TODO: Fix unique class for profile first */
+/*#Scene #Wall .Box .tabs
+{
+	padding-top: 0;
+}*/
+
+.Col2 .name h2 {
+    display: none;
+    font-size: 100px;
+    visibility: hidden;
+}
+
+#Profile div.imagebox .Col1 {
+    position: relative;
+	z-index: 3;
+}
+
+#Profile div.imagebox .edit_btn {
+    border-radius: 100%;
+    bottom: 8px;
+    display: none;
+    height: 220px;
+    left: 8px;
+	overflow: hidden;
+    position: absolute;
+    width: 220px;
+    z-index: 30;
+	background-color: rgba(255, 255, 255, 0.1);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+}
+
+#Profile div.imagebox:hover .edit_btn, #Profile div.imagebox.display .edit_btn {
+    display: block;
+}
+
+#Profile div.imagebox .edit_btn > div {
+	background: url("@url/img/upload_big_black.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    height: 18px;
+    left: 0;
+    height: 75%;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 2px #ffffff;
+    bottom: 0;
+    width: 100%;
+	cursor: pointer;
+}
+
+/*
+#Profile div.imagebox .edit_btn > div > span {
+    cursor: pointer;
+    display: block;
+    padding: 25px 6px;
+    text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	color: #000000;
+	text-shadow: 0 0 2px #ffffff;
+}
+*/
+
+#Profile div.imagebox .edit_btn > div > span {
+	display: none;
+}
+
+#Profile div.imagebox table div.image {
+    border: 8px solid rgba(229, 229, 229, 0.2);
+    border-radius: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+	z-index: 1;
+}
+
+#Profile div.imagebox table div.image div
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 106%;
+	height: 106%;
+	top: -3%;
+	left: -3%;
+}
+
+#Profile div.imagebox table div img {
+	height: auto !important;
+}
+
+#Profile div.imagebox table a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#Profile div.imagebox td.Col2 {
+    padding-top: 120px;
+}
+#Profile div.infobox {
+    position: relative;
+	z-index: 50;
+}
+#Profile div.infobox table {
+    width: 100%;
+}
+
+#Profile div.infobox table tr.Row1 td button {
+	background: #0f1013;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBmMTAxMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIzMjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #0f1013 0%, #222326 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f1013), color-stop(100%,#222326)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0f1013 0%,#222326 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0f1013 0%,#222326 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0f1013 0%,#222326 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1013', endColorstr='#222326',GradientType=0 ); /* IE6-8 */
+	color: #ffffff;
+    border-radius: 8px;
+	-webkit-border-radius: 8px;
+    height: 40px;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+    margin: 5px 12px 12px;
+    width: 122px;
+    z-index: 120;
+	font-family: Raleway;
+	border: none;
+	position: relative;
+    top: -130px;
+}
+
+#Profile div.infobox table tr.Row1 td button {
+	cursor: pointer;
+    display: block;
+    padding: 13px 10px;
+    text-align: center;
+	float: left;
+}
+
+#Profile div.infobox table tr.Row2 td {
+}
+
+#Profile div.infobox table tr.Row1 td > div {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#Profile div.infobox table tr.Row2 td.Col1 > div {
+	float: left;
+    background: none;
+    max-height: 100px;
+	color: #656a77;
+    overflow: visible;
+    max-width: 510px;
+	text-align: left;
+}
+#Profile div.infobox table tr.Row2 td.Col1 > div > div {
+    padding: 6px 7px 6px 0;
+}
+#Profile div.infobox table tr.Row2 td.Col2 {
+    width: 510px;
+}
+#Profile div.infobox table tr.Row2 td.Col2 > div {
+    padding-right: 15px;
+}
+#Profile div.infobox table tr.Row2 td.Col2 > div > div {
+    border: 4px solid #cacaca;
+    border-radius: 16px;
+    float: right;
+    height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 80px;
+}
+#Profile div.infobox #ProfileOptionsBox {
+    background-color: #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    padding: 6px;
+    position: absolute;
+    text-align: left;
+	/*right: 20px;*/
+    /*top: 60px;*/
+	right: 160px;
+	top: -60px;
+    visibility: hidden;
+    width: 130px;
+    z-index: 200;
+}
+#Profile div.infobox #ProfileOptionsBox .toparrow {
+    background: url("@url/img/toparrow_2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 12px;
+    position: absolute;
+    right: 12px;
+    top: -12px;
+    width: 24px;
+}
+#Profile div.infobox #ProfileOptionsBox .inner {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+#Profile div.infobox #ProfileOptionsBox ul, #Profile div.infobox #ProfileOptionsBox li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#Profile div.infobox #ProfileOptionsBox ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#Profile div.infobox #ProfileOptionsBox ul li:hover {
+    background: none repeat scroll 0 0 #dcdddd;
+    cursor: pointer;
+}
+#Profile div.infobox #ProfileOptionsBox a {
+    color: #000000;
+    line-height: 20px;
+}
+#Profile div.infobox #ProfileOptionsBox.open {
+    visibility: visible;
+}
+#Profile .info {
+    padding-right: 40px;
+    position: relative;
+}
+
+#Profile .info.display .Edit.profile {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    right: 0;
+    padding: 0 !important;
+    position: absolute;
+    right: -25px;
+    top: 5px;
+    z-index: 5;
+}
+
+#Profile .name h2 {
+	display: inline-table;
+}
+#Profile .name .Edit.profile {
+    display: inline-table;
+    z-index: 5;
+}
+#Profile .Edit.profile > div.options {
+    background: none repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 20px;
+    padding: 0 !important;
+    width: 20px;
+}
+#Profile .name:hover .Edit.profile > div.options, #Profile .info:hover .Edit.profile > div.options, #Profile .info.display .Edit.profile > div.options {
+    background: url("@url/img/edit_icon.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+
+div#Field_middle div#About div.Box input[type="checkbox"] {
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	width: 16px;
+}
+
+/* Panel */
+
+.home #Table_Fields td.Col1 {
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+	width: 220px;
+	vertical-align: top;
+}
+
+.home #Table_Fields td.Col2 {
+	vertical-align: top;
+}
+
+#Field_left hr {
+    background: none repeat scroll 0 0 #c0c0c0;
+    border: 0 none;
+    height: 1px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.profile.thumb a {
+	color: #686868;
+    font-size: 14px;
+    font-weight: 700;
+	text-decoration: none;
+}
+
+.profile.thumb .edit {
+	display: block;
+	font-size: 80%;
+	font-weight: normal;
+}
+
+.Panel ul > li
+{
+	padding: 0 !important;
+}
+
+.Panel ul > li > div, .Panel ul > li > a
+{
+	padding: 3px 3px 0;
+}
+
+.Panel ul > li > ul
+{
+    height: 0;
+    overflow: hidden;
+}
+
+.Panel ul > li > ul.open
+{
+    height: auto;
+    margin: 0 0 0 14px;
+    overflow: visible;
+    padding: 0 0 0 5px;
+    position: relative;
+}
+
+.Panel ul > li > ul.open > li
+{
+    position: relative;
+}
+
+.Panel ul > li > ul.open > li:before
+{
+    border-top: 1px dotted #909090;
+    content: " ";
+    height: 1px;
+    left: -3px;
+    position: absolute;
+    top: 14px;
+    width: 8px;
+}
+
+.Panel ul > li > ul.open > li:after
+{
+    border-left: 1px dotted #909090;
+    content: " ";
+    height: 31px;
+    left: -4px;
+    position: absolute;
+    top: -4px;
+    width: 1px;
+}
+
+.Panel ul > li > ul.open > li:first-child:after
+{
+    height: 29px;
+    top: 0;
+}
+
+.Panel ul > li > ul.open > li:last-child:after
+{
+    height: 9px !important;
+}
+
+.Panel ul > li > ul.open > li + li:last-child:after
+{
+    height: 21px !important;
+    top: -6px;
+}
+.Panel div table div.image {
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    height: 50px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 50px;
+}
+.Panel div table a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.Panel div h4 {
+    font-weight: 600;
+	color: #a1a1a1;
+	font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.Panel div h4 span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 10px;
+}
+
+.Panel div h4:not(:first-child) {
+	margin-top: 10px;
+}
+.Panel div ul, .Panel div ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Panel div ul > li > div:hover, .Panel div ul > li > a:hover , .Panel div ul > li.current > div 
+{
+    background-color: #f5f5f5;
+}
+
+.Panel div ul > li > div, .Panel div ul > li > a
+{
+	border-radius: 8px;
+    padding: 4px 8px;
+    margin: 0 0 5px 0;
+}
+.Panel div ul li a span 
+{
+    text-overflow: ellipsis;
+	text-transform: uppercase;
+	color: #686868;
+	font-size: 13px;
+	font-weight: 600;
+	white-space: nowrap;
+	text-overflow: hidden;
+	overflow: hidden;
+	display: block;
+	margin: 1px 5px 0 0;
+}
+.Panel div ul li a span.name
+{
+	position: relative; top: 0px;
+}
+.Panel div ul li a span.ncount 
+{
+    background-color: #c0c0c0;
+    border-radius: 3px;
+    color: #000000;
+    display: block;
+    font-size: 11px;
+    line-height: normal;
+    margin: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.Panel div table div.image 
+{
+	border: 4px solid #cfcfcf;
+	border-radius: 100%;
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+}
+.Panel div table a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.Panel div ul, .Panel div ul li, #Contacts div ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Panel div ul li a {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 10px;
+    position: relative;
+	text-decoration: none;
+}
+
+.Panel div ul li a span.ncount {
+    background-color: #c0c0c0;
+    border-radius: 3px;
+    color: #000000;
+    display: block;
+    font-size: 11px;
+    line-height: normal;
+    margin: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+#PanelDimmed {
+    background: none repeat scroll 0 0 #dcdddd;
+    border-bottom: 1px solid #c0c0c0;
+    border-top: 1px solid #c0c0c0;
+    display: none;
+    margin: 0;
+    padding: 1px 0 19px;
+}
+.DimMenu:hover #PanelDimmed {
+    display: block;
+}
+.PanelHeader, .PanelHeaderDimmed {
+    background: none repeat scroll 0 0 #dcdddd;
+    border-top: 1px solid #c0c0c0;
+    margin: 20px 0 0;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.PanelHeaderDimmed {
+    border-bottom: 1px solid #c0c0c0;
+}
+.DimMenu:hover .PanelHeaderDimmed {
+    background: none repeat scroll 0 0 #ffffff;
+    border-bottom: 0 none;
+}
+.PanelHeader {
+    background: none repeat scroll 0 0 #ffffff;
+    border-bottom: 1px solid #c0c0c0;
+    margin: 0;
+}
+
+#Contacts ul {
+    margin: 0;
+    padding: 0;
+}
+
+#Contacts div h4 {
+    font-weight: 600;
+	color: #a1a1a1;
+	font-size: 12px;
+    margin-bottom: 10px;
+	margin-top: 10px;
+    text-transform: uppercase;
+}
+
+#Contacts div h4 span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 10px;
+}
+
+#Contacts .image > img {
+	border-radius: 100%;
+}
+
+#Contacts .image {
+	width: 30px;
+	height: 28px;
+	float: left;
+	clear: both;
+	position: relative;
+	border: 3px solid #cacaca;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+}
+
+#Contacts .contact .image
+{
+	border: 0;
+}
+
+#Contacts .tooltips
+{
+	left: 180px;
+	right: auto;
+	bottom: auto;
+	top: -5px;
+}
+
+#Contacts .tooltips:after, #Contacts .tooltips:before
+{
+    border: medium solid transparent;
+    content: " ";
+    height: 0;
+	width: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 12px;
+    right: 100%;
+}
+#Contacts .tooltips:after
+{
+    border-color: rgba(136, 183, 213, 0);
+	border-width: 9px;
+	border-right-color: #e7e7e7; 
+    margin-top: 0;
+}
+#Contacts .tooltips:before
+{
+    border-color: rgba(194, 225, 245, 0);
+	border-width: 10px;
+	border-right-color: #cacaca; 
+    margin-top: -1px;
+}
+
+#Contacts .tooltips .image
+{
+	margin-right: 5px;
+}
+
+#Contacts .tooltips .text
+{
+	float: left;
+}
+
+#Contacts li {
+	position: relative;
+	min-height: 30px;
+	padding-bottom: 10px !important;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+	/*overflow: hidden;*/	
+}
+
+#Contacts ul li a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #a1a1a1;
+	font-weight: 700;
+	padding-left: 8px;
+	line-height: 28px;
+}
+
+#Contacts ul li a span {
+	text-overflow: ellipsis;
+    white-space: nowrap;
+	overflow: hidden;
+	top: 3px;
+	position: relative;
+}
+
+#Contacts > div > .Box > table > tbody > tr > td {
+    width: 25%;
+	overflow: hidden;
+}
+
+#Contacts .contact
+{
+	float: left;
+	width: 32.3%;
+	height: 105px;
+	margin: 0.5%;
+	overflow: hidden;
+}
+
+#Contacts .contact table table {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+#Contacts .contact table .image {
+    border-radius: 100%;
+    height: 100px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 100px;
+}
+
+#Contacts .contact table a {
+    text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#Contacts .Box > table {
+    width: 100%;
+}
+
+#Contacts button {
+	/*background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;*/
+	background: linear-gradient(to bottom, #003629 0%, #006655 100%) repeat scroll 0 0 #003629;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+}
+
+/* Account */
+
+#Content input, #Account input{
+	background: none;
+	border: none;
+	border-bottom: 1px solid #cacaca;
+	font-family: Raleway;
+	width: 70%;
+}
+
+#Content input[type="radio"], #Account input[type="radio"],
+#Content input[type="checkbox"], #Account input[type="checkbox"]
+{
+	width: auto !important;
+}
+
+#Account button {
+	/*background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;*/
+	background: linear-gradient(to bottom, #003629 0%, #006655 100%) repeat scroll 0 0 #003629;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+}
+
+#Account button.cancel_btn
+{
+	background: linear-gradient(to bottom, #871414 0%, #bd0f0f 100%) repeat scroll 0 0 #dcdcdc;
+}
+
+#About button span {
+	display: none;
+}
+
+#Display, #Account select {
+    float: left;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+    background: url("@url/img/dropdown.png") no-repeat scroll 100% center / 15% auto rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #515461;
+    font-family: Raleway;
+    font-size: 13px;
+    position: relative;
+    width: 95px;
+	margin-right: 10px;
+}
+
+#Statistics h4 {
+	background-image: url("@url/img/informations.png");
+	background-position: left left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	border-bottom: 1px solid #cacaca;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#WorkAndEducation h4 {
+	background-image: url("@url/img/education.png");
+	background-position: left left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	border-bottom: 1px solid #cacaca;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#Basic h4 {
+	background-image: url("@url/img/informations.png");
+	background-position: left left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	border-bottom: 1px solid #cacaca;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#ContactInfo h4 {
+	background-image: url("@url/img/contactinfo.png");
+	background-position: left left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	border-bottom: 1px solid #cacaca;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#AboutMe h4 {
+	background-image: url("@url/img/about.png");
+	background-position: left left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	border-bottom: 1px solid #cacaca;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+#Quotations h4 {
+	background-image: url("@url/img/quotations.png");
+	background-position: left left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	border-bottom: 1px solid #cacaca;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+
+#Statistics:hover .editbtn,
+#WorkAndEducation:hover .editbtn,
+#ContactInfo:hover .editbtn,
+#ExtendedInfo:hover .editbtn,
+#AboutMe:hover .editbtn,
+#Quotations:hover .editbtn,
+#Basic:hover .editbtn
+{ 
+	display: block;
+}
+
+#Statistics .editbtn,
+#WorkAndEducation .editbtn,
+#ContactInfo .editbtn,
+#ExtendedInfo .editbtn,
+#AboutMe .editbtn,
+#Quotations .editbtn,
+#Basic .editbtn
+{
+	background-image: url("@url/img/edit16.png");
+	background-color: Transparent;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	border: none;
+    cursor: pointer;
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 60px;
+}
+
+#Statistics .closebtn,
+#WorkAndEducation .closebtn,
+#ContactInfo .closebtn,
+#ExtendedInfo .closebtn,
+#AboutMe .closebtn,
+#Quotations .closebtn,
+#Basic .closebtn
+{
+	background-image: url("@url/img/close.png");
+	background-color: Transparent;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	border: none;
+    cursor: pointer;
+	position: absolute;
+	right: 40px;
+	top: 60px;
+}
+
+#Statistics .savebtn,
+#WorkAndEducation .savebtn,
+#ContactInfo .savebtn,
+#ExtendedInfo .savebtn,
+#AboutMe .savebtn,
+#Quotations .savebtn,
+#Basic .savebtn
+{
+	background-image: url("@url/img/save.png");
+	background-color: Transparent;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	border: none;
+    cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 60px;
+}
+
+#Statistics table,
+#WorkAndEducation table,
+#Basic table,
+#ContactInfo table,
+#ExtendedInfo table,
+#AboutMe table,
+#Quotations table
+{
+	width: 100%;
+}
+
+#Statistics table td,
+#WorkAndEducation table td,
+#Basic table td,
+#ContactInfo table td,
+#ExtendedInfo table td,
+#AboutMe table td,
+#Quotations table td
+{
+	padding-top: 10px;
+}
+
+#Statistics table td:first-child,
+#WorkAndEducation table td:first-child,
+#Basic table td:first-child,
+#ContactInfo table td:first-child,
+#ExtendedInfo table td:first-child,
+#AboutMe table td:first-child,
+#Quotations table td:first-child
+{
+	width: 15%;
+}
+
+#Statistics table td:last-child,
+#WorkAndEducation table td:last-child,
+#Basic table td:last-child,
+#ContactInfo table td:last-child,
+#ExtendedInfo table td:last-child,
+#AboutMe table td:last-child,
+#Quotations table td:last-child
+{
+	text-transform: none !important;
+	font-weight: 500;
+	color: #656a77;
+}
+
+#Statistics h4,
+#WorkAndEducation h4,
+#Basic h4,
+#ContactInfo h4,
+#ExtendedInfo h4,
+#AboutMe h4,
+#Quotations h4
+{
+	border-bottom: 1px solid #cacaca;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+	margin-top: 30px;
+	text-transform: uppercase;
+}
+
+#AboutMe > table {
+    width: 90%;
+}
+
+#AboutMe textarea, #Quotations textarea {
+	height: 100px;
+	width: 100%;
+}
+
+#Quotations > table {
+    width: 90%;
+}
+
+#Panel > div {
+    padding-top: 5px;
+}
+#Account #Tabs {
+    padding: 15px;
+}
+
+#Account #Tabs > ul {
+    border-bottom: 1px solid rgba(129, 131, 143, 0.7);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Account #Tabs > ul > li:first-child {
+	border: none;
+}
+
+#Account #Tabs > ul > li + li {
+    border-top: 1px solid rgba(129, 131, 143, 0.7);
+}
+
+#Account #Tabs > ul > li {
+    border-top: 0 none;
+    line-height: 30px;
+}
+
+html body.home div#CenterBox__ div#Center__ div#Content__ div#InnerContainer__ div#InnerContent__ div#Scene div#Home table#Table_Fields tbody tr td.Col2 div#Field_middle div#Account div#Tabs ul li table tbody tr td div {
+	cursor: pointer;
+}
+
+#Account #Tabs > ul > li > table {
+    width: 100%;
+}
+#Account #Tabs > ul > li > table > tbody > tr > td {
+    width: 100px;
+	vertical-align: top;
+}
+#Account #Tabs > ul > li > table > tbody > tr > td + td {
+    width: auto;
+}
+#Account #Tabs > ul > li > table > tbody > tr > td + td + td {
+    width: 50px;
+}
+#Account #Tabs button.disabled {
+    opacity: 0.5;
+}
+
+#About #WorkAndEducation, #About #Basic, #About #ContactInfo, #About #AboutMe, #About #Quotations {
+	color: #686868;
+    font-size: 12px;
+    font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+/* Slideshow */
+
+.Showroom .Pages
+{
+	position: absolute !important;
+	left: 126px !important;
+	top: auto !important;
+	bottom: 0 !important;
+	visibility: visible !important;
+	z-index: 70 !important;
+	color: #ffffff;
+	padding: 10px;
+	margin: 5px;
+}
+
+.Showroom .Pages > div
+{
+	float: left;
+}
+
+.Showroom .Pages span
+{
+	margin-right: 3px;
+}
+
+.Showroom .Pages > .Page
+{
+	visibility: hidden;
+	overflow: hidden;
+	width: 0px;
+	height: 0px;
+}
+
+.imgs1 .Showroom .Arrows
+{
+	display: none;
+}
+
+.Showroom {
+    background-color: #000000;
+    overflow: hidden;
+    position: relative;
+}
+.Showroom .ImageContainer {
+    position: relative;
+    z-index: 10;
+}
+.fullscreen #Album_Showroom {
+    height: 100% !important;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+}
+.fullscreen .Showroom .ImageContainer > div, .fullscreen .Showroom .ImageContainer {
+    height: 100%;
+    left: 0;
+    right: auto;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.fullscreen .Showroom .ImageContainer > div {
+    background: none repeat scroll 0 0 black;
+}
+.Showroom .ImageContainer > div {
+    position: absolute;
+    right: 100%;
+    top: 0;
+}
+.Showroom .ImageContainer > div > div {
+    font-size: 16px;
+    margin-right: -10px;
+    margin-top: 10px;
+}
+.Showroom .Pages {
+    left: -1000px;
+    position: absolute;
+    top: -1000px;
+    visibility: hidden;
+}
+.Showroom .Arrows {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.Showroom .Arrows .ArrowPrev {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 50;
+}
+.Showroom .Arrows .ArrowNext {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: 50;
+}
+.Showroom .Arrows .ArrowPrev span, .Showroom .Arrows .ArrowNext span {
+    display: none;
+}
+.Showroom .Arrows .ArrowPrev:hover {
+    background: url("@url/img/arrow_overlay_left_white.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+.Showroom .Arrows .ArrowNext:hover {
+    background: url("@url/img/arrow_overlay_right_white.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+/* Messages */
+
+#Messages li.line_info
+{
+	display: none;
+}
+
+#Messages .Box {
+    padding: 0 0 15px 15px;
+}
+#Messages .post > input, #Messages .post > textarea {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    padding: 6px;
+}
+
+#Messages .post textarea
+{
+	background-color: #e5e5e5;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+
+#Messages #MainIM table {
+    width: 100%;
+}
+#Messages #MainIM td.leftCol {
+    min-width: 250px;
+    width: 250px;
+	vertical-align: top;
+}
+#Messages #MainIM td
+{
+	vertical-align: top;
+}
+#Messages #MainIM a {
+    color: $colorLighter;
+    display: block;
+    text-decoration: none;
+}
+
+#Messages #MainIM #ListIM_inner {
+	height: 685px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    position: relative;
+	max-height: 685px;
+	overflow: hidden;
+	overflow-y: auto;
+	border: 1px solid #cacaca;
+	border-radius: 8px 0 0 8px;
+}
+
+#Messages #Accounts_inner {
+	height: 630px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: relative;
+	max-height: 630px;
+	overflow: hidden;
+	overflow-y: auto;
+	border: 1px solid #cacaca;
+	border-radius: 8px;
+}
+
+#Messages #MainIM #RightIM_inner .messages, #Messages #MainIM #RightIM_inner .chatpriv {
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #cacaca;
+    height: 618px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    position: relative;
+}
+
+#Messages #MainIM #RightIM .MailBox, #Messages #MainIM #RightIM > div.write {
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #cacaca;
+    height: 618px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 0px;
+    position: relative;
+}
+
+#Messages #MainIM ul, #Messages #MainIM ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+/*#Messages #MainIM #ListIM_inner li:hover, #Messages #MainIM #ListIM_inner li.NotRead {
+    background-color: #eeeeee;
+}*/
+#Messages #MainIM #ListIM_inner li:hover {
+    background-color: #eeeeee;
+}
+#Messages #MainIM #ListIM_inner li.current {
+    background-color: #eeeeee;
+}
+#Messages #MainIM #ListIM_inner li > div {
+    cursor: pointer;
+    height: 52px;
+    padding: 10px 5px;
+}
+#Messages #MainIM #ListIM_inner li:last-child > div {
+    border-bottom: 0 none;
+}
+#Messages #MainIM #RightIM_inner li > div {
+    height: auto;
+    padding: 5px;
+}
+#Messages #MainIM #ListIM_inner .image {
+    border-radius: 100%;
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    width: 30px;
+	margin-right: 5px;
+	background-size: cover;
+	background-position: center center;
+	background-size: 100%;
+}
+
+#Messages .contact .name {
+	color: #686868;
+	position: relative;
+	top: 5px;
+}
+
+#Messages .contact .content {
+	border: none;
+	color: #686868;
+	font-size: 13px;
+	padding-left: 0px;
+	padding-top: 20px;
+}
+
+#Messages #MainIM #RightIM_inner .image, #Messages #MainIM #RightIM_inner .Image {
+	border-radius: 100%;
+    float: left;
+    height: 28px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 30px;
+}
+
+#RightIM_inner .name {
+	position: relative;
+	top: 5px;
+}
+
+#RightIM_inner .content {
+	padding-top: 20px;
+	padding-left: 0px;
+	font-size: 13px;
+}
+
+#Messages #MainIM #ListIM_inner .image > img, #Messages #MainIM #RightIM_inner .Image > img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0 none transparent !important;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#Messages #MainIM .time {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+	color: #707277;
+	font-size: 12px;
+}
+#Messages #MainIM div.inner {
+    position: relative;
+}
+
+#Messages #MainIM #ListIM_inner li > div > a > span + span > div:first-child{
+	color: #686868;
+	font-size: 12px;
+    font-weight: 700;
+	position: relative;
+	top: 5px;
+}
+
+#Messages #MainIM div a span div.time {
+	color: #000000;
+	font-size: 10px;
+    font-weight: 700;
+	position: absolute;
+	top: 5px;
+}
+
+#Messages #MainIM #ListIM_inner li > div > a > span + span > div + div {
+	color: #ffffff;
+	font-size: 12px;
+    font-weight: 700;
+	position: relative;
+	top: 5px;
+}
+
+#Messages #Tabs {
+	margin-bottom: 15px;
+}
+
+#Messages #Tabs ul#MessagesMenu {
+	list-style-type:none;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 39px;
+	padding-left: 15px;
+	border-bottom: 1px solid #cacaca;
+}
+
+#Messages #Tabs ul#MessagesMenu li {
+	float: left;
+	margin-right: 20px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border-color: #cacaca;
+}
+
+#Messages ul#MessagesMenu li a span {
+}
+
+#Messages ul#MessagesMenu li a {
+	color: #686868;
+	font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+	text-decoration: none;
+    text-transform: uppercase;
+	padding-bottom: 20px;
+}
+
+#Messages ul#MessagesMenu li a:hover {
+	color: $colorDefault;
+}
+
+#Messages #Tabs ul#MessagesMenu li:hover, #Messages #Tabs ul#MessagesMenu .current {
+	padding-bottom: 19px;
+	border-bottom: 3px solid !important;
+	border-color: $colorDefault !important;
+}
+
+#Messages #Accounts_inner li {
+    padding: 5px 15px !important;
+}
+#Messages #Accounts_inner li:hover {
+    cursor: pointer;
+}
+#Messages #Accounts_inner li.current{
+    background: #eeeeee;
+}
+
+#Messages #Mail_top {
+    padding: 0;
+    position: relative;
+}
+#Messages #Mail_top > div {
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 19px;
+	border-bottom: 1px solid #cacaca;
+}
+
+#Messages #Mail_top > div > span {
+	color: #686868;
+	font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+	text-decoration: none;
+    text-transform: uppercase;
+	margin: 0 10px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+#Messages #Mail_top > div > span:hover {
+	padding-bottom: 19px;
+	border-bottom: 3px solid !important;
+	border-color: $colorDefault !important;
+	cursor: pointer;
+}
+
+#Messages #Mail_top .seperator.account {
+	display: none;
+}
+
+#Messages #Mail_top > div .button.account, #Messages #Mail_top > div .seperator.account {
+    float: right;
+}
+#Messages #Mail_inner {
+    padding: 5px;
+    position: relative;
+}
+
+#Messages #Accounts_inner h4 {
+	text-transform: uppercase;
+	border-bottom: 1px solid #cacaca;
+	padding: 20px 0 19px 15px;
+	overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#Messages #Accounts_inner ul {
+	margin-top: 5px;
+}
+
+#Messages #Mail_top .buttonsmail, #Messages #Mail_top .buttonsread, #Messages .write #Mail_top .buttonslist, #Messages .open #Mail_top .buttonslist, #Messages .open #Mail_top .buttonsmail {
+    display: none;
+}
+#Messages .write #Mail_top .buttonsmail, #Messages .open #Mail_top .buttonsread {
+    display: block;
+}
+#Messages #Mail_inner.write td.leftcol, #Messages #Mail_inner.open td.leftcol {
+    line-height: 25px;
+    padding-right: 10px;
+    text-align: right;
+    width: 80px;
+}
+#Messages #Mail_inner.write td.rightcol, #Messages #Mail_inner.open td.rightcol {
+    padding-right: 10px;
+    position: relative;
+	line-height: 25px;
+}
+#Messages #Mail_inner.write td.rightcol .datetime, #Messages #Mail_inner.open td.rightcol .datetime {
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+}
+#Messages #Mail_inner.write .headderbox, #Messages #Mail_inner.open .headderbox {
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    min-height: 110px;
+    width: 50%;
+}
+#Messages #Mail_inner.write .headderfiles, #Messages #Mail_inner.open .headderfiles {
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    float: left;
+    height: 110px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 48%;
+}
+#Messages #Mail_inner .headderfiles .upload_btn {
+    padding: 5px 5px 0;
+}
+#Messages #Mail_inner .headderfiles .hfiles_inner {
+    padding: 0 5px 5px;
+}
+#Messages #Mail_inner.open .headderfiles .hfiles_inner {
+    padding-top: 5px;
+}
+#Messages #Mail_inner.write .message, #Messages #Mail_inner.open .message {
+    border-top: 1px solid #c0c0c0;
+    padding: 20px 10px 10px;
+}
+#Messages #Mail_inner.write input, #Messages #Mail_inner.open input, #Messages #Mail_inner select {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #c0c0c0;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    box-sizing: border-box;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#Messages #Mail_inner.write textarea, #Messages #Mail_inner.write .textarea, #Messages #Mail_inner.open textarea, #Messages #Mail_inner.open .textarea {
+    border: 0 none;
+    box-sizing: border-box;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#Messages #Mail_inner li {
+    padding: 5px 10px 5px 5px !important;
+}
+
+#Messages #Accounts_inner li.current, #Messages #Accounts_inner li:hover {
+    background: #eeeeee none repeat scroll 0 0;
+    cursor: pointer;
+}
+#Messages #Mail_inner li:hover {
+    background: #eeeeee none repeat scroll 0 0;
+    cursor: pointer;
+}
+#Messages #Mail_inner .Message {
+    width: 100%;
+}
+#Messages #Mail_inner .Message.NotRead {
+    font-weight: bold;
+}
+#Messages #Mail_inner .Message > div {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#Messages #Mail_inner .Message .Mark {
+    width: 4%;
+}
+#Messages #Mail_inner .Message .Mark input {
+    display: block;
+}
+#Messages #Mail_inner .Message .From {
+    width: 30%;
+}
+#Messages #Mail_inner .Message .Subject {
+    width: 46%;
+}
+#Messages #Mail_inner .Message .Date {
+    text-align: right;
+    width: 20%;
+}
+#Messages .clearboth {
+    clear: both !important;
+    float: none !important;
+}

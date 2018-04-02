@@ -1,0 +1,67 @@
+Start : Start
+End : Slutt
+Hours : Timer
+Extra (50%) : Tillegg (50%)
+Extra (100%) : Tillegg (100%)
+Description : Beskrivelse
+Create : Lag ny
+Create_suborder : Lag subordre
+Name : Navn
+Projects : Prosjekter
+Members : Medlemmer
+Participants : Deltakere
+Date : Dato
+Add hours : Legg til timer
+
+Hour description : Time beskrivelse
+
+Timeoff : Avspasering
+Toll : Bom
+Parking : Parkering
+Km : Km
+
+Entry : Oppført
+Price : Pris
+
+h : t
+
+Mon : Man
+Tue : Tir
+Wed : Ons
+Thu : Tor
+Fri : Fre
+Sat : Lør
+Sun : Søn
+
+Pending : Venter
+Active : Aktiv
+OnHold : Stoppet
+Canceled : Kansellert
+Finished : Ferdig
+Archived : Arkivert
+
+OrderID : Ordrenr
+JobID : Jobbnr
+OperationID : Operasjonsnr
+Deadline : Frist
+Project : Prosjekt
+Jobtext : Jobbtekst
+Assigned : Ansvarlig
+Participants : Deltakere
+Customer : Kunde
+Contact : Kontakt
+Billing : Fakturering
+Delivery : Leveranse
+Mobile : Mobil
+Email : Epost
+Total Price : Total Pris
+
+Save   : Lagre
+Open   : Åpne
+Close  : Lukk
+Delete : Slett
+
+i18n_h_Active 	: Aktive
+i18n_h_Pending 	: Til godkjenning
+i18n_h_Finished : Ferdig
+i18n_h_Archived : Arkivert

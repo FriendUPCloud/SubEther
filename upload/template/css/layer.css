@@ -1,0 +1,11 @@
+
+html .ManagedWindow.Active > .WindowTitle
+{
+	background: $defaultLinkColor;
+}
+
+html #creategroup .head, html #groupinvite .head,
+html #InnerPopupWindow__ .head
+{
+	background: $defaultLinkColor;
+}

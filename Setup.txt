@@ -1,0 +1,14 @@
+Manual installation instructions
+--------------------------------
+
+Treeroot is an open source software system for social networking, spreading of
+information and deployment of webapplications. It is built on top of ARENA CM, 
+or, in the enterprise version, ARENA Enterprise. Because of this, the 
+installation procedure involves installing ARENA CM/Enterprise first. This
+guide presumes that you are going to use ARENA CM.
+
+At this time, these instructions imply that you have an average experience with
+Linux, MySQL, Apache2 and PHP. You will not need to do any programming, but you
+will have to edit some config files to set everything up.
+
+

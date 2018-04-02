@@ -1,0 +1,40 @@
+
+#Bank table
+{
+	border-collapse: collapse;
+}
+
+#Bank table th
+{
+	background-color: #dcdddd;
+	font-weight: normal;
+}
+
+#Bank table td strong
+{
+	font-weight: normal;
+}
+
+#Bank table th, #Bank table td
+{
+	padding: 10px;
+}
+
+#Bank table tr + tr td
+{
+	border-bottom: 1px solid #c0c0c0;
+}
+
+#Bank table .red
+{
+	color: #ac0200;
+}
+
+#Bank table em
+{
+	display: block;
+	background: url("../../../gfx/search.png") no-repeat scroll center center transparent;
+    cursor: pointer;
+    width: 30px;
+	height: 15px;
+}

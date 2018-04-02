@@ -1,0 +1,195 @@
+
+#Case ul, #Case li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#Case .clearboth {
+    clear: both !important;
+    float: none !important;
+}
+#Case input[type="text"] {
+    position: relative;
+    top: -1px;
+}
+#Case select {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: black;
+    position: relative;
+    text-shadow: none;
+    top: -2px;
+}
+#Case input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+#Case .cols, #Case .hours .subcols {
+    display: block;
+    float: left;
+}
+#Case .content.hidden {
+    height: 0;
+    overflow: hidden;
+    padding: 5px;
+    visibility: hidden;
+}
+#Case .cols > span {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#Case .cols.col1 {
+    width: 5%;
+}
+#Case .cols.col2 {
+    width: 75%;
+}
+#Case .cols.col3 {
+    width: 20%;
+}
+#Case .rows {
+    line-height: 35px;
+}
+#Case .sw1 > .rows {
+    background: #2c2f38 none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+#Case .sw2 > .rows {
+    border: 1px solid #53565d;
+    border-radius: 3px;
+}
+#Case .content {
+    padding: 20px 10px;
+}
+#Case .info {
+    padding-bottom: 20px;
+}
+#Case .hours {
+    padding-top: 20px;
+}
+#Case .textarea {
+    border: 1px solid #53565d;
+    border-radius: 3px;
+    padding: 7px;
+}
+#Case .textarea > textarea {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    margin: 0;
+    min-height: 200px;
+    padding: 0;
+    width: 100%;
+	color: #d6d8ec;
+	font-family: Raleway;
+}
+#Case .info > div {
+    float: left;
+}
+#Case .info .leftbox, #Case .info .rightbox {
+    width: 50%;
+}
+#Case .info .bottombox {
+    padding-top: 15px;
+}
+#Case .info input[type="text"] {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#Case .info > div > div {
+    padding-bottom: 5px;
+}
+#Case .info > div > div > span {
+    display: block;
+    float: left;
+}
+#Case .info .bottombox > div span+span {
+	text-align: center;
+}
+#Case .leftcol {
+    width: 90px;
+}
+#Case .rightcol > span {
+    border-bottom: 1px solid #53565d;
+    display: block;
+    line-height: 25px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+#Case .subcols > span {
+    display: inline-block;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+#Case .subcols.col2_2 > span, #Case .subcols.col3_2 > span {
+    padding-left: 0;
+}
+#Case .subcols > span > input {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#Case .subcols {
+    line-height: 25px;
+}
+#Case .hours .subcols.col1 {
+    width: 90px;
+}
+#Case .hours .subcols.col2 {
+    width: 80px;
+}
+#Case .hours .subcols.col2_1, #Case .hours .subcols.col3_1 {
+    width: 30px;
+}
+#Case .hours .subcols.col2_2, #Case .hours .subcols.col3_2 {
+    width: 50px;
+}
+#Case .hours .subcols.col3 {
+    width: 80px;
+}
+#Case .hours .subcols.col4 {
+    width: 60px;
+}
+#Case .hours .subcols.col5 {
+    width: 480px;
+}
+#Case .hours .subcols.col6 {
+    width: 80px;
+}
+#Case .hours .subcols.col7 {
+    width: 80px;
+}
+#Case .hours .subcols.col1, #Case .hours .subcols.col2, #Case .hours .subcols.col2_2, #Case .hours .subcols.col3, #Case .hours .subcols.col3_2, #Case .hours .subcols.col4, #Case .hours .subcols.col5, #Case .hours .subcols.col6 {
+    padding-right: 5px;
+}
+#Case .list .subcols.col1 > span {
+    border-bottom: 1px solid #53565d;
+}
+#Case .list .subcols.col2_1 > span {
+    
+}
+#Case .list .subcols.col2_2 > span {
+	border-bottom: 1px solid #53565d;
+}
+#Case .list .subcols.col3_1 > span {
+    
+}
+#Case .list .subcols.col3_2 > span {
+    border-bottom: 1px solid #53565d;
+}
+#Case .list .subcols.col4 > span {
+    border-bottom: 1px solid #53565d;
+}
+#Case .list .subcols.col5 > span {
+    border-bottom: 1px solid #53565d;
+}
+#Case .list .subcols.col6 > span {
+    border-bottom: 1px solid #53565d;
+}
+#Case .list .subcols.col7 > span {
+    border-bottom: 1px solid #53565d;
+}

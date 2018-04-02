@@ -1,0 +1,440 @@
+#Files #Main table
+{
+	width: 100%;
+}
+
+#Files #Main td.leftCol
+{
+	width: 265px;
+}
+
+#Files #Main td.topRow
+{
+	height: 35px;
+	text-align: right;
+}
+
+#Files #Main td.topRow > div
+{
+	padding-right: 10px;
+}
+
+#Files #Main a
+{
+	color: #000000;
+	text-decoration: none;
+	display: block;
+}
+
+#Files #Main #Directory
+{
+	padding: 5px;
+	height: 500px;
+	overflow: hidden;
+	overflow-y: auto;
+	border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    position: relative;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#Files #Main #Content
+{
+	padding: 5px;
+	/*height: 462px;*/
+	height: 500px;
+	resize: none;
+	overflow: hidden;
+	overflow-y: auto;
+	border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    position: relative;
+	margin-bottom: 10px;
+}
+
+#Files #Main #Content .textarea
+{
+	padding: 5px;
+	padding-bottom: 10px;
+	margin-bottom: 5px;
+}
+
+#Files #Main #Content table
+{
+	border-collapse: collapse;
+}
+
+#Files #Main #Content table th,
+#Files #Main #Content table td
+{
+	text-align: left;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+#Files #Main #Content table td div
+{
+	height: 20px;
+	line-height: 20px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+#Files #Main #Content table td div.files
+{
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Files #Main  ul, #Files #Main ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Files #Main ul > li > div:hover, #Files #Main ul > li > div.current
+{
+	background: #DCDDDD;
+}
+
+#Files #Main #Directory input#EditMode
+{
+	border: 0;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans',sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+#Files #Main #Directory h4 input#EditMode
+{
+	text-transform: uppercase;
+}
+
+#Files #Main #Directory h4,
+#Files #Main #Content table th > h4
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	position: relative;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Files #Main #Directory li > div
+{
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	padding-right: 10px;
+	position: relative;
+	/*border-bottom: 1px solid #C0C0C0;*/
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Files #Main #Directory li > div > span > img
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 2px;
+}
+
+#Files #Main #Directory li > div > span.files
+{
+	padding-left: 2px;
+}
+
+#Files #Main #Directory li > div > span.files > i
+{
+	background-image: url( './../../../../subether/gfx/play_thumb.png' );
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: auto;
+    height: 8px;
+    left: 5px;
+    margin: 0;
+    position: absolute;
+    right: auto;
+    top: 6px;
+    width: 10px;
+	display: none;
+}
+
+#Files #Main #Directory h4 .edit_icons
+{
+	text-transform: none;
+	font-weight: normal;
+	position: absolute;
+	right: 5px;
+	top: 0;
+	cursor: hand;
+	cursor: pointer;
+}
+#Files #Main #Directory h4 .edit_icons img
+{
+	vertical-align: middle;
+}
+
+#Files #Main #Directory ul > li > ul
+{
+	height: 0;
+	overflow: hidden;
+}
+
+#Files #Main #Directory ul > li > ul.open
+{
+	overflow: visible;
+	position: relative;
+	height: auto;
+	margin: 0 0 0 13px;
+	padding: 0px 0 0 5px;
+}
+
+#Files #Main #Directory ul > li > ul.open > li
+{
+	position: relative;
+}
+
+#Files #Main #Directory ul > li > ul.open > li:before
+{
+	content: " ";
+	position: absolute;
+	top: 8px;
+	left: -7px;
+	width: 8px;
+	height: 1px;
+	border-top: 1px dotted #909090;
+}
+#Files #Main #Directory ul > li > ul.open > li:after
+{
+	content: " ";
+	position: absolute;
+	top: -4px;
+	left: -9px;
+	width: 1px;
+	height: 19px;
+	border-left: 1px dotted #909090;
+}
+#Files #Main #Directory ul > li > ul.open > li:first-child:after
+{
+	top: 0;
+	height: 15px;
+}
+#Files #Main #Directory ul > li > ul.open > li:last-child:after
+{
+	height: 9px !important;
+}
+#Files #Main #Directory ul > li > ul.open > li + li:last-child:after
+{
+	height: 13px !important;
+}
+
+#Files #Main #Directory li .edit_icons
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Files #Main #Directory li > div:hover > .edit_icons
+{
+	visibility: visible;
+}
+
+#Files #Main #Directory h4 .edit_icons img
+{
+	margin-left: 5px;
+}
+
+#Files #Main #Directory li .edit_icons img
+{
+	margin: 2px;
+	margin-left: 5px;
+	margin-right: 2px;
+}
+
+#Files #Main #Directory li .edit_icons select
+{
+	position: relative;
+	top: -5px;
+}
+
+#Files #Main #Directory .edit_icons .sortUp
+{
+	background: url( './../../../../admin/gfx/icons/bullet_up.png' ) center -3px no-repeat;
+	position: absolute;
+	left: -18px;
+	top: 2px;
+	width: 16px;
+	height: 7px;
+	border-bottom: 1px solid transparent;
+}
+#Files #Main #Directory .edit_icons .sortUp:hover
+{
+	opacity: 0.5;
+}
+
+#Files #Main #Directory .edit_icons .sortDown
+{
+	background: url( './../../../../admin/gfx/icons/bullet_down.png' ) center -6px no-repeat;
+	position: absolute;
+	left: -18px;
+	top: 11px;
+	width: 16px;
+	height: 7px;
+}
+#Files #Main #Directory .edit_icons .sortDown:hover
+{
+	opacity: 0.5;
+}
+
+#Files #Main #Directory h4 .edit_icons .sortUp { top: 3px; }
+#Files #Main #Directory h4 .edit_icons .sortDown { top: 12px; }
+
+#Files #Main #Content li > div
+{
+	height: 30px;
+	padding: 5px;
+}
+
+#Files #Main #Content .thumbs,
+#Files #Main #Content .fileupload
+{
+	float: left;
+	position: relative;
+	/*width: 97px;*/
+	/*height: 97px;*/
+	width: 105px;
+	height: 105px;
+	overflow: hidden;
+	/*border: 1px solid #C0C0C0;*/
+	border: 1px solid transparent;
+    border-radius: 3px;
+	margin: 2px;
+	padding: 5px;
+	cursor: hand;
+	cursor: pointer;
+	text-align: center;
+}
+
+#Files #Main #Content .thumbs > img
+{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+	margin: 0 auto;
+}
+
+#Files #Main #Content .thumbs > img:active
+{
+	opacity: 0.5;
+}
+
+#Files #Main #Content .thumbs > i
+{
+    background-image: url( './../../../../subether/gfx/play_thumb.png' );
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    bottom: auto;
+    height: 26px;
+    left: 10px;
+    margin: 0;
+    position: absolute;
+    right: auto;
+    top: 65px;
+    width: 35px;
+}
+
+#Files #Main #Content .fileupload > div
+{
+	/*height: 97px;*/
+	height: 100px;
+	border-radius: 3px;
+}
+
+#Files #Main #Content .thumbs:hover
+{
+	border: 1px solid #C0C0C0;
+}
+
+#Files #Main #Content .fileupload > div
+{
+	background: url( '../../../../subether/gfx/cross.png' ) center center no-repeat;
+	border: 2px dashed #C0C0C0;
+}
+
+#Files #Main .upload_btn
+{
+	/*position: relative;
+	z-index: 200;
+	height: auto;
+	display: block;
+	margin: 12px;
+	margin-left: 0;
+	margin-right: 0;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+#Files #Main .upload_btn > div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#Files #Main .upload_btn > div > span
+{
+	display: block;
+	padding: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Files div .Download
+{
+	display: none;
+}
+
+#Files div:hover > .Download
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: block;
+}

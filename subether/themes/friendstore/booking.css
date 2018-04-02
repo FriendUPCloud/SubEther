@@ -1,0 +1,312 @@
+
+#Booking .Box {
+	padding: 15px 0;
+}
+
+#Booking div.checkbox input {
+	display: block !important;
+}
+
+#Booking .clearboth {
+    clear: both;
+    float: none;
+}
+#Booking .event {
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    float: left;
+    height: 242px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 228px;
+}
+#Booking .event.admin.closed {
+    background: rgba(0, 0, 0, 0) url("@url/img/cross.png") no-repeat scroll center center;
+    border: 1px dashed #cacaca;
+    cursor: pointer;
+    height: 240px;
+    width: 226px;
+}
+#Booking .event > .checkbox {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+}
+#Booking .event > .checkbox > input {
+    cursor: pointer;
+}
+#Booking .event > .edit {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0 !important;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+}
+#Booking .event > .edit > div.options {
+    background: rgba(0, 0, 0, 0) url("@url/img/downarrow.png") no-repeat scroll center center;
+    cursor: pointer;
+    height: 16px;
+    padding: 0 !important;
+    width: 20px;
+}
+#Booking .event.admin.closed .information {
+}
+#Booking .event .information {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+#Booking .event .information .inputs {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    bottom: 0;
+    color: white;
+    left: 0;
+    padding-bottom: 8px;
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+}
+#Booking .event .information .inputs a {
+    color: white;
+}
+#Booking .event.admin .information .inputs, #Booking .event.open .information .inputs, #Booking .event.edit .information .inputs {
+    background-color: transparent;
+    color: #777777;
+}
+#Booking .event.edit .information .inputs a {
+    color: black;
+}
+#Booking .event .information > div.inputs > div {
+    overflow: hidden;
+    padding: 0 10px 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#Booking .event .information .inputs .place, #Booking .event .information .inputs .description {
+    font-size: 80%;
+}
+#Booking .event .information .inputs .price {
+    font-weight: bold;
+}
+#Booking .event .information input {
+    border-bottom: 1px solid #cacaca;
+    padding: 5px;
+    width: 96%;
+}
+#Booking .event .heading {
+    font-weight: bold;
+    padding-top: 10px;
+}
+#Booking .event .time {
+    background: #dcdddd none repeat scroll 0 0;
+    padding-top: 10px;
+}
+#Booking h4 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0 5px 5px;
+    position: relative;
+    text-transform: uppercase;
+}
+#Booking .inner {
+    border-top: 1px solid #c0c0c0;
+    padding: 10px 5px 5px;
+}
+#Booking .fileupload {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    z-index: 3;
+}
+#Booking .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+#Booking .event.edit .fileupload, #Booking .event:hover .fileupload {
+    display: block;
+}
+#Booking .fileupload > div {
+    background: rgba(0, 0, 0, 0) url("@url/img/upload_big.png") no-repeat scroll center center;
+}
+#Booking .fileupload > div {
+    border-radius: 3px;
+    height: 46px;
+}
+#Booking .upload_btn {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+}
+#Booking .navigator {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+#Booking .navigator .wrapper {
+    float: left;
+}
+#Booking .navigator .wrapper .container {
+    padding-right: 10px;
+}
+#Booking .navigator .wrapper .container.children {
+    padding-right: 0;
+}
+#Booking .navigator .wrapper .container > div {
+    width: 100%;
+}
+#Booking .navigator .wrapper.placename {
+    width: 42%;
+}
+#Booking .navigator .wrapper.fromdate, #Booking .navigator .wrapper.todate {
+    width: 17%;
+}
+#Booking .navigator .wrapper.number, #Booking .navigator .wrapper.adults, #Booking .navigator .wrapper.children {
+    width: 8%;
+}
+#Booking .navigator .heading {
+    padding-bottom: 5px;
+}
+#Booking .navigator .heading.placename {
+    padding-left: 15px;
+}
+#Booking .navigator .input {
+    position: relative;
+	border-bottom: 1px solid #cacaca;
+}
+#Booking .navigator .input > div {
+    padding-right: 10px;
+    position: relative;
+}
+
+#Booking .navigator .input.placename > div { 
+	padding-left: 15px; 
+}
+
+#Booking .navigator input {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#Booking .navigator button {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: black;
+    line-height: 27px;
+    margin: 0;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#Booking .navigator .placename button {
+    background: transparent url("@url/img/booking_search.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 16px;
+}
+#Booking .navigator .fromdate button, #Booking .navigator .todate button {
+    background: transparent url("@url/img/booking_calendar.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 16px;
+}
+#Booking .navigator .number button, #Booking .navigator .adults button, #Booking .navigator .children button {
+    background: transparent url("@url/img/select.png") no-repeat scroll center center;
+    font-size: 0;
+    width: 28px;
+}
+
+#Booking .navigator .calendar {
+	background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+    border-radius: 8px;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 485px;
+    width: auto !important;
+    z-index: 5;
+}
+
+#Booking .navigator .calendar a {
+	text-decoration: none;
+}
+
+#Booking .navigator .calendar.open {
+    display: block;
+}
+#Booking .navigator .calendar table {
+    width: 100%;
+}
+#Booking .navigator .calendar table th {
+    text-align: center;
+}
+#Booking .navigator .calendar table td {
+    text-align: left;
+}
+#Booking .navigator .calendar table tbody tr th, #Booking .navigator .calendar table tbody tr td {
+    border-collapse: collapse;
+}
+#Booking .navigator .calendar .nav {
+    padding-bottom: 10px;
+    position: relative;
+}
+#Booking .navigator .calendar .nav .Left {
+    left: 10px;
+    position: absolute;
+    top: 0;
+}
+#Booking .navigator .calendar .nav .Right {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+#Booking .navigator .calendar .nav .Center {
+    display: block;
+    text-align: center;
+}
+#Booking .navigator .calendar .Week, #Booking .navigator .calendar .prevYear, #Booking .navigator .calendar .nextYear {
+    display: none;
+}
+#Booking .navigator .calendar td > div {
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 5px 10px;
+	text-align: center;
+}
+#Booking .navigator .calendar .Selected {
+    background-color: #eeeeee;
+}
+#Booking .navigator .calendar .Reserved {
+    background-color: #0f75bd;
+    color: white;
+}
+#Booking .navigator .calendar .Space {
+    color: #cacaca;
+}
+#Booking .navigator .calendar .Available {
+    cursor: pointer;
+}

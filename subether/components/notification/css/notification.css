@@ -1,0 +1,236 @@
+#Notification
+{
+	position: relative;
+	padding-right: 15px;
+	min-width: 85px;
+}
+
+#Notification #Frequ, #Notification #Messageu, #Notification #Notiu
+{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#Notification #Frequ    { left: 0; }
+#Notification #Messageu { left: 26px; }
+#Notification #Notiu    { left: 52px; }
+
+#Notification div.ncount
+{
+	position: absolute;
+	top: -4px;
+	right: -1px;
+	display: block;
+	padding-left: 3px;
+	padding-right: 3px;
+	background-color: #720300;
+	color: #ffffff;
+	line-height: normal;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 11px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+#Notification #Frequ
+{
+	background: url("../gfx/icon_freq_u.png") no-repeat center center;
+}
+#Notification #Frequ.active
+{
+	background: url("../gfx/icon_freq_a.png") no-repeat center center;
+}
+
+#Notification #Messageu
+{
+	background: url("../gfx/icon_message_u.png") no-repeat center center;
+}
+#Notification #Messageu.active
+{
+	background: url("../gfx/icon_message_a.png") no-repeat center center;
+}
+
+#Notification #Notiu
+{
+	background: url("../gfx/icon_noti_u.png") no-repeat center center;
+}
+#Notification #Notiu.active
+{
+	background: url("../gfx/icon_noti_a.png") no-repeat center center;
+}
+
+#Notification #NotificationBox 
+{
+    background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    padding: 6px;
+    position: absolute;
+    /*right: -1px;*/
+	left: -140px;
+    text-align: left;
+    top: 45px;
+    visibility: hidden;
+    /*width: 260px;*/
+	/*min-width: 260px;*/
+	/*min-width: 300px;*/
+	min-width: 500px;
+}
+
+#Notification #NotificationBox .toparrow 
+{
+    background: url("../gfx/toparrow.png") no-repeat center center;
+    height: 12px;
+    position: absolute;
+    /*right: 18px;*/
+	left: 190px;
+    top: -12px;
+    width: 24px;
+}
+
+#Notification #NotificationBox.contacts .toparrow
+{
+	/*right: 68px;*/
+	left: 140px;
+}
+
+#Notification #NotificationBox.messages .toparrow
+{
+	/*right: 42px;*/
+	left: 165px;
+}
+
+#Notification #NotificationBox.news .toparrow
+{
+	/*right: 19px;*/
+	left: 190px;
+}
+
+#Notification #NotificationBox.open
+{
+	visibility: visible;
+}
+
+#Notification #NotificationBox a
+{
+	color: #000000;
+	text-decoration: none;
+	display: block;
+}
+
+#Notification #NotificationBox a span
+{
+	line-height: normal;
+}
+
+#Notification #NotificationBox ul, #Notification #NotificationBox ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+
+#Notification #NotificationBox li:hover, #Notification #NotificationBox li.NotRead
+{
+	background: #DCDDDD;
+}
+
+#Notification #NotificationBox li.current
+{
+	background: #C0C0C0
+}
+
+#Notification #NotificationBox li > div
+{
+	min-height: 42px;
+	padding: 5px;
+	border-bottom: 1px solid #C0C0C0;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#Notification #NotificationBox li:last-child > div
+{
+	border-bottom: 0;
+}
+
+#Notification #NotificationBox .image
+{
+	float: left;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 40px;
+    overflow: hidden;
+    width: 40px;
+	margin-right: 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#Notification #NotificationBox .image img
+{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+}
+
+#Notification #NotificationBox .time
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#Notification #NotificationBox.notices .time
+{
+	position: relative;
+	top: auto;
+	right: auto;
+	padding: 0;
+}
+
+#Notification #NotificationBox .buttons
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#Notification #NotificationBox div.inner
+{
+	position: relative;
+	/*max-height: 316px;*/
+	max-height: 400px;
+	overflow-y: auto;
+}
+
+#Notification #NotificationBox div.all
+{
+	border-top: 1px solid #C0C0C0;
+	text-align: center;
+}
+
+#Notification #NotificationBox div.all a
+{
+	line-height: 18px;
+	padding-top: 6px;
+}
+
+#Notification #NotificationBox div.all a:hover
+{
+	text-decoration: underline;
+}

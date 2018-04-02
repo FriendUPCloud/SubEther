@@ -1,0 +1,5 @@
+{
+    "version":1.0,
+    "name":"Funky ARENA Template",
+    "description":"This template is the first piece of shit."
+}

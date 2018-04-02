@@ -1,0 +1,90 @@
+
+#Admin #Members ul, #Admin #Members li
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Admin #Members li
+{
+	padding-bottom: 5px;
+}
+
+#Admin #Members table
+{
+	width: 100%;
+}
+
+#Admin #Members input[type="checkbox"]
+{
+	position: relative;
+	top: 2px;
+	margin-right: 10px;
+}
+
+#Admin #Members .list .header
+{
+	/*cursor: hand;
+	cursor: pointer;*/
+}
+
+#Admin #Members .heading, #Admin #Members .header
+{
+	line-height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#Admin #Members .heading .col1, #Admin #Members .header .col1
+{
+    width: 7%;
+}
+
+#Admin #Members .heading .col2, #Admin #Members .header .col2
+{
+    /*width: 60%;*/
+	width: 25%;
+}
+
+#Admin #Members .heading .col3, #Admin #Members .header .col3
+{
+    width: 25%;
+	white-space: nowrap;
+}
+
+#Admin #Members .heading .col4, #Admin #Members .header .col4
+{
+    width: 10%;
+}
+
+#Admin #Members .heading .col5, #Admin #Members .header .col5
+{
+    width: 25%;
+}
+
+#Admin #Members .heading .col6, #Admin #Members .header .col6
+{
+    width: 5%;
+	text-align: right;
+}
+
+#Admin #Members .heading .col3 > div, #Admin #Members .header .col3 > div
+{
+	width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#Admin #Members .sw1
+{
+    background: none repeat scroll 0 0 #eeeeee;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#Admin #Members .sw2
+{
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+}

@@ -1,0 +1,67 @@
+
+#Browse #Content .groups h3
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/*font-size: 11px;*/
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	height: 18px;
+}
+
+#Browse #Content .groups h4
+{
+	display: block;
+    height: 20px;
+    line-height: 20px;
+	font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Content .groups
+{
+	padding-top: 10px;
+}
+
+#Content .groups > table > tbody > tr > td
+{
+	width: 50%;
+}
+
+#Content .groups table table > tbody > tr > td
+{
+	width: 110px;
+}
+
+#Content .groups table table > tbody > tr > td + td
+{
+	text-align: left;
+	width: auto;
+}
+
+#Content .groups table table
+{
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#Content .groups table .image 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    height: 100px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 100px;
+	background-color: #ffffff;
+}
+
+#Content .groups table a
+{
+	color: #000000;
+	text-decoration: none;
+}

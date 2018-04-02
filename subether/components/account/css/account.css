@@ -1,0 +1,63 @@
+
+#Panel > div
+{
+    padding-top: 15px;
+}
+
+#Account #Tabs
+{
+    padding: 15px;
+}
+
+#Account #Tabs > h2
+{
+    margin-top: 0;
+}
+
+#Account #Tabs > ul
+{
+    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#Account #Tabs > ul > li + li
+{
+    border-top: 1px solid #DCDDDD;
+}
+
+#Account #Tabs > ul > li
+{
+    line-height: 30px;
+    border-top: 0;
+}
+
+#Account #Tabs > ul > li > table
+{
+    width: 100%;
+}
+
+#Account #Tabs > ul > li > table > tbody > tr > td
+{
+    width: 100px;
+}
+
+#Account #Tabs > ul > li > table > tbody > tr > td + td
+{
+    width: auto;
+}
+
+#Account #Tabs > ul > li > table > tbody > tr > td + td + td
+{
+    width: 50px;
+}
+
+#Account #Tabs button.disabled
+{
+    opacity: 0.5;
+    filter:Alpha(opacity=50);
+}
+
+

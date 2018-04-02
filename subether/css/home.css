@@ -1,0 +1,329 @@
+
+.Box
+{
+	padding: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.Box div.tabs a
+{
+	display: block;
+	color: #000000;
+	text-decoration: none;
+	padding-right: 15px;
+	line-height: 15px;
+	height: 25px;
+}
+
+.Box div.tabs a:hover, .Box div.tabs a.current
+{
+	text-decoration: underline;
+}
+
+.str.hide
+{
+	position: absolute;
+	top: -999px;
+	left: -999px;
+	z-index: -999;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+	display: block;
+}
+
+.str.show
+{
+	position: relative;
+	top: auto;
+	left: auto;
+	z-index: auto;
+	visibility: visible;
+	overflow: visible;
+	height: auto;
+	width: auto;
+	display: inline;
+}
+
+.str.link > a
+{
+	text-decoration: underline;
+}
+
+.loading
+{
+	background: url( '../../subether/gfx/loading.gif' ) no-repeat center center #ffffff !important;
+}
+
+#plivo_flash_placeholder
+{
+	position: absolute !important;
+}
+
+/*
+.Box div.post
+{
+	position: relative;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	height: 30px;
+}
+
+.Box div.post > div
+{
+	width: 90%;
+	float: left;
+}
+
+.Box div.post > div + div
+{
+	width: 10%;
+	float: left;
+	text-align: right;
+}
+
+.Box div.post input
+{
+	margin: 3px 2px 3px 6px;
+	border: 0;
+	background: transparent;
+	width: 100%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.Box div.post input:focus
+{
+	outline: none;
+	border: none;
+}
+
+.Box div.post button
+{
+	margin: 3px 6px 3px 3px;
+	text-align: center;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}*/
+
+/*
+#ShareBox
+{
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+*/
+/*
+.Col2 p.Buttons
+{
+	text-align: right;
+}
+*/
+/*
+.ReplyBox
+{
+	border: 1px solid #aaaa00;
+	background: #ffffcc;
+	color: #aaaa00;
+	padding: 10px;
+	margin-top: 2px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+*/
+
+/*.ReplyBox textarea
+{
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}*/
+/*
+#ShareContent
+{
+	border-top: 1px solid #C0C0C0;
+	padding: 15px;
+}
+
+#ShareContent table
+{
+	border-collapse: collapse;
+}
+
+#ShareContent a
+{
+	color: #000000;
+}
+
+#ShareContent .ReplyBox
+{
+	padding: 10px;
+	padding-top: 0;
+}
+
+#ShareContent .ReplyBox table
+{
+	width: 100%;
+}
+
+#ShareContent .ReplyBox .image
+{
+	background: #ffffff;
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#ShareContent .ReplyBox input
+{
+	width: 100%;
+	border: 0;
+	background: transparent;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#ShareContent .ReplyBox button
+{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+
+#ShareContent .ReplyBox div.reply
+{
+	background: #ffffff;
+	position: relative;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 2px;
+	padding-left: 6px;
+}
+
+#ShareContent > div.Comment
+{
+	background: #ffffff;
+	background: #DCDDDD;
+	border: 1px solid #C0C0C0 !important;
+	border-top: 0;
+	position: relative;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#ShareContent .Comment .Box
+{
+	padding: 0;
+}
+
+#ShareContent > .Comment > .Box
+{
+	background: #ffffff;
+}
+
+#ShareContent > .Comment > .Box > .commentbox
+{
+	display: none;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > p, #ShareContent > .Comment > .Box > .messagebox > div
+{
+	padding: 10px;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .posted
+{
+	padding-bottom: 0;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .posted .image
+{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .Buttons
+{
+	border-top: 1px solid #C0C0C0;
+	background: #DCDDDD;
+}
+
+#ShareContent .Comment .Comment
+{
+	padding: 10px;
+	padding-top: 0;
+	border: 0;
+	background: #DCDDDD;
+}
+
+#ShareContent .Comment .Comment > .Box
+{
+	border-top: 1px solid #C0C0C0;
+}
+
+#ShareContent .Comment .Comment > .Box > .messagebox
+{
+	display: none;
+}
+
+#ShareContent .Comment .Comment > .Box > p, #ShareContent .Comment .Comment  > .Box > div
+{
+	padding-top: 10px;
+}
+
+#ShareContent .Comment .Comment .Box .commentbox > table > tbody > tr > td > .image
+{
+	background: #ffffff;
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-right: 5px;
+	overflow: hidden;
+}
+*/
+/*
+#ShareContent .Comment > .Buttons
+{
+	display: block;
+	text-align: right;
+}
+*/
+/*
+#Field_bottom
+{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+}
+*/

@@ -1,0 +1,784 @@
+
+[contenteditable=true]:empty:before
+{
+  content: attr(placeholder);
+  color: #c0c0c0;
+  display: block; /* For Firefox */
+}
+
+/*
+#WallTabs #AjaxLoader
+{
+	float: right;
+	margin: 3px;
+	margin-right: 10px;
+	visibility: hidden;
+}
+
+#WallTabs #AjaxLoader.loading
+{
+	visibility: visible;
+}
+*/
+#WallTabs #AjaxLoader
+{
+    float: right;
+    visibility: hidden;
+}
+#WallTabs #AjaxLoader > div
+{
+    animation: 1.4s ease-in-out 0s normal both infinite running bouncedelay;
+    background-color: #bbb;
+    border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+}
+#WallTabs #AjaxLoader .bounce1
+{
+    animation-delay: -0.32s;
+}
+#WallTabs #AjaxLoader .bounce2
+{
+    animation-delay: -0.16s;
+}
+
+@keyframes bouncedelay
+{
+	0%, 80%, 100%
+	{
+		transform: scale(0);
+	}
+	40%
+	{
+		transform: scale(1);
+	}
+}
+
+#WallTabs #AjaxLoader.loading
+{
+    visibility: visible;
+	background: none !important;
+}
+
+#WallTabs .page
+{
+	visibility: hidden;
+	overflow: hidden;
+	height: 0px;
+}
+
+#WallTabs .active
+{
+	visibility: visible;
+	overflow: visible;
+	height: auto;
+}
+
+#Wall .Box
+{
+	padding: 15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+#Wall .Box div.tabs a
+{
+	display: block;
+	color: black;
+	text-decoration: none;
+	padding-right: 15px;
+	line-height: 15px;
+	height: 25px;
+}
+
+#Wall .Box div.tabs a:hover, #Wall .Box div.tabs a.current
+{
+	text-decoration: underline;
+}
+
+#Wall p.Buttons
+{
+	text-align: right;
+}
+
+#Wall .voteimg
+{
+	margin-top: 4px;
+	margin-left: 5px;
+}
+
+#Wall .Comment,
+#Wall .messagebox
+{
+	position: relative;
+	/*overflow: hidden;*/
+}
+
+#Wall .Comment > .Box > .Edit,
+#Wall .messagebox > .Box > .Edit,
+#Wall .messagebox .edit
+{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 0 !important;
+	/*width: 20px;
+	height: 16px;*/
+	border: 1px solid transparent;
+	z-index: 3;
+}
+/*
+#Wall .Comment > .Box:hover > .Edit > div
+{
+	padding: 0 !important;
+	width: 15px;
+	height: 15px;
+	background: url( '../gfx/x.png' ) center center;
+}
+
+#Wall .Comment > .Box > .Edit:hover
+{
+	border: 1px solid #C0C0C0;
+	cursor: hand;
+	cursor: pointer;
+}*/
+
+#Wall .Comment > .Box > .Edit > div.options,
+#Wall .messagebox > .Box > .Edit > div.options,
+#Wall .messagebox .edit > div.options
+{
+	background: url('./../../../gfx/downarrow.png') center center no-repeat;
+	width: 20px;
+	height: 16px;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0 !important;
+	margin-left: 4px;
+	margin-bottom: 10px;
+}
+
+#Wall .Comment > .Box > .Edit.comment > div.options
+{
+	background: transparent;
+	width: 20px;
+	height: 20px;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0 !important;
+}
+
+#Wall .Comment > .Box:hover > .Edit.comment > div.options
+{
+	background: url('./../../../gfx/edit_icon.png') center center no-repeat;
+}
+
+#Wall .Edit > div.bookmark
+{
+	background-color: #dcdddd;
+	width: 25px;
+	height: 26px;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0;
+	margin-bottom: 10px;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Wall .Edit > div.bookmark > div
+{
+	background: url('../../../gfx/rating_half_star_mini_grey.png') center center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#Wall .Edit > div.bookmark.marked > div,
+#Wall .Edit > div.bookmark:hover > div
+{
+	background: url('../../../gfx/rating_whole_star_mini_grey.png') center center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#Wall #WallOptions
+{
+	position: absolute;
+	min-width: 100px;
+	height: auto;
+	top: 33px;
+	right: -7px;
+	z-index: 200;
+	border: 1px solid #C0C0C0;
+	background: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+#Wall #WallOptions .toparrow
+{
+	position: absolute;
+	top: -12px;
+	right: 5px;
+	background: url('./../../../gfx/toparrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+#Wall #WallOptions .inner
+{
+	float: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Wall #WallOptions ul, #Wall #WallOptions li
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Wall #WallOptions ul li
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#Wall #WallOptions ul li:hover
+{
+	background: #DCDDDD;
+	cursor: pointer;
+}
+
+#Wall #WallOptions a
+{
+	color: #000000;
+	line-height: 20px;
+}
+
+#Wall .Comment p,
+#Wall .messagebox p
+{
+	padding-right: 30px;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > .Buttons
+{
+	margin-top: 20px;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > .posted
+{
+	float: right;
+	padding: 10px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > .posted .image
+{
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > h2
+{
+	margin: 0;
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 15px;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > h2 > a
+{
+	text-decoration: none;
+}
+
+#Wall .Comment.Article > .Box > .messagebox > h2 > a:hover
+{
+	text-decoration: underline;
+}
+
+#ShareContent
+{
+	border-top: 1px solid #C0C0C0;
+	padding: 15px;
+}
+
+#ShareContent table
+{
+	border-collapse: collapse;
+}
+
+#ShareContent .commentbox table
+{
+	width: 100%;
+}
+
+#ShareContent a
+{
+	color: #000000;
+}
+
+#ShareContent .ReplyBox
+{
+	padding: 10px;
+	padding-top: 0;
+}
+
+#ShareContent .ReplyBox table
+{
+	width: 100%;
+}
+
+#ShareContent .ReplyBox .image
+{
+	background-color: #FFFFFF;
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#ShareContent .ReplyBox input,
+#ShareContent .ReplyBox .textarea
+{
+	width: 100%;
+	max-width: 100%;
+	min-height: 26px;
+	border: 0;
+	background: transparent;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 70px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#ShareContent .ReplyBox button
+{
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+}
+
+#ShareContent .ReplyBox div.reply
+{
+	position: relative;
+	border: 1px solid #C0C0C0;
+	padding: 2px;
+	padding-left: 6px;
+}
+
+#ShareContent > div.Comment,
+#ShareContent > div.messagebox
+{
+	border: 1px solid #C0C0C0;
+	position: relative;
+	margin-bottom: 10px;
+	/*overflow: hidden;*/
+}
+
+#ShareContent .Comment .Box,
+#ShareContent .messagebox .Box
+{
+	padding: 0;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > p, #ShareContent > .Comment > .Box > .messagebox > div,
+#ShareContent > .messagebox > .Box > .messagebox > p, #ShareContent > .messagebox > .Box > .messagebox > div
+{
+	padding: 10px;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .posted,
+#ShareContent .messagebox > .posted
+{
+	padding-bottom: 0;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .posted .image,
+#ShareContent .messagebox > .posted .image
+{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #C0C0C0;
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .Buttons,
+#ShareContent > .messagebox .post .buttons
+{
+	border-top: 1px solid #C0C0C0;
+}
+
+#ShareContent > .messagebox .post .buttons
+{
+	padding: 10px;
+	background: #dcdddd;
+}
+
+#ShareContent > .messagebox .post .buttons div.result,
+#ShareContent > .messagebox .post .buttons div.seen
+{
+	float: right;
+}
+
+#ShareContent > .messagebox .post .buttons span.result
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+#ShareContent .Comment .Comment
+{
+	padding: 10px;
+	padding-top: 0;
+	border: 0;
+}
+
+#ShareContent .Comment .Comment > .Box
+{
+	border-top: 1px solid #C0C0C0;
+}
+
+#ShareContent .Comment .Comment > .Box > p, #ShareContent .Comment .Comment  > .Box > div
+{
+	padding-top: 10px;
+}
+
+#ShareContent .Comment .Comment .Box .commentbox > table > tbody > tr > td > .image
+{
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	margin-right: 5px;
+	overflow: hidden;
+	background-color: #ffffff;
+}
+
+#ShareContent .messagebox .post
+{
+	position: relative;
+}
+
+#ShareContent .messagebox .post > .posted,
+#ShareContent .messagebox .post > .content,
+#ShareContent .messagebox .post > .voteoptions
+{
+	padding: 10px;
+}
+
+#ShareContent .messagebox .post > .content
+{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#ShareContent .messagebox .post > .content h3
+{
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+#ShareContent .messagebox .post > .voteoptions
+{
+	padding-top: 0;
+}
+
+#ShareContent .messagebox .post > .voteoptions .option > div.result
+{
+	display: none;
+}
+
+#ShareContent .messagebox .post > .voteoptions.showresult .option > div.result
+{
+	display: block;
+}
+
+#ShareContent .messagebox .post > .voteoptions.showresult .option > div.input
+{
+	display: none;
+}
+
+#ShareContent .messagebox .posted > div
+{
+	float: left;
+	padding-right: 5px;
+}
+
+#ShareContent .messagebox .posted > .nickname
+{
+    float: none;
+}
+
+#ShareContent .messagebox .avatar
+{
+	border: 1px solid #c0c0c0;
+    height: 40px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 40px;
+	padding: 0 !important;
+}
+
+#ShareContent .messagebox .avatar > a,
+#ShareContent .messagebox .avatar > a > div
+{
+	width: 100%;
+	height: 100%;
+}
+
+#ShareContent .messagebox .avatar > a > div
+{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#ShareContent .messagebox .voteoptions .option
+{
+	position: relative;
+	margin-top: 5px;
+}
+
+#ShareContent .messagebox .voteoptions .option:first-Child
+{
+	margin: 0;
+}
+
+#ShareContent .messagebox .voteoptions .option .info
+{
+	position: relative;
+	z-index: 1;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#ShareContent .messagebox .voteoptions .option .rate
+{
+	background-color: #dcdddd;
+	position: absolute;
+	left: 0;
+	height: 100%;
+}
+
+.clearboth
+{
+	clear: both;
+	float: none !important;
+}
+
+.floatright
+{
+	position: relative;
+	float: right;
+}
+
+.floatleft
+{
+	position: relative;
+	float: left;
+}
+
+.clearboth
+{
+	clear: both;
+}
+
+.Buttons .floatleft > a,
+.floatleft > span.date
+{
+	float: left;
+}
+
+.tooltips
+{
+	position: absolute;
+	/*bottom: 33px;*/
+	bottom: 38px;
+	/*right: -7px;*/
+	right: -4px;
+	min-width: 50px;
+	z-index: -99;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background: #ffffff;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 6px;
+	color: #000000;
+	text-align: left;
+}
+
+.tooltips.open
+{
+	z-index: 99;
+	visibility: visible;
+}
+
+.tooltips .bottomarrow
+{
+	position: absolute;
+	bottom: -12px;
+	right: 15px;
+	background: url('./../../../gfx/bottomarrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+.tooltips .inner
+{
+	float: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tooltips ul, .tooltips li
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	white-space: nowrap;
+}
+
+#ListFoundContacts
+{
+	position: relative;
+}
+
+#ListFoundContacts > div
+{
+	position: absolute;
+	z-index: 3;
+	top: 4px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 5px;
+}
+
+#ListFoundContacts > div > table
+{
+	border-collapse: collapse;
+}
+
+#ListFoundContacts > div > table > tbody > tr
+{
+	cursor: pointer;
+}
+
+#ListFoundContacts > div > table > tbody > tr:hover
+{
+	background: #DCDDDD;
+}
+
+#ListFoundContacts > div > table > tbody > tr > td
+{
+	padding: 4px;
+}
+
+#ListFoundContacts .image
+{
+	border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+}
+
+#ShareBox span.contact
+{
+	background: #DCDDDD;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+#ShareBox span.contact a
+{
+	color: #000000;
+	text-decoration: none;
+	margin-left: 1px;
+	margin-right: 3px;
+}
+
+#Wall .content a,
+#Wall .replycontent a
+{
+	text-decoration: underline;
+}
+
+#Wall .ratebox > div
+{
+	float: left;
+}
+
+#Wall .ratebar2
+{
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-image: url('../../../gfx/rating_half_star_mini_grey.png');
+    background-repeat: repeat-x;
+    background-color: transparent;
+    height: 18px;
+	width: 120px;
+}
+
+#Wall .ratebar2 > div
+{
+    background-image: url('../../../gfx/rating_whole_star_mini_grey.png');
+    background-repeat: repeat-x;
+    background-color: transparent;
+    height: 100%;
+}
+
+/* Code blocks */
+
+#Wall div.Code
+{
+  /*font-family: monospace, courier, courier new;*/
+  padding: 20px;
+  margin: 10px 0 10px 0;
+  border: 1px solid #303030;
+  border: 0;
+  background: #202020;
+  background: #dcdddd;
+  color: #77cc44;
+  color: black;
+}
+
+#Wall div.Code > pre
+{
+	overflow: visible;
+	background: none;
+	height: auto;
+	max-height: none;
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}

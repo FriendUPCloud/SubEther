@@ -1,0 +1,350 @@
+#News .edit_icons
+{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	visibility: hidden;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#News .edit_icons img
+{
+	margin-left: 5px;
+}
+
+#News .NewsBox:hover .edit_icons,
+#News .image:hover .edit_icons
+{
+	visibility: visible;
+}
+
+#News .post
+{
+	margin-bottom: 15px;
+	margin-top: 8px;
+	padding: 0;
+	padding-top: 8px;
+}
+
+#News .Box .post 
+{
+	height: 22px;
+	overflow: hidden;
+	padding: 8px 5px 0;
+}
+
+#News .image
+{
+	//position: relative;
+	//width: 98%;
+	width: auto;
+	overflow: hidden;
+	height: auto;
+}
+
+#News .post .image
+{
+	margin: 1%;
+	margin-top: 0;
+	display: none;
+}
+
+#News .Box input
+{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#News .Box textarea
+{
+	visibility: hidden;
+}
+
+#News .Active input
+{
+	width: 96%;
+	margin: 1%;
+	padding: 1%;
+	border: 0;
+	background: transparent;
+	font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+	border: 1px solid #C0C0C0;
+    border-radius: 3px;
+}
+
+#News .Active textarea
+{
+	width: 96%;
+	min-height: 150px;
+	margin: 1%;
+	padding: 1%;
+	border: 0;
+	background: transparent;
+	resize: none;
+	font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+	border: 1px solid #C0C0C0;
+    border-radius: 3px;
+	visibility: visible;
+}
+
+#News .post > input:focus,
+#News .post > textarea:focus
+{
+	background: transparent;
+}
+
+#News .header strong
+{
+	padding: 4px;
+	padding-left: 10px;
+}
+
+#News > .Box .header strong
+{
+	display: none;
+}
+
+#News .publish
+{
+	background-color: #DCDDDD;
+	width: 100%;
+	height: 32px;
+	overflow: hidden;
+}
+
+#News .publish button
+{
+	position: absolute;
+	top: auto;
+	bottom: 3px;
+	right: 3px;
+}
+
+#News .publish .bottom
+{
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+}
+
+#News .publish .bottom button
+{
+	position: relative;
+	top: auto;
+	right: auto;
+	bottom: auto;
+}
+
+#News .publish select
+{
+	position: absolute;
+	bottom: 6px;
+	right: 95px;
+	border: 0;
+	background: transparent;
+	text-align: center;
+	font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+}
+
+#NewsContent .NewsBox .publish select
+{
+	position: absolute;
+	bottom: 6px;
+	right: 130px;
+	border: 0;
+	background: transparent;
+	text-align: center;
+	font-family: 'Open Sans',sans-serif;
+    font-size: 11px;
+}
+
+#NewsContent .NewsBox .image
+{
+	height: 400px;
+}
+
+#News .publish .upload_btn
+{
+	float: left;
+	width: 35px;
+	height: 32px;
+	border-right: 1px solid #C0C0C0;
+	background-image:url('./../../../gfx/img_icon.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#News .publish .code_btn
+{
+	float: left;
+	width: 35px;
+	height: 32px;
+	border-right: 1px solid #C0C0C0;
+	background-image:url('./../../../gfx/code_icon.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#News .publish .upload_btn input
+{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+}
+
+#NewsContent .NewsBox
+{
+	position: relative;
+	float: left;
+	width: 99.5%;
+	min-height: 150px;
+	padding-top: 5px;
+	padding-bottom: 30px;
+	transition: all 2s;
+	-webkit-transition: all 2s;
+	//border: 1px solid blue;
+}
+
+#NewsContent .EmptyBox
+{
+	float: left;
+	width: 99.5%;
+	height: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	//border: 1px solid green;
+}
+
+#NewsContent .NewsBox h1,
+#NewsContent .NewsBox h2,
+#NewsContent .NewsBox h3
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#NewsContent .NewsBox a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+#NewsContent .NewsBox .bottom a
+{
+	color: #000000;
+	text-decoration: underline;
+}
+
+#NewsContent .NewsBox .posted
+{
+	//color: #C0C0C0;
+	font-style: italic;
+}
+
+#NewsContent .NewsBox > div
+{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#NewsContent .NewsBox .bottom
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#NewsContent .NewsBox .bottom > div
+{
+	padding: 5px;
+}
+
+#NewsContent .NewsBox .bottom .rating
+{
+	float: right;
+}
+
+#NewsContent .NotPublished
+{
+	opacity: 0.5;
+}
+
+.Active,
+.Active > .post
+{
+	height: auto !important;
+	width: 100% !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	//padding-bottom: 0 !important;
+	min-height: 150px;
+	overflow: visible !important;
+}
+.Active > div
+{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.Active strong, .Active .image
+{
+	display: block !important;
+	height: auto !important;
+}
+
+#NewsContent .Medium
+{
+	//width: 49.5%;
+	//width: 74.5%;
+	width: 66%;
+	height: 300px;
+	overflow: hidden;
+	//border: 1px solid red;
+}
+
+#NewsContent .Medium .image
+{
+	height: 200px;
+}
+
+#NewsContent .Small,
+#NewsContent .Archive
+{
+	//width: 24.5%;
+	width: 33%;
+	height: 300px;
+	overflow: hidden;
+	//border: 1px solid red;
+}
+
+#NewsContent .Small .image,
+#NewsContent .Archive .image
+{
+	height: 200px;
+}
+
+#NewsContent .Archive
+{
+	//border: 1px solid red;
+	border-left: 1px solid #C0C0C0;
+}
+
+#NewsContent .clearboth
+{
+	clear: both;
+}

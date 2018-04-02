@@ -1,0 +1,165 @@
+
+#Files.mobileview #Main #Directory div:hover div.edit_icons
+{
+	background: #DCDDDD;
+	visibility: visible;
+	overflow: visible;
+	height: 20px;
+}
+
+#Files.mobileview #Main #Directory h4 .edit_icons
+{
+	text-transform: none;
+	font-weight: normal;
+	position: absolute;
+	right: 5px;
+	top: 0;
+	cursor: hand;
+	cursor: pointer;
+}
+#Files.mobileview #Main #Directory h4 .edit_icons img
+{
+	vertical-align: middle;
+}
+
+#Files.mobileview #Main #Directory li .edit_icons
+{
+	position: relative;
+	right: auto;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0;
+	cursor: hand;
+	cursor: pointer;
+	margin-right: -10px;
+}
+
+#Files.mobileview #Main #Directory h4 .edit_icons img
+{
+	margin-left: 5px;
+}
+
+#Files.mobileview #Main #Directory li .edit_icons img
+{
+	margin: 2px;
+	margin-left: 5px;
+	margin-right: 2px;
+}
+
+#Files.mobileview #Main #Directory li .edit_icons select
+{
+	position: relative;
+	top: -5px;
+}
+
+#Files.mobileview #Main #Directory .edit_icons .sortUp
+{
+	background: url( './../../../../admin/gfx/icons/bullet_up.png' ) center -3px no-repeat;
+	position: absolute;
+	left: -18px;
+	top: 2px;
+	width: 16px;
+	height: 7px;
+	border-bottom: 1px solid transparent;
+}
+
+#Files.mobileview #Main #Directory .edit_icons .sortUp:hover
+{
+	opacity: 0.5;
+}
+
+#Files.mobileview #Main #Directory .edit_icons .sortDown
+{
+	background: url( './../../../../admin/gfx/icons/bullet_down.png' ) center -6px no-repeat;
+	position: absolute;
+	left: -18px;
+	top: 11px;
+	width: 16px;
+	height: 7px;
+}
+
+#Files.mobileview #Main #Directory .edit_icons .sortDown:hover
+{
+	opacity: 0.5;
+}
+
+#Files.mobileview #Main #Directory h4 .edit_icons .sortUp
+{
+	top: 3px;
+}
+
+#Files.mobileview #Main #Directory h4 .edit_icons .sortDown
+{
+	top: 12px;
+}
+
+#Files.mobileview #Main #Directory .edit_icons .sorting img
+{
+	display: none;
+}
+
+#Files.mobileview #Main #Directory ul > li > ul.open
+{
+	overflow: visible;
+	position: relative;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+#Files.mobileview #Main #Directory ul > li > ul.open > li
+{
+	position: relative;
+}
+
+#Files.mobileview #Main #Directory ul > li > ul.open > li:before
+{
+	content: " ";
+	position: absolute;
+	top: 8px;
+	left: -7px;
+	width: 8px;
+	height: 1px;
+	border: 0;
+}
+
+#Files.mobileview #Main #Directory ul > li > ul.open > li:after
+{
+	content: " ";
+	position: absolute;
+	top: -4px;
+	left: -9px;
+	width: 1px;
+	height: 19px;
+	border: 0;
+}
+#Files.mobileview #Main #Directory ul > li > ul.open > li:first-child:after
+{
+	top: 0;
+	height: 15px;
+}
+
+#Files.mobileview #Main #Directory ul > li > ul.open > li:last-child:after
+{
+	height: 9px !important;
+}
+
+#Files.mobileview #Main #Directory ul > li > ul.open > li + li:last-child:after
+{
+	height: 13px !important;
+}
+
+#Files.mobileview #Main #Directory li > div
+{
+	height: auto;
+	min-height: 20px;
+}
+
+#Files.mobileview #Main #Directory li > div > span.download > img
+{
+	position: absolute;
+	left: auto;
+	right: 4px;
+}

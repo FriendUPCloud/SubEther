@@ -1,0 +1,263 @@
+
+#Browse ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Browse ul li
+{
+	float: left;
+}
+
+#Browse .video h3
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/*font-size: 11px;*/
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	height: 18px;
+}
+
+#Browse .video h4
+{
+	display: block;
+    height: 20px;
+    line-height: 20px;
+	font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Browse a
+{
+	color: #000000;
+	/*text-decoration: underline;*/
+}
+
+#Browse .tabs a
+{
+	text-decoration: none;
+}
+
+#Browse .tabs a:hover, #Browse .tabs a.current
+{
+	text-decoration: underline;
+}
+
+#Browse #Content table 
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#Browse .videobox
+{
+	float: left;
+	width: 185px;
+	height: 155px;
+	margin: 5px;
+	//border: 1px solid red;
+	overflow: hidden;
+}
+
+#Browse .RightCol .videobox
+{
+	//border: 1px solid blue;
+	width: 350px;
+	height: 68px;
+}
+
+#Browse .RightCol .videobox > div
+{
+	float: left;
+}
+
+#Browse .RightCol .videobox .content
+{
+	width: 218px;
+	height: 68px;
+	padding-left: 10px;
+	//border: 1px solid red;
+}
+
+#Browse .RightCol .videobox h3
+{
+	/*font-size: 11px;*/
+	font-size: 100%;
+}
+
+#Browse .videobox .thumb
+{
+	width: 185px;
+	height: 110px;
+	position: relative;
+	overflow: hidden;
+	background: #000000;
+}
+
+#Browse .videobox .thumb img
+{
+	/*width: 185px;*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#Browse .RightCol .videobox .thumb
+{
+	width: 120px;
+	height: 68px;
+}
+
+#Browse .RightCol .videobox .thumb > img
+{
+	width: 120px;
+}
+
+#Browse .videobox .source
+{
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	background: url('../../../gfx/utube.png') no-repeat center center;
+	width: 52px;
+	height: 22px;
+}
+
+#Browse .videobox .duration
+{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	padding: 2px;
+	padding-left: 4px;
+	padding-right: 4px; 
+	background: #000000;
+	color: #ffffff;
+}
+
+#Browse .Active
+{
+	//border: 1px solid red;
+	width: 400px;
+	height: auto;
+}
+
+#Browse .Active video
+{
+	background-color: #000000;
+}
+
+#Browse .clearboth
+{
+	clear: both;
+}
+
+#Browse .posted
+{
+	padding-top: 5px;
+}
+
+#Browse .posted .image 
+{
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 40px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 40px;
+}
+
+#Browse .rating
+{
+	//color: #C0C0C0;
+}
+
+#Browse .rating .ratebar
+{
+	background-color: #DCDDDD;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	height: 2px;
+	overflow: hidden;
+	width: 100%;
+}
+
+#Browse .rating .ratebar > div
+{
+	height: 100%;
+	background-color: #006600;
+}
+
+#Browse .rating img
+{
+	margin-left: 5px;
+}
+
+#Browse .comments
+{
+	padding-top: 10px;
+}
+
+#Browse .comments .commentbox
+{
+	border-bottom: 1px solid #C0C0C0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#Browse .comments .image 
+{
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 28px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 30px;
+}
+
+#Browse .comments .postbox
+{
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    padding: 2px 2px 2px 6px;
+    position: relative;
+}
+
+#Browse .comments .comment img
+{
+	margin-bottom: -5px;
+	margin-left: 5px;
+}
+
+#Browse .comments input 
+{
+    background: transparent;
+    border: 0 none;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    width: 100%;
+}
+
+#Browse .comments button 
+{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+#Browse .show-browse-menu, 
+#Browse #show-browse-menu
+{
+	display: none;
+}

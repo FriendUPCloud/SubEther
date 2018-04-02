@@ -1,0 +1,139 @@
+
+#Messages .Box
+{
+	padding: 15px;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+
+#Messages .post > input
+{
+	background: transparent;
+	border: 0;
+	padding: 6px;
+}
+
+#Messages #MainIM table
+{
+	width: 100%;
+}
+
+#Messages #MainIM td.leftCol
+{
+	width: 250px;
+	min-width: 250px;
+}
+
+#Messages #MainIM a
+{
+	color: #000000;
+	text-decoration: none;
+	display: block;
+}
+
+#Messages #MainIM #ListIM
+{
+	padding: 5px;
+	height: 498px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border: 1px solid #C0C0C0;
+    position: relative;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#Messages #MainIM #RightIM
+{
+	padding: 5px;
+	height: 458px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border: 1px solid #C0C0C0;
+    position: relative;
+	margin-bottom: 10px;
+}
+
+#Messages #MainIM  ul, #Messages #MainIM ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+#Messages #MainIM #ListIM li:hover, #Messages #MainIM #ListIM li.NotRead
+{
+	background: #DCDDDD;
+}
+
+#Messages #MainIM #ListIM li.current
+{
+	background: #C0C0C0
+}
+
+#Messages #MainIM #ListIM li > div
+{
+	height: 52px;
+	padding: 5px;
+	border-bottom: 1px solid #C0C0C0;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#Messages #MainIM #ListIM li:last-child > div
+{
+	border-bottom: 0;
+}
+
+#Messages #MainIM #RightIM li > div
+{
+	height: auto;
+	padding: 5px;
+}
+
+#Messages #MainIM #ListIM .image
+{
+	float: left;
+    border: 1px solid #C0C0C0;
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+	margin-right: 5px;
+}
+
+#Messages #MainIM #RightIM .image
+{
+	float: left;
+    border: 1px solid #C0C0C0;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+	margin-right: 5px;
+}
+
+#Messages #MainIM #ListIM .image > img,
+#Messages #MainIM #RightIM .image > img
+{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+	border: 0px !important;
+	border-color: transparent !important;
+}
+
+#Messages #MainIM .time
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#Messages #MainIM div.inner
+{
+	position: relative;
+}

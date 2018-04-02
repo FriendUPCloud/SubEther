@@ -1,0 +1,187 @@
+#creategroup table,
+#groupinvite table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#creategroup table tbody, #creategroup table td,
+#groupinvite table tbody, #groupinvite table td
+{
+	padding: 0;
+	vertical-align: top;
+}
+
+#creategroup table td,
+#groupinvite table td
+{
+	text-align: right;
+	padding: 4px;
+}
+
+#creategroup table td + td,
+#groupinvite table td + td
+{
+	text-align: left;
+}
+
+#creategroup input[type="text"]
+{
+	width: 98%;
+}
+
+#creategroup ul, #creategroup li,
+#groupinvite ul, #groupinvite li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#creategroup .head,
+#groupinvite .head
+{
+	background-color: #006600;
+	color: #ffffff;
+	padding: 10px;
+}
+
+#creategroup .head > h1,
+#groupinvite .head > h1
+{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#creategroup .content,
+#groupinvite .content
+{
+	padding: 10px;
+}
+
+#creategroup .buttons,
+#groupinvite .buttons
+{
+	padding: 10px;
+	text-align: right;
+	background-color: #DCDDDD;
+	border-top: 1px solid #C0C0C0;
+}
+
+#Group .members > table.panel
+{
+	width: 100%;
+}
+
+#Group .members > table.panel td
+{
+	padding-bottom: 20px;
+}
+
+#Group .members table div
+{
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#Group .members table .image 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 50px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 50px;
+}
+
+#Group .members table a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+#groupinvite .inputfield,
+#creategroup .inputfield
+{
+	position: relative;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 2px;
+	padding-left: 6px;
+}
+
+#groupinvite .inputfield input,
+#creategroup .inputfield input
+{
+	border: 0;
+	background: transparent;
+	width: 240px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#groupinvite #FindMembers span,
+#creategroup #FindMembers span
+{
+	background: #DCDDDD;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+#groupinvite #FindMembers span a,
+#creategroup #FindMembers span a
+{
+	color: #000000;
+	text-decoration: none;
+	margin-left: 1px;
+	margin-right: 3px;
+}
+
+#groupinvite #ListFoundMembers,
+#creategroup #ListFoundMembers
+{
+	position: relative;
+}
+
+#groupinvite #ListFoundMembers > div,
+#creategroup #ListFoundMembers > div
+{
+	position: absolute;
+	top: -2px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 5px;
+}
+
+#groupinvite #ListFoundMembers > div > table > tbody > tr,
+#creategroup #ListFoundMembers > div > table > tbody > tr
+{
+	cursor: pointer;
+}
+
+#groupinvite #ListFoundMembers > div > table > tbody > tr:hover,
+#creategroup #ListFoundMembers > div > table > tbody > tr:hover
+{
+	background: #DCDDDD;
+}
+
+#groupinvite #ListFoundMembers .image,
+#creategroup #ListFoundMembers .image
+{
+	border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+}

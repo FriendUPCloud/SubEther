@@ -1,0 +1,6 @@
+
+#PopupWindow__.controlpanel > #InnerPopupWindow__
+{
+	width: 800px !important;
+	height: 500px !important;
+}

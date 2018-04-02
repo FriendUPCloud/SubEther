@@ -1,0 +1,312 @@
+
+.Authentication #LoginBox.open {
+  overflow: visible;
+  width: auto;
+  height: auto;
+  visibility: visible;
+}
+
+.Authentication #LoginBox {
+	position: relative;
+	top: 29px;
+	right: 0px;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	visibility: hidden;
+	padding: 6px;
+	background-color: #e7e7e7;
+    -webkit-box-shadow:inset 0 0 0 1px #cacaca;
+	box-shadow:inset 0 0 0 1px #cacaca;
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    border-radius: 8px;
+	font-family: Raleway;
+	font-weight: 400;
+	font-size: 12px;
+    color: #7a7d88;
+    text-align: left;
+}
+
+.Authentication #LoginBox input[type="text"], .Authentication #LoginBox input[type="password"] {
+	border: none;
+	background: none;
+	border-bottom: 1px solid #cacaca;
+	width: 95%;
+	color: #7a7d88;
+	font-family: Raleway;
+	padding: 4px;
+}
+
+.Authentication #LoginBox td {
+	padding: 5px;
+}
+
+#LoginForm a {
+	font-size: 13px;
+	text-decoration: underline;
+	color: #7a7d88;
+}
+
+#LoginForm input {
+    float: left;
+}
+
+#LoginForm span {
+    position: relative;
+    top: 2px;
+}
+
+div#LoginForm form table tbody tr.Row3 td.Col2 {
+	text-align: right;
+}
+
+div#LoginForm form table tbody tr.Row4 td.Col1 {
+	text-align: center;
+}
+
+.Authentication .toparrow {
+    height: 10px;
+    position: absolute;
+    top: -12px;
+    width: 21px;
+}
+
+.Authentication .toparrow:before, .Authentication .toparrow:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-top: 0;
+}
+
+.Authentication .toparrow:before {
+    border-bottom-color: #cacaca;
+    border-width: 12px;
+}
+
+.Authentication .toparrow:after {
+    bottom: -3px;
+    left: 0;
+    border-bottom-color: #e7e7e7;
+    border-width: 12px;
+}
+
+.Authentication > table > tbody > tr > td {
+  text-align: right;
+}
+
+/* MiddleCol */
+
+.Authentication #LoginFront #LoginForm
+{
+	background-color: #ffffff;
+	padding: 15px;
+	/*color: #ffffff;*/
+	color: #686868;
+	margin: 0 auto;
+	position: relative;
+	width: 400px;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.Authentication #LoginFront #LoginForm a
+{
+	font-size: 15px;
+	color: #686868;
+}
+
+.Authentication #LoginFront table
+{
+	width: 100%;
+}
+
+.Authentication #LoginFront input
+{
+	width: auto;
+}
+
+.Authentication #LoginFront .Row1 input, .Authentication #LoginFront .Row2 input
+{
+	float: none;
+	width: 100%;
+	padding: 15px;
+	/*background-color: #ffffff;*/
+	background-color: #e5e5e5;
+	box-sizing: border-box;
+	border-radius: 8px;
+	margin-bottom: 5px;
+	border: 0;
+}
+
+.Authentication #LoginFront .Row3 input
+{
+	margin-right: 10px;
+}
+
+.Authentication #LoginFront button
+{
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+/*.Authentication #LoginFront button
+{
+    background: linear-gradient(to bottom, #0f1013 0%, #222326 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    height: 40px;
+    position: relative;
+    text-transform: uppercase;
+    width: 122px;
+}*/
+
+.signupbox
+{
+	padding-top: 15px;
+}
+
+#SignupBox
+{
+	background-color: #ffffff;
+	padding: 15px;
+	/*color: #ffffff;*/
+	color: #686868;
+	margin: 0 auto;
+	position: relative;
+	width: 400px;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+#SignupBox table
+{
+	width: 100%;
+}
+
+#SignupBox input
+{
+	width: auto;
+}
+
+#SignupBox input 
+{
+	float: none;
+	width: 100%;
+	padding: 15px;
+	/*background-color: #ffffff;*/
+	background-color: #e5e5e5;
+	box-sizing: border-box;
+	border-radius: 8px;
+	margin-bottom: 5px;
+	border: 0;
+}
+
+#SignupBox .heading,
+#SignupBox .Row1 .Col1,
+#SignupBox .Row2 .Col1
+{
+	display: none;
+}
+
+.activatebox #SignupBox .Row1 .Col1,
+.activatebox #SignupBox .Row2 .Col1,
+.invitebox #SignupBox .Row1 .Col1,
+.invitebox #SignupBox .Row2 .Col1,
+.recoverbox #SignupBox .Row1 .Col1,
+.recoverbox #SignupBox .Row2 .Col1,
+.limitedbox #SignupBox .Row1 .Col1,
+.limitedbox #SignupBox .Row2 .Col1,
+.limitedbox #SignupBox .ButtonRow .Col1
+{
+	display: table-cell;
+	width: 140px;
+}
+
+.activatebox #SignupBox,
+.activatebox #SignupBox,
+.invitebox #SignupBox,
+.invitebox #SignupBox,
+.recoverbox #SignupBox,
+.recoverbox #SignupBox,
+.limitedbox #SignupBox,
+.limitedbox #SignupBox,
+.limitedbox #SignupBox
+{
+	margin: 0;
+}
+
+
+
+#SignupBox tr.ButtonRow td
+{
+	text-align: right;
+}
+
+#SignupBox tr.ButtonRow td.Col1
+{
+	display: none;
+}
+
+#SignupBox button
+{
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.register #RegisterBox #SignupBox .heading,
+.register #RegisterBox #SignupBox .Row1 .Col1,
+.register #RegisterBox #SignupBox .Row2 .Col1
+{
+	display: inline;
+}
+
+.register #InfoBox
+{
+	padding: 15px;
+}
+
+.register #RegisterBox,
+.register #InfoBox
+{
+	/*padding-top: 50px;*/
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.register #Scene > div
+{
+	padding-top: 30px;
+}
+
+.register #RegisterBox .signupbox
+{
+	padding: 0;
+}
+
+.register #RegisterBox #SignupBox
+{
+	/*width: 90%;*/
+	width: 100%;
+	margin: 0;
+	padding-top: 0;
+}
+
+.register #RegisterBox #SignupBox .Col1
+{
+	width: 90px;
+	line-height: 42px;
+}
+
+.register #RegisterBox #SignupBox h2
+{
+	padding-bottom: 15px;
+}

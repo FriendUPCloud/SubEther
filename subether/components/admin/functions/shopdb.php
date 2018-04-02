@@ -1,0 +1,17 @@
+<?php/*******************************************************************************
+*   SubEther, The Decentralized Network.                                       *
+*   Copyright (C) 2012 Friend Studios AS                                       *
+*                                                                              *
+*   This program is free software: you can redistribute it and/or modify       *
+*   it under the terms of the GNU Affero General Public License as             *
+*   published by the Free Software Foundation, either version 3 of the         *
+*   License, or (at your option) any later version.                            *
+*                                                                              *
+*   This program is distributed in the hope that it will be useful,            *
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of             *
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the              *
+*   GNU Affero General Public License for more details.                        *
+*                                                                              *
+*   You should have received a copy of the GNU Affero General Public License   *
+*   along with this program.  If not, see <https://www.gnu.org/licenses/>.     *
+*******************************************************************************/$collect = array(); $collect2 = array();$cats = array( 'PRODUKT', 'DETALJER', 'BUTIKK', 'KATEGORI', 'L1', 'PRICE' );foreach( $cats as $k=>$c ){	$cat = new stdClass();	$cat->FieldID = $k;	$cat->Name = $c;	$collect[] = $cat;}$cnts = array( 	array( 'Field0'=>'Kebabpizza', 'Field1'=>'Pizza', 'Field2'=>'Rimi', 'Field3'=>'Matvare', 'Field4'=>'Img ids', 'Field5'=>'64.90' ), 	array( 'Field0'=>'Hipp Kyllinggryte', 'Field1'=>'Barnemat', 'Field2'=>'Rimi', 'Field3'=>'Matvare', 'Field4'=>'Img ids', 'Field5'=>'10.40' ), 	array( 'Field0'=>'Barnekjeks 8mnd2', 'Field1'=>'Barnemat', 'Field2'=>'Rimi', 'Field3'=>'Matvare', 'Field4'=>'Img ids', 'Field5'=>'17.60' ) );foreach( $cnts as $ke=>$cn ){	$cnt = new stdClass();	foreach( $cn as $k=>$c )	{		$cnt->$k = $c;	}	$collect2[] = $cnt;}//die( print_r( $collect,1 ) . ' .. ' . print_r( $collect2,1 ) );$str = ''; $srt = '';$str .= '<div class="shopdb"><table><tr class="head">';if( $collect ){	$i = 0;	foreach( $collect as $cat )	{		$str .= '<th><span>' . $cat->Name . '</span></th>';		$srt .= '<td><img src="' . $cbase . '/gfx/aup.png"/></td>';		$i++;	}}$str .= '<tr class="sw' . $sw = ( $sw == 2 ? 1 : 2 ) . ' sort">' . $srt . '</tr>';if( $collect2 ){	foreach( $collect2 as $cnt )	{		$str .= '<tr class="sw' . $sw = ( $sw == 2 ? 1 : 2 ) . '">';		$str .= '<td><span>' . $cnt->Field0 . '</span></td>';		$str .= '<td><span>' . $cnt->Field1 . '</span></td>';		$str .= '<td><span>' . $cnt->Field2 . '</span></td>';		$str .= '<td><span>' . $cnt->Field3 . '</span></td>';		$str .= '<td><span>' . $cnt->Field4 . '</span></td>';		$str .= '<td><span>' . ( $sum[] = $cnt->Field5 ) . '</span></td>';		$str .= '</tr>';	}}/* $str .= '<tr class="total"><td colspan="' . $i . '"><span>' . ( $sum ? CalcSumFromArray( $sum ) : '0.00' ) . '</span></td></tr>'; */$str .= '</table></div>';?>

@@ -1,0 +1,154 @@
+#Meeting > div > table
+{
+	width: 100%;
+}
+
+#Meeting .leftCol
+{
+	width: 250px;
+}
+
+#Meeting img
+{
+	margin: 0;
+	padding: 0;
+}
+
+#Meeting h4 
+{
+    font-weight: bold;
+    margin: 5px 0 5px 5px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#Meeting ul, #meeting ul li
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Meeting div ul li div 
+{
+    display: block;
+    line-height: 28px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#Meeting ul li > div 
+{
+    height: 30px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+#Meeting ul li span + span 
+{
+    left: 5px;
+    line-height: 28px;
+    position: relative;
+}
+
+#Meeting .image 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    float: left;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+	padding: 0;
+}
+
+#Meeting .image img
+{
+	width: 30px;
+	height: 28px;
+}
+
+#Meeting #ParticipantBox 
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	height: 220px;
+	margin-bottom: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 5px;
+	position: relative;
+}
+
+#Meeting #ParticipantBox  > ul
+{
+	border-top: 1px solid #C0C0C0;
+	padding-top: 4px;
+}
+
+#Meeting #ChatBox
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	height: 220px;
+	margin-bottom: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 5px;
+	position: relative;
+}
+
+#Meeting #ChatBox > div
+{
+	border-top: 1px solid #C0C0C0;
+	padding-top: 4px;
+}
+
+#Meeting #VideoBox
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	height: 500px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 5px;
+	position: relative;
+}
+
+#Meeting #VideoBox > div
+{
+	border-top: 1px solid #C0C0C0;
+	padding-top: 4px;
+}
+
+#Meeting #VideoBox .inner
+{
+	margin: auto;
+}
+
+#Meeting #VideoBox .webcam
+{
+	position: relative;
+	float: left;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	width: 152px;
+	height: 152px;
+	margin: 5px;
+	margin-bottom: 22px;
+}
+
+#Meeting #VideoBox .webcam .username
+{
+	width: 100%;
+	position: absolute;
+	bottom: -20px;
+	text-align: center;
+}
+
+#Meeting #VideoBox .clearboth
+{
+	clear: both;
+}

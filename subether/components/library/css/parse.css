@@ -1,0 +1,215 @@
+
+.ParseContent
+{
+	/*border: 1px solid #C0C0C0;*/
+    min-height: 147px;
+    /*padding: 10px;*/
+    position: relative;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.ParseContent .image
+{
+	float: left;
+	cursor: pointer;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    position: relative;
+    width: 154px;
+	height: 154px;
+}
+
+.ParseContent .image.video,
+.ParseContent .image.big
+{
+	float: none;
+	width: 100%;
+	height: auto;
+	padding-right: 0;
+}
+
+.ParseContent .image.big img
+{
+	height: 324px;
+}
+
+.ParseContent .image img
+{
+	display: block;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.ParseContent > .text
+{
+	height: 133px;
+	margin-bottom: 21px;
+	overflow: hidden;
+	padding: 0;
+	text-overflow: ellipsis;
+}
+
+.ParseContent > .text > p
+{
+	padding-right: 0 !important;
+}
+
+.ParseContent > .text > p.url
+{
+	position: absolute;
+	padding: 7px !Important;
+	bottom: 0;
+	right: 0;
+	text-transform: uppercase;
+}
+
+.ParseContent h3
+{
+	margin: 0;
+}
+
+.ParseContent a, .ParseContent a:hover
+{
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: black;
+}
+
+.ParseContent .image .arrows
+{
+	position: absolute;
+	left: 0;
+    top: 0;
+	padding: 5px;
+}
+
+.parse #InnerPopupWindow__
+{
+	left: 93px;
+	width: 782px;
+}
+
+#libraryparse table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#libraryparse table td
+{
+	vertical-align: top;
+}
+
+#libraryparse .head
+{
+	border-bottom: 1px solid #C0C0C0;
+	padding: 10px;
+}
+
+#libraryparse .head h1
+{
+	margin: 0;
+}
+
+#libraryparse .post
+{
+	padding: 10px;
+	/*padding-bottom: 0;*/
+	/*border-bottom: 1px dashed #C0C0C0;*/
+}
+
+#libraryparse .post .textarea
+{
+	min-height: 50px;
+}
+
+#libraryparse .content 
+{
+	padding: 10px;
+}
+
+#libraryparse .buttons 
+{
+	padding: 10px;
+	text-align: right;
+	border-top: 1px solid #C0C0C0;
+}
+
+#libraryparse .ParseContent .image.big
+{
+	float: left;
+	cursor: pointer;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    position: relative;
+	width: 154px;
+	height: 154px;
+}
+
+#libraryparse .ParseContent .image.big img
+{
+	width: 100%;
+	height: 100%;
+}
+
+#libraryparse .head
+{
+	background-color: #006600;
+	color: #ffffff;
+}
+
+#libraryparse .head > h1
+{
+	text-transform: uppercase;
+}
+
+#libraryparse .buttons 
+{
+	background-color: #DCDDDD;
+}
+
+#libraryparse #ParseContent > div
+{
+	position: relative;
+	border: 1px solid #C0C0C0;
+	padding: 10px;
+	min-height: 147px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#libraryparse #ParseContent .image.big
+{
+	float: left;
+	cursor: pointer;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    position: relative;
+	width: 154px;
+	height: 154px;
+}
+
+#libraryparse #ParseContent .image.big img
+{
+	width: 100%;
+	height: 100%;
+}
+
+#libraryparse #AjaxLoader
+{
+    float: right;
+    margin: 5px 10px 5px 5px;
+    visibility: hidden;
+}
+
+#libraryparse #AjaxLoader.loading
+{
+	visibility: visible;
+}

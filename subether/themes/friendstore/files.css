@@ -1,0 +1,913 @@
+#Files table
+{
+    width: 100%;
+}
+
+#Files td.leftCol
+{
+	width: 340px;
+	vertical-align: top;
+}
+#Files td.topRow
+{
+    height: 35px;
+    text-align: right;
+}
+#Files td.topRow > div
+{
+    padding-right: 10px;
+}
+#Files a
+{
+    /*color: #000000;*/
+	color: #7a7d88;
+    display: block;
+    text-decoration: none;
+}
+
+#Files #Directory .open
+{
+	display: block;
+}
+
+#Files #Directory .closed
+{
+	display: none;
+}
+
+/*#Files #Directory > div > .heading
+{
+	font-weight: 600;
+    color: #a1a1a1;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    cursor: auto;
+}
+
+#Files #Directory > div > .heading > span
+{
+	display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 10px;
+}*/
+
+#Files #Directory > div > .library_list > .library_heading
+{
+	padding: 5px 0 5px 5px;
+	text-overflow: ellipsis;
+    /*text-transform: uppercase;
+    color: #686868;
+    font-size: 12px;
+    font-weight: 600;*/
+    white-space: nowrap;
+    cursor: pointer;
+    padding-left: 22px;
+}
+
+#Files #Directory > div > .library_list > .library_wrapper
+{
+	border-top:1px solid #c0c0c0;
+}
+
+#Files #Directory > div > .library_list + div > .library_wrapper
+{
+	border-bottom:1px solid #c0c0c0;
+}
+
+#Files #Directory > div > .library_list:last-child > .library_wrapper
+{
+	border-bottom: 0 !important;
+}
+
+#Files #Directory
+{
+    height: 500px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #cacaca;
+    color: #7a7d88;
+	max-width: 330px;
+}
+
+#Files #Content
+{
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #cacaca;
+    color: #7a7d88;
+	height: 500px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+	padding: 5px;
+    position: relative;
+    resize: none;
+}
+
+#Files #ContentInner, #Files .editview, #Files .textarea
+{
+	box-sizing: border-box;
+	height: 100%;
+}
+
+#Files .textarea
+{
+	box-sizing: border-box;
+	height: 100%;
+	padding: 8px;
+}
+
+#Files #Content iframe, #Files #Content video
+{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#Files #Content table
+{
+    border-collapse: collapse;
+}
+#Files #Content table th, #Files #Content table td
+{
+    border-bottom: 1px solid #c0c0c0;
+    text-align: left;
+}
+#Files #Content table td div
+{
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 6px 5px 20px;
+    position: relative;
+}
+#Files #Content table td div.files
+{
+    cursor: pointer;
+}
+#Files ul, #Files ul li
+{
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0;
+    padding: 1px;
+    position: relative;
+}
+#Files ul > li > div:hover, #Files ul > li > div.current
+{
+    background-color: #eeeeee;
+}
+#Files #Directory input#EditMode
+{
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 14px;
+	font-family: Raleway;
+    margin: 0;
+    padding: 0;
+}
+#Files #Directory h4 input#EditMode
+{
+    text-transform: uppercase;
+}
+#Files #Directory h4, #Files #Content table th > h4
+{
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px 0 5px 5px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#Files #Content table th > h4
+{
+    margin: 5px 0 5px 20px;
+}
+
+#Files #Content table th > .name
+{
+    margin-left: 0;
+}
+
+#Files #Directory li > div
+{
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    position: relative;
+}
+#Files #Directory li > div > span > img
+{
+    left: 0;
+    margin: 2px;
+    position: absolute;
+    top: 0;
+}
+
+#Files #Directory .toggle
+{
+	/*background: url("@url/img/bullet_toggle_plus.png");*/
+	background: url("@url/img/bullet_right.png");
+	position: absolute;
+	display: block;
+	/*width: 12px;
+	height: 8px;
+	left: 4px;
+    top: 6px;*/
+	width: 16px;
+	height: 16px;
+	left: 2px;
+    top: 2px;
+}
+
+#Files #Directory .toggle.open
+{
+	/*background: url("@url/img/bullet_toggle_minus.png");*/
+	background: url("@url/img/bullet_down.png");
+	position: absolute;
+	display: block;
+	/*width: 12px;
+	height: 8px;
+	left: 4px;
+    top: 6px;*/
+	width: 16px;
+	height: 16px;
+	left: 2px;
+    top: 2px;
+}
+
+#Files #Directory .toggle.none
+{
+	background: transparent !important;
+}
+
+#Files #Directory .toggle img
+{
+	display: none;
+}
+
+#Files #Directory li > div > span.files
+{
+    padding-left: 2px;
+}
+#Files #Directory li > div > span.files > i
+{
+    background-image: url("@url/img/play_thumb.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: auto;
+    display: none;
+    height: 8px;
+    left: 5px;
+    margin: 0;
+    position: absolute;
+    right: auto;
+    top: 6px;
+    width: 10px;
+}
+#Files #Directory h4 .edit_icons
+{
+    cursor: pointer;
+    font-weight: normal;
+    position: absolute;
+    right: 5px;
+    text-transform: none;
+    top: 0;
+}
+#Files #Directory h4 .edit_icons img
+{
+    vertical-align: middle;
+}
+#Files #Directory ul > li > ul
+{
+    height: 0;
+    overflow: hidden;
+}
+#Files #Directory ul > li > ul.open
+{
+    height: auto;
+    margin: 0 0 0 13px;
+    overflow: visible;
+    padding: 0 0 0 5px;
+    position: relative;
+}
+#Files #Directory ul > li > ul.open > li
+{
+    position: relative;
+}
+
+#Files #Directory ul > li > ul.open li:hover .filename
+{
+	display: inline-block;
+    width: 45%;
+	overflow: hidden;
+    text-overflow: ellipsis;
+	word-wrap: break-word;
+	white-space: nowrap;
+}
+
+#Files #Directory ul > li > ul.open > li::before
+{
+    border-top: 1px dotted #909090;
+    content: " ";
+    height: 1px;
+    left: -7px;
+    position: absolute;
+    top: 8px;
+    width: 8px;
+}
+#Files #Directory ul > li > ul.open > li::after
+{
+    border-left: 1px dotted #909090;
+    content: " ";
+    height: 21px;
+    left: -9px;
+    position: absolute;
+    top: -4px;
+    width: 1px;
+}
+#Files #Directory ul > li > ul.open > li:first-child::after
+{
+    height: 17px;
+    top: 0;
+}
+#Files #Directory ul > li > ul.open > li:last-child::after
+{
+    height: 9px !important;
+}
+#Files #Directory ul > li > ul.open > li + li:last-child::after
+{
+    height: 15px !important;
+    top: -6px;
+}
+#Files #Directory li .edit_icons
+{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+	z-index: 10;
+}
+#Files #Directory li > div:hover > .edit_icons
+{
+    visibility: visible;
+}
+#Files #Directory h4 .edit_icons img
+{
+    margin-left: 5px;
+}
+#Files #Directory li .edit_icons span
+{
+    margin-right: 4px;
+	margin-top: -3px;
+}
+#Files #Directory li .edit_icons select
+{
+    position: relative;
+
+}
+#Files #Directory .edit_icons .sortUp
+{
+    background: url("@url/img/bullet_up.png") no-repeat scroll center -3px rgba(0, 0, 0, 0);
+    border-bottom: 1px solid transparent;
+    height: 7px;
+    left: -18px;
+    position: absolute;
+    top: 2px;
+    width: 16px;
+}
+
+
+#Files #Directory li .edit_icons .sortUp, #Files #Directory li .edit_icons .sortDown
+{
+	left: -15px;
+}
+
+#Files #Directory .edit_icons .sortUp:hover
+{
+    opacity: 0.5;
+}
+#Files #Directory .edit_icons .sortDown
+{
+    background: url("@url/img/bullet_down.png") no-repeat scroll center -6px rgba(0, 0, 0, 0);
+    height: 7px;
+    left: -18px;
+    position: absolute;
+    top: 11px;
+    width: 16px;
+}
+#Files #Directory .edit_icons .sortDown:hover
+{
+    opacity: 0.5;
+}
+
+#Files #Directory h4 .edit_icons .sortUp
+{
+    top: 3px;
+}
+#Files #Directory h4 .edit_icons .sortDown
+{
+    top: 12px;
+}
+
+#Files #Directory .edit_icons .Icon:hover
+{
+    opacity: 0.5;
+}
+
+#Files #Content li > div
+{
+    height: 30px;
+    padding: 5px;
+}
+#Files #Content .thumbs, #Files #Content .fileupload
+{
+	background-size: cover;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+    height: 105px;
+    margin: 2px 2px 30px;
+    overflow: visible;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    width: 105px;
+	background-position: center center;
+}
+
+/*
+#Files #Content .thumbs > img
+{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+*/
+
+#Files #Content .thumbs.image
+{
+	background: none;
+}
+
+#Files #Content .thumbs.image > div.image
+{
+	width: 95px;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	left: 10px;
+	top: 12px;
+}
+
+#Files #Content .thumbs > img:active
+{
+    opacity: 0.5;
+}
+#Files #Content .thumbs > i
+{
+    background-image: url("@url/img/play.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    bottom: auto;
+    height: 16px;
+    left: 24px;
+    margin: 0;
+    position: absolute;
+    right: auto;
+    top: 75px;
+    width: 16px;
+}
+#Files #Content .fileupload > div
+{
+    border-radius: 3px;
+    height: 100px;
+}
+#Files #Content .thumbs:hover
+{
+    box-shadow: 0 0 3px #cacaca;
+	border: 1px solid #cacaca;
+}
+#Files #Content .fileupload > div
+{
+    background: url("@url/img/cross.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border: 2px dashed #c0c0c0;
+}
+#Files .rightCol .upload_btn
+{
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+}
+#Files .rightCol .upload_btn > div
+{
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#Files .rightCol .upload_btn > div > span
+{
+    cursor: pointer;
+    display: block;
+    padding: 4px 6px;
+    text-align: center;
+}
+#Files div .Download,
+#Files div .Delete
+{
+	position: absolute;
+    right: 5px;
+    top: 5px;
+	z-index: 30;
+    display: none;
+}
+
+#Files div .Delete
+{
+	top: 30px;
+}
+
+#Files div .Delete > img
+{
+	display: inline;
+}
+
+#Files div:hover > .Download,
+#Files div:hover > .Delete
+{
+    display: block;
+    
+}
+
+#Directory select
+{
+	-moz-appearance: none;
+    background: url("@url/img/dropdown.png") no-repeat;
+	background-position: center right;
+    border: medium none;
+    color: #515461;
+    font-family: Raleway;
+    font-size: 13px;
+	width: 30px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+#Controls .topcontrols select
+{
+	-moz-appearance: none;
+    background: url("@url/img/dropdown.png") no-repeat;
+	background-position: center right;
+    border: medium none;
+    color: #515461;
+    font-family: Raleway;
+    font-size: 13px;
+	width: 83px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/*#Files.mobileview .mainfolder
+{
+	font-size: 18px;
+	color: #3C404C;
+}
+
+#Files.mobileview #Directory li > div
+{
+    cursor: pointer;
+    height: 30px;
+	padding-left: 45px;
+	line-height: 25px;
+}
+
+#Files.mobileview #Directory li > div.file
+{
+	height: 35px;
+	line-height: 20px;
+	font-size: 15px;
+}
+
+#Files.mobileview #Directory li > div.subfolder:hover
+{
+    cursor: pointer;
+    height: 70px;
+}
+
+#Files.mobileview #Directory li > div.subfolder
+{
+    background: url("@url/img/subfolder.png") no-repeat;
+	background-position: left top;
+}
+
+#Files.mobileview #Directory .toggle
+{
+	right: 0;
+	left: unset;
+}
+
+#Files.mobileview #Directory li > div.subfolder > .edit_icons
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	background-color: #eeeeee;
+	padding: 5px 0;
+}
+
+#Files.mobileview #Directory li > div.subfolder > .edit_icons
+{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    visibility: hidden;
+}
+#Files.mobileview #Directory li > div:hover > .edit_icons
+{
+    visibility: visible;
+}
+#Files.mobileview #Directory h4 .edit_icons img
+{
+    margin-left: 5px;
+}
+#Files.mobileview #Directory .subfolders .edit_icons span
+{
+	margin-right: 20px;
+	margin-top: -3px;
+	display: inline-block;
+}
+#Files.mobileview #Directory li .edit_icons select
+{
+    position: relative;
+
+}
+#Files.mobileview #Directory .subfolders .edit_icons .sortUp
+{
+    background: url("@url/img/bullet_up.png") no-repeat scroll center -3px rgba(0, 0, 0, 0);
+    border-bottom: 1px solid transparent;
+    height: 7px;
+    left: 0;
+    position: relative;
+    top: 2px;
+    width: 16px;
+}
+
+
+#Files.mobileview #Directory li .edit_icons .sortUp, #Files.mobileview #Directory li .edit_icons .sortDown
+{
+	left: -15px;
+}
+
+#Files.mobileview #Directory .edit_icons .sortUp:hover
+{
+    opacity: 0.5;
+}
+#Files.mobileview #Directory .subfolders .edit_icons .sortDown
+{
+    background: url("@url/img/bullet_down.png") no-repeat scroll center -6px rgba(0, 0, 0, 0);
+	height: 7px;
+    left: 0;
+    position: relative;
+    top: 3px;
+    width: 16px;
+}
+
+#Files.mobileview #Directory .edit_icons .sortDown img, #Files.mobileview #Directory .edit_icons .sortUp img 
+{
+	display: none;
+}
+
+#Files.mobileview #Directory .edit_icons .sortDown:hover
+{
+    opacity: 0.5;
+}
+#Files.mobileview #Directory h4 .edit_icons .sortUp
+{
+    top: 3px;
+}
+#Files.mobileview #Directory h4 .edit_icons .sortDown
+{
+    top: 12px;
+}
+#Files.mobileview #Directory .edit_icons .Icon:hover
+{
+    opacity: 0.5;
+}
+
+#Files.mobileview #Directory ul > li > ul.open
+{
+	margin: 0;
+	padding: 0;
+}
+
+#Files.mobileview #Directory ul > li > ul.open > li::before
+{
+	border: none;
+	position: inherit;
+}
+
+#Files.mobileview #Directory ul > li > ul.open > li::after
+{
+	border: none;
+	position: inherit;
+}
+
+#Files.mobileview #Directory .file .filesize
+{
+	float: none !important;
+	padding-right: 0 !important;
+	position: absolute;
+	top: 20px;
+	left: 45px;
+	font-size: 13px;
+	color: #666472;
+	font-weight: 600;
+}
+
+#Files.mobileview #Directory li.file
+{
+	height: 45px;
+	border-bottom: 1px solid #666472;
+	padding-top: 10px;
+}
+
+#Files.mobileview #Directory li.file .edit_icons
+{
+	top: 10px;
+	right: 20px;
+}
+
+#Files.mobileview #Directory li > div > span > img
+{
+	left: inherit;
+	right: 0;
+	top: 10px;
+}
+
+#Files.mobileview #Directory .subfolders li.file .edit_icons .sortUp
+{
+	position: relative;
+}
+
+#Files.mobileview #Directory .subfolders li.file .edit_icons .sortDown
+{
+	position: relative;
+}
+
+#Files.mobileview #Directory .subfolders li.file .edit_icons span
+{
+	margin-right: 3px;
+}
+
+div#Files.mobileview form .file_upload_label
+{
+	background-image: url("@url/img/upload_big.png");
+	background-size: 32px 32px;
+	height: 32px;
+	width: 32px;
+	display: block;
+	opacity: 1 !important;
+}*/
+
+#Files .topcontrols #ThumbView
+{
+	float: right;
+}
+
+#Files .topcontrols li
+{
+	display: inline;
+}
+
+#Files .topcontrols li > span
+{
+	float: left;
+	display: block;
+	margin-left: 15px;
+}
+
+#Files .topcontrols li.selected, #Files .topcontrols li:hover
+{
+	color: $colorDefault;
+}
+
+#Files .editview.editor
+{
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+#cke_ContentEditorCK
+{
+	height: 100%;
+	box-sizing: border-box;
+}
+
+#cke_ContentEditorCK .cke_inner
+{
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+#cke_ContentEditorCK .cke_top
+{
+	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+#cke_ContentEditorCK .cke_contents
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100% !important;
+	box-sizing: border-box;
+	padding-top: 75px;
+	padding-bottom: 30px;
+}
+
+#cke_ContentEditorCK .cke_bottom
+{
+	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+
+#PopupWindow__ #librarycontent
+{
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+
+#PopupWindow__ #librarycontent .content
+{
+	background: black;
+}
+
+#PopupWindow__ #librarycontent .content,
+#PopupWindow__ #librarycontent .content div,
+#PopupWindow__ #librarycontent .content iframe,
+#PopupWindow__ #librarycontent .content video,
+#PopupWindow__ #librarycontent .content audio
+{
+	width: 100%;
+	height: 100%;
+}
+
+/* Media queries ------------------------------------------------------------ */
+
+@media screen and ( min-height:900px ) and ( max-height:1279px )
+{
+	#Files #Content,
+	#Files #Directory
+	{
+		height: 760px;
+	}
+}
+
+@media screen and ( min-height:1280px ) and ( max-height:1439px )
+{
+	#Files #Content,
+	#Files #Directory
+	{
+		height: 880px;
+	}
+}
+
+@media screen and ( min-height:1440px ) 
+{
+	#Files #Content,
+	#Files #Directory
+	{
+		height: 1180px;
+	}
+}

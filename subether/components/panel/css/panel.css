@@ -1,0 +1,230 @@
+.home #Table_Fields td.Col1
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*white-space: nowrap;*/
+}
+
+.Panel div table
+{
+	padding: 10px;
+}
+
+#Field_left hr
+{
+	border: 0;
+	height: 1px;
+	background: #c0c0c0;
+	margin: 10px 0 10px 0;
+	padding: 0;
+}
+
+.Panel div table div.image
+{
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+.Panel div table a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.Panel div h4
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.Panel div h4 span
+{
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.Panel div ul, .Panel div ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Panel div ul li:hover, .Panel div ul li.current
+{
+	background: #DCDDDD;
+}
+
+.Panel div ul li a
+{
+	position: relative;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	padding-right: 10px;
+	overflow: hidden;
+}
+
+.Panel div ul li a span
+{
+	text-overflow: ellipsis;
+}
+
+.Panel div ul li a span.ncount
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	margin: 2px;
+	display: block;
+	padding-left: 3px;
+	padding-right: 3px;
+	background-color: #C0C0C0;
+	color: #000000;
+	line-height: normal;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 11px;
+}
+
+/* From global */
+
+.Panel div table
+{
+	padding: 10px;
+}
+
+.Panel div table div.image
+{
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+.Panel div table a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.Panel div h4
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.Panel div h4 span
+{
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.Panel div ul, .Panel div ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Panel div ul li:hover, .Panel div ul li.current
+{
+	background: #DCDDDD;
+}
+
+.Panel div ul li a
+{
+	position: relative;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.Panel div ul li a span.ncount
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	margin: 2px;
+	display: block;
+	padding-left: 3px;
+	padding-right: 3px;
+	background-color: #C0C0C0;
+	color: #000000;
+	line-height: normal;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 11px;
+}
+
+#PanelDimmed
+{
+	padding: 1px 0 19px 0;
+	margin: 0px;
+	background: #DCDDDD;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	display: none;
+}
+
+.DimMenu:hover #PanelDimmed
+{
+	display: block;
+}
+
+.PanelHeader, .PanelHeaderDimmed
+{
+	padding: 10px;
+	margin: 20px 0 0 0;
+	border-top: 1px solid #c0c0c0;
+	background: #dcdddd;
+	text-transform: uppercase;
+}
+
+.PanelHeaderDimmed
+{
+	border-bottom: 1px solid #c0c0c0;
+}
+
+
+.DimMenu:hover .PanelHeaderDimmed
+{
+	background: #ffffff;
+	border-bottom: 0;
+}
+
+.PanelHeader
+{
+	margin: 0;
+	background: #ffffff;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+

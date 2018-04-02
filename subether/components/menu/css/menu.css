@@ -1,0 +1,116 @@
+.menu > table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.menu > table > tbody > tr > td
+{
+	padding: 0;
+	text-align: right;
+	position: relative;
+}
+
+.menu ul, .menu ul li 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu #GlobalMenu ul li
+{
+	float: right;
+	padding-left: 6px;
+}
+
+.menu ul li > select 
+{
+	background: transparent;
+	color: white;
+	padding: 6px;
+	margin: 0;
+	float: left;
+	border: 0;
+	position: relative;
+	top: 1px;
+}
+
+.menu ul 
+{
+	background: transparent;
+	color: white;
+	margin: 0;
+	border: 0;
+}
+
+.menu ul li > select option 
+{
+	color: black;
+	background: white;
+	padding: 4px;
+}
+
+.menu #GlobalMenu > ul
+{
+	padding: 0;
+}
+
+.menu #GlobalMenu .cpanel
+{
+	display: block;
+	min-width: 22px;
+	min-height: 14px;
+	background: url('../gfx/icon_edit_hvite.png') center center no-repeat;
+}
+
+.menu .toparrow
+{
+	position: absolute;
+	top: -12px;
+	right: 18px;
+	background: url('../gfx/toparrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+.menu #MenuBox
+{
+	position: absolute;
+	width: 150px;
+	top: 43px;
+	right: -20px;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+.menu #MenuBox ul li
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.menu #MenuBox ul li:hover
+{
+	background: #DCDDDD;
+	cursor: pointer;
+}
+
+.menu #MenuBox a
+{
+	color: #000000 !important;
+	line-height: 20px !important;
+}
+
+.menu #MenuBox.open
+{
+	visibility: visible;
+}

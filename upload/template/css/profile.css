@@ -1,0 +1,49 @@
+
+
+/* Top ---------------------------------------------------------------------- */
+
+.profile #Notification
+{
+	float: left;
+	line-height: 46px;
+}
+
+/* Field_top -------------------------------------------------------------------- */
+
+#Profile
+{
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+}
+
+/* Middle ------------------------------------------------------------------- */
+
+.profile #Table_Fields > tbody > tr > td > div
+{
+	min-height: 380px;
+}
+
+.profile #Table_Fields td.Col1
+{
+	width: 185px;
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+}
+
+.profile #Table_Fields td.Col3
+{
+	width: 185px;
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+}
+
+/* Bottom ------------------------------------------------------------------- */
+
+.profile #Footer__ #BottomLinks
+{
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+}

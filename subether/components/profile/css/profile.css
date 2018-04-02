@@ -1,0 +1,472 @@
+#Profile table, #Profile table > tbody, #Profile table > tbody > tr > td
+{
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+}
+
+#Profile a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+#Profile .coverimage
+{
+	position: relative;
+	width: 100%;
+	height: 338px;
+}
+
+#Profile .coverimage #MainImage
+{
+	position: relative;
+	width: 1000px;
+	height: 338px;
+	margin-left: -1px;
+	margin-right: -1px;
+	overflow: hidden;
+}
+
+#Profile .coverimage #MainImage img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#Profile .coverimage .Navigation
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#Profile .coverimage .Navigation .ArrowPrev
+{
+	height: 280px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 450px;
+	z-index: 10;
+}
+
+#Profile .coverimage .Navigation .ArrowNext
+{
+	height: 280px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 450px;
+	z-index: 10;
+}
+
+#Profile .coverimage .Navigation .ArrowPrev span,
+#Profile .coverimage .Navigation .ArrowNext span
+{
+	display: none;
+}
+
+#Profile .coverimage .Navigation .ArrowPrev:hover 
+{
+    background: url('../../../../subether/gfx/arrow_overlay_left_white.png') no-repeat left center;
+	cursor: pointer;
+}
+
+#Profile .coverimage .Navigation .ArrowNext:hover 
+{
+    background: url('../../../../subether/gfx/arrow_overlay_right_white.png') no-repeat right center;
+	cursor: pointer;
+}
+
+#Profile .coverimage #CoverPages
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
+	padding-right: 20px;
+}
+
+#Profile .coverimage #CoverPages > .Page
+{
+	float: left;
+	background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    height: 10px;
+    margin: 20px 5px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 1.5s ease 0s;
+    width: 10px;
+	cursor: pointer;
+}
+
+#Profile .coverimage #CoverPages > .Page:hover,
+#Profile .coverimage #CoverPages > .Page.Current
+{
+	background-color: #006600;
+}
+
+#Profile .coverimage #CoverPages > .Page span
+{
+	display: none;
+}
+
+#Profile .coverimage .edit_btn_cover
+{
+	position: absolute;
+	bottom: 0;
+	left: 195px;
+	z-index: 120;
+	width: 122px;
+	/*height: auto;*/
+	height: 25px;
+	display: none;
+	margin: 12px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+#Profile .coverimage .uploadfile,
+#Profile div.imagebox .uploadfile
+{
+	visibility: hidden;
+}
+
+#Profile .coverimage:hover .edit_btn_cover, #Profile .coverimage.display .edit_btn_cover
+{
+	display: block;
+}
+
+#Profile .coverimage .edit_btn_cover > div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#Profile .coverimage .edit_btn_cover > div > span
+{
+	display: block;
+	padding: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Profile .coverimage .view_btn_cover
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 30;
+	width: 110px;
+	height: auto;
+	display: none;
+	margin: 12px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+#Profile .coverimage:hover .view_btn_cover
+{
+	display: block;
+}
+
+#Profile .coverimage .view_btn_cover > div > span
+{
+	display: block;
+	padding: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Profile div.imagebox
+{
+	position: absolute;
+	top: 217px;
+	left: 24px;
+	z-index: 100;
+}
+
+#Profile div.imagebox .Col1
+{
+	position: relative;
+}
+
+#Profile div.imagebox .edit_btn
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 30;
+	width: 135px;
+	/*height: auto;*/
+	height: 25px;
+	display: none;
+	margin: 16px;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+#Profile div.imagebox:hover .edit_btn, #Profile div.imagebox.display .edit_btn
+{
+	display: block;
+}
+
+#Profile div.imagebox .edit_btn > div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#Profile div.imagebox .edit_btn > div > span
+{
+	display: block;
+	padding: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Profile div.imagebox table div.image
+{
+	position: relative;
+	width: 160px;
+	height: 160px;
+	padding: 4px;
+	background: #ffffff;
+	margin-right: 15px;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+}
+
+#Profile div.imagebox table a
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#Profile div.imagebox td.Col2
+{
+	padding-top: 120px;
+}
+
+#Profile div.infobox
+{
+	position: relative;
+	border-top: 1px solid #C0C0C0;
+}
+
+#Profile div.infobox table
+{
+	width: 100%;
+}
+
+#Profile div.infobox table tr.Row1 td
+{
+	padding-top: 80px;
+}
+
+#Profile div.infobox table tr.Row2 td
+{
+	padding-bottom: 40px;
+}
+
+#Profile div.infobox table tr.Row1 td > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
+#Profile div.infobox table tr.Row2 td.Col1 > div
+{
+	width: 360px;
+	height: 84px;
+	background: #DCDDDD;
+	overflow: hidden;
+	border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+	border-top: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+#Profile div.infobox table tr.Row2 td.Col1 > div > div
+{
+	padding-left: 30px;
+	padding-right: 7px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+#Profile div.infobox table tr.Row2 td.Col2
+{
+	width: 600px;
+}
+
+#Profile div.infobox table tr.Row2 td.Col2 > div
+{
+	padding-right: 15px;
+}
+
+#Profile div.infobox table tr.Row2 td.Col2 > div > div
+{
+	float: right;
+	width: 105px;
+	height: 84px;
+	overflow: hidden;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: 1px solid #C0C0C0;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#Profile div.infobox #ProfileOptionsBox
+{
+	position: absolute;
+	width: 130px;
+	top: 60px;
+	right: 20px;
+	z-index: 200;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+#Profile div.infobox #ProfileOptionsBox .toparrow
+{
+	position: absolute;
+	top: -12px;
+	right: 12px;
+	background: url('./../../../gfx/toparrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+#Profile div.infobox #ProfileOptionsBox .inner
+{
+	float: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Profile div.infobox #ProfileOptionsBox ul, #Profile div.infobox #ProfileOptionsBox li
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Profile div.infobox #ProfileOptionsBox ul li
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#Profile div.infobox #ProfileOptionsBox ul li:hover
+{
+	background: #DCDDDD;
+	cursor: pointer;
+}
+
+#Profile div.infobox #ProfileOptionsBox a
+{
+	color: #000000;
+	line-height: 20px;
+}
+
+#Profile div.infobox #ProfileOptionsBox.open
+{
+	visibility: visible;
+}
+
+#Profile .name, #Profile .info
+{
+	position: relative;
+	padding-right: 40px;
+}
+
+#Profile .Edit.profile
+{
+	position: absolute;
+	z-index: 5;
+	right: 5px;
+	top: 5px;
+	padding: 0 !important;
+	/*width: 20px;
+	height: 16px;*/
+	border: 1px solid transparent;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+/*#Profile .Edit.profile:hover
+{
+	border: 1px solid #c0c0c0;
+}*/
+
+#Profile .Edit.profile > div.options
+{
+	background: transparent;
+	width: 20px;
+	height: 20px;
+	cursor: hand;
+	cursor: pointer;
+	padding: 0 !important;
+}
+
+#Profile .name:hover .Edit.profile > div.options, #Profile .info:hover .Edit.profile > div.options, #Profile .info.display .Edit.profile > div.options
+{
+	background: url('./../../../gfx/edit_icon.png') center center no-repeat;
+}

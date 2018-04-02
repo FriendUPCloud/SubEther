@@ -1,0 +1,87 @@
+
+#Admin .mailing #MainBox > table
+{
+	width: 100%;
+}
+
+#Admin .mailing #MainBox td.leftCol
+{
+	width: 330px;
+}
+
+#Admin .mailing #MainBox #MailList
+{
+	padding: 5px;
+	height: 522px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border: 1px solid #C0C0C0;
+    position: relative;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#Admin .mailing #MainBox #MessageBox
+{
+	padding: 5px;
+	height: 485px;
+	overflow: hidden;
+	overflow-y: scroll;
+	border: 1px solid #C0C0C0;
+    position: relative;
+	margin-bottom: 10px;
+}
+
+#Admin .mailing #MainBox ul, #Admin .mailing #MainBox ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+#Admin .mailing #MainBox #MailList li > div
+{
+	height: 37px;
+	padding: 5px;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+#Admin .mailing #MainBox #MailList li:last-child > div
+{
+	border-bottom: 0;
+}
+
+#Admin .mailing #MainBox #MailList li td.first
+{
+	width: 40px;
+}
+
+#Admin .mailing #MainBox #MailList li td.last
+{
+	width: 20px;
+	vertical-align: middle;
+}
+
+#Admin .mailing #MainBox #MailList .image
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    border: 1px solid #C0C0C0;
+    overflow: hidden;
+    width: 35px;
+	height: 35px;
+	margin-right: 5px;
+}
+
+#Admin .mailing #MainBox #MessageContent
+{
+	width: 100%;
+	min-height: 458px;
+}
+
+#Admin .mailing #PostBox .publish
+{
+	float: right;
+}

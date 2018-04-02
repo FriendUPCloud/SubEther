@@ -1,0 +1,260 @@
+
+#Wall div.fileupload
+{
+	position: relative;
+	height: 100px;
+}
+
+#Wall div.fileupload .edit_btn
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 200;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Wall div.fileupload .edit_btn:hover
+{
+	background: #DCDDDD;
+}
+
+#Wall div.fileupload .edit_btn > div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#Wall div.fileupload .edit_btn > div > span
+{
+	display: table-cell;
+	padding: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Wall div.fileupload .edit_btn form, #Wall div.fileupload .edit_btn input
+{
+	width: 100%;
+	height: 100%;
+}
+
+/* --- Post --- */
+
+#Wall div.postmedia
+{
+	position: relative;
+	float: left;
+	background-image:url('./../../../gfx/img_icon.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	/*border-right: 1px solid #C0C0C0;*/
+	width: 35px;
+	height: 32px;
+}
+
+#Wall div.postmedia .edit_btn
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Wall div.postmedia .edit_btn:hover
+{
+	/*background: #DCDDDD;*/
+}
+
+#Wall div.postmedia .edit_btn > div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#Wall div.postmedia .edit_btn > div > span
+{
+	display: none;
+}
+
+#Wall div.postmedia .edit_btn form, #Wall div.fileupload .edit_btn input
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Wall .ParseContent .image.album
+{
+	position: relative;
+	float: left;
+	width: auto;
+	height: auto;
+	padding: 2px;
+}
+
+#Wall #WallEditor .ParseContent .image.album
+{
+	position: relative;
+	float: left;
+	/*width: 143px;
+	height: 143px;*/
+	width: 120px;
+	height: 120px;
+	padding: 2px;
+}
+
+#ParseContent .image.album .Edit
+{
+	margin: 0;
+}
+
+.clearboth
+{
+	clear: both;
+}
+
+#WallEditor .ParseContent .fileupload
+{
+	float: left;
+	position: relative;
+	/*width: 97px;*/
+	/*height: 97px;*/
+	/*width: 105px;
+	height: 105px;*/
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	/*border: 1px solid #C0C0C0;*/
+	border: 1px solid transparent;
+    border-radius: 3px;
+	/*margin: 2px;*/
+	/*padding: 5px;*/
+	padding: 2px;
+	cursor: hand;
+	cursor: pointer;
+	text-align: center;
+}
+
+#WallEditor .ParseContent .fileupload > div
+{
+	/*height: 97px;*/
+	/*height: 100px;*/
+	height: 116px;
+	border-radius: 3px;
+}
+
+#WallEditor .ParseContent .fileupload > div
+{
+	background: url( '../../../../subether/gfx/cross.png' ) center center no-repeat;
+	border: 2px dashed #C0C0C0;
+}
+
+/* --- Parse Image Styling --- */
+/*
+#Wall .html > .ParseContent > .album.nr1,
+#Wall .html > .ParseContent > .album.nr4,
+#Wall .html > .ParseContent > .album.nr5
+{
+	float: left;
+}
+
+#Wall .html > .ParseContent > .album.nr2,
+#Wall .html > .ParseContent > .album.nr3
+{
+	float: right;
+}*/
+/*
+#Wall .html > .ParseContent > .album.wide50.total5,
+#Wall .html > .ParseContent > .album.wide.total5,
+#Wall .html > .ParseContent > .album.match.total5
+{
+	width: 365px;
+	height: 350px;
+}
+
+#Wall .html > .ParseContent > .album.wide100.total5,
+#Wall .html > .ParseContent > .album.wide150.total5,
+#Wall .html > .ParseContent > .album.wide200.total5
+{
+	width: 365px;
+	height: 280px;
+}
+
+#Wall .html > .ParseContent > .album.wide400.total5,
+#Wall .html > .ParseContent > .album.wide450.total5,
+#Wall .html > .ParseContent > .album.wide250.total5
+{
+	width: 365px;
+	height: 160px;
+}
+
+#Wall .html > .ParseContent > .album.wide950.total5
+{
+	width: 734px;
+	height: 240px;
+}
+
+#Wall .html > .ParseContent > .album.long800.total5,
+#Wall .html > .ParseContent > .album.long50.total5
+{
+	width: 365px;
+	height: 444px;
+}*/
+/*
+#Wall .html > .ParseContent > .album.wide_900.total5
+{
+	width: 734px;
+	height: 300px;
+}
+
+#Wall .html > .ParseContent > .album.wide_500.total5,
+#Wall .html > .ParseContent > .album.wide_400.total5
+{
+	width: 365px;
+	height: 150px;
+}
+
+#Wall .html > .ParseContent > .album.wide_200.total5,
+#Wall .html > .ParseContent > .album.wide_100.total5
+{
+	width: 180.5px;
+	height: 150px;
+}
+
+#Wall .html > .ParseContent > .album.long_800.total5
+{
+	width: 365px;
+	height: 458px;
+}
+
+#Wall .html > .ParseContent > .album.wide.total5,
+#Wall .html > .ParseContent > .album.long.total5,
+#Wall .html > .ParseContent > .album.match.total5
+{
+	width: 180.5px;
+	height: 150px;
+}*/

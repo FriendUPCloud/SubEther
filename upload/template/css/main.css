@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600,600italic,400italic,300italic,300);
+@append url(style.css);
+@append url(home.css);
+@append url(profile.css);
+@append url(rot.css);
+@append url(responsive.css);
+@append url(layer.css);
+
+@declaration
+{
+	/* Fonts */
+	$fontDefault: 'Open Sans', sans-serif;
+	$fontMonospace: monospace, courier, courier new;
+	$fontSizeBase: 14px;
+	
+	/* Colors */
+	$colorBody: #ffffff;
+	
+	/* Margins */
+	$marginBody: 0px;
+	
+	/* Paddings */
+	$paddingBody: 50px 0 0 0;
+	
+	$defaultLinkColor: #0f75bd;
+}
+
+/* Blocks - borders - gui elements */
+
+
+

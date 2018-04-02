@@ -1,0 +1,112 @@
+
+#Chat .voicechat
+{
+	visibility: visible;
+}
+
+#Chat .voicechat
+{
+	width: 17px;
+	height: 12px;
+	top: 2px !important;
+}
+
+#Chat .voicechat.hidden
+{
+	visibility: hidden;
+}
+
+.voicechat #InnerPopupWindow__
+{
+	width: 280px;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+}
+
+#voicechat > .head > .name
+{
+	text-align: center;
+	padding: 10px;
+	padding-bottom: 0;
+	text-transform: uppercase;
+}
+
+#voicechat > .head > .buttons
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#voicechat > .head > .buttons > div
+{
+	float: left;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#voicechat .content > .image > img
+{
+	display: block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 0;
+	width: 100%;
+	height: 230px;
+	margin: 10px;
+}
+
+#voicechat .content > .name
+{
+	text-align: center;
+}
+
+#voicechat .bottom > .buttons
+{
+	text-align: center;
+	padding: 10px;
+	padding-bottom: 15px;
+}
+
+#voicechat .bottom > .buttons > .answere
+{
+	background: url('./../../../gfx/answere_icon.png');
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	background-color: #006600;
+	/*box-shadow: 0 1px 3px #909090;*/
+	color: #ffffff;
+	padding: 8px 15px 8px 40px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border: 0;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#voicechat .bottom > .buttons > .decline
+{
+	background: url('./../../../gfx/decline_icon.png');
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	background-color: #720300;
+	/*box-shadow: 0 1px 3px #909090;*/
+	color: #ffffff;
+	padding: 8px 15px 8px 40px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border: 0;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	cursor: hand;
+	cursor: pointer;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title/>
+		<basehref/>
+		<?= defined('ADDTIONAL_HEAD_MARKUP') ? ADDTIONAL_HEAD_MARKUP : '' ?>
+		<link rel="stylesheet" href="template-css/main.css"/>
+		<script type="text/javascript" src="lib/javascript/arena-lib.js"></script>
+		<script type="text/javascript" src="lib/javascript/bajax.js"></script>
+		<script type="text/javascript" src="upload/template/javascript/main.js"></script>
+		<script type="text/javascript" src="upload/template/javascript/webapp.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" id="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="subether-node-verification" content="<?= defined( 'NODE_VERIFICATION' ) ? NODE_VERIFICATION : '{DC65D301-0301-4CA7-B2E1-E6490BAB7F5E}' ?>" id="nodeverification">
+		<meta name="subether-node-info" content="<?= defined( 'NODE_INFO' ) ? NODE_INFO : 'Subether' ?>" id="nodeinfo">
+		<meta name="subether-node-version" content="<?= defined( 'NODE_VERSION' ) ? NODE_VERSION : '1.0.00' ?>" id="nodeversion">
+		<meta name="author" content="<?= defined( 'NODE_VERIFICATION' ) ? NODE_VERIFICATION : '{DC65D301-0301-4CA7-B2E1-E6490BAB7F5E}' ?>">
+	</head>
+	<body>
+		<div id="TopBox__">
+			<div id="InnerTopBox__">
+				<div id="Top"><group name="Top"/></div>
+			</div>
+		</div>
+		<div id="PopupWindow__">
+			<div id="InnerPopupWindow__"></div>
+		</div>
+		<div id="CenterBox__">
+			<div id="Center__">
+				<div id="Content__">
+					<div id="InnerContainer__">
+						<div id="InnerContent__">
+							<div id="Scene"><group name="Scene"/></div>
+							<div id="Field1"><group name="Field1"/></div>
+							<div id="Field2"><group name="Field2"/></div>
+						</div>
+						<div id="Bottom"><group name="Bottom"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Footer__">
+			<div id="InnerFooter__">
+				<div id="Footer"><group name="Footer"/></div>
+			</div>
+		</div>
+		<div id="MaintenanceMode__" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);<?= ( isset( $GLOBALS['maintenance'] ) ? 'z-index:999;visibility:visible;' : 'z-index:-999;visibility:hidden;' ) ?>">
+			<div id="InnerMaintenanceMode__" style="padding:10px;"><span>Maintenance Mode</span></div>
+		</div>
+	</body>
+</html>

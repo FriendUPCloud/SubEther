@@ -1,0 +1,756 @@
+
+.presentation #libraryalbum .bottom .buttons
+{
+	display: none;
+}
+
+.presentation .menu #MenuBox
+{
+	right: 22px;
+	top: 85px;
+}
+
+.presentation .menu #MenuBox .list.groups
+{
+	max-height: 300px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.presentation #Top
+{
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+
+.presentation #Center__,
+.presentation #Content__,
+.presentation #InnerContainer__,
+.presentation #InnerContent__,
+.presentation #Scene,
+.presentation #Main,
+.presentation #Table_Fields
+{
+	border-collapse: collapse;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	min-height: 0px !important;
+}
+
+
+.presentation #Footer__
+{
+	display: none;
+}
+
+.presentation #InnerTopBox__,
+.presentation #CenterBox__,
+.presentation #InnerFooter__
+{
+	width: 100%;
+}
+
+.presentation #Group > .coverimage,
+.presentation #Group > #Tabs,
+.presentation #Group > #About
+{
+	display: none;
+}
+
+.presentation #TopSearch
+{
+	display: none;
+}
+
+.presentation #Wall #WallTabs
+{
+	display: none;
+}
+
+.presentation #Table_Fields > tbody > tr > td > div
+{
+	padding: 0;
+	/*padding-top: 4px;*/
+	margin-top: -2px;
+}
+
+.presentation #Wall #ShareContent
+{
+	background-color: black;
+	/*padding: 15px;*/
+	padding: 0;
+	box-sizing: border-box;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	height: calc(100% - 74px);
+}
+
+.presentation #Wall #ShareContent .ParseContent,
+.presentation #Wall #ShareContent .ParseContent > div
+{
+	padding: 0;
+	margin: 0;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox
+{
+	background: transparent;
+	margin: 0;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border: 0;
+	border-radius: 0;
+}
+
+/*.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox .content,*/
+.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox .text
+{
+	display: none;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Pages .Page/*,
+.presentation #Wall #ShareContent > #MediaSlideshow .Arrows*/
+{
+	display: none;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Pages
+{
+	position: absolute;
+	top: -88px;
+	right: 240px;
+	z-index: 999;
+	width: 200px;
+	height: 88px;
+	color: white;
+	text-align: right;
+	line-height: 80px;
+	font-size: 250%;
+	display: none;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Arrows
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Arrows span
+{
+	display: none;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Arrows > .ArrowPrev
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40%;
+	height: 100%;
+	z-index: 5;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Arrows > .ArrowNext
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40%;
+	height: 100%;
+	z-index: 5;
+} 
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Arrows > .ArrowPrev:hover
+{
+    background: url( "@url/img/arrow_overlay_left_white.png" ) no-repeat scroll left center;
+    cursor: pointer;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Arrows > .ArrowNext:hover
+{
+    background: url( "@url/img/arrow_overlay_right_white.png" ) no-repeat scroll right center;
+    cursor: pointer;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow
+{
+	/*position: fixed;
+	width: 100%;
+	left: 0;
+	height: calc(100% - 90px);*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+
+
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Settings
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	padding: 25px;
+	box-sizing: border-box;
+	color: white;
+	font-size: 90%;
+	text-shadow: 1px 1px rgba( 0, 0, 0, 0.8 );
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Settings .icon_cover
+{
+	cursor: pointer;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Settings .icon_contain
+{
+	cursor: pointer;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Settings .icon_cover,
+.presentation #Wall #ShareContent > #MediaSlideshow .Settings .icon_cover:hover,
+.presentation #Wall #ShareContent > #MediaSlideshow.cover .Settings .icon_cover
+{
+	text-decoration: underline;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .Settings .icon_contain:hover,
+.presentation #Wall #ShareContent > #MediaSlideshow.contain .Settings .icon_contain
+{
+	text-decoration: underline;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow.cover .Settings .icon_contain,
+.presentation #Wall #ShareContent > #MediaSlideshow.contain .Settings .icon_cover
+{
+	text-decoration: none;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .ImageContainer .imagecontainer,
+.presentation #Wall #ShareContent > #MediaSlideshow.cover .ImageContainer .imagecontainer
+{
+	background-size: cover !important;
+	background-position: center center !important;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow.contain .ImageContainer .imagecontainer
+{
+	background-size: contain !important;
+	background-position: center center !important;
+}
+
+
+
+.presentation #Wall #ShareContent > #MediaSlideshow .ImageContainer,
+.presentation #Wall #ShareContent > #MediaSlideshow .ImageContainer > div.messagebox,
+.presentation #Wall #ShareContent > #MediaSlideshow .ImageContainer > div.messagebox div
+{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	box-sizing: border-box;
+}
+
+/*.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox .content
+{
+	background: rgba( 255, 255, 255, 0.6 );
+	position: absolute;
+	bottom: 35px;
+	left: 0;
+	z-index: 99;
+	height: 60px !important;
+	padding: 10px !important;
+	box-sizing: border-box !important;
+	color: black !important;
+	overflow: hidden;
+}*/
+
+.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox .content
+{
+	background: transparent;
+	position: absolute;
+	top: -78px;
+	left: 200px;
+	z-index: 999;
+	height: 90px !important;
+	width: calc(100% - 400px) !important;
+	padding: 27px !important;
+	box-sizing: border-box !important;
+	color: white !important;
+	overflow: hidden;
+	display: none;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .ImageContainer .imagecontainer
+{
+	/*max-width: none !important;
+	max-height: none !important;
+	width: auto !important;
+	height: auto !important;*/
+	max-width: 100% !important;
+	max-height: 100% !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow .ImageContainer .imagecontainer img
+{
+	max-height: none !important;
+	display: none !important;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow iframe,
+.presentation #Wall #ShareContent > #MediaSlideshow video,
+.presentation #Wall #ShareContent > #MediaSlideshow audio
+{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.presentation #Wall #ShareContent > #PostScroller
+{
+	padding: 0;
+	/*position: fixed;*/
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	/*bottom: 30px;*/
+	bottom: 0;
+	color: white;
+	/*background: rgba( 0, 0, 0, 0.8 );*/
+	background-color: #000000;
+	width: 100%;
+	/*padding: 20px;
+	padding: 10px;*/
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	height: 60px;
+	/*height: 35px;*/
+}
+
+.presentation #Wall #ShareContent > #PostScroller .TextOverlayLeft
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	box-sizing: border-box;
+	width: 60px;
+	height: 100%;
+	background-image: url( "@url/img/leftscroll.png" );
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.presentation #Wall #ShareContent > #PostScroller .TextOverlayRight
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 5;
+	box-sizing: border-box;
+	width: 60px;
+	height: 100%;
+	background-image: url( "@url/img/rightscroll.png" );
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.presentation #Wall #ShareContent > #PostScroller .TextContainer
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.presentation #Wall #ShareContent > #PostScroller .TextContainer > table,
+.presentation #Wall #ShareContent > #PostScroller .TextContainer > table > tbody,
+.presentation #Wall #ShareContent > #PostScroller .TextContainer > table > tbody > tr,
+.presentation #Wall #ShareContent > #PostScroller .TextContainer > table > tbody > tr > td
+{
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.presentation #Wall #ShareContent > #PostScroller .TextContainer > table > tbody > tr > td
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.presentation #Wall #ShareContent > #PostScroller div.messagebox *
+{
+	/*float: left;*/
+	padding: 0;
+	margin: 0;
+	color: white;
+	white-space: nowrap !important;
+	border: 0;
+	/*display: inline !important;*/
+}
+
+.presentation #Wall #ShareContent > #PostScroller div.messagebox br
+{
+	display: none;
+}
+
+.presentation #Wall #ShareContent > #PostScroller div.messagebox h3
+{
+	height: auto;
+}
+
+.presentation #Wall #ShareContent > #PostScroller div.messagebox .html,
+.presentation #Wall #ShareContent > #PostScroller div.messagebox .image,
+.presentation #Wall #ShareContent > #PostScroller div.messagebox p.url
+{
+	display: none;
+}
+
+/*.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox,*/
+.presentation #Wall #ShareContent > #PostScroller div.messagebox
+{
+	/*display: none;*/
+	float: left !important;
+	display: inline !important;
+	box-sizing: border-box;
+}
+
+.presentation #Wall #ShareContent > #PostScroller div.messagebox .content,
+.presentation #Wall #ShareContent > #PostScroller .TextContainer > table > tbody > tr > td
+{
+	font-size: 20px !important;
+}
+
+/*.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox.current,*/
+.presentation #Wall #ShareContent > #PostScroller div.messagebox.current
+{
+	display: block;
+}
+
+
+
+.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox
+{
+	opacity: 0;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox.current
+{
+	opacity: 1;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow div.ImageContainer
+{
+	position: relative;
+	max-height: calc(100% - 60px) !important;
+}
+
+.presentation #Wall #ShareContent > #MediaSlideshow div.messagebox
+{
+	position: absolute;
+	top: 0;
+}
+
+.presentation #Wall #ShareContent > #Plugins
+{
+	overflow: hidden;
+	position: relative;
+	top: 35px;
+	/*left: 50px;*/
+	left: 15px;
+	z-index: 33;
+	/*width: calc(100% - 100px);*/
+	width: 280px;
+	height: calc(100% - 130px);
+	/*height: calc(100% - 180px);*/
+	transition: left 2s;
+}
+
+.presentation #Wall #ShareContent > #Plugins.closed
+{
+	left: -270px;
+	transition: left 2s;
+}
+
+.presentation #Wall #ShareContent > #Plugins .LeftCol
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba( 0, 0, 0, 0.8 );
+	width: 280px;
+	height: 100%;
+	color: white;
+}
+
+.presentation #Wall #ShareContent > #Plugins .RightCol
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: rgba( 0, 0, 0, 0.8 );
+	width: calc(100% - 400px);
+	height: 100%;
+	color: white;
+	display: none;
+}
+
+.presentation #Wall #ShareContent > #Plugins #Yrweather
+{
+	text-align: center;
+}
+
+.presentation #Plugins #Yrweather .More,
+.presentation #Plugins #Yrweather .Credit,
+.presentation #Plugins #Yrweather .Header,
+.presentation #Plugins #Yrweather span.DayName,
+.presentation #Plugins #Yrweather .Time,
+.presentation #Plugins #Yrweather .Wind,
+.presentation #Plugins #Yrweather .Direction,
+.presentation #Plugins #Yrweather th
+{
+	display: none;
+}
+
+.presentation #Plugins #Yrweather p
+{
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.presentation #Plugins #Yrweather .YrDay
+{
+	float: left;
+	position: relative;
+	padding: 20px;
+}
+
+.presentation #Plugins #Yrweather .Sym
+{
+	position: absolute;
+	top: 98px;
+}
+
+.presentation #Plugins #Yrweather .Temp td
+{
+	font-size: 200%;
+}
+
+.presentation #Plugins #Yrweather .Rain td
+{
+	padding-top: 50px;
+}
+
+.presentation #Plugins #Files
+{
+	height: calc(100% - 225px);
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.presentation #Plugins #Files #Directory
+{
+	/*border: 0;*/
+	border: 1px solid rgba( 255, 255, 255, 0.3 );
+	margin: 0;
+	/*padding: 15px;*/
+	padding: 0;
+	color: white !important;
+	/*overflow: visible;
+	height: auto;
+	height: 410px;*/
+	height: 100%;
+}
+
+.presentation #Plugins #Files a
+{
+	color: white;
+}
+
+.presentation #Plugins #Files ul > li > div:hover,
+.presentation #Plugins #Files ul > li > div.current
+{
+	background:rgba( 255, 255, 255, 0.1 );
+}
+
+.presentation #Plugins #Files #Directory .toggle
+{
+	background: url( "@url/img/bullet_right_white.png" );
+}
+
+.presentation #Plugins #Files #Directory .toggle.open
+{
+	background: url( "@url/img/bullet_down_white.png" );
+}
+
+.presentation #Plugins #Files #Directory ul > li > ul.open > li:before
+{
+	border-top: 1px dotted white;
+}
+
+.presentation #Plugins #Files #Directory ul > li > ul.open > li:after
+{
+	border-left: 1px dotted white;
+}
+
+.presentation #Plugins #Files #Directory .edit_icons
+{
+	display: none;
+}
+
+.presentation #Plugins #CategoryInfo
+{
+	height: 40px;
+	overflow: hidden;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.presentation #Wall #ShareContent .edit
+{
+	display: none;
+}
+
+.presentation #Wall #ShareContent .access
+{
+	display: none;
+}
+
+.presentation #Wall #ShareContent .replybox
+{
+	display: none;
+}
+
+.presentation #Wall #ShareContent .reply,
+.presentation #Wall #ShareContent .vote
+{
+	display: none;
+}
+
+.presentation #Group .edit_btn_cover
+{
+	display: none !important;
+}
+
+.presentation #Group #Tabs .buttons
+{
+	display: none;
+}
+
+.presentation #Members .panel
+{
+	display: none;
+}
+
+.presentation #Members .edit
+{
+	display: none;
+}
+
+.presentation #Profile .edit_btn_cover
+{
+	display: none !important;
+}
+
+.presentation #Profile .infobox .Row1
+{
+	display: none;
+}
+
+.presentation #Profile .edit_btn
+{
+	display: none !important;
+}
+
+.presentation #Profile .Edit
+{
+	display: none !important;
+}
+
+.presentation #GlobalSearch #Search
+{
+	/*display: none;*/
+}
+
+.presentation #GlobalSearch #Search
+{
+    float: left;
+    margin-top: 28px;
+    position: relative;
+	width: 400px;
+	background-color: #ffffff;
+}
+
+html:fullscreen .presentation #UserMenu .fullscreenmode
+{
+	display: none;
+}
+html:-webkit-full-screen .presentation #UserMenu .fullscreenmode
+{
+	display: none;
+}
+html:-ms-fullscreen .presentation #UserMenu .fullscreenmode
+{
+	display: none;
+}
+html:-moz-full-screen .presentation #UserMenu .fullscreenmode
+{
+	display: none;
+}
+
+html .presentation #UserMenu .defaultmode
+{
+	display: none;
+}
+
+html:fullscreen .presentation #UserMenu .defaultmode
+{
+	display: block;
+}
+html:-webkit-full-screen .presentation #UserMenu .defaultmode
+{
+	display: block;
+}
+html:-ms-fullscreen .presentation #UserMenu .defaultmode
+{
+	display: block;
+}
+html:-moz-full-screen .presentation #UserMenu .defaultmode
+{
+	display: block;
+}

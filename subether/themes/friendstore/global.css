@@ -1,0 +1,395 @@
+.library #Main 
+{ 
+	width: calc(100% - 103px); 
+}
+
+.profile #Files
+{
+	width: calc(100% + 203px);
+}
+
+#Files a { white-space: nowrap; }
+
+.background_layer
+{
+	filter: none;
+	-moz-filter: none;
+	-o-filter: none;
+	-ms-filter: none;
+	filter: none;
+}
+
+#Files .topcontrols li.selected, #Files .topcontrols li:hover,
+div#Field_middle div.Box div.tabs a.current,
+div#Field_middle div#Group div.Box div.tabs a.current,
+#Group ul li a:hover,
+div#Field_middle #Browse div.Box div.tabs a.current
+{
+	color: #294363;
+}
+
+div#Field_middle #Browse div.Box div.tabs a.current,
+#Group #Tabs ul li:hover, #Group #Tabs ul .current,
+#Messages #Tabs ul#MessagesMenu li:hover, #Messages #Tabs ul#MessagesMenu .current
+{
+	padding-bottom: 23px;
+	border-bottom: 1px solid !important;
+}
+
+#Group #Tabs ul li:hover, #Group #Tabs ul .current,
+#Messages #Tabs ul#MessagesMenu li:hover, #Messages #Tabs ul#MessagesMenu .current
+{
+	padding-bottom: 21px;
+}
+
+ul.EventDateTable li:hover, ul.EventDateTable .current
+{
+	padding-bottom: 21px;
+	border-bottom: 1px solid #294363 !important;
+}
+
+ul.EventDateTable li:hover a, ul.EventDateTable .current a,
+#Messages ul#MessagesMenu li a:hover
+{
+	color: #294363;
+}
+
+#Group #Tabs .buttons button
+{
+	padding: 0;
+	border-radius: 0;
+}
+
+#Group #Tabs .buttons button:hover
+{
+	border-bottom: 1px solid #294363 !important;
+	padding-bottom: 22px;
+}
+
+#Group #Tabs ul
+{
+	margin: 0 0 0 20px;
+	padding-left: 0;
+}
+
+
+#Browse #Content .network .file .image.png,
+#Browse #Content .network .file .image.jpg,
+#Browse #Content .network .file .image.gif,
+#Browse #Content .network .file .image.pdf
+{
+	background-size: contain;
+}
+
+#ShareContent .events .edit
+{
+	display: none;
+}
+
+
+#Group #Tabs ul li:hover, #Group #Tabs ul .current
+{
+	border-bottom-color: #294363;
+}
+
+.slideshow #MainImage .ImageContainer, .slideshow #MainImage .ImageContainer div
+{
+	border-radius: 10px;
+}
+
+#Field_bottom
+{
+	z-index: 100;
+}
+
+.ChatRow > .ChatMessage
+{
+	word-break: break-word;
+}
+
+body .messagebox .walloptions
+{
+	z-index: 1000;
+}
+
+
+#Global #Tabs ul, #Global #Tabs li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#Global #Tabs .closed table + table
+{
+	visibility: hidden;
+	overflow: hidden;
+	display: none;
+}
+
+/* Logo graphics */
+
+#Top #Logo img
+{
+	display: none;
+}
+
+#Top
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#Top #Logo a:after
+{
+	content: " ";
+	width: 277px;
+	height: 60px;
+	position: absolute;
+	top: 11px;
+	left: 43px;
+	display: block;
+	background: url(/subether/themes/friendstore/img/logo_community.png) no-repeat top left;
+}
+
+/* Far right menu :) */
+
+#Menu
+{
+	position: absolute;
+	right: 43px;
+}
+
+/* Center menu */
+
+#GlobalSearch
+{
+	position: absolute;
+	width: 600px;
+	left: calc(50% - 300px);
+}
+
+#Notification #Frequ
+{
+	margin-left: 0;
+}
+
+#Top #Notification
+{
+	width: 150px;	
+	position: relative;
+}
+
+html .home.browser #GlobalSearch #Search, html .browser #GlobalSearch #Search
+{
+	float: none;
+	max-width: 100%;
+	position: absolute;
+	left: 150px;
+	top: -2px;
+	width: calc(100% - 170px);
+	border: 0;
+}
+
+#Top #Logo { width: 0; }
+
+
+/* Fix for notifications */
+body #Notification #NotificationBox
+{
+	top: 55px;
+	left: -125px;
+	box-shadow: 0 1px 4px rgba(255, 255, 255, 0.8);
+	opacity: 0.9;
+}
+
+body #Notification #NotificationBox a
+{
+	color: white;
+}
+
+body #Notification #NotificationBox .all a
+{
+	color: black;
+}
+
+body #Notification .inner u, 
+body #Notification .inner .name
+{
+	color: white;
+}
+body #Notification #NotificationBox li,
+body #Notification #NotificationBox li:hover
+{
+	color: black;
+}
+
+/* For buttons */
+
+html #Browse .contacts button,
+html #Browse .groups table button
+{
+	color: black;
+	border-radius: 8px;
+    background: #efefef;
+    border: 0;
+    margin: 0 0 5px 0;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    cursor: hand;
+    cursor: pointer;
+}
+
+html #Browse .contacts button:hover,
+html #Browse .groups table button:hover
+{
+	background: #156E99;
+	color: white;
+}
+
+/* Fix for footer */
+html body #Footer__
+{
+	display: none;
+}
+
+/* Fix for menu */
+
+body .menu #MenuBox
+{
+	right: 0;
+	top: 60px;
+	filter: invert(100%);
+    -webkit-filter: invert(100%);
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.8);
+}
+body .menu #MenuBox a
+{
+    color: black !important;
+}
+
+@media screen and (max-width: 1220px) and (min-width: 980px)
+{
+	body #Top #Logo
+	{
+		display: none;
+	}
+	
+	body #Top #Logo_Symbol
+	{
+		display: block;
+		position: relative;
+		top: 15px;
+		left: 33px;
+	}
+	
+	body #GlobalSearch
+	{
+		left: 81px;
+	}
+	
+	html .home.browser #GlobalSearch #Search, 
+	html .browser #GlobalSearch #Search
+	{
+		left: 166px;
+	}
+	
+	body #Top #Logo_Symbol
+	{
+		margin: 0;
+	}
+	
+	#Top #Logo_Symbol img { display: none; }
+	
+	#Top #Logo_Symbol a:after
+	{
+		content: " ";
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		display: block;
+		background: url(/subether/themes/friendstore/img/logo_community_mini.png) no-repeat top left;
+	}
+}
+
+@media screen and (max-width: 980px)
+{
+	html #TopSearch
+	{
+		left: 80px;
+	}
+	
+	body #Top #Logo_Symbol
+	{
+		margin: 0;
+	}
+	
+	
+	#Top #Logo_Symbol img { display: none; }
+	
+	#Top #Logo_Symbol a:after
+	{
+		content: " ";
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		display: block;
+		background: url(/subether/themes/friendstore/img/logo_community_mini.png) no-repeat top left;
+	}
+	
+	body #TopSearch
+	{
+		width: calc(100% - 60px);
+		left: 60px !important;
+	}
+	
+	body #TopSearch #GlobalSearch
+	{
+		left: 0px !important;
+	}
+	body #Notification #Frequ { position: absolute; left: 0; }
+	body #Notification #Messageu { position: absolute; left: 50px; }
+	body #Notification #Notiu { position: absolute; left: 100px; }
+	
+	html .menu #DropDownMenu .cpanel
+	{
+		margin: 0;
+	}
+	
+	.tablet .menu #DropDownMenu .cpanel, .mobile .menu #DropDownMenu .cpanel
+	{
+		padding: 0 !important;
+	}
+	
+	body #Menu
+	{
+		right: 10px;
+	}
+	
+	html .mobile .menu #MenuBox
+	{
+		width: calc(90% - 10px) !important;
+		top: 62px !important;
+		height: 82% !important;
+		position: fixed;
+		left: 5%;
+		margin: 0;
+	}
+	
+}
+
+
+/* Fix for groups */
+
+#creategroup td > strong
+{
+    display: block;
+    padding: 5px;
+}
+

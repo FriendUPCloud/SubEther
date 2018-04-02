@@ -1,0 +1,14 @@
+
+#Global #Tabs ul, #Global #Tabs li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#Global #Tabs .closed table + table
+{
+	visibility: hidden;
+	overflow: hidden;
+	display: none;
+}

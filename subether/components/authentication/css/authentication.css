@@ -1,0 +1,313 @@
+#Top #Authentication
+{
+	float: right;
+    position: relative;
+    right: 0;
+}
+
+.Authentication ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Authentication ul li
+{
+	text-align: right;
+}
+
+.Authentication > table > tbody > tr > td
+{
+	text-align: right;
+}
+
+.Authentication #LoginBox
+{
+	position: relative;
+	top: 34px;
+	right: -40px;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.Authentication .toparrow
+{
+	position: absolute;
+	top: -12px;
+	/*left: 57px;*/
+	right: 115px;
+	background: url('../gfx/toparrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+.Authentication #LoginBox input[type="text"],
+.Authentication #LoginBox input[type="password"]
+{
+	width: 90%;
+	padding: 6px;
+	border: 1px solid #C0C0C0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.Authentication #LoginBox table > tbody > tr > td
+{
+	text-align: center;
+	padding: 4px;
+}
+
+.Authentication #LoginBox a
+{
+	color: #000000 !important;
+}
+
+.Authentication #LoginBox.open
+{
+	overflow: visible;
+	width: auto;
+	height: auto;
+	visibility: visible;
+}
+
+.menu > table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.menu > table > tbody > tr > td
+{
+	padding: 0;
+	text-align: right;
+	position: relative;
+}
+
+.menu ul, .menu ul li 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu #DropDownMenu ul li
+{
+	float: right;
+	padding-left: 6px;
+}
+
+.menu ul li > select 
+{
+	background: transparent;
+	color: white;
+	padding: 6px;
+	margin: 0;
+	float: left;
+	border: 0;
+	position: relative;
+	top: 1px;
+}
+
+.menu ul li > select option 
+{
+	color: black;
+	background: white;
+	padding: 4px;
+}
+
+.menu #DropDownMenu > ul
+{
+	padding: 0;
+}
+
+.menu #DropDownMenu .cpanel
+{
+	display: block;
+	min-width: 22px;
+	min-height: 14px;
+	background: url('../gfx/icon_edit_hvite.png') center center no-repeat;
+}
+
+.menu .toparrow
+{
+	position: absolute;
+	top: -12px;
+	right: 18px;
+	background: url('../gfx/toparrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+.menu #MenuBox
+{
+	position: absolute;
+	width: 150px;
+	top: 45px;
+	right: -17px;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+.menu #MenuBox ul li
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.menu #MenuBox ul li:hover
+{
+	background: #DCDDDD;
+	cursor: pointer;
+}
+
+.menu #MenuBox a
+{
+	color: #000000 !important;
+	line-height: 20px !important;
+}
+
+.menu #MenuBox.open
+{
+	visibility: visible;
+}
+
+.signup
+{
+	margin: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: auto !important;
+}
+
+.signupbox table
+{
+	width: 100%;
+}
+
+.signupbox table > tbody > tr > td
+{
+	padding: 4px;
+    text-align: left;
+}
+
+.signupbox table tbody, .signupbox table tbody td
+{
+	vertical-align: top;
+}
+
+.signupbox table td.Col1
+{
+	width: 500px;
+	padding-right: 50px;
+}
+
+.signupbox input 
+{
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    padding: 6px;
+    width: 95%;
+}
+
+.signupbox td.buttons
+{
+	text-align: right !important;
+	padding: 10px;
+}
+
+.signupbox .disabled td
+{
+	visibility: hidden;
+	padding: 0px;
+	height: 0px;
+}
+
+/* --- PopupWindow --- */
+
+.recover #InnerPopupWindow__
+{
+	width: 400px;
+}
+
+#recover table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#recover table tbody, #recover table td
+{
+	padding: 0;
+	vertical-align: top;
+}
+
+#recover table td
+{
+	text-align: left;
+	padding: 4px;
+}
+
+#recover input[type="text"]
+{
+	width: 98%;
+}
+
+#recover ul, #recover li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#recover .head
+{
+	background-color: #006600;
+	color: #ffffff;
+	padding: 10px;
+}
+
+#recover .head > h1
+{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#recover .content 
+{
+	padding: 10px;
+}
+
+#recover .buttons 
+{
+	padding: 10px;
+	text-align: right;
+	background-color: #DCDDDD;
+	border-top: 1px solid #C0C0C0;
+}
+
+#Authentication .show-auth-menu, 
+#Authentication #show-auth-menu
+{
+	display: none;
+}

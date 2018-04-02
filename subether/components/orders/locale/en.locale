@@ -1,0 +1,19 @@
+Start : Start
+End : Slutt
+Hours : Timer
+Description : Beskrivelse
+Create : Lag ny
+Name : Navn
+Projects : Prosjekter
+Date : Dato
+Add hours : Legg til timer
+
+Timeoff : Avspasering
+Toll : Bom
+Parking : Parkering
+Km : Km
+
+i18n_h_Active 	: Active
+i18n_h_Pending 	: Pending
+i18n_h_Finished : Finished
+i18n_h_Archived : Archived

@@ -1,0 +1,748 @@
+#Browse #Content {
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+.network > div {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+#Browse .network > ol,
+body.search ol
+{
+	margin: 0;
+	padding: 0;
+}
+
+.network > ol > li
+{
+	list-style-type: none;
+	line-height: 1;
+	border-bottom: 1px solid #cacaca;
+}
+
+body.search ol > li
+{
+	line-height: normal;
+	list-style-type: none;
+}
+
+.network > ol > li:hover
+{
+	background-color: #eeeeee;
+}
+
+.network > ol > li > table {
+	font-size: 12px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.network > ol > li > table span {
+	color: #686868;
+	font-size: 11px;
+}
+
+.network .image
+{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 90px;
+	height: 100px;
+	margin: 5px;
+}
+
+.network .image > img
+{
+	display: none;
+}
+
+#Content__.search
+{
+	padding-top: 20px !important;
+}
+
+#Content__.search > ol
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#Content__.search > ol > li > div
+{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#Content__.search > ol > li em
+{
+	font-weight: bold;
+	font-style: normal;
+}
+
+#Content__.search > ol > li > div > div > div > p
+{
+	margin: 0;
+	padding: 0;
+	font-style: italic;
+}
+
+#Content__.search > ol > li > div > div > div > p em
+{
+	font-style: italic;
+}
+
+#Content__.search > div > table a
+{
+	color: inherit;
+}
+
+#Content__.search a
+{
+	text-decoration: none;
+}
+
+#Content__.search a:hover,
+#Content__.search a.current
+{
+	text-decoration: underline;
+}
+
+html body.home div#CenterBox__ div#Center__ div#Content__ div#InnerContainer__ div#InnerContent__ div#Scene div#Home table#Table_Fields tbody tr td.Col2 div#Field_middle div#Browse div.Box div#Content div.network ol li table tbody tr td div h3 a {
+	text-decoration: none;
+	color: $colorLighter !important;
+}
+
+#Browse a {
+	color: #686868;
+}
+
+#Browse .video h3 {
+    display: block;
+    font-size: 100%;
+    height: 33px;
+    margin-bottom: 2px;
+    margin-top: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#Browse .video h4 {
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+#Browse .tabs a {
+    text-decoration: none;
+}
+#Browse .tabs a:hover, #Browse .tabs a.current {
+    text-decoration: underline;
+}
+#Browse #Content table {
+    border-collapse: collapse;
+    width: 100%;
+	table-layout: fixed;
+}
+
+#Browse .Box .videobox {
+	border-radius: 100% 100% 0 0;
+    display: inline-table;
+    height: 185px;
+    overflow: hidden;
+    width: 185px;
+	margin: 15px;
+}
+
+#Browse #Content > table > tbody > tr > td.LeftCol .Active,
+#Browse #Content > table > tbody > tr > td.LeftCol .Active iframe
+{
+    width: 100%;
+	border-radius: 0;
+	height: 500px;
+	margin-left: 0;
+}
+
+#Browse .LeftCol {
+	width: 70%;
+}
+
+#Browse .RightCol {
+	padding-left: 1%;
+}
+
+#Browse .RightCol .videobox {
+    height: 68px;
+    width: 100%;
+	padding-bottom: 10px;
+	border-radius: 0;
+}
+#Browse .RightCol .videobox > div {
+    float: left;
+	height: 68px;
+    width: 170px;
+}
+
+#Browse .RightCol .videobox > div > h3 {
+    margin-top: 0;
+	font-size: 12px;
+	height: 50px;
+}
+
+
+#Browse .videobox .content {
+    text-align: center;
+    width: 185px;
+	font-size: 12px;
+}
+
+#Browse .videobox .thumb {
+    background: none repeat scroll 0 0 #000000;
+    height: 105px;
+    overflow: hidden;
+    position: relative;
+    width: 185px;
+}
+#Browse .videobox .thumb img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#Browse .RightCol .videobox .thumb {
+    height: 68px;
+    width: 120px;
+}
+#Browse .RightCol .videobox .thumb > img {
+    width: 120px;
+}
+#Browse .videobox .source {
+    background: url("@url/img/utube.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: 5px;
+    height: 22px;
+    left: 5px;
+    position: absolute;
+    width: 52px;
+}
+#Browse .Box .videobox .duration {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
+    border-radius: 20%;
+    bottom: 5px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 2px 4px;
+    position: absolute;
+    right: 5px;
+}
+#Browse .Active {
+    height: auto;
+    width: 400px;
+}
+#Browse .Active video {
+    background-color: #000000;
+}
+#Browse .clearboth {
+    clear: both;
+}
+#Browse .posted {
+    padding-top: 5px;
+}
+#Browse .posted .image {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    height: 40px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 40px;
+}
+#Browse .rating {
+}
+#Browse .rating .ratebar {
+    background-color: #dcdddd;
+    height: 2px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    overflow: hidden;
+    width: 100%;
+}
+#Browse .rating .ratebar > div {
+    background-color: #006600;
+    height: 100%;
+}
+#Browse .rating img {
+    margin-left: 5px;
+}
+#Browse .comments {
+    padding-top: 10px;
+}
+#Browse .comments .commentbox {
+    border-bottom: 1px solid #c0c0c0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#Browse .comments .image {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    height: 28px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 30px;
+}
+#Browse .comments .postbox {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 2px 2px 2px 6px;
+    position: relative;
+}
+#Browse .comments .comment img {
+    margin-bottom: -5px;
+    margin-left: 5px;
+}
+#Browse .comments input {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    width: 100%;
+}
+#Browse .comments button {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+
+#Browse .files h3 {
+    display: block;
+    font-size: 100%;
+    height: 18px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#Browse .files h4 {
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+#Browse .filebox {
+    float: left;
+    height: 120px;
+    margin: 2px;
+    overflow: hidden;
+    width: 120px;
+	font-size: 12px;
+	text-align: center;
+}
+#Browse .RightCol .filebox {
+    height: 68px;
+    width: 350px;
+}
+#Browse .RightCol .filebox > div {
+    float: left;
+}
+#Browse .filebox .content {
+    height: 68px;
+    padding-left: 10px;
+}
+#Browse .RightCol .filebox h3 {
+    font-size: 100%;
+}
+#Browse .filebox .thumb {
+    overflow: hidden;
+    position: relative;
+}
+#Browse .filebox .thumb img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+#Browse .RightCol .filebox .thumb {
+    height: 68px;
+    width: 120px;
+}
+#Browse .RightCol .filebox .thumb > img {
+    width: 120px;
+}
+#Browse .filebox .source {
+    background: url("@url/img/utube.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: 5px;
+    height: 22px;
+    left: 5px;
+    position: absolute;
+    width: 52px;
+}
+#Browse .filebox .duration {
+    background: none repeat scroll 0 0 #000000;
+    bottom: 5px;
+    color: #ffffff;
+    padding: 2px 4px;
+    position: absolute;
+    right: 5px;
+}
+
+
+#Browse .images h3 {
+    display: block;
+    font-size: 100%;
+    height: 18px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#Browse .images h4 {
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+#Browse .imagebox {
+    float: left;
+    font-size: 12px;
+    height: 185px;
+    margin: 15px;
+    overflow: hidden;
+    text-align: center;
+    width: 145px;
+}
+#Browse .RightCol .imagebox {
+    height: 68px;
+    width: 350px;
+}
+#Browse .RightCol .imagebox > div {
+    float: left;
+}
+#Browse .imagebox .content {
+    height: 68px;
+    padding-top: 26px;
+    width: 145px;
+}
+#Browse .RightCol .imagebox h3 {
+    font-size: 100%;
+}
+#Browse .imagebox .thumb {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 100%;
+    height: 145px;
+    overflow: hidden;
+    position: relative;
+    width: 145px;
+}
+#Browse .imagebox .thumb img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#Browse .RightCol .imagebox .thumb {
+    height: 68px;
+    width: 120px;
+}
+#Browse .RightCol .imagebox .thumb > img {
+    width: 120px;
+}
+#Browse .imagebox .source {
+    background: url("@url/img/utube.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: 5px;
+    height: 22px;
+    left: 5px;
+    position: absolute;
+    width: 52px;
+}
+#Browse .imagebox .duration {
+    background: none repeat scroll 0 0 #000000;
+    bottom: 5px;
+    color: #ffffff;
+    padding: 2px 4px;
+    position: absolute;
+    right: 5px;
+}
+
+#Browse .contact
+{
+	position: relative;
+	float: left;
+	height: 105px;
+	margin: 0.5%;
+	overflow: hidden;
+	width: 32.3%;
+}
+
+#Browse .contact td
+{
+	width: 115px;
+}
+
+#Browse .contact td + td
+{
+	width: auto;
+}
+
+#Browse .contacts h3 {
+    display: block;
+    font-size: 100%;
+    height: 18px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#Browse .contacts h4 {
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+#Browse #Content .contacts {
+    padding-top: 10px;
+}
+#Browse .contacts > table > tbody > tr > td {
+    width: 50%;
+}
+#Browse .contacts table table > tbody > tr > td {
+    width: 110px;
+}
+#Browse .contacts table table > tbody > tr > td + td {
+    text-align: left;
+    width: auto;
+}
+#Browse .contacts table table {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#Browse .contacts table .image {
+    background-size: cover;
+	border: 0;
+    border-radius: 100%;
+    height: 100px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 100px;
+}
+
+#Browse .contacts table a {
+    color: $colorLighter !important;
+    text-decoration: none;
+	margin-bottom: 10px;
+}
+
+#Browse .contacts button {
+	/*background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;*/
+	background: linear-gradient(to bottom, #003629 0%, #006655 100%) repeat scroll 0 0 #003629;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+	margin-top: 10px;
+}
+
+#Browse .contacts table p {
+	display: none;
+}
+
+#Browse .contacts .status
+{
+	position: absolute;
+	left: 70px;
+	top: 85px;
+}
+
+#Browse .contacts .status > img
+{
+	background: url("@url/img/online.png") no-repeat !important;
+    height: 11px;
+    position: relative;
+    width: 11px;
+}
+
+#Browse .groups h3 {
+    display: block;
+    font-size: 100%;
+    height: 18px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#Browse .groups h4 {
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+#Browse #Content .groups {
+    padding-top: 10px;
+}
+
+#Browse .group
+{
+	float: left;
+	height: 130px;
+	margin: 0.5%;
+	overflow: hidden;
+	width: 32.3%;
+}
+
+#Browse .group td
+{
+	width: 115px;
+}
+
+#Browse .group td + td
+{
+	width: auto;
+}
+
+#Browse .groups > table > tbody > tr > td {
+    width: 50%;
+}
+#Browse .groups table table > tbody > tr > td {
+    width: 110px;
+}
+#Browse .groups table table > tbody > tr > td + td {
+    text-align: left;
+    width: auto;
+	font-size: 13px;
+}
+#Browse .groups table table {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+#Browse .groups table .image {
+    border: 1px solid #cacaca;
+    border-radius: 100%;
+    height: 100px;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 100px;
+}
+#Browse .groups table a {
+    color: $colorLighter !important;
+    text-decoration: none;
+	font-size: 13px;
+}
+
+#Browse .groups table button {
+	/*background: linear-gradient(to bottom, #1267a3 0%, #0f75bd 100%) repeat scroll 0 0 #dcdcdc;*/
+	background: linear-gradient(to bottom, #003629 0%, #006655 100%) repeat scroll 0 0 #003629;
+    border: medium none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+	margin-top: 5px;
+}
+
+.Box .tabs {
+	/*padding-bottom: 20px;*/
+	padding-top: 10px;
+}
+
+div#Field_middle #Browse div.Box div.tabs a.current
+{
+	color: $colorDefault;
+	text-decoration: none;
+	padding-bottom: 19px;
+	border-bottom: 3px solid !important;
+}
+div#Field_middle div.Box div.tabs a.current
+{
+	color: $colorDefault;
+}
+
+div#Field_middle div#Group div.Box div.tabs a.current
+{
+	color: $colorDefault;
+	text-decoration: none;
+}
+
+div#Field_middle #Browse div.Box ul {
+	border-bottom: 1px solid #cacaca;
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+div#Field_middle #Browse div.Box .tabs ul li {
+	float: left;
+	margin-right: 20px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border-color: #282c35;
+}
+
+div#Field_middle #Browse div.Box .tabs ul li:hover {
+	padding-bottom: 19px;
+	border-bottom: 3px solid $colorDefault;
+}
+
+div#Field_middle #Browse div.Box .tabs li a{
+    color: #686868;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+div#Field_middle #Browse div.Box .show-browse-menu {
+	background-image: url("@url/img/toggle.png");
+	background-repeat: no-repeat;
+	width: 39px;
+	height: 35px;
+	display: none;
+}
+
+
+div#Field_middle div.Box input[type=checkbox]{
+    display: none;
+}
+
+div#Field_middle div.Box #AdminContent input[type=checkbox]{
+    /*display: block;*/
+	display: inline;
+}
+
+div#Field_middle div.Box input[type=checkbox]:checked ~ #BrowseMenu{
+    display: block;
+}

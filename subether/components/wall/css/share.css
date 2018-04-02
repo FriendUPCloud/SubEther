@@ -1,0 +1,69 @@
+
+.share #InnerPopupWindow__
+{
+	left: 93px;
+	width: 782px;
+}
+
+#share table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#share table td
+{
+	vertical-align: top;
+}
+
+#share .head
+{
+	border-bottom: 1px solid #C0C0C0;
+	padding: 10px;
+}
+
+#share .head h1
+{
+	margin: 0;
+}
+
+#share .post
+{
+	padding: 10px;
+	/*padding-bottom: 0;*/
+	border-bottom: 1px dashed #C0C0C0;
+}
+
+#share .post .textarea
+{
+	min-height: 50px;
+}
+
+#share .content 
+{
+	padding: 10px;
+}
+
+#share .buttons 
+{
+	padding: 10px;
+	text-align: right;
+	border-top: 1px solid #C0C0C0;
+}
+
+#share .ParseContent .image.big
+{
+	float: left;
+	cursor: pointer;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    position: relative;
+	width: 154px;
+	height: 154px;
+}
+
+#share .ParseContent .image.big img
+{
+	width: 100%;
+	height: 100%;
+}

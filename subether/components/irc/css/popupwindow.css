@@ -1,0 +1,91 @@
+body
+{
+	background: #c0c0c0;
+	padding: 0;
+	margin: 0;
+	font-family: 'Sans serif';
+	font-size: 15px;
+	position: relative;
+}
+
+.toolbar { display: none; }
+
+#ChatPopout 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#MainIM
+{
+	position: absolute !important;
+	top: 0px;
+	left: 0%;
+	width: 75%;
+	bottom: 30px;
+	background: #c0c0c0;
+	height: auto !important;
+}
+
+#MainIM > div
+{
+	position: absolute;
+	overflow: auto;
+	top: 0px;
+	left: 0px;
+	right: 16px;
+	bottom: 0px;
+	height: auto !important;
+	background: #1F1F2F;
+	color: #ccff00;
+	font-family: monospace, courier, courier new;
+	font-size: 13px;
+}
+
+#UserIM
+{
+	position: absolute;
+	top: 0px;
+	left: 75%;
+	right: 0%;
+	bottom: 30px;
+	width: auto;
+	height: auto;
+	background: #c0c0c0;
+}
+
+#UserIM > div
+{
+	background: #1F1F2F;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+}
+
+#InputGui
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30px;
+}
+
+#InputGui > div
+{
+	padding: 5px;
+}
+
+#InputGui input
+{
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+

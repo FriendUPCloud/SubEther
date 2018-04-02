@@ -1,0 +1,9 @@
+/me [nickname]
+/op [nickname]
+/deop [nickname]
+/voice [nickname]
+/devoice [nickname]
+/invite [nickname]
+/kick [nickname]
+/ping [nickname]
+/sound <filename>

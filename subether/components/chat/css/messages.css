@@ -1,0 +1,392 @@
+
+#Messages #Tabs ul li
+{
+	float: left;
+}
+
+#Messages #Tabs ul li a
+{
+	height: 25px;
+	line-height: 15px;
+	color: black;
+	display: block;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+#Messages #Tabs ul li.current a,
+#Messages #Tabs ul li:hover a
+{
+	text-decoration: underline;
+}
+
+#Messages table
+{
+	width: 100%;
+}
+
+#Messages table td.leftCol
+{
+	width: 260px;
+}
+
+#Messages ul,
+#Messages li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Messages #ListIM
+{
+	position: relative;
+	border: 1px solid #c0c0c0;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#Messages #RightIM
+{
+	position: relative;
+	border: 1px solid #c0c0c0;
+	margin-bottom: 10px;
+	overflow-x: auto;
+    overflow-y: auto;
+	height: 730px;
+	max-width: 730px;
+}
+
+#Messages #ListIM_inner,
+#Messages #Accounts_inner
+{
+	overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+	padding: 5px;
+	width: 250px;
+	height: 720px;
+}
+
+#Messages #Mail_top
+{
+	/*position: absolute;
+	top: 0;
+	width: 100%;*/
+	position: relative;
+	padding: 5px;
+	padding-bottom: 0;
+}
+
+#Messages #Mail_top > div
+{
+	height: 25px;
+	line-height: 25px;
+	/*border-bottom: 1px solid #c0c0c0;*/
+	background: #dcdddd;
+	padding: 5px 10px 5px;
+	/*margin: 5px;
+	margin-bottom: 0;*/
+}
+
+#Messages #Mail_top > div .button:hover
+{
+	cursor: hand;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#Messages #Mail_top > div .button.account,
+#Messages #Mail_top > div .seperator.account
+{
+	float: right;
+}
+
+#Messages #Mail_inner
+{
+	/*overflow-x: auto;
+    overflow-y: auto;*/
+    position: relative;
+	padding: 5px;
+	/*padding-top: 45px;
+	height: 680px;*/
+}
+
+#Messages #Mail_top .buttonsmail,
+#Messages #Mail_top .buttonsread,
+#Messages .write #Mail_top .buttonslist,
+#Messages .open #Mail_top .buttonslist,
+#Messages .open #Mail_top .buttonsmail
+{
+	display: none;
+}
+
+#Messages .write #Mail_top .buttonsmail,
+#Messages .open #Mail_top .buttonsread
+{
+	display: block;
+}
+
+#Messages #Mail_inner.write td.leftcol,
+#Messages #Mail_inner.open td.leftcol
+{
+	text-align: right;
+	width: 80px;
+	padding-right: 10px;
+	line-height: 25px;
+}
+
+#Messages #Mail_inner.write td.rightcol,
+#Messages #Mail_inner.open td.rightcol
+{
+	position: relative;
+	padding-right: 10px;
+}
+
+#Messages #Mail_inner.write td.rightcol .datetime,
+#Messages #Mail_inner.open td.rightcol .datetime
+{
+	position: absolute;
+	right: 0;
+	padding-right: 10px;
+}
+
+#Messages #Mail_inner.write .headderbox,
+#Messages #Mail_inner.open .headderbox
+{
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	width: 50%;
+	min-height: 110px;
+}
+
+#Messages #Mail_inner.write .headderfiles,
+#Messages #Mail_inner.open .headderfiles
+{
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	width: 48%;
+	height: 110px;
+	overflow: hidden;
+	overflow-y: auto;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#Messages #Mail_inner .headderfiles .upload_btn
+{
+	padding: 5px;
+	padding-bottom: 0;
+}
+
+#Messages #Mail_inner .headderfiles .hfiles_inner
+{
+	padding: 5px;
+	padding-top: 0;
+}
+
+#Messages #Mail_inner.open .headderfiles .hfiles_inner
+{
+	padding-top: 5px;
+}
+
+#Messages #Mail_inner.write .message,
+#Messages #Mail_inner.open .message
+{
+	padding: 10px;
+	padding-top: 20px;
+	border-top: 1px solid #c0c0c0;
+}
+
+#Messages #Mail_inner.write input,
+#Messages #Mail_inner.open input
+{
+	width: 100%;
+	line-height: 25px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-bottom: 1px solid #c0c0c0;
+	box-sizing: border-box;
+}
+
+#Messages #Mail_inner.write textarea, #Messages #Mail_inner.write .textarea,
+#Messages #Mail_inner.open textarea, #Messages #Mail_inner.open .textarea
+{
+	width: 100%;
+	height: 450px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+#Messages #ListIM_inner a,
+#Messages #ListIM_inner a:hover
+{
+	color: black;
+	text-decoration: none;
+}
+
+#Messages #ListIM_inner li.current,
+#Messages #ListIM_inner li:hover
+{
+	background: #dcdddd;
+}
+
+#Messages #ListIM_inner li .contact
+{
+	position: relative;
+	border-top: 1px solid #c0c0c0;
+	padding: 5px;
+	padding-right: 60px;
+	height: 52px;
+}
+
+#Messages #ListIM_inner li:first-child .contact
+{
+	border-top: 0;
+}
+
+#Messages #ListIM_inner li .contact .image
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 1px solid #c0c0c0;
+    float: left;
+    height: 50px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 50px;
+}
+
+#Messages #ListIM_inner li .contact .name,
+#Messages #ListIM_inner li .contact .content
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#Messages #ListIM_inner li .contact .time
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#Messages #RightIM_inner .messages
+{
+	border: 1px solid #c0c0c0;
+	height: 618px;
+	overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+	margin-bottom: 10px;
+}
+
+#Messages #RightIM_inner .inner
+{
+	padding: 10px;
+}
+
+#Messages #RightIM_inner .inner li
+{
+	padding-bottom: 10px;
+}
+
+#Messages #RightIM_inner .ChatRow
+{
+	position: relative;
+	padding-bottom: 0;
+	font-size: 100%;
+}
+
+#Messages #RightIM_inner .ChatRow .Nick,
+#Messages #RightIM_inner .ChatRow .ChatMessage
+{
+	float: none;
+}
+
+#Messages #RightIM_inner .ChatRow .Time
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#Messages #RightIM_inner .ChatRow .Image
+{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: 1px solid #c0c0c0;
+    float: left;
+    height: 42px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 42px;
+	padding: 0;
+}
+
+#Messages #RightIM_inner .ChatRow > .ChatInfo > .Image > img
+{
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+}
+
+#Messages #RightIM_inner li.line_info
+{
+	color: #aaa;
+    font-size: 80%;
+    position: relative;
+    text-align: left;
+}
+
+#Messages #RightIM_inner li.line_info > span
+{
+	display: block;
+	position: absolute;
+	left: 0;
+}
+
+#Messages #RightIM_inner li.line_info > .icon
+{
+	background: url("./../../../gfx/check_icon.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 15px;
+    width: 15px;
+}
+
+#Messages #RightIM_inner li.line_info > .info
+{
+	left: 15px;
+}
+
+#Messages #RightIM_inner .post
+{
+	position: relative;
+	height: 100px;
+	overflow: hidden;
+}
+
+#Messages #RightIM_inner textarea
+{
+    border: 0;
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    padding: 5px;
+	margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

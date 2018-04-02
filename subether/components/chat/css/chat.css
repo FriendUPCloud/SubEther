@@ -1,0 +1,603 @@
+
+#Field_bottom .clearboth
+{
+	clear: both;
+}
+
+#Field_bottom .clearfix:after
+{
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+#Field_bottom
+{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 300;
+	direction: ltr;
+	-webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#Field_bottom .chatwrapper
+{
+	float: right;
+}
+body[layer] .chatwrapper
+{
+	position: fixed;
+	left: -10000px;
+}
+
+#Field_bottom .chatwrapper #ChatTabs
+{
+	float: left;
+	position: relative;
+}
+
+#Field_bottom #ChatTabs .chattab
+{
+	float: left;
+	position: relative;
+	margin-right: 9px;
+	width: 160px;
+	height: 28px;
+}
+
+#Field_bottom #ChatTabs .chattab.open
+{
+	width: 260px;
+}
+
+#Field_bottom .chatwrapper #ChatBox
+{
+	float: left;
+	position: relative;
+	margin-right: 5px;
+	width: 160px;
+	height: 28px;
+}
+
+#Field_bottom .chatwrapper #ChatBox.open
+{
+	width: 222px;
+}
+
+#Field_bottom #Chat, #Field_bottom .chatpriv, 
+.Layer #Chat
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+	border-bottom: 0;
+    -webkit-border-radius: 3px 3px 0px 0px;
+	-moz-border-radius: 3px 3px 0px 0px;
+	border-radius: 3px 3px 0px 0px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #000000;
+	width: 100%;
+	height: auto;
+}
+
+#Field_bottom .chatpriv .name, .Layer .chatpriv .name
+{
+	float: left;
+	width: 73%;
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.Layer .WindowContent > .chattab,
+.Layer .WindowContent > .chattab > .chatpriv > .messages
+{
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+.Layer .WindowContent > .chattab > .chatpriv > .messages
+{
+	overflow-y: scroll;
+	bottom: 30px;
+	height: auto;
+}
+.Layer .chatpriv
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.Layer .WindowContent > .chattab > .chatpriv > .post
+{
+	position: absolute;
+	bottom: 0;
+	height: 30px;
+	left: 0;
+	width: 100%;
+}
+
+#Chat .search
+{
+	border-top: 1px solid #C0C0C0;
+    display: none;
+    padding: 4px;
+	height: 18px;
+	position: relative;
+}
+
+#Chat .search > input
+{
+	position: absolute;
+	left: 0;
+	border: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: block;
+	padding-left: 25px;
+	background: url('./../../../gfx/search.png') no-repeat scroll left center rgba(0, 0, 0, 0);
+}
+
+#Chat .search .buttons
+{
+	float: right;
+	position: relative;
+}
+
+#Chat .search .buttons > i
+{
+	display: block;
+	width: 18px;
+	height: 18px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Chat .search .buttons > i.edit
+{
+	background: url('./../../../gfx/icon_edit_grey.png') no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+
+#Chat.open .search
+{
+	display: block;
+}
+
+#Chat .search .buttons #ChatSettings
+{
+    background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    padding: 6px;
+    position: absolute;
+    right: -10px;
+    text-align: left;
+    visibility: hidden;
+    width: 90px;
+}
+
+#Chat .search .buttons #ChatSettings .bottomarrow
+{
+    background: url("./../../../gfx/bottomarrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: -12px;
+    height: 12px;
+    position: absolute;
+    right: 9px;
+    width: 24px;
+}
+
+#Chat .search .buttons #ChatSettings .inner
+{
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Chat .search .buttons #ChatSettings ul li
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#Chat .search .buttons #ChatSettings ul li:hover
+{
+    background: none repeat scroll 0 0 #DCDDDD;
+    cursor: pointer;
+}
+
+#Chat .search .buttons #ChatSettings a
+{
+    color: #000000;
+    line-height: 22px;
+}
+
+#Chat .search .buttons #ChatSettings.open
+{
+    visibility: visible;
+}
+
+#Chat_inner div a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+#Chat > div .head, #Chat > div .inner,
+#Field_bottom .chatpriv > .head, #Field_bottom .chatpriv .inner,
+.Layer .chatpriv > .head, .Layer .chatpriv .inner
+{
+	padding: 4px;
+}
+
+#Field_bottom .chatpriv.open .inner li.line_info,
+.Layer .chatpriv.open .inner li.line_info
+{
+	position: relative;
+	color: #aaa;
+	text-align: left;
+	font-size: 80%;
+}
+
+#Field_bottom .chatpriv .inner li.line_info span,
+.Layer .chatpriv .inner li.line_info span
+{
+	display: block;
+	position: absolute;
+	left: 0;
+}
+
+#Field_bottom .chatpriv .inner li.line_info span.icon,
+.Layer .chatpriv .inner li.line_info span.icon
+{
+	background: url("./../../../gfx/check_icon.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	width: 15px;
+	height: 15px;
+}
+
+#Field_bottom .chatpriv .inner li.line_info span.info,
+.Layer .chatpriv .inner li.line_info span.info
+{
+	left: 15px;
+}
+
+#Chat div ul, #Chat div ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Field_bottom .chatpriv div ul, #Field_bottom .chatpriv div ul li,
+.Layer .chatpriv div ul, .Layer .chatpriv div ul li
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+#Chat_inner div ul li:hover, #Chat_inner div ul li.current
+{
+	background: #DCDDDD;
+}
+
+#Chat_inner div ul li a
+{
+	position: relative;
+	width: 100%;
+	float: left;
+	display: block;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+#Chat_inner ul li > div
+{
+	height: 30px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#Chat_inner ul li span + span
+{
+	position: relative;
+	left: 5px;
+	line-height: 28px;
+	width: 110px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#Chat_inner ul li span
+{
+	float: left;
+	display: block;
+	width: auto;
+}
+
+#Chat_inner ul li span + span + span
+{
+	position: absolute;
+	left: auto;
+	right: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#Chat_inner .image
+{
+	float: left;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+}
+
+#Field_bottom .chatpriv .image,
+.Layer .chatpriv .image
+{
+	float: left;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    height: 28px;
+    overflow: hidden;
+    width: 30px;
+	margin-right: 5px;
+}
+
+/* Chat rows */
+.ChatRow
+{
+	clear: both;
+	position: relative;
+	padding: 0 0 2px 0;
+	font-size: 95%;
+}
+.ChatRow > .ChatInfo
+{
+	position: relative;
+	width: 100%;
+}
+.ChatRow > .ChatInfo > div
+{
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.ChatRow > .ChatInfo > .Image
+{
+	width: 15%;
+}
+.ChatRow > .ChatInfo > .Image > img
+{
+	width: 30px;
+	height: 28px;
+	background-size: cover;
+	background-position: center;
+	display: block;
+	border-radius: 3px;
+	border: 1px solid #c0c0c0;
+	margin: 0 0 5px 0;
+}
+.ChatRow > .ChatInfo > .Nick
+{
+	width: 52%;
+	overflow: hidden;
+}
+.ChatRow > .ChatInfo > .Time
+{
+	text-align: right;
+	width: 33%;
+	padding-left: 5px;
+	color: #666666;
+}
+.ChatRow > .ChatMessage
+{
+	clear: both;
+	display: inline;
+}
+/* End chat rows */
+
+#Chat_inner .image > img,
+#Field_bottom .chatpriv .image > img,
+.Layer .chatpriv .image > img
+{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+	border: 0px !important;
+	border-color: transparent !important;
+}
+
+#Chat_inner .status
+{
+	float: right;
+	width: 50px;
+	text-align: right;
+}
+
+#Chat_inner .status > img
+{
+	position: relative;
+	top: 4px;
+}
+
+#Field_bottom .chatwrapper .head,
+.Layer .chatwrapper .head
+{
+	height: 22px;
+	line-height: 22px;
+	cursor: pointer;
+	cursor: hand;
+	clear: both;
+}
+
+#Field_bottom .chatpriv .time,
+.Layer .chatpriv .time
+{
+	position: absolute;
+	top: 0;
+	right: 3px;
+}
+
+#Field_bottom .chatpriv .status,
+.Layer .chatpriv .status
+{
+	float: left;
+	padding-top: 2px;
+	padding-right: 3px;
+	height: 22px;
+	line-height: 22px;
+	box-sizing: border-box;
+}
+
+#Field_bottom .chatpriv .head .image,
+.Layer .chatpriv .head .image,
+#Field_bottom .chatpriv .head .tooltips,
+.Layer .chatpriv .head .tooltips
+{
+	display: none;
+}
+
+#Field_bottom .chatpriv .delete,
+.Layer .chatpriv .delete
+{
+	float: right;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+#Field_bottom .chatpriv.open .name,
+.Layer .chatpriv.open .name
+{
+	float: left;
+	display: block;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+}
+
+#Chat #Chat_list
+{
+	overflow: hidden;
+	height: 0px;
+}
+
+#Chat.open #Chat_list
+{
+	border-top: 1px solid #C0C0C0;
+	overflow-y: auto;
+	height: 405px;
+}
+
+#Chat_inner div.inner
+{
+	/*border-top: 1px solid #C0C0C0;
+	overflow: hidden;
+	overflow-y: scroll;
+	height: 405px;*/
+	height: auto;
+}
+
+#Field_bottom .chatpriv div.post,
+.Layer .chatpriv div.post
+{
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+}
+
+#Field_bottom .open .chatpriv div.post,
+.Layer .open .chatpriv div.post
+{
+	height: 26px;
+}
+
+#Field_bottom .chatpriv.open div.post,
+.Layer .chatpriv.open div.post
+{
+	display: block;
+}
+
+#Field_bottom .chatpriv.notify,
+.Layer .chatpriv.notify
+{
+	background-color: #DCDDDD;
+}
+
+#Field_bottom .chatpriv div.messages,
+.Layer .chatpriv div.messages
+{
+	position: relative;
+	overflow: hidden;
+	overflow-y: auto;
+	height: 0px;
+}
+
+#Field_bottom .chatpriv.open div.messages,
+.Layer .chatpriv.open div.messages
+{
+	border-top: 1px solid #C0C0C0;
+	height: 405px;
+}
+
+#Field_bottom .chatpriv input,
+.Layer .chatpriv input,
+#Field_bottom .chatpriv textarea,
+.Layer .chatpriv textarea
+{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+	border-top: 1px solid #c0c0c0;
+	box-sizing: border-box;
+	/*height: 100%;*/
+	height: 26px;
+	padding: 5px;
+}
+
+#Field_bottom .chatpriv input:focus,
+.Layer .chatpriv input:focus,
+#Field_bottom .chatpriv textarea:focus,
+.Layer .chatpriv textarea:focus
+{
+	outline: none;
+	background: #f0f0f0;
+	box-shadow: inset 0px 0px 1px rgba(0,0,0,0.5);
+}
+

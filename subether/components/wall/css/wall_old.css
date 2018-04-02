@@ -1,0 +1,668 @@
+/*
+#Wall .editor
+{
+    border: 1px solid #C0C0C0;*/
+    /*border-radius: 3px;*/
+    /*position: relative;
+}*/
+/*
+#ShareContent .messagebox .html
+{
+	padding: 10px !important;
+	padding-top: 0 !important;
+}
+
+#ShareContent .commentbox .html
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}*/
+/*
+#Wall .editor #ParseContent,
+#ShareContent .messagebox .html .ParseContent,
+#ShareContent .commentbox .html .ParseContent,
+#share .html .ParseContent
+{
+    border: 1px solid #C0C0C0;*/
+    /*border-radius: 3px;*/
+    /*position: relative;
+	padding: 7px;
+	min-height: 155px;
+}
+
+#ShareContent .commentbox .html .ParseContent
+{
+	min-height: 100px;
+}
+
+#Wall .editor #ParseContent a,
+#ShareContent .messagebox .html .ParseContent a,
+#ShareContent .commentbox .html .ParseContent a,
+#share .html .ParseContent a
+{
+	text-decoration: none;
+	color: black;
+}
+
+#Wall .editor #ParseContent a:hover,
+#ShareContent .messagebox .html .ParseContent a:hover,
+#ShareContent .commentbox .html .ParseContent a:hover,
+#share .html .ParseContent a:hover
+{
+	text-decoration: none;
+	color: black;
+}
+
+#Wall .editor #ParseContent .image,
+#ShareContent .messagebox .html .ParseContent .image,
+#ShareContent .commentbox .html .ParseContent .image,
+#share .html .ParseContent .image
+{
+	position: relative;
+	float: left;
+	padding-bottom: 7px;
+	cursor: hand;
+	cursor: pointer;
+	width: 154px;
+	height: 154px;
+	padding-right: 7px;
+}
+
+#Wall .editor #ParseContent .image.video,
+#ShareContent .messagebox .html .ParseContent .image.video,
+#ShareContent .commentbox .html .ParseContent .image.video,
+#share .html .ParseContent .image.video
+{
+	padding-right: 0;
+	width: auto;
+	height: auto;
+	float: none;
+}
+
+#Wall .editor #ParseContent .image i,
+#ShareContent .messagebox .html .ParseContent .image i,
+#share .html .ParseContent .image i
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: auto;
+	background-image: url( '../gfx/play.png' );
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	width: 54px;
+	height: 54px;
+}
+
+#ShareContent .commentbox .html .ParseContent .image i
+{
+	position: absolute;
+	bottom: 12px;
+	left: 5px;
+	background-image: url( '../gfx/play_thumb.png' );
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	width: 35px;
+	height: 26px;
+}
+
+#Wall .editor #ParseContent .image:hover i,
+#ShareContent .messagebox .html .ParseContent .image:hover i,
+#share .html .ParseContent .image:hover i
+{
+	background-position: 0 -55px;
+}
+
+#Wall .editor #ParseContent .image img,
+#ShareContent .messagebox .html .image img,
+#ShareContent .commentbox .html .image img,
+#share .html .image img
+{
+	display: block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-right: 7px;
+}
+
+#Wall .editor #ParseContent .text p,
+#ShareContent .messagebox .html .ParseContent .text p,
+#ShareContent .commentbox .html .ParseContent .text p,
+#share .html .ParseContent .text p
+{
+	overflow: hidden;
+	height: auto;
+	max-height: 50px;
+}
+
+#Wall .editor #ParseContent .text p.url,
+#ShareContent .messagebox .html .ParseContent .text p.url,
+#share .html .ParseContent .text p.url
+{
+	margin-top: 15px;
+}
+
+#ShareContent .commentbox .html .ParseContent .text h3
+{
+	margin: 0;
+	font-size: 13px;
+}
+
+#ShareContent .commentbox .html .ParseContent .text p
+{
+	margin: 0;
+	max-height: 35px;
+}
+
+#Wall .editor #ParseContent .image img,
+#ShareContent .messagebox .html .ParseContent .image img,
+#ShareContent .commentbox .html .ParseContent .image img,
+#share .html .ParseContent .image img
+{
+	width: 100%;
+	height: 100%;
+}
+
+#ShareContent .commentbox .html .ParseContent .image
+{
+	width: 130px;
+	height: 100px;
+}
+
+#Wall .editor #ParseContent .image.big,
+#share .html .ParseContent .image.big
+{
+	width: 154px !important;
+}
+
+#ShareContent .commentbox .html .ParseContent .image.big
+{
+	width: 130px !important;
+}
+
+#ShareContent .messagebox .html .ParseContent .image.big
+{
+	width: 100%;
+	height: auto;
+	margin-right: 0;
+}
+
+#ShareContent .messagebox .html .ParseContent .image.big img
+{
+	height: 320px;
+}
+
+#Wall .editor #ParseContent .image.picture.big,
+#ShareContent .messagebox .html .ParseContent .image.picture.big,
+#ShareContent .commentbox .html .ParseContent .image.picture.big
+{
+	width: auto;
+	height: 320px;
+	margin-right: 0;
+}
+
+#Wall .editor #ParseContent .image.picture.big,
+#ShareContent .messagebox .html .ParseContent .image.picture.big,
+#ShareContent .commentbox .html .ParseContent .image.picture.big
+{
+	float: none;
+	padding-bottom: 0;
+}*/
+/*
+#Wall .editor .textarea
+{
+	min-height: 50px;
+}
+
+#Wall .editor.closed
+{
+	overflow: hidden;
+	height: 30px;
+}
+
+#Wall .editor.closed .textarea
+{
+	min-height: 16px;
+}
+
+#Wall .editor.article .textarea
+{
+    border-top: 1px solid #C0C0C0;
+    position: relative;
+}
+
+#Wall .editor.article .textarea.extrafield
+{
+	padding: 7px;
+}
+
+#Wall .editor.article .input.heading
+{
+	/*font-weight: bold;
+    text-transform: uppercase;*/
+	/*padding: 7px;
+}*//*
+
+#Wall .editor.article .textarea.leadin
+{
+	min-height: 100px;
+}
+
+#Wall .editor.article .textarea.article
+{
+	min-height: 150px;
+}
+
+#Wall .editor .input
+{
+	min-height: 16px;
+}
+
+#Wall .editor > .text
+{
+	padding: 7px;
+}
+
+#Wall .editor.article .text
+{
+	padding: 0;
+}
+
+#Wall .editor .toolbar
+{
+	*//*background-color: #DCDDDD;*/
+	/*border-top: 1px solid #C0C0C0;
+    height: 32px;
+    overflow: hidden;
+    width: 100%;*/
+	/*border-radius: 0px 0px 3px 3px;*//*
+}
+
+#Wall .editor .toolbar .publish
+{
+	float: right;
+	padding: 4px;
+}
+
+#Wall .editor .toolbar .icons
+{
+	float: left;
+	padding: 4px;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 10px;
+	cursor: hand;
+	cursor: pointer;
+}*/
+
+#ShareContent img.voteimg
+{
+	margin-bottom: -5px;
+	margin-left: 5px;
+}
+
+#ShareContent .Comment
+{
+	position: relative;
+}
+
+#ShareContent .Comment > .Box > .Edit/*,
+#Wall .editor #ParseContent .Edit*/
+{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 0px !important;
+	width: 15px !important;
+	height: 15px !important;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	border: 1px solid transparent;
+}
+
+#ShareContent .Comment > .Box:hover > .Edit > div/*,
+#Wall .editor #ParseContent .Edit > div*/
+{
+	width: 15px !important;
+	height: 15px !important;
+	padding: 0px !important;
+	background: url( '../gfx/x.png' ) center center;
+}
+
+#ShareContent .Comment > .Box > .Edit:hover/*,
+#Wall .editor #ParseContent .Edit:hover*/
+{
+	/*background: #ffffff;*/
+	border: 1px solid #C0C0C0;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#ShareContent .Comment .messagebox p,
+#ShareContent .Comment .commentbox p
+{
+	padding-right: 30px;
+}
+
+#ShareContent > .Comment.Article > .Box > .messagebox > .posted
+{
+	float: right;
+	padding: 10px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+}
+
+#ShareContent > .Comment.Article > .Box > .messagebox > .posted .image
+{
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#ShareContent > .Comment.Article > .Box > .messagebox > h2
+{
+	margin: 0;
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 15px;
+	/*text-transform: uppercase;*/
+}
+
+#ShareContent > .Comment.Article > .Box > .messagebox > h2 > a
+{
+	text-decoration: none;
+}
+
+#ShareContent > .Comment.Article > .Box > .messagebox > h2 > a:hover
+{
+	text-decoration: underline;
+}
+
+#WallTabs .page
+{
+	visibility: hidden;
+	overflow: hidden;
+	height: 0px;
+}
+
+#WallTabs .active
+{
+	visibility: visible;
+	overflow: visible;
+	height: auto;
+}
+
+/* --- PopupWindow --- */
+/*
+.share #InnerPopupWindow__
+{
+	left: 93px;
+	width: 782px;
+}
+
+#share table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#share table tbody, #share table td
+{
+	padding: 0;
+	vertical-align: top;
+}
+
+#share table td
+{
+	text-align: left;
+	padding: 4px;
+}
+
+#share input[type="text"]
+{
+	width: 98%;
+}
+
+#share ul, #share li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#share .head
+{*/
+	/*background-color: #006600;
+	color: #ffffff;*/
+	/*border-bottom: 1px solid #C0C0C0;
+	padding: 10px;
+}
+
+#share .head > h1
+{*/
+	/*font-size: 14px;
+	text-transform: uppercase;*/
+	/*margin: 0;
+}
+
+#share .post
+{
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+#share .post .textarea
+{
+	min-height: 50px;
+}
+
+#share .content 
+{
+	padding: 10px;
+}
+
+#share .buttons 
+{
+	padding: 10px;
+	text-align: right;*/
+	/*background-color: #DCDDDD;*/
+	/*border-top: 1px solid #C0C0C0;
+}*/
+
+
+#ShareContent
+{
+	border-top: 1px solid #C0C0C0;
+	padding: 15px;
+}
+
+#ShareContent table
+{
+	border-collapse: collapse;
+}
+
+#ShareContent a
+{
+	color: #000000;
+}
+
+#ShareContent .ReplyBox
+{
+	padding: 10px;
+	padding-top: 0;
+}
+
+#ShareContent .ReplyBox table
+{
+	width: 100%;
+}
+
+#ShareContent .ReplyBox .image
+{
+	/*background: #ffffff;*/
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#ShareContent .ReplyBox input
+{
+	width: 100%;
+	border: 0;
+	background: transparent;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#ShareContent .ReplyBox button
+{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+
+#ShareContent .ReplyBox div.reply
+{
+	/*background: #ffffff;*/
+	position: relative;
+	border: 1px solid #C0C0C0;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	padding: 2px;
+	padding-left: 6px;
+}
+
+#ShareContent > div.Comment
+{
+	/*background: #DCDDDD;*/
+	border: 1px solid #C0C0C0;
+	/*border-top: 0;*/
+	position: relative;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#ShareContent .Comment .Box
+{
+	padding: 0;
+}
+
+#ShareContent > .Comment > .Box
+{
+	/*background: #ffffff;*/
+}
+
+#ShareContent > .Comment > .Box > .commentbox
+{
+	display: none;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > p, #ShareContent > .Comment > .Box > .messagebox > div
+{
+	padding: 10px;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .posted
+{
+	padding-bottom: 0;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .posted .image
+{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #C0C0C0;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+#ShareContent > .Comment > .Box > .messagebox > .Buttons
+{
+	border-top: 1px solid #C0C0C0;
+	/*background: #DCDDDD;*/
+}
+
+#ShareContent .Comment .Comment
+{
+	padding: 10px;
+	padding-top: 0;
+	border: 0;
+	/*background: #DCDDDD;*/
+}
+
+#ShareContent .Comment .Comment > .Box
+{
+	border-top: 1px solid #C0C0C0;
+}
+
+#ShareContent .Comment .Comment > .Box > .messagebox
+{
+	display: none;
+}
+
+#ShareContent .Comment .Comment > .Box > p, #ShareContent .Comment .Comment  > .Box > div
+{
+	padding-top: 10px;
+}
+
+#ShareContent .Comment .Comment .Box .commentbox > table > tbody > tr > td > .image
+{
+	/*background: #ffffff;*/
+	width: 30px;
+	height: 28px;
+	border: 1px solid #C0C0C0;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	margin-right: 5px;
+	overflow: hidden;
+}
+
+.Box
+{
+	padding: 15px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.Box div.tabs a
+{
+	display: block;
+	color: black;
+	text-decoration: none;
+	padding-right: 15px;
+	line-height: 15px;
+	height: 25px;
+}
+
+.Box div.tabs a:hover, .Box div.tabs a.current
+{
+	text-decoration: underline;
+}
+
+.Col2 p.Buttons
+{
+	text-align: right;
+}

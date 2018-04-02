@@ -1,0 +1,153 @@
+i18n_Hour : H
+
+i18n_Week : Week
+i18n_Monday : Monday
+i18n_Tuesday : Tuesday
+i18n_Wednesday : Wednesday
+i18n_Thursday : Thursday
+i18n_Friday : Friday
+i18n_Saturday : Saturday
+i18n_Sunday : Sunday
+
+i18n_d_Week : Week
+i18n_d_Monday : Monday
+i18n_d_Tuesday : Tuesday
+i18n_d_Wednesday : Wednesday
+i18n_d_Thursday : Thursday
+i18n_d_Friday : Friday
+i18n_d_Saturday : Saturday
+i18n_d_Sunday : Sunday
+
+i18n_a_Week : Week
+i18n_a_Monday : Mon
+i18n_a_Tuesday : Tue
+i18n_a_Wednesday : Wed
+i18n_a_Thursday : Thu
+i18n_a_Friday : Fri
+i18n_a_Saturday : Sat
+i18n_a_Sunday : Sun
+
+i18n_s_Week : We
+i18n_s_Monday : Mo
+i18n_s_Tuesday : Tu
+i18n_s_Wednesday : We
+i18n_s_Thursday : Th
+i18n_s_Friday : Fr
+i18n_s_Saturday : Sa
+i18n_s_Sunday : Su
+
+i18n_s_Wee : Wee
+i18n_s_Mon : Mon
+i18n_s_Tue : Tue
+i18n_s_Wed : Wed
+i18n_s_Thu : Thu
+i18n_s_Fri : Fri
+i18n_s_Sat : Sat
+i18n_s_Sun : Sun
+
+i18n_January : January
+i18n_February : February
+i18n_March : March
+i18n_April : April
+i18n_May : May
+i18n_June : June
+i18n_July : July
+i18n_August : August
+i18n_September : September
+i18n_October : October
+i18n_November : November
+i18n_December : December
+
+i18n_d_January : January
+i18n_d_February : February
+i18n_d_March : March
+i18n_d_April : April
+i18n_d_May : May
+i18n_d_June : June
+i18n_d_July : July
+i18n_d_August : August
+i18n_d_September : September
+i18n_d_October : October
+i18n_d_November : November
+i18n_d_December : December
+
+i18n_a_January : Jan
+i18n_a_February : Feb
+i18n_a_March : Mar
+i18n_a_April : Apr
+i18n_a_May : May
+i18n_a_June : Jun
+i18n_a_July : Jul
+i18n_a_August : Aug
+i18n_a_September : Sep
+i18n_a_October : Oct
+i18n_a_November : Nov
+i18n_a_December : Dec
+
+i18n_s_January : January
+i18n_s_February : February
+i18n_s_March : March
+i18n_s_April : April
+i18n_s_May : May
+i18n_s_June : June
+i18n_s_July : July
+i18n_s_August : August
+i18n_s_September : September
+i18n_s_October : October
+i18n_s_November : November
+i18n_s_December : December
+
+i18n_Previous_Year : Previous Year
+i18n_Previous_Month : Previous Month
+i18n_Todays_Date : Todays Date
+i18n_Next_Month : Next Month
+i18n_Next_Year : Next Year
+
+i18n_sharebox_share : POST
+i18n_sharebox_shareheading : Share something
+i18n_no_wall_messages : Your wall is empty.
+i18n_wall_posted : posted
+i18n_share : Share
+i18n_comment : Comment
+i18n_like : Like
+i18n_store_reply : REPLY
+i18n_no_share_content_message : You need to write a message.
+i18n_wall_replies : replies
+i18n_wall_reply : reply
+i18n_page_heading_part : 's page
+
+i18n_day_01 : one
+i18n_day_02 : two
+i18n_day_03 : three
+i18n_day_04 : four
+i18n_day_05 : five
+i18n_day_06 : six
+i18n_day_07 : seven
+i18n_day_08 : eight
+i18n_day_09 : nine
+i18n_day_10 : ten
+i18n_day_11 : eleven
+i18n_day_12 : twelve
+i18n_day_13 : thirteen
+i18n_day_14 : fourteen
+i18n_day_15 : fifteen
+i18n_day_16 : sixteen
+i18n_day_17 : seventeen
+i18n_day_18 : eighteen
+i18n_day_19 : nineteen
+i18n_day_20 : twenty
+i18n_day_21 : twentyone
+i18n_day_22 : twentytwo
+i18n_day_23 : twentythree
+i18n_day_24 : twentyfour
+i18n_day_25 : twentyfive
+i18n_day_26 : twentysix
+i18n_day_27 : twentyseven
+i18n_day_28 : twentyeight
+i18n_day_29 : twentynine
+i18n_day_30 : thirty
+i18n_day_31 : thirtyone
+
+i18n_SecretGroup : Secret Group
+i18n_OpenGroup : Open Group
+i18n_ClosedGroup : Closed Group

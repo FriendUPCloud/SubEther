@@ -1,0 +1,340 @@
+@media screen and (min-height: 800px) 
+{
+	#Files #Directory, #Messages #ListIM, 
+	#Files #Content,   #Messages #RightIM
+	{
+		min-height: 720px;
+	}
+}
+
+@media screen and (min-height: 950px) 
+{
+	#Files #Directory, #Messages #ListIM, 
+	#Files #Content,   #Messages #RightIM
+	{
+		min-height: 770px;
+	}
+}
+
+@media screen and (min-width: 1280px) 
+{
+	body
+	{
+		font-size: 15px;
+	}
+	#CenterBox__, #InnerTopBox__, #InnerFooter__
+	{
+		width: 1024px;
+	}
+	html #Field_bottom #ChatTabs .chattab.open
+	{
+		width: 300px;
+	}
+	.ChatRow > .ChatInfo > .Image
+	{
+		box-sizing: border-box;
+		padding-right: 5px;
+	}
+	.ChatRow > .ChatInfo > .Image img
+	{
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+@media screen and (min-width: 1300px) 
+{
+	body
+	{
+		font-size: 16px;
+	}
+	#CenterBox__, #InnerTopBox__, #InnerFooter__
+	{
+		width: 1260px;
+	}
+	.home #Table_Fields td.Col1
+	{
+		width: 220px;
+	}
+	html #Field_bottom .chatwrapper #ChatBox
+	{
+		width: 235px;
+	}
+	html #Field_bottom #ChatTabs .chattab.open
+	{
+		width: 330px;
+	}
+	html .ChatRow > .ChatInfo > .Image
+	{
+		width: 13%;
+	}
+	html .ChatRow > .ChatInfo > .Nick
+	{
+		width: 54%;
+	}
+}
+
+@media screen and (min-width: 1920px) 
+{
+	#CenterBox__, #InnerTopBox__, #InnerFooter__
+	{
+		width: 1400px;
+	}
+	.home #Table_Fields td.Col1
+	{
+		width: 265px;
+	}
+	html #Field_bottom #ChatTabs .chattab.open
+	{
+		width: 360px;
+	}
+	
+	/*#Search table > tbody > tr > td > *
+	{
+		position: relative;
+		top: -3px;
+	}*/
+}
+
+/* Mobile version ----------------------------------------------------------- */
+
+@media screen and (max-width: 980px)
+{
+	body
+	{
+		font-size: 16px;
+		padding-top: 70px;
+	}
+	
+	#CenterBox__, #InnerFooter__
+	{
+		width: 100%;
+	}
+	
+	/* Main layout ---------------------------------------------------------- */
+	#Table_Fields, #Table_Fields > tbody, 
+	#Table_Fields > tbody > tr, #Table_Fields > tbody > tr > td,
+	.home #Table_Fields td.Col1, .main #Content__,
+	.main #InnerContent__
+	{
+		display: block;
+		width: 100%;
+	}
+	.main #Content__
+	{
+		margin: 0;
+		box-sizing: border-box;
+	}
+	.main #InnerContent__
+	{
+		padding: 0;
+	}
+	.main #Field1 img
+	{
+		width: 90% !important;
+		height: auto !important;
+		margin: 5%;
+		padding: 0;
+		display: block;
+	}
+	.main #Top #Menu > #Menu
+	{
+		left: 0;
+	}
+	body.main
+	{
+		padding-top: 50px;
+	}
+	.main #TopBox__
+	{
+		height: 50px;
+	}
+	.main #Field1
+	{
+		height: auto;
+	}
+	html .ParseContent .image img
+	{
+		width: 100% !important;
+		height: auto !important;
+	}
+	html .home #Table_Fields > tbody > tr > td > div
+	{
+		min-height: 0 !important;
+	}
+	
+	/* Top and login -------------------------------------------------------- */
+	#TopBox__
+	{
+		height: 70px;
+	}
+	#InnerTopBox__
+	{
+		width: 100%;
+	}
+	#Logo img
+	{
+		width: 70px;
+		height: auto;
+	}
+	#TopBox__ #TopSearch
+	{
+		position: absolute;
+		left: 10px;
+	}
+	#TopBox__ #Notification
+	{
+		position: absolute;
+		top: 28px;
+		left: 0px;
+	}
+	#TopBox__ #SearchEngine #Search,
+	#TopBox__ #GlobalSearch #Search
+	{
+		position: absolute;
+		left: 85px;
+		top: 29px;
+		height: 25px;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+	html #SearchEngine #Search input
+	{
+		width: 50%;
+		box-sizing: border-box;
+		float: left;
+	}
+	html #SearchEngine #Search select
+	{
+		width: 25%;
+		box-sizing: border-box;
+		float: left;
+	}
+	html #SearchEngine button
+	{
+		width: 25%;
+		float: left;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	#Search input
+	{
+		padding: 1px;
+	}
+	html #Top
+	{
+		width: 100%;
+	}
+	#Top #Menu
+	{
+		float: none;
+		top: 0;
+		left: 0;
+		width: 100%;
+		right: auto;
+		position: absolute;
+	}
+	html #Top #Authentication
+	{
+		float: none;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	#Top #Menu > #Menu
+	{
+		left: 85px;
+		top: 10px;
+	}
+	#Footer__ #BottomLinks, #Footer__ #BottomLinks
+	{
+		height: auto;
+	}
+	
+	/* Profile panel -------------------------------------------------------- */
+	
+	/* Panel ---------------------------------------------------------------- */
+	#Table_Fields td.Col1
+	{
+		display: none !important;
+	}
+	
+	/* Notification --------------------------------------------------------- */
+	#TopSearch,
+	#Notification 
+	{
+		width: 100% !important;
+		padding: 0 !important;
+	}
+	
+	#NotificationBox .inner
+	{
+		max-height: none !important;
+		overflow-y: visible !important;
+	}
+	
+	#NotificationBox .toparrow,
+	#NotificationBox .all
+	{
+		display: none;
+	}
+	
+	#NotificationBox
+	{
+		border: 0 !important;
+		border-radius: 0 !important;
+		/*box-shadow: none !important;*/
+		left: -10px !important;
+		padding: 0px !important;
+		top: 33px !important;
+		width: 100% !important;
+	}
+	
+	/* Messages ------------------------------------------------------------- */
+	#Messages .leftCol
+	{
+		display: none;
+	}
+	
+	/* Chat ----------------------------------------------------------------- */
+	html #Field_bottom .chatwrapper
+	{
+		display: none;
+		float: none;
+		width: 100%;
+	}
+	html #Chat.open #Chat_list
+	{
+		height: 320px;
+	}	
+	html #Field_bottom
+	{
+		left: 0;
+	}
+	html #Field_bottom .chatwrapper #ChatBox.open
+	{
+		width: 100%;
+	}
+	html #Field_bottom #Chat, #Field_bottom .chatpriv
+	{
+		max-height: 300px;
+	}
+	html #Field_bottom .chatwrapper #ChatTabs
+	{
+		float: none;
+		z-index: 1;
+	}
+	html #Field_bottom #ChatTabs .chattab.open
+	{
+		float: none;
+		width: 100%;
+	}
+	
+	/* Footer ----------------------------------------------------------------- */
+	#Footer__ #BottomLinks
+	{
+		display: none !important;
+	}
+}
+

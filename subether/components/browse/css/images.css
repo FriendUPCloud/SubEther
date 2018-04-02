@@ -1,0 +1,110 @@
+
+#Browse #Content .images h3
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/*font-size: 11px;*/
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	height: 18px;
+}
+
+#Browse #Content .images h4
+{
+	display: block;
+    height: 20px;
+    line-height: 20px;
+	font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Browse #Content .imagebox
+{
+	float: left;
+	width: 185px;
+	height: 135px;
+	margin: 5px;
+	/*border: 1px solid red;*/
+	overflow: hidden;
+}
+
+#Browse #Content .RightCol .imagebox
+{
+	/*border: 1px solid blue;*/
+	width: 350px;
+	height: 68px;
+}
+
+#Browse #Content .RightCol .imagebox > div
+{
+	float: left;
+}
+
+#Browse #Content .imagebox .content
+{
+	width: 218px;
+	height: 68px;
+	padding-left: 10px;
+	/*border: 1px solid red;*/
+}
+
+#Browse #Content .RightCol .imagebox h3
+{
+	/*font-size: 11px;*/
+	font-size: 100%;
+}
+
+#Browse #Content .imagebox .thumb
+{
+	width: 185px;
+	height: 110px;
+	position: relative;
+	overflow: hidden;
+	background: #000000;
+}
+
+#Browse #Content .imagebox .thumb img
+{
+	/*width: 185px;*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#Browse #Content .RightCol .imagebox .thumb
+{
+	width: 120px;
+	height: 68px;
+}
+
+#Browse #Content .RightCol .imagebox .thumb > img
+{
+	width: 120px;
+}
+
+#Browse #Content .imagebox .source
+{
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	background: url('../../../gfx/utube.png') no-repeat center center;
+	width: 52px;
+	height: 22px;
+}
+
+#Browse #Content .imagebox .duration
+{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	padding: 2px;
+	padding-left: 4px;
+	padding-right: 4px; 
+	background: #000000;
+	color: #ffffff;
+}

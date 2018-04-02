@@ -1,0 +1,332 @@
+#PopupWindow__.open
+{
+	visibility: visible;
+	/*z-index: 99999;*/
+	z-index: 999;
+}
+
+#PopupWindow__ .close
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px;
+	/*z-index: 9999;*/
+	z-index: 99;
+	cursor: pointer;
+	cursor: hand;
+	color: #ffffff;
+	background: rgba(0,0,0,0.7);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#PopupWindow__ .buttons .fullscreen
+{
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	padding: 5px;
+	/*z-index: 9999;*/
+	z-index: 998;
+	cursor: pointer;
+	cursor: hand;
+	color: #ffffff;
+}
+
+#PopupWindow__ ul, #PopupWindow__ ul li 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#PopupWindow__.avatar .bottom,
+#PopupWindow__.cover .bottom,
+#PopupWindow__.album .bottom
+{
+	position: absolute;
+	background-color: rgba( 0, 0, 0, 0.8 );
+	z-index: 60;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #ffffff;
+}
+
+#PopupWindow__.avatar .bottom .status,
+#PopupWindow__.cover .bottom .status,
+#PopupWindow__.album .bottom .status
+{
+	float: left;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#PopupWindow__.avatar .bottom .buttons,
+#PopupWindow__.cover .bottom .buttons,
+#PopupWindow__.album .bottom .buttons
+{
+	float: right;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#PopupWindow__.avatar .bottom > div > div,
+#PopupWindow__.cover .bottom > div > div,
+#PopupWindow__.album .bottom > div > div
+{
+	float: left;
+	padding: 5px;
+	margin: 5px;
+}
+
+#PopupWindow__.avatar .bottom .buttons > div:hover, #PopupWindow__.avatar .bottom .buttons > div.active,
+#PopupWindow__.cover .bottom .buttons > div:hover, #PopupWindow__.cover .bottom .buttons > div.active,
+#PopupWindow__.album .bottom .buttons > div:hover, #PopupWindow__.album .bottom .buttons > div.active
+{
+	background-color: #FFFFFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: black;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox,
+#PopupWindow__.cover .bottom #OptionsBox,
+#PopupWindow__.album .bottom #OptionsBox
+{
+	position: absolute;
+	width: 180px;
+	bottom: 60px;
+	right: 10px;
+	visibility: hidden;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 6px;
+	color: #000000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox .bottomarrow,
+#PopupWindow__.cover .bottom #OptionsBox .bottomarrow,
+#PopupWindow__.album .bottom #OptionsBox .bottomarrow
+{
+	position: absolute;
+	bottom: -22px;
+	right: 12px;
+	background: url('../gfx/bottomarrow.png') center center no-repeat;
+	width: 24px;
+	height: 12px;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox .inner,
+#PopupWindow__.cover .bottom #OptionsBox .inner,
+#PopupWindow__.album .bottom #OptionsBox .inner
+{
+	float: none;
+	padding: 0;
+	margin: 0;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox ul li,
+#PopupWindow__.cover .bottom #OptionsBox ul li,
+#PopupWindow__.album .bottom #OptionsBox ul li
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox ul li:hover,
+#PopupWindow__.cover .bottom #OptionsBox ul li:hover,
+#PopupWindow__.album .bottom #OptionsBox ul li:hover
+{
+	background: #DCDDDD;
+	cursor: pointer;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox a,
+#PopupWindow__.cover .bottom #OptionsBox a,
+#PopupWindow__.album .bottom #OptionsBox a
+{
+	color: #000000;
+	line-height: 20px;
+}
+
+#PopupWindow__.avatar .bottom #OptionsBox.open,
+#PopupWindow__.cover .bottom #OptionsBox.open,
+#PopupWindow__.album .bottom #OptionsBox.open
+{
+	visibility: visible;
+}
+
+#InnerPopupWindow__
+{
+	position: relative;
+	top: 150px;
+	width: 600px;
+	background: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	margin: auto;
+	/*overflow: hidden;*/
+}
+
+
+#InnerPopupWindow__ table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#InnerPopupWindow__ table tbody, #InnerPopupWindow__ table td
+{
+	padding: 0;
+	vertical-align: top;
+}
+
+#InnerPopupWindow__ table td
+{
+	text-align: right;
+	padding: 4px;
+}
+
+#InnerPopupWindow__ table td + td
+{
+	text-align: left;
+}
+
+#InnerPopupWindow__ input[type="text"]
+{
+	width: 98%;
+}
+
+#InnerPopupWindow__ ul, #InnerPopupWindow__ li
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#InnerPopupWindow__ .head
+{
+	background-color: #006600;
+	color: #ffffff;
+	padding: 10px;
+}
+
+#InnerPopupWindow__ .head > h1
+{
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#InnerPopupWindow__ .content
+{
+	padding: 10px;
+}
+
+#InnerPopupWindow__ .buttons
+{
+	padding: 10px;
+	text-align: right;
+	background-color: #DCDDDD;
+	border-top: 1px solid #C0C0C0;
+}
+
+#InnerPopupWindow__ .inputfield
+{
+	position: relative;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 2px;
+	padding-left: 6px;
+}
+
+#InnerPopupWindow__ .inputfield input
+{
+	border: 0;
+	background: transparent;
+	width: 240px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#InnerPopupWindow__ .textarea
+{
+	position: relative;
+	border: 1px solid #C0C0C0;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 2px;
+	padding-left: 6px;
+	min-height: 50px;
+}
+
+
+.Showroom .Pages
+{
+	position: absolute !important;
+	left: 126px !important;
+	top: auto !important;
+	bottom: 0 !important;
+	visibility: visible !important;
+	z-index: 70 !important;
+	color: #ffffff;
+	padding: 10px;
+	margin: 5px;
+}
+
+.Showroom .Pages > div
+{
+	float: left;
+}
+
+.Showroom .Pages span
+{
+	margin-right: 3px;
+}
+
+.Showroom .Pages > .Page
+{
+	visibility: hidden;
+	overflow: hidden;
+	width: 0px;
+	height: 0px;
+}
+
+.imgs1 .Showroom .Arrows
+{
+	display: none;
+}
+
+
+#PopupWindow__.controlpanel > #InnerPopupWindow__
+{
+	width: 90%;
+	height: 80%;
+	top: 13%;
+}
+
+#PopupWindow__.controlpanel #controlpanel
+{
+	width: 100%;
+	height: 100%;
+}

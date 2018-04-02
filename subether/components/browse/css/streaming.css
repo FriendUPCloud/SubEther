@@ -1,0 +1,79 @@
+
+#Browse #Content .streaming h3
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/*font-size: 11px;*/
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	height: 18px;
+}
+
+#Browse #Content .streaming h4
+{
+	display: block;
+    height: 20px;
+    line-height: 20px;
+	font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Browse #Content .streaming h4
+{
+	text-transform: uppercase;
+}
+
+#Browse #Content .streaming th
+{
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+#Browse #Content .streaming th + th, #Browse .streaming td + td
+{
+	text-align: center;
+	border-left: 1px solid #C0C0C0;
+}
+
+#Browse #Content .streaming a
+{
+	text-decoration: none;
+}
+
+#Browse #Content .streaming a:hover
+{
+	text-decoration: underline;
+}
+
+#Browse #Content .streaming th, #Browse .streaming td
+{
+	padding: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+#Browse #Content .streaming td.category
+{
+	border: 0;
+	background: transparent;
+}
+
+#Browse #Content .streaming tr:hover td
+{
+	background-color: #DCDDDD;
+}
+
+#Browse #Content .streaming tr:hover td.category
+{
+	background-color: transparent;
+}
+
+#Browse #Content .streaming th.views
+{
+	width: 150px;
+}

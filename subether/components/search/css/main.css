@@ -1,0 +1,163 @@
+.focus
+{
+	/*border: 1px solid #006600 !important;*/
+	border: 1px solid #0f75bd !important;
+}
+
+.main #GlobalSearch
+{
+	visibility: hidden;
+}
+
+#GlobalSearch #Search
+{
+	float: left;
+	margin-top: 1px;
+}
+
+#GlobalSearch #Search, 
+#SearchEngine #Search
+{
+	position: relative;
+	background-color: #ffffff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	height: 31px;
+	top: -2px;
+}
+
+.main #GlobalSearch #Search,
+.main #SearchEngine #Search
+{
+	padding-top: 4px;
+}
+
+#GlobalSearch #Search input, #GlobalSearch #Search select,
+#SearchEngine #Search input, #SearchEngine #Search select
+{
+	border: 0;
+}
+
+#SearchEngine #Search > table, 
+#GlobalSearch #Search > table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+#SearchEngine #Search table > tbody > tr > td, #SearchEngine #Search table > tbody,
+#GlobalSearch #Search table > tbody > tr > td, #GlobalSearch #Search table > tbody
+{
+	position: relative;
+	padding: 0;
+}
+
+#SearchEngine #Search > table > tbody > tr > td,
+#GlobalSearch #Search > table > tbody > tr > td
+{
+	padding: 0px 4px;
+}
+
+#SearchEngine #Search > table > tbody > tr + tr > td,
+#GlobalSearch #Search > table > tbody > tr + tr > td
+{
+	padding: 0;
+}
+
+#GlobalSearch #Search button
+{
+	width: 26px;
+	background: url( '../gfx/search.png' );
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: transparent;
+	border: 2px solid transparent;
+	/*border-left: 1px solid #C0C0C0;*/
+	overflow: hidden;
+	cursor: hand;
+	cursor: pointer;
+}
+
+#GlobalSearch #Search select
+{
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#GlobalSearch #Search button > span
+{
+	visibility: hidden;
+	white-space: nowrap;
+}
+
+/*
+#GlobalSearch button span
+{
+	display: none;
+}
+
+#GlobalSearch button
+{
+	display: none;
+	position: absolute;
+	right: 0;
+	background-image: url('upload/images-master/icon_search_bg.png');
+	background-color: transparent;
+	background-position: center center;
+	width: 40px;
+	height: 20px;
+	border-left: 1px solid #C0C0C0;
+	padding: 0;
+	margin: 0;
+}
+*/
+#SearchEngine #Search
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#SearchEngine #Search button
+{
+	text-transform: uppercase;
+}
+
+#SearchEngine #Search input
+{
+	width: 400px;
+}
+
+#SearchOptions
+{
+	width: 100%;
+	position: relative;
+	visibility: hidden;
+}
+
+#SearchOptions > table
+{
+	padding: 2px;
+	position: absolute;
+	margin-top: -3px;
+	width: 100%;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-radius: 0 0 3px 3px;
+}
+
+#SearchOptions > table > tbody > tr:hover
+{
+	background-color: #DCDDDD;
+}
+
+#SearchOptions > table > tbody > tr:hover > td
+{
+	cursor: hand;
+	cursor: pointer;
+}

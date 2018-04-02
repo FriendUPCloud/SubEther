@@ -1,0 +1,397 @@
+i18n_W : U
+i18n_M : M
+i18n_T : T
+i18n_W : O
+i18n_T : T
+i18n_F : F
+i18n_S : L
+i18n_S : S
+
+i18n_Previous_Year : Forrige År
+i18n_Previous_Month : Forrie Måned
+i18n_Todays_Date : Dagens Dato
+i18n_Next_Month : Neste Måned
+i18n_Next_Year : Neste År
+
+i18n_Hour : T
+
+i18n_Week : Uke
+i18n_Monday : Mandag
+i18n_Tuesday : Tirsdag
+i18n_Wednesday : Onsdag
+i18n_Thursday : Torsdag
+i18n_Friday : Fredag
+i18n_Saturday : Lørdag
+i18n_Sunday : Søndag
+
+i18n_d_Week : Uke
+i18n_d_Monday : Mandag
+i18n_d_Tuesday : Tirsdag
+i18n_d_Wednesday : Onsdag
+i18n_d_Thursday : Torsdag
+i18n_d_Friday : Fredag
+i18n_d_Saturday : Lørdag
+i18n_d_Sunday : Søndag
+
+i18n_a_Week : Uke
+i18n_a_Monday : Man
+i18n_a_Tuesday : Tir
+i18n_a_Wednesday : Ons
+i18n_a_Thursday : Tor
+i18n_a_Friday : Fre
+i18n_a_Saturday : Lør
+i18n_a_Sunday : Søn
+
+i18n_s_Week : Uk
+i18n_s_Monday : Ma
+i18n_s_Tuesday : Ti
+i18n_s_Wednesday : On
+i18n_s_Thursday : To
+i18n_s_Friday : Fr
+i18n_s_Saturday : Lø
+i18n_s_Sunday : Sø
+
+i18n_s_Wee : Uke
+i18n_s_Mon : Man
+i18n_s_Tue : Tir
+i18n_s_Wed : Ons
+i18n_s_Thu : Tor
+i18n_s_Fri : Fre
+i18n_s_Sat : Lør
+i18n_s_Sun : Søn
+
+i18n_January : Januar
+i18n_February : Februar
+i18n_March : Mars
+i18n_April : April
+i18n_May : Mai
+i18n_June : Juni
+i18n_July : Juli
+i18n_August : August
+i18n_September : September
+i18n_October : Oktober
+i18n_November : November
+i18n_December : Desember
+
+i18n_d_January : Januar
+i18n_d_February : Februar
+i18n_d_March : Mars
+i18n_d_April : April
+i18n_d_May : Mai
+i18n_d_June : Juni
+i18n_d_July : Juli
+i18n_d_August : August
+i18n_d_September : September
+i18n_d_October : Oktober
+i18n_d_November : November
+i18n_d_December : Desember
+
+i18n_a_January : Jan
+i18n_a_February : Feb
+i18n_a_March : Mar
+i18n_a_April : Apr
+i18n_a_May : Mai
+i18n_a_June : Jun
+i18n_a_July : Jul
+i18n_a_August : Aug
+i18n_a_September : Sep
+i18n_a_October : Okt
+i18n_a_November : Nov
+i18n_a_December : Des
+
+i18n_s_January : Januar
+i18n_s_February : Februar
+i18n_s_March : Mars
+i18n_s_April : April
+i18n_s_May : Mai
+i18n_s_June : Juni
+i18n_s_July : Juli
+i18n_s_August : August
+i18n_s_September : September
+i18n_s_October : Oktober
+i18n_s_November : November
+i18n_s_December : Desember
+
+i18n_sharebox_share : Del nå
+i18n_sharebox_shareheading : Del noe
+i18n_no_wall_messages : Intet er postet på din vegg.
+i18n_wall_posted : postet 
+i18n_share : Del
+i18n_comment : Kommenter
+i18n_like : Liker
+i18n_store_reply : Svar
+i18n_no_share_content_message : Du må skrive noe i tekstboksen.
+i18n_wall_replies : svar
+i18n_wall_reply : svar
+i18n_page_heading_part : &nbsp;sin side
+
+i18n_day_01 : one
+i18n_day_02 : two
+i18n_day_03 : three
+i18n_day_04 : four
+i18n_day_05 : five
+i18n_day_06 : six
+i18n_day_07 : seven
+i18n_day_08 : eight
+i18n_day_09 : nine
+i18n_day_10 : ten
+i18n_day_11 : eleven
+i18n_day_12 : twelve
+i18n_day_13 : thirteen
+i18n_day_14 : fourteen
+i18n_day_15 : fifteen
+i18n_day_16 : sixteen
+i18n_day_17 : seventeen
+i18n_day_18 : eighteen
+i18n_day_19 : nineteen
+i18n_day_20 : twenty
+i18n_day_21 : twentyone
+i18n_day_22 : twentytwo
+i18n_day_23 : twentythree
+i18n_day_24 : twentyfour
+i18n_day_25 : twentyfive
+i18n_day_26 : twentysix
+i18n_day_27 : twentyseven
+i18n_day_28 : twentyeight
+i18n_day_29 : twentynine
+i18n_day_30 : thirty
+i18n_day_31 : thirtyone
+
+i18n_SecretGroup : Secret Group
+i18n_OpenGroup : Open Group
+i18n_ClosedGroup : Closed Group
+
+i18n_News Feed : Nyheter
+i18n_Orders : Timeføring
+i18n_Messages : Meldinger
+i18n_Calendar : Kalender
+i18n_Library : Bibliotek
+i18n_Bookmarks : Bokmerker
+i18n_Browse : Utforsk
+i18n_About : Om Meg
+i18n_Members : Medlemmer
+i18n_Subgroups : Undergrupper
+
+i18n_Accounting : Regnskap
+i18n_Import : Import
+i18n_Clients : Kunder
+i18n_Mailing : Mailing
+
+i18n_Favorites : Favoritter
+
+i18n_Groups : Grupper
+i18n_Create Group : Opprett Gruppe
+
+i18n_Events : Hendelser
+i18n_Create Event : Opprett Hendelse
+
+i18n_Edit Profile : Endre Profil
+
+i18n_Account Settings : Konto instillinger
+i18n_Global Settings : Globale instillinger
+i18n_Log Out : Logg ut
+i18n_Report a Problem : Rapporter et problem
+
+i18n_Home : Hjem
+i18n_Profile : Profil
+
+i18n_Write Post : Skriv Innlegg
+i18n_Ask Question : Still Spørsmål
+
+i18n_Post : Publiser
+i18n_Write post here : Skriv innlegget her
+i18n_Write question here : Skriv spørsmålet her
+i18n_Add Poll Options : Legg til alternativer
+
+i18n_Public : Alle
+i18n_Contacts : Kontakter
+i18n_Only Me : Bare Meg
+i18n_Custom : Tilpasset
+i18n_Admin : Admin
+
+i18n_Write a comment : Skriv en kommentar
+i18n_Reply : Svar
+
+i18n_Seen by : Sett av
+
+i18n_at : kl
+i18n_Yesterday at : Igår kl
+i18n_about an hour ago : For en time siden
+i18n_about a minute ago : For et minutt siden
+i18n_a few seconds ago : Få sekunder siden
+
+i18n_January : Januar
+i18n_February : Februar
+i18n_March : Mars
+i18n_April : April
+i18n_May : Mai
+i18n_June : Juni
+i18n_July : Juli
+i18n_August : August
+i18n_September : September
+i18n_October : Oktober
+i18n_November : November
+i18n_December : Desember
+
+i18n_Web : Nettet
+i18n_Network : Nettverket
+i18n_Images : Bilder
+i18n_Files : Filer
+i18n_Videos : Videoer
+i18n_Wall : Veggen
+
+i18n_Create New Event : Opprett Ny Hendelse
+i18n_Name : Navn
+i18n_Details : Detaljer
+i18n_Place : Sted
+i18n_Start : Start
+i18n_End : Slutt
+i18n_Slots : Slott
+i18n_Access : Adgang
+i18n_EventName : HendelsesNavn
+i18n_EventDetails : HendelsesDetaljer
+i18n_EventPlace : HendelsesSted
+i18n_TimeStart : TidStart
+i18n_TimeEnd : TidSlutt
+
+i18n_Edit : Endre
+i18n_Delete : Slett
+
+i18n_Report a Problem : Rapporter et Problem
+i18n_Type : Type
+i18n_Description : Beskrivelse
+i18n_Bug : Bug
+i18n_Feature : Funksjon
+i18n_Other : Annet
+i18n_Report : Rapporter
+i18n_Cancel : Avbryt
+
+i18n_Email : Epost
+i18n_Password : Passord
+i18n_Keep me logged in : Hold meg innlogget
+i18n_Login : Logg inn
+i18n_Forgot your password : Glemt passordet
+
+i18n_Account Recovery : Kontogjenoppretting
+i18n_Email, Phone or Username : Epost, Telefon eller Brukernavn
+i18n_Recover : Gjennopprett
+
+i18n_Create New Group : Opprett Ny Gruppe
+i18n_Group Name : Gruppenavn
+i18n_Members : Medlemmer
+i18n_Who do you want to add to the group : Hvem ønsker du å legge til i gruppen
+i18n_Privacy : Personvern
+i18n_Open : Åpen
+i18n_Closed : Lukket
+i18n_Secret : Hemmelig
+i18n_Create : Opprett
+
+i18n_commented on your post in : kommenterte på innlegget ditt i
+i18n_made an event in : opprettet en hendelse i
+i18n_posted in : publiserte innlegget i
+i18n_commented on your post : kommenterte på ditt innlegg
+i18n_wrote on : skrev på
+i18n_\'s wall : sin vegg
+i18n_wrote on your wall : skrev på din vegg
+i18n_invited you to : inviterte deg til
+i18n_accept : godta
+i18n_decline : avslå
+i18n_made an event : opprettet en hendelse
+i18n_wrote a post : skrev et innlegg
+
+i18n_See All : Se Alle
+
+i18n_Allow : Tillatt
+i18n_Deny : Avslå
+
+i18n_General : Generelt
+i18n_General Account Settings : Generelle Kontoinnstillinger
+i18n_Save : Lagre
+i18n_First : Fornavn
+i18n_Middle : Mellomnavn
+i18n_Last : Etternavn
+i18n_Alternate name : Alternativt navn
+i18n_Display as : Vis som
+i18n_Include this on my profile : Inkluder dette på profilen min
+i18n_Username : Brukernavn
+i18n_Your public username is the same as your address for : Ditt offentlige brukernavn er det samme som adressen din for
+i18n_Primary email : Primær Epost
+i18n_Primary : Primær
+i18n_New email : Ny Epost
+i18n_email : epost
+i18n_Optional : Alternativt
+i18n_Password last changed : Passord sist endret
+i18n_Current : Nåværende
+i18n_New : Nytt
+i18n_Re-type New : Gjenta Nytt
+i18n_Language : Språk
+i18n_Choose primary : Velg primært
+i18n_Theme : Tema
+i18n_Default : Standard
+
+i18n_View Album : Vis Album
+i18n_Change Cover : Bytt Bakgrunn
+i18n_Message : Melding
+i18n_Contact : Kontakt
+i18n_Pending : Venter
+i18n_Add Contact : Legg til Kontakt
+i18n_Call : Ring
+
+i18n_This user has not : Denne brukeren har ikke
+i18n_updated his or her : oppdatert han eller hennes
+i18n_profile yet : profil enda
+
+i18n_Leave Group : Forlat Gruppe
+i18n_Delete Group : Slett Gruppe
+i18n_Group Settings : Gruppeinnstillinger
+
+i18n_Options : Alternativer
+i18n_Download : Last Ned
+i18n_Delete This Photo : Slett Bildet
+i18n_Cover Photos : Bakgrunner
+i18n_Profile Photos : Profilbilder
+
+i18n_Access Levels : Adgangs Nivå
+i18n_Display : Vis
+i18n_Addition : Tillegg
+i18n_Read : Les
+i18n_Write : Skriv
+i18n_Admin : Admin
+i18n_Owner : Eier
+i18n_Close : Lukk
+
+i18n_Main Group : Hovedgruppe
+i18n_Select a main group : Velg en hovedgruppe
+i18n_No main group : Ingen hovedgruppe
+i18n_Privacy setting : Personvern Instillinger
+i18n_Wall mode : Vegg modus
+
+i18n_Work And Education : Jobb Og Utdanning
+i18n_Work : Jobb
+i18n_College : Høyskole
+i18n_High School : Videregående
+i18n_Basic Information : Grunnleggende Informasjon
+i18n_Firstname : Fornavn
+i18n_Middlename : Mellomnavn
+i18n_Lastname : Etternavn
+i18n_Birthdate : Fødselsdato
+i18n_Gender : Kjønn
+i18n_Languages : Språk
+i18n_Interests : Interesser
+i18n_Philosophy : Filosofi
+i18n_Religious view : Relgion
+i18n_Political view : Politikk
+i18n_Contact Information : Kontakt Informasjon
+i18n_Mobile : Mobil
+i18n_Address : Adresse
+i18n_Screen Name : Kallenavn
+i18n_Website : Webside
+i18n_Quotations : Sitater
+i18n_Extended Information : Utvidet Informasjon
+
+i18n_No orders in list : Ingen prosjekter listet
+
+i18n_Amount : Beløp
+
+i18n_Fullscreen view : Fullskjerm modus
+i18n_Default view : Standard modus

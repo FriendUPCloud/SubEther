@@ -1,0 +1,182 @@
+.Showroom
+{
+	position: relative;
+	overflow: hidden;
+	background-color: #000000;
+}
+/*
+.Showroom .Pages, .Showroom .Arrows
+{
+	position: absolute;
+	right: 50px;
+	bottom: 10px;
+	z-index: 12;
+}
+
+.Showroom .Arrows
+{
+	right: 10px;
+}
+
+.Showroom .Pages .Page, .Showroom .Pages .PageActive, 
+.Showroom .Arrows > div
+{
+	width: 16px;
+	height: 16px;
+	background: #c0c0c0;
+	float: left;
+	margin: 0 4px 0 0;
+	text-align: center;
+	font-size: 12px;
+	line-height: 15px;
+	cursor: hand;
+	cursor: pointer;
+	color: #909090;
+}
+.Showroom .Pages .PageActive
+{
+	background: #202020;
+	color: #e0e0e0;
+}
+
+.Showroom .Pages .Page:hover, .Showroom .Pages .PageActive:hover,
+.Showroom .Arrows > div:hover
+{
+	background: #ffffff;
+	color: #000000;
+}
+*/
+.Showroom .ImageContainer
+{
+	position: relative;
+	z-index: 10;
+}
+
+
+.fullscreen #Album_Showroom
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.fullscreen .Showroom .ImageContainer > div, 
+.fullscreen .Showroom .ImageContainer
+{
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	right: auto;
+	text-align: center;
+}
+
+.fullscreen .Showroom .ImageContainer > div
+{
+	background: black;
+}
+
+.Showroom .ImageContainer > div
+{
+	position: absolute;
+	right: 100%;
+	top: 0px;
+}
+
+.Showroom .ImageContainer > div > div
+{
+	font-size: 16px;
+	margin-top: 10px;
+	margin-right: -10px;
+}
+/*
+.Showroom .ImageContainer > .Image > .Description
+{
+	position: absolute;
+	top: 0px;
+	left: -300px;
+	width: 300px;
+	color: white;
+	color: rgba(255,255,255,0);
+	text-shadow: 0px 0px 50px white;
+}
+
+.Showroom .ImageContainer > .ImageCurrent > .Description
+{
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	width: 300px;
+	color: white;
+	text-shadow: 0px 0px 0px white;
+}
+
+.Showroom .ImageContainer > .Image > .Description > h2
+{
+	margin: 0 0 8px 0;
+	font-size: 20px;
+}
+
+.Showroom .Arrows > .ArrowNextActive, .Showroom .Arrows > .ArrowPrevActive
+{
+	background: #ffffff;
+	color: #000000;
+}
+*/
+
+.Showroom .Pages
+{
+	position: absolute;
+	left: -1000px;
+	top: -1000px;
+	visibility: hidden;
+}
+
+.Showroom .Arrows
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.Showroom .Arrows .ArrowPrev
+{
+	height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+	z-index: 50;
+}
+
+.Showroom .Arrows .ArrowNext
+{
+	height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+	z-index: 50;
+}
+
+.Showroom .Arrows .ArrowPrev span,
+.Showroom .Arrows .ArrowNext span
+{
+	display: none;
+}
+
+.Showroom .Arrows .ArrowPrev:hover 
+{
+    background: url('../../subether/gfx/arrow_overlay_left_white.png') no-repeat left center;
+	cursor: pointer;
+}
+
+.Showroom .Arrows .ArrowNext:hover 
+{
+    background: url('../../subether/gfx/arrow_overlay_right_white.png') no-repeat right center;
+	cursor: pointer;
+}

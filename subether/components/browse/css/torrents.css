@@ -1,0 +1,89 @@
+
+#Browse #Content .torrents h3
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/*font-size: 11px;*/
+	font-size: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	height: 18px;
+}
+
+#Browse #Content .torrents h4
+{
+	display: block;
+    height: 20px;
+    line-height: 20px;
+	font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Browse #Content .torrents h4
+{
+	text-transform: uppercase;
+}
+
+#Browse #Content .torrents th
+{
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+#Browse #Content .torrents th + th, #Browse .torrents td + td
+{
+	text-align: center;
+	border-left: 1px solid #C0C0C0;
+}
+
+#Browse #Content .torrents a
+{
+	text-decoration: none;
+}
+
+#Browse #Content .torrents a:hover
+{
+	text-decoration: underline;
+}
+
+#Browse #Content .torrents th, #Browse .torrents td
+{
+	padding: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+#Browse #Content .torrents td.category
+{
+	border: 0;
+	background: transparent;
+}
+
+#Browse #Content .torrents tr:hover td
+{
+	background-color: #DCDDDD;
+}
+
+#Browse #Content .torrents tr:hover td.category
+{
+	background-color: transparent;
+}
+
+#Browse #Content .torrents td .icons
+{
+	float: right;
+}
+
+#Browse #Content .torrents span.green
+{
+	color: #006600;
+}
+
+#Browse #Content .torrents span.red
+{
+	color: #B94309;
+}

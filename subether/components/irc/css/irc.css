@@ -1,0 +1,142 @@
+/* Toolbar above irc chat --------------------------------------------------- */
+
+.Box > .toolbar
+{
+	position: absolute;
+	right: 53px;
+	top: 7px;
+}
+
+.Box > .toolbar a
+{
+	display: block;
+	float: right;
+	border: 1px solid #c0c0c0;
+	border-radius: 2px;
+	text-decoration: none;
+	color: black;
+	padding: 4px 6px;
+}
+
+.Box > .toolbar a:hover
+{
+	background: #dcdddd;
+}
+
+.Box > .toolbar a > img
+{
+	float: left;
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+
+.Box > .toolbar a > span
+{
+	float: right;
+}
+
+#Messages #MainIM
+{
+	/*font-family: 'Times New Roman';
+	font-size: 14px;
+    background-color: #FFFFFF;*/
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    position: relative;
+	height: 510px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	background: #1f1f2f;
+	color: #54a000;
+	text-shadow: 0px 0px 2px rgbs(60,100,0);
+	font-family: monospace;
+	font-size: 14px;
+}
+
+#Messages #MainIM a
+{
+	color: #C0C0C0;
+	text-decoration: underline;
+}
+
+#Messages #MainIM table
+{
+	width: 100%;
+	color: #54a000;
+}
+
+#Messages #MainIM td.rightCol
+{
+	width: 185px;
+}
+
+#Messages #MainIM #ListIM
+{
+	padding: 5px;
+	height: 500px;
+	max-width: 640px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#Messages #MainIM #RightIM
+{
+	padding: 5px;
+	height: 500px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#Messages #MainIM #RightIM .onlineuser
+{
+	/*padding-left: 5px;
+	padding-right: 5px;*/
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Messages #MainIM .admin
+{
+	/*color: #006600;*/
+}
+
+#Messages #ListIM .joins span, 
+#Messages #ListIM .quits span,
+#Messages #ListIM .command span
+{
+	/*color: #006600;*/
+	color: #C0C0C0;
+}
+
+#Messages #ListIM .command span strong
+{
+	font-weight: normal;
+}
+
+#Messages .post
+{
+	display: block;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: white;
+	padding: 0px;
+}
+
+#Messages .post input
+{
+	width: 100%;
+	background: white;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin: 0;
+}
+
+#Messages .post input:focus
+{
+	outline: none;
+	background: #e0e0e0;
+}

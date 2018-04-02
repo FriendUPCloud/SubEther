@@ -1,0 +1,812 @@
+
+#Orders .Box, #Orders .tabs
+{
+	padding-top: 0;
+}
+
+#Orders .tabs
+{
+	padding: 0 !important;
+	border: 0 !important;
+}
+
+#Orders ul, #Orders li,
+.orders ul, .orders li
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.orders li a span
+{
+	margin: 0 !important;
+}
+
+.orders table
+{
+	width: 100%;
+}
+
+/*#Content input, #Account input
+{
+	background: none;
+	border: none;
+	border-bottom: 1px solid #cacaca;
+	font-family: Raleway;
+	width: 70%;
+}*/
+
+.orders textarea
+{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #777777;
+    font-family: Raleway;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    min-height: 200px;
+    padding: 10px;
+    width: 100%;
+	box-sizing: border-box;
+	resize: none;
+}
+
+.orders input
+{
+	background: none;
+	border: none;
+	border-bottom: 1px solid #cacaca;
+	font-family: Raleway;
+	width: 90% !important;
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+.orders select
+{
+	width: 90%;
+	box-sizing: border-box;
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #777777;
+    font-family: Raleway;
+    border: 1px solid #cacaca;
+    /*border-radius: 3px;*/
+}
+
+.orders select:focus
+{
+	border: 1px solid #cacaca;
+}
+
+.orders input[type="radio"]
+{
+	width: auto !important;
+	position: relative;
+	top: 2px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.orders input[type="checkbox"]
+{
+	display: inline !important;
+	width: auto !important;
+	position: relative;
+	top: 2px;
+}
+
+.orders #OrdersMenu
+{
+	list-style-type: none;
+	border-bottom: 1px solid #cacaca;
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.orders #OrdersMenu li
+{
+	float: left;
+	margin-right: 20px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border-color: #282c35;
+}
+
+.orders #OrdersMenu a.current
+{
+	color: $colorDefault;
+	text-decoration: none;
+	padding-bottom: 19px;
+	border-bottom: 3px solid !important;
+}
+
+.orders #OrdersMenu li:hover
+{
+	padding-bottom: 19px;
+	border-bottom: 3px solid $colorDefault;
+}
+
+.orders #OrdersMenu li a
+{
+	color: #686868;
+    cursor: pointer;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.orders .toggle
+{
+	background: url("@url/img/bullet_toggle_plus.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+    height: 8px;
+    width: 12px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .toggle.open
+{
+	background: url("@url/img/bullet_toggle_minus.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+    height: 8px;
+    width: 12px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .toggle > span
+{
+	display: none;
+}
+
+.orders .list .header
+{
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .heading, .orders .header
+{
+	line-height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.orders .list .inner
+{
+	overflow: hidden;
+	height: 0;
+	/*padding: 10px;*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.orders .list > ul > li > .inner > div
+{
+	display: none;
+}
+
+.orders .list .inner.open
+{
+	overflow: visible;
+	height: auto;
+	padding-top: 10px;
+	/*padding-bottom: 20px;*/
+	/*padding-bottom: 5px;*/
+	padding-bottom: 10px;
+}
+
+.orders .list > ul > li > .inner.open > div
+{
+	display: block;
+}
+
+/*#Orders .list .inner .hours > div
+{
+	border-radius: 3px;
+	background-color: #e5e5e5;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+#Orders .list .inner .hours > div:first-child
+{
+	background: transparent;
+}
+
+#Orders .list .inner .hours .open
+{
+    border-radius: 3px;
+	background-color: #e5e5e5;
+}*/
+
+.orders .list .inner .order
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+
+.orders .list .inner .hours .heading
+{
+	display: none;
+}
+
+.orders .list .inner .hours div.editor
+{
+	/*background-color: #eeeeee;*/
+	border: 2px dashed #c0c0c0;
+	border-radius: 3px;
+	min-height: 35px;
+	/*margin-right: 6px;
+	margin-left: 6px;*/
+	/*margin-bottom: 4px;
+	margin-top: 4px;*/
+}
+
+.orders .list .inner .hours div.editor.open
+{
+	border: 2px solid transparent;
+}
+
+.orders .list .inner .hours div.hour
+{
+	border: 2px solid transparent;
+	border-bottom: 1px solid #cacaca;
+	border-radius: 3px;
+	min-height: 35px;
+	/*margin-right: 6px;
+	margin-left: 6px;*/
+	/*margin-bottom: 4px;
+	margin-top: 4px;*/
+}
+
+.orders .list .inner .hours div.hour:last-child
+{
+	border-bottom: 0 !important;
+}
+
+.orders .list .inner .hours div.hour.open
+{
+	border: 2px solid transparent;
+}
+
+.orders .list .inner .hours div.editor.closed > div,
+.orders .list .inner .hours div.hour.closed > div
+{
+	display: none;
+}
+
+.orders .list .inner .hours div.table
+{
+	display: none;
+}
+
+.orders .list .inner .hours div.editor > div.description
+{
+	background: url("@url/img/cross.png") no-repeat scroll 10px center;
+	background-size: 12px;
+	padding: 8px;
+	padding-left: 33px;
+	display: block;
+	/*color: #DDDDDD;*/
+	color: #C0C0C0;
+	font-weight: bold;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .list .inner .hours div.editor.open > div.inner
+{
+	border: 2px dashed #c0c0c0;
+	border-radius: 3px;
+}
+
+.orders .list .inner .hours div.hour > div.description
+{
+	background: url("@url/img/bullet_toggle_plus.png") no-repeat scroll 10px center;
+	padding: 8px;
+	padding-left: 33px;
+	display: block;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .list .inner .hours div.hour > div.description span.hours,
+.orders .list.admin .inner .hours div.hour > div.description span.edit,
+.orders .list.admin .inner .hours div.hour > div.description span.date
+{
+	float: right;
+}
+
+.orders .list.admin .inner .hours div.hour > div.description span.hours
+{
+	float: none;
+}
+
+.orders .list .inner .hours div.hour.open > div.inner
+{
+	border: 1px solid #cacaca;
+	border-radius: 3px;
+}
+
+.orders .list .inner .hours div.hour.open > div.description
+{
+	background: url("@url/img/bullet_toggle_minus.png") no-repeat scroll 10px center;
+	/*border-bottom: 1px solid #cacaca;*/
+}
+
+.orders .list .inner .hours div.editor.open > div.description
+{
+	/*display: none;*/
+}
+
+.orders .list .inner .order input
+{
+	background-color: #eeeeee !important;
+	border-radius: 3px;
+	border: 0 !important;
+	padding: 10px;
+}
+
+.orders .list .inner .order select
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #eeeeee !important;
+	border-radius: 3px;
+	border: 0 !important;
+	padding: 5px;
+	max-height: 77px;
+}
+
+.orders .list .inner .order select option
+{
+	padding: 5px;
+}
+
+.orders .list .inner .hours .open input
+{
+	/*background-color: #e5e5e5;*/
+	background-color: #eeeeee !important;
+	border-radius: 3px;
+	border: 0 !important;
+	padding: 10px;
+}
+
+.orders .list .inner .hours .open select
+{
+	background-color: #eeeeee !important;
+	border-radius: 3px;
+	border: 0 !important;
+	/*padding-left: 10px;
+	padding-right: 10px;*/
+	padding: 5px;
+}
+
+.orders .list .inner .hours .open select option
+{
+	/*padding: 10px;*/
+	padding: 5px;
+}
+
+.orders .list .inner .order textarea
+{
+	background-color: #eeeeee !important;
+	border-radius: 3px;
+	border: 0 !important;
+	padding: 10px;
+}
+
+.orders .list .inner .order input,
+.orders .list .inner .order select
+{
+	width: 100% !important;
+}
+
+
+.orders .list .inner .products
+{
+	padding-bottom: 20px;
+}
+
+.orders .list .inner .field
+{
+	float: left;
+	width: 50%;
+	line-height: 35px;
+	padding-bottom: 5px;
+}
+
+.orders .list .inner .order .field
+{
+	box-sizing: border-box;
+	padding-right: 10px !important;
+}
+
+.orders .list .inner .order .field.nr2,
+.orders .list .inner .order .field.nr4,
+.orders .list .inner .order .field.nr6,
+.orders .list .inner .order .field.nr8,
+.orders .list .inner .order .field.nr10,
+.orders .list .inner .order .field.nr12,
+.orders .list .inner .order .field.nr13,
+.orders .list .inner .order .field.nr14,
+.orders .list .inner .order .field.nr15
+{
+	padding-right: 0px !important;
+}
+
+.orders .list .inner .field .label
+{
+	width: 20%;
+	float: left;
+	line-height: 35px !important;
+}
+
+.orders .list .inner .field .value
+{
+	position: relative;
+	float: left;
+	width: 80%;
+	line-height: 35px;
+}
+
+.orders .list .field.nr11 .value
+{
+	/*padding-top: 8px;*/
+	height: 77px;
+}
+
+.orders .list .field.nr14 .label,
+.orders .list .field.nr15 .label
+{
+	display: none;
+}
+
+.orders .list .field.nr14,
+.orders .list .field.nr14 .value,
+.orders .list .field.nr15 .value
+{
+	width: 100%;
+}
+
+.orders .list .field.nr14
+{
+	padding-top: 15px;
+}
+
+.orders .list .field.nr15
+{
+	width: 100%;
+	padding-top: 15px;
+	/*padding-bottom: 15px;*/
+	padding-bottom: 10px;
+}
+
+.orders .heading .col1, .orders .header .col1
+{
+    /*width: 5%;*/
+	width: 30px;
+}
+
+.orders .heading .col2, .orders .header .col2
+{
+    /*width: 60%;*/
+}
+
+.orders .heading .col3, .orders .header .col3
+{
+    /*width: 20%;*/
+}
+
+.orders .heading .col4, .orders .header .col4
+{
+    /*width: 10%;*/
+	text-align: right;
+}
+
+.orders .header.sw1
+{
+    background: none repeat scroll 0 0 #eeeeee;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.orders .header.sw2
+{
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+}
+
+.orders .list .hours input,
+.orders .list .hours select
+{
+	width: 100% !important;
+}
+
+.orders .list .hours .hidden div,
+.orders .list .hours .hidden input
+{
+	display: none;
+}
+
+.orders .list .hours .stopwatch > div
+{
+	float: left;
+}
+
+.orders .list .hours .stopwatch .checkbox
+{
+	width: 15%;
+}
+
+.orders .list .hours .stopwatch .input
+{
+	width: 85%;
+}
+
+.orders .list .hours div .inner
+{
+	overflow: hidden;
+	height: 0px;
+	padding: 0;
+}
+
+.orders .list .hours div.open .inner
+{
+	overflow: visible;
+	height: auto;
+	padding: 5px 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	/*padding-top: 0;*/
+}
+
+/*#Orders .list .hours div.open .inner .clearboth
+{
+	padding-top: 3px;
+	border-bottom: 1px solid #cacaca;
+}*/
+
+.orders .list .hours div td
+{
+	box-sizing: border-box;
+}
+
+.orders .list .hours .datefield .icon
+{
+	padding-top: 8px;
+    text-align: center;
+	font-size: 9px !important;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .list .hours div td.col1
+{
+	width: 15px;
+	padding-right: 5px;
+}
+
+.orders .list .hours div td.col2
+{
+	width: 40px;
+	padding-right: 5px;
+}
+
+.orders .list .hours div td.col2
+{
+	padding-left: 7px;
+}
+
+.orders .list .hours > div:first-child div td.col2
+{
+	padding-left: 0;
+}
+
+.orders .list .hours div td.col3
+{
+	width: 60px;
+	padding-right: 3px;
+}
+
+.orders .list .hours div td.col1 > div
+{
+	width: 20px;
+}
+
+.orders .list .hours .inner div.field
+{
+	padding: 0px;
+	padding-bottom: 1px;
+	line-height: normal;
+}
+
+.orders .list .hours .inner .label
+{
+	box-sizing: border-box;
+	padding-right: 10px !important;
+	width: 125px;
+	float: none;
+	line-height: normal;
+}
+
+.orders .list .hours .inner .value
+{
+	box-sizing: border-box;
+	padding-right: 10px !important;
+	width: auto;
+	float: none;
+	line-height: normal;
+}
+
+.orders .list .hours .inner div.field.nr2 .label,
+.orders .list .hours .inner div.field.nr4 .label,
+.orders .list .hours .inner div.field.nr6 .label,
+.orders .list .hours .inner div.field.nr8 .label,
+.orders .list .hours .inner div.field.nr10 .label
+{
+	width: 50px;
+}
+
+.orders .list .hours .inner div.field.nr2 .value,
+.orders .list .hours .inner div.field.nr4 .value,
+.orders .list .hours .inner div.field.nr6 .value,
+.orders .list .hours .inner div.field.nr8 .value,
+.orders .list .hours .inner div.field.nr10 .value
+{
+	padding-right: 0 !important;
+}
+
+/* Calendar */
+
+.orders .datefield, .orders .datefield2
+{
+	position: relative;
+}
+
+.orders .datefield input, .orders .datefield2 input
+{
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .closed .calendar
+{
+	display: none;
+}
+
+.orders .datefield2 .icon
+{
+	background: url("@url/img/booking_calendar.png") no-repeat center center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 40px;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.orders .calendar
+{
+	background-color: #f5f5f5;
+    border: 1px solid #cacaca;
+    
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+	left: -35px;
+    width: auto !important;
+    z-index: 5;
+}
+
+.orders .calendar a
+{
+	text-decoration: none;
+}
+
+.orders .calendar table
+{
+    width: 100%;
+	border-collapse: collapse;
+}
+
+.orders .calendar table > tbody > tr.sw1,
+.orders .calendar table > tbody > tr.sw2
+{
+	background-color: transparent !important;
+}
+
+.orders .calendar table th
+{
+    text-align: center;
+}
+
+.orders .calendar table td
+{
+    text-align: left;
+}
+
+.orders .calendar table tbody tr th,
+.orders .calendar table tbody tr td
+{
+    border-collapse: collapse;
+}
+
+.orders .calendar .nav
+{
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.orders .calendar .nav .Left
+{
+    left: 10px;
+    position: absolute;
+    top: 0;
+}
+
+.orders .calendar .nav .Right
+{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.orders .calendar .nav .Center
+{
+    display: block;
+    text-align: center;
+}
+
+.orders .calendar .Week,
+.orders .calendar .prevYear,
+.orders .calendar .nextYear
+{
+    display: none;
+}
+
+.orders .calendar td > div
+{
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 5px 10px;
+	text-align: center;
+}
+
+.orders .calendar .Selected
+{
+    background-color: #eeeeee;
+}
+
+.orders .calendar .Reserved
+{
+    background-color: #0f75bd;
+    color: white;
+}
+
+.orders .calendar .Space
+{
+    color: #cacaca;
+}
+
+.orders .calendar .Available
+{
+    cursor: pointer;
+}

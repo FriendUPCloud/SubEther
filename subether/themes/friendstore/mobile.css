@@ -1,0 +1,2858 @@
+/* Responsive */
+.tablet .menu #DropDownMenu .cpanel,
+.mobile .menu #DropDownMenu .cpanel
+{
+	min-width:32px;
+	min-height:32px;
+	background: url("@url/img/menu.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	padding:0 12px 0 0;
+}
+
+.tablet #Main,
+.mobile #Main { width:100%; }
+.menu #MenuBox { right:20px; }
+
+@media screen and (max-height: 400px)
+{
+	#Footer__
+	{
+		display: none;
+	}
+}
+
+@media screen and (min-height: 900px)
+{
+	#ContentEditor iframe
+	{
+	   height: 740px;
+	}
+	#ContentEditor video
+	{
+		height: 740px;
+	}
+	.Authentication .toparrow
+	{
+		left: 108px;
+	}
+}
+
+@media screen and (min-width: 981px)
+{
+	body
+	{
+	   font-size: 15px;
+	}
+	#CenterBox__, #InnerTopBox__, #InnerFooter__
+	{
+		/*width: 1024px;*/
+	}
+	html #Field_bottom #ChatTabs .chattab.open
+	{
+		width: 300px;
+	}
+
+	.Authentication .toparrow
+	{
+		left: 108px;
+	}
+	
+	#Menu .menu
+	{
+		/*float: right;*/
+	}
+
+	.main #Top #Menu
+	{
+		position: relative;
+	}
+
+	.main #Top #Menu
+	{
+		position: relative;
+		right: 0;
+		float: right;
+	}
+
+	.ChatRow > .ChatInfo > .Image
+	{
+		box-sizing: border-box;
+		padding-right: 5px;
+	}
+	.ChatRow > .ChatInfo > .Image img
+	{
+		height: auto !important;
+		width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 1300px)
+{
+	#CenterBox__, #InnerTopBox__, #InnerFooter__
+	{
+		/*width: 1260px;*/
+	}
+	.home #Table_Fields td.Col1
+	{
+		width: 220px;
+	}
+	html .ChatRow > .ChatInfo > .Nick
+	{
+		width: 67%;
+	}
+	#Browse #Content table
+	{
+		table-layout: inherit;
+	}
+}
+
+@media screen and (min-width: 1920px)
+{
+	#CenterBox__, #InnerTopBox__, #InnerFooter__
+	{
+		/*width: 1400px;*/
+	}
+	.home #
+	ds td.Col1
+	{
+		width: 265px;
+	}
+	html #Field_bottom #ChatTabs .chattab.open
+	{
+		width: 360px;
+	}
+}
+
+@media screen and (max-width: 980px)
+{
+
+	#Table_Fields { width:100%; }
+
+	body
+	{
+		font-size: 16px;
+		padding-top: 70px;
+	}
+
+	body.main
+	{
+		background: url("@url/img/background_stars.jpg") no-repeat;
+		background-size: cover;
+		/*height: 100%;*/
+	}
+
+	html
+	{
+		height:100%;
+		min-height:100%;
+	}
+
+	body.home
+	{
+		background: #ffffff;
+		margin: 0;
+		padding: 0;
+		/*height: 100%;*/
+	}
+
+	body.main.mobile.engine.search
+	{
+		background: #ffffff;
+		height: 100%;
+	}
+
+	.main.mobile.engine.search #Footer__
+	{
+		bottom: inherit;
+	}
+
+	.mobile.search .search.results
+	{
+		padding-top: 60px;
+	}
+
+	.home.mobile #SearchWrapper
+	{
+		display: none;
+	}
+
+	.main #Footer__
+	{
+		position: absolute !important;
+		padding: 15px 0;
+		text-align: center;
+		height: auto;
+		margin: 0;
+		background: #ffffff;
+	}
+
+	#Footer__ #BottomInfo
+	{
+		float: none;
+	}
+
+	.home #Footer__
+	{
+		padding: 20px 0;
+		text-align: center;
+		height: auto;
+		margin: 0;
+	}
+
+	/* Paddings */
+
+	#Field_middle, #Field_top
+	{
+		min-height: 0 !important;
+		padding: 70px 10px 0 !important;
+	}
+	
+	.custom #Field_middle
+	{
+		padding-top: 12px !important;
+	}
+	
+	#Table_Fields,
+	#Table_Fields > tbody,
+	#Table_Fields > tbody > tr,
+	#Table_Fields > tbody > tr > td
+	{
+		min-height: 100% !important;
+		height: 100% !important;
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+	
+	#Messages #MainIM ul,
+	#Messages #MainIM div.inner
+	{
+		position: static;
+	}
+	
+	.mobile.profile #Field_middle
+	{
+		padding: 0px 10px 0 !important;
+	}
+	
+	.Box
+	{
+		padding: 0;
+	}
+
+	#Wall
+	{
+		padding: 0;
+	}
+
+	#Group #Wall
+	{
+		padding: 0;
+	}
+
+	#Wall .Box
+	{
+		padding: 0;
+	}
+
+	#Wall
+	{
+		padding: 0;
+	}
+
+	#Group .Box
+	{
+		padding: 0;
+		text-align: left;
+	}
+
+	#ShareContent
+	{
+		padding: 0;
+	}
+
+	#Group .slideshow
+	{
+		padding: 0;
+	}
+
+	#Group .slideshow, #Profile .slideshow
+	{
+		padding: 0;
+	}
+
+	div#Field_middle div.Box
+	{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box; 
+	}
+
+	#Messages .Box
+	{
+		padding: 0;
+	}
+
+	#Messages #Tabs
+	{
+		margin: 0;
+		margin-bottom: 15px;
+	}
+
+	#Messages #Tabs ul#MessagesMenu
+	{
+		padding-top: 0;
+	}
+	
+	#Messages #Chat_list
+	{
+		height: auto !important;
+		overflow: visible !important;
+	}
+	
+	#Messages #Chat_list .messages
+	{
+		height: 85%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: relative;
+		border: 1px solid #cacaca;
+		border-radius: 8px 0 0 8px;
+		/*margin-bottom: 10px;
+		margin-top: 8px;*/
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	
+	#Messages #Chat_list div.inner > ul > li > div.open
+	{
+		display: none;
+		height: 0px;
+		overflow: hidden;
+	}
+	
+	#Messages #Chat_list div.inner > ul > li.open > div.open
+	{
+		display: block;
+		height: 90%;
+		overflow: visible;
+		box-sizing: border-box;
+	}
+	
+	#Messages #Chat_list.open > div.inner > ul > li
+	{
+		display: none;
+	}
+	
+	#Messages #Chat_list > div.inner > ul > li.active.open
+	{
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		height: 100%;
+		height: 100vh;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 15px !important;
+		padding-top: 70px !important;
+		background-color: white;
+	}
+	
+	#Messages #Chat_list ul li.active.open > div.contact
+	{
+		box-sizing: border-box;
+		height: 10%;
+		min-height: 40px;
+		padding-bottom: 8px;
+	}
+	
+	#Messages #Chat_list .contact .anchor
+	{
+		/*position: relative;
+		top: -65px;*/
+		display: none;
+	}
+	
+	#Messages #Chat_list .post
+	{
+		box-sizing: border-box;
+		padding-top: 10px;
+		height: 15%;
+	}
+	
+	#Messages #Chat #Chat_list div ul li a
+	{
+		height: auto !important;
+		line-height: normal !important;
+		padding: 0px !important;
+	}
+	
+	body.openprivchat #Footer__
+	{
+		display: none;
+	}
+	
+	div#Field_middle div.Box div.tabs
+	{
+		padding: 0;
+	}
+
+	div#Field_middle div#Files div.Box
+	{
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box; 
+	}
+
+	div#Field_middle div#Browse div.Box
+	{
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#Profile .slideshow
+	{
+		padding: 0;
+		margin-top: 0;
+	}
+
+	#Account #Tabs
+	{
+		padding: 0;
+	}
+
+	#Wall #WallTabs
+	{
+		padding-bottom: 10px;
+	}
+
+	#Menu .menu
+	{
+		/*float: right;*/
+		position: relative;
+		/*top: -23px;*/
+		width: 100%;
+		height: 100%;
+	}
+	
+	#Menu .menu > ul,
+	#Menu .menu > ul > li:first-child,
+	#Menu .menu #DropDownMenu,
+	#Menu .menu #DropDownMenu ul,
+	#Menu .menu #DropDownMenu ul > li
+	{
+		margin: 0;
+		padding: 0;
+		display: block;
+		height: 100%;
+	}
+	
+	.mobile .menu #MenuBox
+	{
+		width: 90% !important;
+		top: 62px !important;
+		height: 82% !important;
+		position: fixed;
+		left: 1%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.mobile .menu #MenuBox #UserMenu
+	{
+		overflow-y: auto;
+		position: relative;
+		height: 100%;
+		font-size: 16px;
+		line-height: 24px !important;
+	}
+
+	.mobile .menu #MenuBox a
+	{
+		line-height: 24px !important;
+	}
+
+	.mobile .menu #UserMenu .icon
+	{
+		position: relative;
+		top: 4px;
+	}
+
+	.mobile .menu .toparrow
+	{
+		right: 14px !important;
+	}
+
+	.mobile #PopupWindow__.open.album
+	{
+		position: fixed;
+	}
+
+	.mobile #PopupWindow__
+	{
+		position: absolute;
+	}
+
+	.mobile #InnerPopupWindow__
+	{
+		width: auto;
+		margin: 2px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		top: 60px;
+	}
+
+	#GlobalMenu .main.link
+	{
+		left: 34px;
+		position: relative;
+		top: 18px;
+	}
+
+	#GlobalMenu ul li
+	{
+		display: inline;
+	}
+
+	#Top #Authentication
+	{
+		text-align: center !important;
+	}
+	
+	#Top #Authentication > div > ul > li > .buttons
+	{
+		text-align: right;
+		padding-top: 9px;
+		padding-right: 10px;
+		position: relative;
+		z-index: 3;
+	}
+	
+	html body.home div#TopBox__ div#InnerTopBox__ div#Top div#Menu div#Menu div.menu div#GlobalMenu ul li.profile.thumb a img.image
+	{
+		display: none;
+	}
+	
+	#Notification #Cart div.ncount,
+	#Notification #Frequ div.ncount,
+	#Notification #Messageu div.ncount,
+	#Notification #Notiu div.ncount
+	{
+		top: 28px;
+	}
+	
+	#Notification #Cart
+	{
+		/*top: -4px;*/
+		margin-left: 10px;
+		margin-left: 0;
+		left: 60px;
+		z-index: 3;
+		top: 0;
+		height: 100%;
+		padding: 0;
+		background-position: center center;
+		background-size: contain;
+	}
+	
+	#Notification #Frequ
+	{
+		/*top: -4px;*/
+		margin-left: 10px;
+		left: 60px;
+		z-index: 3;
+		top: 0;
+		height: 100%;
+		padding: 0;
+		background-position: center center;
+		background-size: contain;
+	}
+	
+	#Notification #Messageu
+	{
+		/*top: -4px;*/
+		margin-left: 10px;
+		left: 60px;
+		z-index: 3;
+		top: 0;
+		height: 100%;
+		padding: 0;
+		background-position: center center;
+		background-size: contain;
+	}
+
+	#Notification #Notiu
+	{
+		/*top: -7px;*/
+		margin-left: 10px;
+		left: 60px;
+		z-index: 3;
+		top: 0;
+		height: 100%;
+		padding: 0;
+		background-position: center center;
+		background-size: contain;
+	}
+
+	.home.register .LeftCol
+	{
+		/*background-image: url("img/mainbg.jpg");
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: cover;*/
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box; 
+		width: 100%;
+		float: left;
+		/*padding-top: 100px;*/
+		background-color: #ffffff;
+	}
+	
+	.mobile.register .RightCol table
+	{
+		border-spacing: 0;
+	}
+	
+	.LeftCol
+	{
+		width: 100%;
+		float: left;
+	}
+
+	.RightCol
+	{
+		width: 100%;
+		float: left;
+		padding: 0;
+	}
+
+	.RightCol .video
+	{
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	#Browse .RightCol .videobox
+	{
+		width: 250px;
+	}
+
+	#Browse .Box .videobox
+	{
+		float: none;
+		margin: 15px;
+	}
+
+	#Browse .Box #Content .files, #Browse .Box #Content .images
+	{
+		text-align: center;
+	}
+
+	#Browse .filebox, #Browse .imagebox
+	{
+		float: none;
+		display: inline-block;
+	}
+
+	#Browse .network > ol > li > table
+	{
+		display: table;
+		white-space: normal;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	#Browse .contact
+	{
+		float: none;
+	}
+
+	#Browse #Content .contacts
+	{
+		text-align: center;
+	}
+
+	#Browse .group, #Browse div.contact
+	{
+		float: none;
+		display: inline-block;
+		text-align: center;
+		margin: 0 auto;
+		width: 300px;
+	}
+
+	#Browse #Content .groups
+	{
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+	}
+
+	#Browse .group td + td
+	{
+		text-align: left;
+	}
+
+	#Browse .video h3
+	{
+		height: auto;
+	}
+
+	#Browse #Content
+	{
+		margin: 0;
+		padding-top: 15px;
+	}
+
+	#Browse #Content .video
+	{
+		text-align: center;
+	}
+
+	.home #GlobalSearch #Search
+	{
+		/*display: block;
+		position: absolute;
+		right: 55px;*/
+		
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		width: 100% !important;
+	}
+
+	#CenterBox__, #InnerFooter__
+	{
+		width: 100%;
+	}
+
+	#CenterBox__
+	{
+		margin: 0;
+	}
+
+	#Search table
+	{
+		width: 100%;
+	}
+
+	.main #CenterBox__
+	{
+		left: 50%;
+		margin: 0 auto;
+		position: absolute;
+		top: 48% !important;
+		transform: translate(-50%, -50%);
+		padding-top: 55px;
+	}
+	
+	.mobile.search #CenterBox__
+	{
+		left: 0 !important;
+		margin: 0 !important;
+		position: relative !important;
+		top: 0 !important;
+		transform: none !important;
+		width: auto !important;
+	}
+	
+	.mobile.search #CenterBox__ #Content__.search
+	{
+		padding: 70px 10px 10px !important;
+		text-align: left !important;
+	}
+
+	#Table_Fields, #Table_Fields > tbody, #Table_Fields > tbody > tr, #Table_Fields > tbody > tr > td, .home #Table_Fields td.Col1
+	{
+		display: block;
+	}
+
+	.main #Content__, .main #InnerContent__
+	{
+		width: 100%;
+		clear: both;
+		display: block;
+	}
+
+	.main #Content__
+	{
+		box-sizing: border-box;
+		margin: 0;
+	}
+	.main #InnerContent__
+	{
+		padding: 0;
+	}
+	.main #Field1 img
+	{
+		height: auto;
+		padding: 0;
+		width: auto;
+		max-width: 85%;
+	}
+	.main #Top #Menu > #Menu
+	{
+		left: 0;
+	}
+
+	body.main
+	{
+		padding: 0;
+		margin: 0;
+	}
+
+	.main #Field1
+	{
+		height: auto;
+	}
+	html .ParseContent .image img
+	{
+		width: 100% !important;
+	}
+	#TopSearch
+	{
+		left: 0px !important;
+		position: relative;
+	}
+	
+	#TopBox__
+	{
+		height: 55px;
+	}
+	#InnerTopBox__
+	{
+		width: 100%;
+	}
+	
+	#Top #Logo
+	{
+		display: none;
+	}
+	
+	#Top #Logo_Symbol
+	{
+		width: 34px;
+		height: 100%;
+		line-height: 75px;
+		margin-left: 15px;
+		z-index: 4;
+		position: relative;
+		display: block;
+		float: left;
+	}
+	
+	#Top #Logo_Symbol a
+	{
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	
+	#Top #Logo_Symbol img
+	{
+		max-width: 100%;
+		max-height: 100%;
+	}
+	
+	/*.main #Top #Logo .mainlogo,
+	.main #Top #Logo
+	{
+		display: none;
+	}
+
+	.home #Top #Logo .mainlogo,
+	.home #Top #Logo
+	{
+		display: none;
+	}
+
+	.home #Top #Logo
+	{
+		height: 100%;
+		width: auto;
+		position: relative;
+		z-index: 4;
+		padding: 0;
+	}
+	
+	#Top .mobilelogo,
+	#Top #Logo_Symbol,
+	.mobile #Top #Logo .mobilelogo,
+	.mobile #Top #Logo_Symbol
+	{
+		float: left;
+		background: url("@url/img/mobilelogo-blue.png");
+		background-repeat: no-repeat;
+		width: 34px;
+		height: 32px;
+		margin-left: 10px;
+		display: block;
+		visibility: hidden;
+	}
+	
+	.home #Top #Logo .mobilelogo,
+	.home #Top #Logo_Symbol
+	{
+		float: left;
+		background: url("@url/img/mobilelogo.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		width: 34px;
+		height: 100%;
+		margin-left: 15px;
+		z-index: 4;
+		position: relative;
+		visibility: visible;
+	}
+
+	.home #Top #Logo .mobilelogo img,
+	.home #Top #Logo_Symbol img
+	{
+		display: none;
+	}
+
+	#Top #Logo .mobilelogo img,
+	#Top #Logo_Symbol img
+	{
+		display: none;
+	}*/
+
+	#TopBox__ #TopSearch
+	{
+		z-index: 3;
+		height: 100%;
+	}
+	
+	#TopBox__ #TopSearch #GlobalSearch
+	{
+		height: 100%;
+	}
+	
+	#TopBox__ #Notification
+	{
+		/*float: left;*/
+		float: none;
+	}
+
+	.mobile .signupbox
+	{
+		padding-top: 0px;
+	}
+
+	.mobile .menu #DropDownMenu .cpanel
+	{
+		/*top: -6px !important;*/
+	}
+
+	.menu #DropDownMenu ul li
+	{
+		position: absolute;
+		right: 0;
+		z-index: 4;
+	}
+
+	.messagebox .replybox .avatar
+	{
+		display: none;
+	}
+
+	.messagebox .replybox .reply
+	{
+		width: 100%;
+	}
+	.replybox div.reply
+	{
+		padding: 2px;
+	}
+
+	html body.home.mobile div#TopBox__ div#InnerTopBox__ div#Top div#TopSearch div#GlobalSearch div#Search table tbody tr td div#SearchWrapper.open
+	{
+		display: block;
+		background-color: #e7e7e7;
+		box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.8);
+		border: #b9b9b9;
+		-moz-border-radius: 8px; 
+		-webkit-border-radius: 8px; 
+		border-radius: 8px;
+		font-family: Raleway;
+		font-weight: 400;
+		font-size: 12px;
+		color: #7a7d88;
+		text-align: left;
+		top: 60px;
+		position: fixed;
+		width: 95%;
+		left: 50%;
+		margin: 0 0 0 -47.5%;
+	}
+
+	html #SearchEngine #Search input
+	{
+		box-sizing: border-box;
+		float: left;
+		width: 60%;
+		padding-left: 5px;
+	}
+	html #SearchEngine #Search select
+	{
+		box-sizing: border-box;
+		float: left;
+		width: auto;
+	}
+	html #SearchEngine button
+	{
+		/*float: right;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 25% !important;*/
+	}
+
+	.main #Search input
+	{
+		font-size: 16px;
+		line-height: 36px;
+	}
+
+	#Bottom > div
+	{
+		margin-top: 20px;
+	}
+
+	html #Top
+	{
+		width: 100%;
+		/*padding-top: 10px;*/
+	}
+
+	#Top #Menu
+	{
+		/* right: 0;
+		position: absolute; */
+		/*top: -15px;*/
+		margin: 0;
+	}
+
+	.main #Top #Menu, .home #Top #Menu
+	{
+		/*margin-right: 10px;
+		margin-left: 10px;
+		float: none !important;
+		position: unset !important;*/
+		
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		width: 100% !important;
+		top: 0;
+	}
+	
+	.main #Top #Authentication, .home #Top #Authentication
+	{
+		float: none !important;
+		/*position: unset !important;
+		text-align: right !important;
+		top: 0 !important;
+		padding-top: 8px;*/
+		top: 0;
+		height: 100%;
+	}
+
+	html body.home.register div#TopBox__ div#InnerTopBox__ div#Top div#Menu div#Authentication div.Authentication ul li div#LoginBox.open div#LoginForm form table tbody tr td + td
+	{
+		text-align: right;
+	}
+
+	html body.home.register div#TopBox__ div#InnerTopBox__ div#Top div#Menu div#Authentication div.Authentication ul li div#LoginBox.open div#LoginForm form table tbody tr td div
+	{
+		text-align: left;
+	}
+
+	.main #Top #Authentication table, .home #Top #Authentication table
+	{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.main .Authentication > table > tbody > tr > td, .home .Authentication > table > tbody > tr > td
+	{
+		text-align: center !important;
+	}
+
+	.main #GlobalSearch
+	{
+		display: none;
+	}
+
+	.Authentication .toparrow
+	{
+		right: 120px;
+		left: inherit !important;
+	}
+	
+	.Authentication #LoginBox
+	{
+		margin-left: 2%;
+		margin-right: 2%;
+		top: 15px;
+	}
+	
+	#GlobalMenu .name
+	{
+		position: relative;
+	}
+
+	#GlobalMenu .image
+	{
+		margin-right: 0;
+		position: relative;
+		top: 17px;
+	}
+
+	#GlobalMenu .main.link a
+	{
+		left: 5px;
+		position: relative;
+		top: 2px;
+	}
+
+	.menu #DropDownMenu .cpanel
+	{
+		top: 0 !important;
+		right: 0 !important;
+		margin-right: 15px;
+		display: block;
+		height: 100%;
+		background-size: contain;
+		background-position: center center;
+	}
+
+	.mobile #GlobalSearch #SearchIcon,
+	.mobile.authentication #GlobalSearch #SearchIcon
+	{
+		background: url("@url/img/search_top.png");
+		width: 26px;
+		/*height: 27px;*/
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+		display: block;
+		float: right;
+		position: relative;
+		top: 0;
+		left: auto;
+		right: 55px;
+		margin-left: 15px;
+	}
+	
+	.mobile #GlobalSearch #SearchIcon
+	{
+		right: auto;
+		left: 50px;
+		float: left;
+	}
+	
+	.mobile #Search select
+	{
+		-moz-appearance: none;
+		background: #dcdcdc url("@url/img/dropdown.png") no-repeat scroll 80% center / 15% auto;
+		border: medium none;
+		color: #515461;
+		font-family: Raleway;
+		font-size: 13px;
+		position: relative;
+		/*top: 2px;*/
+		top: 0;
+		width: 80px;
+		float: left;
+		padding: 10px;
+	}
+
+	.mobile #Search input
+	{
+		float: left;
+		width: 60%;
+		/*margin-left: 10px;*/
+		padding-right: 10px;
+	}
+
+	.mobile #Search button
+	{
+		right: 5px;
+		float: right;
+	}
+
+	.mobile #Search .toparrow
+	{
+		height: 11px;
+		position: absolute;
+		top: -11px;
+		width: 21px;
+	}
+
+	.mobile #Search .toparrow:before, .mobile #Search .toparrow:after
+	{
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-color: transparent;
+		border-top: 0;
+	}
+
+	.mobile #Search .toparrow:before
+	{
+		border-bottom-color: #464a54;
+		border-width: 11px;
+	}
+
+	.mobile #Search .toparrow:after
+	{
+		bottom: 0px;
+		left: 1px;
+		border-bottom-color: #313541;
+		border-width: 10px;
+	}
+
+	#Top #Menu > #Menu
+	{
+		top: 10px;
+	}
+	#Footer__ #BottomLinks, #Footer__ #BottomLinks
+	{
+		height: auto;
+	}
+	#Table_Fields td.Col1
+	{
+		display: none !important;
+	}
+
+	#Top #Notification
+	{
+		width: 100% !important;
+		height: 100%;
+		padding: 0;
+		position: absolute;
+		margin: 0;
+	}
+
+	#TopSearch, #Notification
+	{
+		/*padding: 0 !important;*/
+	}
+
+	#Notification #NotificationBox.contacts .toparrow
+	{
+	    left: 70px;
+	}
+
+	#Notification #NotificationBox.messages .toparrow
+	{
+		left: 114px;
+	}
+
+	#Notification #NotificationBox.notices .toparrow
+	{
+		left: 164px;
+	}
+	
+	#Notification #NotificationBox
+	{
+		overflow: hidden !important;
+		height: 0px !important;
+	}
+	
+	#Notification #NotificationBox.open
+	{
+		overflow: visible !important;
+		height: 82% !important;
+	}
+	
+	#Notification table
+	{
+		width: 100% !important;
+	}
+
+	#Notification table,
+	#Notification table > tbody,
+	#Notification table > tbody > tr:first-child,
+	#Notification table > tbody > tr:first-child > td,
+	#GlobalSearch > #Search table,
+	#GlobalSearch > #Search table > tbody,
+	#GlobalSearch > #Search table > tbody > tr:first-child,
+	#GlobalSearch > #Search table > tbody > tr:first-child > td
+	{
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		display: block;
+	}
+	
+	#Notification table,
+	#Notification table > tbody,
+	#Notification table > tbody > tr,
+	#Notification table > tbody > tr > td
+	{
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#NotificationBox
+	{
+		left: 1% !important;
+		/*top: 5px !important;*/
+		top: 62px !important;
+		width: 90% !important;
+		height: 82% !important;
+		/*position: relative !important;*/
+		position: fixed !important;
+		min-width: 0 !important;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	
+	#NotificationBox #DropDownWindow
+	{
+		height: 100%;
+	}
+	
+	#Messages .leftCol
+	{
+		display: block;
+		width: 100% !important;
+		min-width: 0 !important;
+	}
+
+	#Messages .leftCol ul li
+	{
+		float: left;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+
+	#Messages .leftCol ul li .contact .content
+	{
+		font-size: 13px;
+		float: left;
+		padding-top: 8px;
+		padding-left: 5px;
+	}
+
+	#Messages .rightCol
+	{
+		display: block;
+		width: 100%;
+		clear: both;
+		vertical-align: top;
+	}
+
+	#Messages .contact .name
+	{
+		top: 8px;
+		float: left;
+	}
+
+	#Messages .contact .name:after
+	{
+		content: ' said...';
+		display: block;
+		float: right;
+		margin-left: 3px;
+	}
+
+	#Messages #MainIM
+	{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#Messages #MainIM #ListIM_inner li > div
+	{
+		height: inherit;
+		padding: 0;
+	}
+	
+	#Messages #MainIM #Chat_list .ChatRow
+	{
+		height: auto;
+		padding: 5px;
+	}
+	
+	/*#Messages #MainIM ul, */#Messages #MainIM #Chat_list > div.inner > ul > li
+	{
+		padding: 5px;
+	}
+	
+	#Messages #MainIM ul
+	{
+		padding-bottom: 10px;
+	}
+
+	#Messages #MainIM #RightIM_inner .messages
+	{
+		border-radius: 8px 0 0 8px;
+	}
+	#Messages #Accounts_inner
+	{
+		margin-right: 0;
+		height: auto;
+	}
+
+	#Messages #MainIM table
+	{
+		table-layout: fixed;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#Messages #MainIM td.leftCol
+	{
+		min-width: inherit;
+		width: inherit;
+	}
+
+	#Messages #MainIM #ListIM_inner
+	{
+		margin-right: 0;
+		height: auto;
+	}
+
+	#Messages #Mail_top > div
+	{
+		padding: 0;
+	}
+
+	#Messages #Mail_top > div .button.account, #Messages #Mail_top > div .seperator.account
+	{
+		float: none;
+	}
+	#Messages #Mail_top > div > span
+	{
+		color: #686868;
+		display: block;
+		font-family: Raleway;
+		font-size: 13px;
+		font-weight: 700;
+		margin: 10px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all 0.2s ease-in-out 0s;
+		width: 100%;
+	}
+
+	#Messages #Mail_top > div > span:hover
+	{
+		border-bottom: none;
+		border-color: $colorDefault !important;
+		cursor: pointer;
+		padding-bottom: 0px;
+	}
+
+	#Messages #Mail_inner.write .headderbox, #Messages #Mail_inner.open .headderbox
+	{
+		width: 100%;
+	}
+
+	#Messages #Mail_inner.write .headderfiles, #Messages #Mail_inner.open .headderfiles
+	{
+		width: 100%;
+	}
+
+	html #Field_bottom .chatwrapper
+	{
+		display: none;
+		float: none;
+		width: 100%;
+	}
+	
+	#Table_Fields { width:100%; }
+	
+	html #Chat.open #Chat_list
+	{
+		height: 320px;
+	}
+	html #Field_bottom
+	{
+		left: 0;
+	}
+	html #Field_bottom .chatwrapper #ChatBox.open
+	{
+		width: 100%;
+	}
+	html #Field_bottom #Chat, #Field_bottom .chatpriv
+	{
+		max-height: 300px;
+	}
+	html #Field_bottom .chatwrapper #ChatTabs
+	{
+		float: none;
+		z-index: 1;
+	}
+	html #Field_bottom #ChatTabs .chattab.open
+	{
+		float: none;
+		width: 100%;
+	}
+	#Footer__ #BottomLinks
+	{
+		display: none !important;
+	}
+
+	#Profile div.infobox table
+	{
+		margin: 20px 0 10px;
+		width: 100%;
+	}
+
+	#Profile .coverimage .edit_wrapper
+	{
+		position: inherit;
+		display: none;
+	}
+
+	#Profile .coverimage #CoverPages
+	{
+		top: 0;
+	}
+
+	#Profile .name .Edit.profile
+	{
+		display: none;
+	}
+
+	#Profile .coverimage:hover .background_layer, #Profile .coverimage.display .background_layer
+	{
+		display: none;
+	}
+
+	#Profile .coverimage #CoverPages, #Group .coverimage #CoverPages
+	{
+		position: inherit;
+		padding-right: 20px;
+		padding-top: 10px;
+		bottom: inherit;
+		right: 0;
+	}
+
+	#Profile .coverimage .Navigation .ArrowPrev, #Profile .coverimage .Navigation .ArrowNext, #Group .coverimage .Navigation .ArrowPrev, #Group .coverimage .Navigation .ArrowNext
+	{
+		position: inherit;
+		display: none;
+	}
+	.infobox .Row1
+	{
+		display: none;
+	}
+
+	.infobox .Row2 .Col2
+	{
+		display: none;
+	}
+
+	.infobox .Row2 .Col1 > div
+	{
+		max-width: 100% !important;
+	}
+
+	#Profile div.name
+	{
+		position: relative;
+		text-align: left;
+		top: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 20px;
+	}
+
+	#Profile div.infobox table
+	{
+		text-align: right;
+		width: auto !important;
+	}
+	
+	#Profile div.infobox table tr.Row2 td.Col1 > div > div
+	{
+		padding: 6px;
+	}
+	
+	#Profile div.infobox
+	{
+		width: 100%;
+		clear: both;
+		/*padding: 0 15px;*/
+	}
+
+	#Profile div.imagebox
+	{
+		left: 0;
+		right: 0;
+		height: 0;
+	}
+
+	#Profile .edit_wrapper
+	{
+		padding-left: 15px;
+		padding-top: 40px;
+		text-align: center;
+	}
+
+	#Profile .coverimage:hover .view_btn_cover, #Profile .coverimage:hover .edit_btn_cover
+	{
+		display: inline-block;
+	}
+
+	#Profile .coverimage:hover .edit_btn_cover, #Profile .coverimage.display .edit_btn_cover
+	{
+		display: inline-block;
+	}
+
+	#Profile .coverimage .edit_btn_cover > div
+	{
+		position: inherit;
+	}
+
+	#Profile .coverimage .edit_btn_cover
+	{
+		height: 35px;
+		border-radius: 2px;
+		border: 1px solid #cacaca;
+		display: -moz-inline-stack;
+		display: inline-block;
+		/*display: inline;*/
+		vertical-align: top;
+		position: inherit;
+		background: none;
+		line-height: 35px;
+		margin: 0;
+		color: #686868;
+		float: none;
+	}
+
+	#Profile .coverimage .view_btn_cover
+	{
+		height: 35px;
+		border-radius: 2px;
+		border: 1px solid #cacaca;
+		display: -moz-inline-stack;
+		display: inline-block;
+		/*display: inline;*/
+		vertical-align: top;
+		position: inherit;
+		background: none;
+		line-height: 35px;
+		margin: 0;
+		margin-left: 15px;
+		color: #686868;
+		float: none;
+	}
+
+	#Profile .coverimage .view_btn_cover > div > span, #Profile .coverimage .edit_btn_cover > div > span
+	{
+		padding: 0;
+	}
+
+	#Profile .coverimage .edit_btn_cover > div+div
+	{
+		position: inherit;
+	}
+
+	#Group div.group
+	{
+		float: none;
+		display: inline-block;
+		text-align: center;
+		margin: 0 auto;
+		width: 300px;
+	}
+
+	#Group table.group
+	{
+		table-layout: fixed;
+	}
+
+	#Group table.group td
+	{
+		width: 115px;
+	}
+
+	#Group table.group td + td
+	{
+		text-align: left;
+		width: inherit;
+	}
+
+	div#Group #About .Box.description
+	{
+		text-align: center;
+	}
+
+	div#Group #About .Box.description p
+	{
+		padding: 0;
+	}
+
+	#Group .members .member
+	{
+		float: none;
+		width: 200px;
+		display: inline-block;
+	}
+
+	#Group table, #Group table > tbody, #Group table > tbody > tr > td
+	{
+		text-align: left;
+	}
+
+	div#Field_middle #WallTabs
+	{
+		padding-top: 0;
+	}
+
+	div#Field_middle #WallTabs div.tabs
+	{
+		padding-top: 0;
+	}
+
+	div#Field_middle #Contacts div.Box
+	{
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+	}
+
+	#Contacts .contact
+	{
+		display: inline-block;
+		float: none;
+		margin: 0 auto;
+		width: 300px;
+	}
+
+	#Contacts table.contact
+	{
+		table-layout: fixed;
+	}
+
+	div.contact table tbody tr td
+	{
+		width: 115px;
+	}
+
+	div.contact table tbody tr td + td
+	{
+		text-align: left;
+		width: inherit;
+	}
+
+	#WorkAndEducation .closebtn, #ContactInfo .closebtn, #AboutMe .closebtn, #Quotations .closebtn, #Basic .closebtn
+	{
+		right: 20px;
+	}
+
+	#WorkAndEducation .savebtn, #ContactInfo .savebtn, #AboutMe .savebtn, #Quotations .savebtn, #Basic .savebtn
+	{
+		right: 0;
+	}
+
+	#AboutMe textarea, #Quotations textarea
+	{
+		width: 93%;
+	}
+
+	#Account #Tabs > ul > li > table
+	{
+		table-layout: fixed;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	#Account #Tabs > ul > li > table > tbody > tr > td
+	{
+		width: 100%;
+		display: block;
+	}
+
+	#Account #Tabs > ul > li > table > tbody > tr > td + td + td
+	{
+		width: 18%;
+		display: -moz-inline-stack;
+		display: inline-block;
+		vertical-align: top;
+		/*display: inline;*/
+		text-align: right;
+	}
+
+	#Account #Tabs > ul > li > table > tbody > tr > td + td
+	{
+		width: 80%;
+		display: -moz-inline-stack;
+		display: inline-block;
+		vertical-align: top;
+		/*display: inline;*/
+		text-overflow: ellipsis;
+		word-wrap: nowrap;
+	}
+
+	#Messages #MainIM #RightIM
+	{
+		box-shadow: none;
+	}
+
+	.slideshow #MainImage
+	{
+		height: inherit;
+	}
+
+	#CalendarContent .CalendarYear > div
+	{
+		width: 100%;
+	}
+
+	#CalendarContent .CalendarMonth tr.hd
+	{
+		display: none;
+	}
+
+	#CalendarContent
+	{
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#CalendarContent .CalendarYear > div
+	{
+		margin: 0;
+	}
+
+	#CalendarContent table
+	{
+		border-collapse: collapse;
+	}
+
+	ul.EventDateTable
+	{
+		padding: 0;
+	}
+
+	ul.EventDateTable li
+	{
+		float: none;
+		display: inline-block;
+	}
+
+	ul.EventDateTable .datenavigate
+	{
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	#CalendarContent .month .CalendarMonth
+	{
+		text-align: center;
+	}
+
+	.CalendarMonth .sw1 > td:first-child, .CalendarMonth .sw2 > td:first-child
+	{
+		display: none;
+	}
+
+	#CalendarContent table.CalendarMonth th + th, #CalendarContent table.CalendarMonth td + td
+	{
+		display: inline-block;
+		width: 50%;
+	}
+
+	#CalendarContent .CalendarMonth div.events
+	{
+		width: 100%;
+	}
+
+	#CalendarContent .tooltips
+	{
+		width: 200px;
+		left: 50%;
+		right: 50%;
+		top: -55px;
+	}
+
+	#CalendarContent .tooltips::after, #CalendarContent .tooltips::before
+	{
+		border: none;
+	}
+
+	#CalendarContent .nav
+	{
+		padding: 10px;
+	}
+
+	/*#CalendarContent #EditEvent
+	{
+		left: -25%;
+		right: -25%;
+	}*/
+
+	#CalendarContent #EditEvent.extended
+	{
+		width: auto !important;
+	}
+
+	#CalendarContent #EditEvent table
+	{
+		table-layout: fixed;
+	}
+
+	#CalendarContent #EditEvent.extended td
+	{
+		width: 100%;
+		display: block;
+	}
+
+	#CalendarContent #EditEvent.extended input#EventStartDate, #CalendarContent #EditEvent.extended input#EventStart, #CalendarContent #EditEvent.extended input#EventEndDate, #CalendarContent #EditEvent.extended input#EventEnd
+	{
+		width: 94% !important;
+		display: block;
+	}
+
+	#CalendarContent .week table:first-child
+	{
+		border: 0;
+	}
+
+	.CalendarWeek .hd > th:first-child
+	{
+		display: none;
+	}
+
+	.CalendarWeek .sw1 > td:first-child, .CalendarWeek .sw2 > td:first-child
+	{
+		display: none;
+	}
+
+	#CalendarContent  .week .heading
+	{
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	#CalendarContent .CalendarWeek td > div
+	{
+		font-size: 10px;
+	}
+
+	#CalendarContent .CalendarDay .event
+	{
+		border-bottom: 1px solid #cacaca;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	#CalendarContent .CalendarDay .image, #CalendarContent .wrapper
+	{
+		float: none;
+		text-align: center;
+	}
+
+	#CalendarContent .CalendarDay .image
+	{
+		width: auto;
+	}
+
+	#CalendarContent .event .button
+	{
+		position: inherit;
+		margin-top: 20px;
+	}
+
+	.CalendarDay .event .wrapper div:first-child
+	{
+		margin-top: 20px;
+	}
+
+	#CalendarContent .CalendarDay .image .imagecontainer
+	{
+		max-width: 100% !important;
+	}
+
+	#CalendarContent .CalendarYear div.events
+	{
+		top: 32px;
+	}
+
+	#CalendarContent .EventList .buttons
+	{
+		float: none !important;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	#CalendarContent .EventList .buttons button, #CalendarContent .EventList .buttons .edit
+	{
+		display: inline-block;
+		float: none;
+		color: #686868;
+		font-family: Raleway;
+		font-size: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		border: 0;
+		background: none;
+		margin: 10px;
+	}
+
+	#CalendarContent .EventList .image
+	{
+		float: none;
+		width: auto;
+		height: 150px;
+	}
+
+	#CalendarContent .EventList .event:first-child
+	{
+		text-align: center;
+	}
+
+	#CalendarContent .EventList .text
+	{
+		float: none;
+		padding: 0;
+	}
+
+	.show-menu, .show-browse-menu
+	{
+		display:block !important;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	#Files #Main #Directory
+	{
+		height: 100%;
+		overflow-y: hidden;
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	#Files.mobileview #Main #Directory .toggle
+	{
+		left: inherit;
+	}
+
+	div#Field_middle #Browse div.Box ul, #Group #Tabs ul
+	{
+		padding: 0;
+	}
+
+	div#Field_middle #Browse div.Box .tabs ul li, #Group #Tabs ul li
+	{
+		float: none;
+	}
+
+	#Group #Tabs ul li
+	{
+		width: 100%;
+		background: none !important;
+		border-radius: none !important;
+		color: #7a7d88 !important;
+		font-weight: 600 !important;
+		text-transform: uppercase !important;
+		padding: 5px 0 !important;
+		font-size: 18px;
+	}
+
+	div#Field_middle div.Box div.tabs
+	{
+		/*padding-top: 40px;*/
+	}
+	div#Field_middle div.Box div.tabs > ul
+	{
+		position: static;
+		text-align: center;
+	}
+
+	div#Field_middle div#Group div#Tabs > ul
+	{
+		position: static;
+		display: none;
+		background-color: #e7e7e7;
+		border: 1px solid #cacaca;
+		border-radius: 0 0 4px 4px;
+		text-align: center;
+	}
+	div#Field_middle div#Browse div.tabs > ul
+	{
+		position: static;
+		display: none;
+		background-color: #e7e7e7;
+		border: 1px solid #cacaca;
+		border-radius: 0 0 4px 4px;
+		text-align: center;
+	}
+
+	#GroupMenu
+	{
+		padding: 0;
+		margin: 0;
+	}
+
+	div#Field_middle #Group div.Box ul
+	{
+		padding: 0;
+	}
+
+	div#Field_middle div.Box div.tabs ul li a span, div#Field_middle div.Box div.tabs ul li a span
+	{
+		display: inline-block;
+		float: none;
+		padding: 0 !important;
+		margin: 0;
+		border: none !important;
+	}
+
+	#Group #Tabs li
+	{
+		margin-bottom: 1px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	div#Field_middle div.Box div.tabs li
+	{
+		margin-bottom: 1px;
+	}
+
+	#Group #Tabs ul li:hover, div#Field_middle #Browse div.Box div.tabs li:hover
+	{
+		background-color: #dddddd !important;
+		border: none !important;
+	}
+
+	#Group #Tabs ul .current
+	{
+		background-color: #dddddd !important;
+		border: none !important;
+	}
+	div#Field_middle #Group div.Box div.tabs ul li, div#Field_middle #Group div.Box div.tabs > ul > li > a, div#Field_middle #Browse div.Box div.tabs ul li, div#Field_middle #Browse div.Box div.tabs > ul > li > a
+	{
+		width: 100%;
+		background: none !important;
+		border-radius: none !important;
+		color: #7a7d88 !important;
+		font-weight: 600 !important;
+		text-transform: uppercase !important;
+		padding: 5px 0 !important;
+		font-size: 18px;
+	}
+
+	#Group #Tabs .buttons button
+	{
+		padding: 0;
+	}
+
+	#Group #Tabs .buttons button:hover
+	{
+		border: 1px solid #686868 !important;
+		padding: 0 5px !important;
+	}
+
+	#Group ul li a:hover
+	{
+		position: relative;
+		top: 0;
+	}
+
+	#Group #Content
+	{
+		clear: both;
+	}
+
+	#Group #Tabs .buttons
+	{
+		left: 50px;
+		position: absolute;
+		top: 0;
+	}
+
+	#Group #Tabs .buttons button + button
+	{
+		margin-left: 10px;
+	}
+
+	#Group #Tabs .buttons button
+	{
+		height: 35px;
+		padding: 0 5px;
+		border-radius: 2px;
+		border: 1px solid #cacaca;
+	}
+
+	#Group #Tabs #GroupOptionsBox
+	{
+		padding: 6px;
+		left: 3px;
+		text-align: left;
+		top: 49px;
+		width: 160px;
+	}
+
+	#Group #Tabs #GroupOptionsBox .toparrow
+	{
+		left: 8px;
+		right: none;
+	}
+
+	#Group .coverimage, #Profile .coverimage
+	{
+		margin-top: 10px;
+		height: inherit;
+		max-height: inherit;
+		bottom: 0;
+		z-index: 12;
+	}
+
+	#Group .coverimage #MainImage img , #Profile .coverimage #MainImage img
+	{
+		position: inherit;
+	}
+
+	#Group .coverimage #MainImage img+img, #Profile .coverimage #MainImage img+img
+	{
+		position: absolute;
+	}
+
+	#Group .coverimage #MainImage
+	{
+		height: inherit;
+	}
+
+	#Group #Tabs
+	{
+		z-index: 10;
+		margin-bottom: 10px;
+	}
+
+	#Group #Content
+	{
+		padding-top: 10px;
+	}
+
+	#Group .coverimage .edit_btn_cover
+	{
+		height: 34px;
+		border-radius: 2px;
+		border: 1px solid #cacaca;
+		display: block;
+		float: left;
+		position: inherit;
+		background: none;
+		line-height: 34px;
+		margin: 0;
+		color: #686868;
+	}
+
+	#Group .coverimage .view_btn_cover
+	{
+		height: 34px;
+		border-radius: 2px;
+		border: 1px solid #cacaca;
+		display: block;
+		float: left;
+		position: inherit;
+		background: none;
+		line-height: 34px;
+		margin: 0;
+		margin-left: 15px;
+		color: #686868;
+		width: 95px;
+	}
+
+	#Group .coverimage .view_btn_cover > div > span, #Group .coverimage .edit_btn_cover > div > span
+	{
+		padding: 0;
+	}
+
+	#Group .coverimage .edit_btn_cover > div
+	{
+		position: inherit;
+	}
+
+	#Group .edit_btn
+	{
+		float: right;
+		z-index: 11;
+	}
+
+	#Group .Box .tabs
+	{
+		padding-top: 0;
+	}
+
+	#Group ul li a
+	{
+		font-size: 18px;
+		font-weight: 600 !important;
+		padding: 5px 0 !important;
+		text-transform: uppercase !important;
+		color: #7a7d88 !important;
+	}
+
+	#Group .members .panel button
+	{
+		border-radius: 2px;
+		border: 1px solid #cacaca;
+		display: block;
+		position: inherit;
+		background: none;
+		margin: 0;
+		color: #686868;
+		float: right;
+	}
+
+	#Booking .navigator .wrapper.placename
+	{
+		width: 100%;
+	}
+
+	#Booking .navigator .heading.placename
+	{
+		padding: 0;
+	}
+
+	#Booking .navigator .input.placename > div
+	{
+		padding: 0;
+	}
+
+	#Booking .navigator .wrapper.fromdate, #Booking .navigator .wrapper.todate
+	{
+		padding-top: 20px;
+		width: 50%;
+	}
+
+	#Booking .navigator .wrapper.number, #Booking .navigator .wrapper.adults, #Booking .navigator .wrapper.children
+	{
+		width: 33%;
+		padding-top: 20px;
+	}
+
+	#Booking .event
+	{
+		float: none;
+		display: inline-block;
+	}
+
+	#Booking #BookingContent
+	{
+		text-align: center;
+	}
+
+	html body.home div#CenterBox__ div#Center__ div#Content__ div#InnerContainer__ div#InnerContent__ div#Scene div#Home table#Table_Fields tbody tr td.Col2 div#Field_middle div#Group div#Tabs div.buttons div#GroupOptionsBox.open div.inner ul li
+	{
+		width: auto;
+	}
+
+	#Wall .editor .textarea
+	{
+		/*min-height: 0px;*/
+	}
+
+	#Wall #ShareContent .access
+	{
+		position: relative;
+		padding-right: 35px;
+		right: 4px;
+	}
+	
+	#Wall .post .bookmark,
+	#Wall .post .bookmark:hover
+	{
+		height: 55px;
+	}
+	
+	#Wall .post .bookmark > div,
+	#Wall .post .bookmark:hover > div
+	{
+		top: 28px;
+	}
+	
+	#Wall .post .edit
+	{
+		top: -13px;
+	}
+	
+	#Wall .post .nickname
+	{
+		top: 3px;
+		left: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 55%;
+	}
+
+	#Wall .comment .nickname
+	{
+		top: 10px;
+		left: 0;
+	}
+
+	#Wall .access
+	{
+		float: none;
+	}
+
+	#Wall .access > select
+	{
+		font-size: 12px;
+	}
+
+	#Wall .post .date
+	{
+		float: none;
+		font-size: 12px;
+		top: 2px;
+		width: 70%;
+	}
+
+	#Wall .comment .nickname
+	{
+		float: none;
+		width: 60%;
+		overflow: hidden;
+	}
+	
+	#Wall .comment .nickname .sender
+	{
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	#Wall .comment .date
+	{
+		font-size: 12px;
+		left: 0;
+		top: 10px;
+		float: none;
+	}
+
+	#Wall .comment .vote
+	{
+		position: relative;
+		left: 79px;
+		top: -24px;
+		float: right;
+	}
+
+	#Wall .comment .rate
+	{
+		top: 8px;
+	}
+
+	#Wall .post .posted .nickname .seperator
+	{
+		font-size: 14px;
+	}
+
+	#Wall .ParseContent.Event
+	{
+		padding: 0;
+	}
+
+	#Wall .comment:hover > .edit
+	{
+		top: 80px;
+	}
+
+	#Wall .editor.open .textarea
+	{
+		/*padding: 0;*/
+	}
+
+	#Wall .ParseContent.Album > .filewrapper.wide.nr1
+	{
+		max-height: 420px !important;
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	#Wall .ParseContent.Album > .filewrapper.wide
+	{
+		max-width: 32% !important;
+		width: 32% !important;
+	}
+
+	#Wall .ParseContent .filewrapper
+	{
+		float: none !important;
+		display: inline-block;
+	}
+
+	#Wall .ParseContent.Album
+	{
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	#ShareContent .seen span, #ShareContent .rate .amount
+	{
+		z-index: 2;
+	}
+	
+	#ShareContent .seen
+	{
+		display: none;
+	}
+	
+	.ParseContent .image.small
+	{
+		float: none;
+		margin: 0;
+		width: 100% !important;
+		max-height: 350px;
+		min-height: 154px;
+	}
+	
+	.ParseContent
+	{
+		/*padding: 20px;*/
+	}
+	
+	.ParseContent .text > h3
+	{
+		height: 40px;
+	}
+	
+	#Wall .ParseContent.File .image.open,
+	#Wall .ParseContent .image.pdf.open
+	{
+		max-height: 350px !important;
+	}
+	
+	.ParseContent.Event .text
+	{
+		padding: 20px;
+	}
+
+	.ParseContent .fileupload
+	{
+		height: 96px !important;
+		width: 100px !important;
+	}
+
+	.ParseContent .image.album
+	{
+		height: 98px !important;
+		width: 100px !important;
+	}
+
+	.ParseContent.Album .image.album
+	{
+		height: 100% !important;
+		width: 99% !important;
+	}
+
+	.ParseContent .fileupload > div
+	{
+		height: 94px !important;
+	}
+
+	#Notification #NotificationBox div.inner
+	{
+		max-height: 100%;
+		overflow-y: auto;
+		position: relative;
+	}
+	
+	#Notification #NotificationBox.messages div.inner
+	{
+		max-height: 94% !important;
+	}
+	
+	.dropdownwindow
+	{
+		overflow: hidden;
+		position: fixed;
+		height: 100%;
+	}
+
+	.dropdownwindow #CenterBox__,
+	.dropdownwindow #Footer__
+	{
+		opacity: 0.5;
+		visibility: hidden;
+		display: none;
+	}
+
+	
+	/* Mobile */
+	
+	.main #Field2
+	{
+		padding: 20px;
+		padding-top: 10px;
+		width: auto;
+		margin: 0;
+	}
+	
+	.main #Field1
+	{
+		padding: 20px;
+		padding-top: 25px;
+		padding-bottom: 15px;
+		width: auto;
+	}
+	
+	.main #Bottom > #Navigation
+	{
+		padding: 20px;
+		padding-top: 10px;
+		margin: 0;
+	}
+	
+	.main #Bottom > #Navigation, .main #Bottom > #Navigation > a
+	{
+		font-size: 80% !important;
+	}
+	
+	.main #SearchEngine #Search
+	{
+		padding: 5px !important;
+		height: 38px !important;
+	}
+	
+	.main #Search button
+	{
+		background: url("@url/img/search_green.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+		border: medium none;
+		box-shadow: none;
+		cursor: pointer;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 35px;
+	}
+	
+	.main #Search span
+	{
+		visibility: hidden;
+		white-space: nowrap;
+	}
+	
+	.main #Search table,
+	.main #Search table > tbody,
+	.main #Search table > tbody > tr:first-child,
+	.main #Search table > tbody > tr:first-child > td,
+	.main #Search #SearchWrapper
+	{
+		display: block;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.mobile #Content__
+	{
+		padding: 0;
+	}
+	
+	/* Authentication MiddleCol */
+	
+	.Authentication #LoginFront #LoginForm
+	{
+		width: 100%;
+		font-size: 14px;
+	}
+	
+	.Authentication #LoginFront #LoginForm a
+	{
+		font-size: 14px;
+	}
+	
+	.Authentication #LoginFront .Row1 input, .Authentication #LoginFront .Row2 input
+	{
+		padding: 10px;
+		margin-bottom: 2px;
+	}
+	
+	/* Orders */
+	
+	#Orders .hours .inner .field
+	{
+		width: 100%;
+	}
+	
+	#Orders .hours .inner .field .value
+	{
+		padding: 0;
+	}
+	
+	#Orders .list .hours .inner div.field .label
+	{
+		width: 100px !important;
+	}
+	
+	/* Calendar */
+	
+	#Orders .calendar
+	{
+		height: 85% !important;
+		left: 1%;
+		margin-left: 2%;
+		margin-right: 2%;
+		position: fixed;
+		top: 62px !important;
+		width: 94% !important;
+		box-sizing: border-box;
+	}
+	
+	#Orders .calendar .hd th:first-child
+	{
+		display: none;
+	}
+	
+	#Orders .calendar .hd div
+	{
+		line-height: 40px;
+		padding-bottom: 2px;
+	}
+	
+	#Orders .calendar table,
+	#Orders .calendar table tr,
+	#Orders .calendar table tr th,
+	#Orders .calendar table tr td
+	{
+		border-collapse: collapse;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#Orders .calendar tr td > div
+	{
+		margin: 0;
+		border-radius: 0;
+		border-right: 0;
+		border-bottom: 0;
+	}
+	
+	#Orders .calendar td + td:last-child > div
+	{
+		border-right: 1px solid #cacaca;
+	}
+	
+	#Orders .calendar tr:last-child td > div
+	{
+		border-bottom: 1px solid #cacaca;
+	}
+	
+	#Orders .calendar .nav
+	{
+		padding-top: 10px;
+		padding-bottom: 12px;
+	}
+	
+	#Orders .calendar .nav .Left,
+	#Orders .calendar .nav .Right
+	{
+		top: 10px;
+	}
+	
+	#Orders .calendar > div.mobile
+	{
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	#Orders .calendar .mobile .Space
+	{
+		display: none;
+	}
+	
+	#Orders .calendar .mobile .datelist
+	{
+		overflow: hidden;
+		overflow-y: auto;
+		height: 87%;
+		padding: 9px;
+		padding-top: 3px;
+		padding-left: 6px;
+		box-sizing: border-box;
+	}
+	
+	#Orders .calendar .mobile .datelist > div > div > div:first-child
+	{
+		border-top: 1px solid #cacaca;
+	}
+	
+	#Orders .calendar .mobile .datelist > div > div > div
+	{
+		border-bottom: 1px solid #cacaca;
+		padding: 5px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		box-sizing: border-box;
+	}
+}
+
+
+
+/* Amendements from Thomas 2016/04 */
+@media screen and (max-width: 980px)
+{
+
+	#Wall #ShareContent .access,
+	#Wall #ShareContent .date,
+	#Wall .post .nickname
+	{
+		left:5px;
+	}
+	#Wall .post .date, #Wall #ShareContent .post .date { top:5px; }
+	#Wall #ShareContent .access { top:9px; }
+	
+	#Wall #ShareContent > div.messagebox.closed .edit,
+	#Wall #ShareContent > div.messagebox.closed .bookmark,
+	#Wall #ShareContent > div.messagebox.closed .access
+	{
+		display:none;
+	}
+	#Wall #ShareContent > div.messagebox.closed .date
+	{
+		position:absolute;
+		top:15px;
+		left:78px;
+	}
+	#Wall #ShareContent > div.messagebox.closed > .post .content
+	{
+		left:58px;
+	}
+	#Wall #ShareContent > div.messagebox.closed > .post .posted .nickname
+	{
+		left:5px;
+	}
+
+}

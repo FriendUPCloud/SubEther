@@ -1,0 +1,105 @@
+
+#Browse #Content .network
+{
+	width: 700px;
+	min-height: 500px;
+	margin: 0 !important;
+	/*padding-left: 20px !important;
+	padding-right: 20px !important;*/
+}
+
+#Browse #Content .network .image
+{
+	position: relative;
+	border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    height: 70px;
+    margin-right: 5px;
+    overflow: hidden;
+    width: 70px;
+}
+
+#Browse #Content .network .file .image
+{
+	border: 1px solid transparent;
+}
+
+#Browse #Content .network .image em
+{
+	background-image: url("../../../gfx/play_thumb.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    bottom: 5px;
+    height: 26px;
+    left: 5px;
+    margin: 0;
+    position: absolute;
+    right: auto;
+    top: auto;
+    width: 35px;
+}
+
+#Browse #Content .network > div
+{
+	line-height: 40px;
+	height: 40px;
+}
+
+#Browse #Content .network em
+{
+	font-weight: bold;
+	font-style: normal;
+}
+
+#Browse #Content .network p
+{
+	/*color: #006600;*/
+	padding: 0;
+}
+
+#Browse #Content .network ol
+{
+	min-height: 400px;
+}
+
+#Browse #Content .network ol, #Browse .network li
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style: none;
+}
+
+#Browse #Content .network > ol > li
+{
+	margin-bottom: 15px;
+}
+
+#Browse #Content .network > ol > li div > h3
+{
+	display: block;
+	font-weight: normal;
+	margin: 0;
+}
+
+#Browse #Content .network > ol > li div > h3 > a
+{
+	color: #000000;
+}
+
+#Browse #Content .network table > tbody > tr > td > a
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+#Browse #Content .network table > tbody > tr > td > a:hover
+{
+	text-decoration: underline;
+}
+
+#Browse #Content .network table > tbody > tr > td > a.current
+{
+	font-weight: bold;
+}

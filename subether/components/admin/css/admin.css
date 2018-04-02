@@ -1,0 +1,260 @@
+#Admin #AdminContent table
+{
+	width: 100%;
+}
+
+#Admin #AdminContent table tr.sw2
+{
+	background-color: #DCDDDD;
+}
+
+#Admin #AdminContent .budget th,
+#Admin #AdminContent .budget td
+{
+	text-align: left;
+	text-transform: uppercase;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#Admin #AdminContent .budget th + th,
+#Admin #AdminContent .budget td + td
+{
+	text-align: right;
+}
+
+#Admin #AdminContent .budget input
+{
+	width: 100%;
+	background: transparent;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans',sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+#Admin #AdminContent .budget td + td input
+{
+	text-align: right;
+}
+
+#Admin #AdminContent .budget tr.head th + th
+{
+	border: 1px solid #C0C0C0;
+	width: 6.3%;
+}
+
+#Admin #AdminContent .budget tr.group td,
+#Admin #AdminContent .budget tr.group td input
+{
+	font-weight: bold;
+}
+
+#Admin #AdminContent .budget tr.sum td + td
+{
+	border-top: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+/* --- ShopDB --- */
+
+#Admin #AdminContent .shopdb table
+{
+	border: 1px solid #C0C0C0;
+}
+
+#Admin #AdminContent .shopdb tr.sort td
+{
+	border-top: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+	height: 8px;
+}
+
+#Admin #AdminContent .shopdb th
+{
+	text-align: center;
+}
+
+#Admin #AdminContent .shopdb th,
+#Admin #AdminContent .shopdb td
+{
+	padding: 4px;
+}
+
+#Admin #AdminContent .shopdb tr.sort td
+{
+	padding: 0;
+	text-align: center;
+}
+
+#Admin #AdminContent .shopdb td + td,
+#Admin #AdminContent .shopdb th + th
+{
+	border-left:  1px solid #C0C0C0;
+}
+
+/* --- CaseList --- */
+
+.case table
+{
+	width: 100%;
+}
+
+.case .col1
+{
+	width: 60px;
+}
+
+.case .col3
+{
+	width: 190px;
+}
+
+.case > table > tbody > tr > th,
+.case > table > tbody > tr > td 
+{
+	text-align: left;
+	padding: 2px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	line-height: 22px;
+}
+
+.case > table > tbody > tr > th
+{
+	padding: 10px !important;
+}
+
+.case tr > td > .edit
+{
+	float: right;
+	display: none;
+}
+
+.case tr > td .ProgressNum
+{
+	text-align: right; 
+	width: 35px; 
+	display: block; 
+	float: left;
+}
+
+.case tr:hover > td > .edit
+{
+	display: block;
+}
+
+.case tr > td > .edit > img
+{
+	cursor: hand;
+	cursor: pointer;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-bottom: -4px;
+}
+
+.case .textarea
+{
+	min-height: 100px;
+	margin-bottom: 5px;
+    padding: 5px 5px 5px;
+}
+
+.case .task,
+.case .newcase,
+.case .newtask
+{
+	/*visibility: hidden;
+	height: 0px;
+	overflow: hidden;*/
+}
+
+.case .task 
+{
+	visibility: hidden;
+	height: 0px;
+	overflow: hidden;
+}
+
+#CaseEditor
+{
+	visibility: hidden;
+	min-height: 0px !important;
+	height: 0px !important;
+	overflow: hidden;
+}
+
+.case .task.open,
+.case .newcase.open,
+.case .newtask.open
+{
+	visibility: visible;
+	height: auto;
+	overflow: auto;
+}
+
+.case .tasks > td,
+.case .inputs > td
+{
+	width: auto;
+	padding: 0px;
+	line-height: normal;
+}
+
+.case .ratebar
+{
+	float: right;
+	background-color: transparent;
+	height: 2px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	overflow: hidden;
+	width: 75%;
+}
+
+.case .ratebar > div
+{
+	background-color: #006600;
+	height: 100%;
+}
+
+.case input[type="text"]
+{
+	width: 100%;
+	background: transparent;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans',sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+.case ul.checklist
+{
+	position: relative;
+	z-index: 1;
+	list-style-type: none;
+}
+
+.case ul.checklist li
+{
+	position: relative;
+	z-index: 2;
+}
+
+.case ul.checklist span
+{
+	position: absolute;
+	z-index: 4;
+	left: -21px;
+}
+
+.case ul.checklist input[type="checkbox"]
+{
+	position: relative;
+	z-index: 3;
+	left: 0;
+}
