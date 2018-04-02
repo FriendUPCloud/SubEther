@@ -112,7 +112,7 @@ Chat room
 
 You will find many of our developers and users on our IRC channel / chat room. Please choose a unique nick and join using the link below.
 
-https://friendup.cloud/community/irc-channel/
+https://developers.friendup.cloud/irc-channel/
 
 Licensing
 =========
