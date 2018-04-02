@@ -8,6 +8,9 @@
 
 PROJECT=$(pwd)
 
+SUBETHER="SubEther"
+ARENA="ArenaCM"
+
 # PARENT LOCATION
 
 PARENT=$(dirname "$PROJECT")
@@ -32,12 +35,12 @@ SYMLINKS="0"
 
 SITE="/var/www/html"
 
-BASE_DIR=${SITE}"/treeroot"
+BASE_DIR=${SITE}"/$SUBETHER"
 
 # --- STEP 1: ---------------------------------------------------------------------
 
-#git clone git@pal.ideverket.no:/home/git/arena2
-#git clone git@pal.ideverket.no:/home/git/treeroot
+#git clone https://github.com/FriendUPCloud/ArenaCM
+#git clone https://github.com/FriendUPCloud/SubEther
 
 # --- STEP 2: ---------------------------------------------------------------------
 
@@ -55,7 +58,7 @@ fi
 
 
 
-if [ "$BASE_DIR" != "$SITE/treeroot" ]; then
+if [ "$BASE_DIR" != "$SITE/$SUBETHER" ]; then
 	
     SITE=${BASE_DIR}
     
@@ -77,21 +80,21 @@ fi
 
 
 
-if [ ! -d ${PARENT}"/arena2" ]; then
+if [ ! -d ${PARENT}"/$ARENA" ]; then
 
-	echo ${PARENT}"/arena2 doesn't exist, copy/clone arena2 repo first, aborting installation."
+	echo ${PARENT}"/$ARENA doesn't exist, copy/clone $ARENA repo first, aborting installation."
 	exit 1
 
 fi
 
-if [ ! -d ${PARENT}"/treeroot" ]; then
+if [ ! -d ${PARENT}"/$SUBETHER" ]; then
 
-	echo ${PARENT}"/treeroot doesn't exist, copy/clone treeroot repo first, aborting installation."
+	echo ${PARENT}"/$SUBETHER doesn't exist, copy/clone $SUBETHER repo first, aborting installation."
 	exit 1
 
 fi
 
-if [ ! -d ${PARENT}"/treeroot/distro/"${DISTRO} ]; then
+if [ ! -d ${PARENT}"/$SUBETHER/distro/"${DISTRO} ]; then
 
 	LICENSE="AGPLv3"
 	
@@ -111,9 +114,9 @@ else
 	
 fi
 
-if [ ! -d ${PARENT}"/treeroot/distro/"${DISTRO} ]; then
+if [ ! -d ${PARENT}"/$SUBETHER/distro/"${DISTRO} ]; then
 		
-	echo ${PARENT}"/treeroot/distro/"${DISTRO}" doesn't exist, contact support, aborting installation."
+	echo ${PARENT}"/$SUBETHER/distro/"${DISTRO}" doesn't exist, contact support, aborting installation."
 	exit 1
 	
 fi
@@ -210,20 +213,20 @@ if [ -d ${BASE_DIR}"/subether" ]; then
 
 	# Take backup of treeroot
 	
-	read -p "Do you want to take backup of "${BASE_DIR}" and store it in ${PARENT}/backup.treeroot (y/n) ? " BACKUP
+	read -p "Do you want to take backup of "${BASE_DIR}" and store it in ${PARENT}/backup."${SUBETHER}" (y/n) ? " BACKUP
 	
 	if [ "$BACKUP" = "y" ]; then
 		
 		echo "Taking backup of "${BASE_DIR}
 		
-		sudo rsync -ravL ${BASE_DIR}/subether ${PARENT}/backup.treeroot/ > /dev/null
-		sudo rsync -ravL ${BASE_DIR}/extensions ${PARENT}/backup.treeroot/ > /dev/null
+		sudo rsync -ravL ${BASE_DIR}/subether ${PARENT}/backup.${SUBETHER}/ > /dev/null
+		sudo rsync -ravL ${BASE_DIR}/extensions ${PARENT}/backup.${SUBETHER}/ > /dev/null
 		
-		sudo rsync -ravL ${BASE_DIR}/admin ${PARENT}/backup.treeroot/ > /dev/null
-		sudo rsync -ravL ${BASE_DIR}/friend ${PARENT}/backup.treeroot/ > /dev/null
-		sudo rsync -ravL ${BASE_DIR}/lib ${PARENT}/backup.treeroot/ > /dev/null
-		sudo rsync -ravL ${BASE_DIR}/web ${PARENT}/backup.treeroot/ > /dev/null
-		sudo rsync -ravL ${BASE_DIR}/upload ${PARENT}/backup.treeroot/ > /dev/null
+		sudo rsync -ravL ${BASE_DIR}/admin ${PARENT}/backup.${SUBETHER}/ > /dev/null
+		sudo rsync -ravL ${BASE_DIR}/friend ${PARENT}/backup.${SUBETHER}/ > /dev/null
+		sudo rsync -ravL ${BASE_DIR}/lib ${PARENT}/backup.${SUBETHER}/ > /dev/null
+		sudo rsync -ravL ${BASE_DIR}/web ${PARENT}/backup.${SUBETHER}/ > /dev/null
+		sudo rsync -ravL ${BASE_DIR}/upload ${PARENT}/backup.${SUBETHER}/ > /dev/null
 		
 	fi
 	
@@ -243,7 +246,7 @@ fi
 
 
 
-read -p "Do you want to use symlinks to link from "${PARENT}"/arena2 and "${PARENT}"/treeroot to "${BASE_DIR}" (y/n) ? " USE_SYMLINKS
+read -p "Do you want to use symlinks to link from "${PARENT}"/$ARENA and "${PARENT}"/$SUBETHER to "${BASE_DIR}" (y/n) ? " USE_SYMLINKS
 
 if [ "$USE_SYMLINKS" = "y" ]; then
 	
@@ -392,90 +395,90 @@ if [ "$SYMLINKS" = "yes" ]; then
 	
 	# TODO: Add .gitignore or something to the repo so you don't have to do this for lib/ and subether/upload/
 	
-	echo "Adding symlinks from "${PARENT}"/arena2 to "${BASE_DIR}
-	echo "Adding symlinks from "${PARENT}"/treeroot to "${BASE_DIR}
+	echo "Adding symlinks from "${PARENT}"/$ARENA to "${BASE_DIR}
+	echo "Adding symlinks from "${PARENT}"/$SUBETHER to "${BASE_DIR}
 	
-	sudo ln -s ${PARENT}/arena2/admin ${BASE_DIR}/admin
-	sudo ln -s ${PARENT}/arena2/friend ${BASE_DIR}/friend
-	sudo ln -s ${PARENT}/arena2/web ${BASE_DIR}/web
-	sudo ln -s ${PARENT}/arena2/extensions/easyeditor ${BASE_DIR}/extensions/easyeditor
-	sudo ln -s ${PARENT}/arena2/extensions/editor ${BASE_DIR}/extensions/editor
-	sudo ln -s ${PARENT}/arena2/extensions/userlogin ${BASE_DIR}/extensions/userlogin
+	sudo ln -s ${PARENT}/${ARENA}/admin ${BASE_DIR}/admin
+	sudo ln -s ${PARENT}/${ARENA}/friend ${BASE_DIR}/friend
+	sudo ln -s ${PARENT}/${ARENA}/web ${BASE_DIR}/web
+	sudo ln -s ${PARENT}/${ARENA}/extensions/easyeditor ${BASE_DIR}/extensions/easyeditor
+	sudo ln -s ${PARENT}/${ARENA}/extensions/editor ${BASE_DIR}/extensions/editor
+	sudo ln -s ${PARENT}/${ARENA}/extensions/userlogin ${BASE_DIR}/extensions/userlogin
 	
-	sudo ln -s ${PARENT}/arena2/lib/3rdparty ${BASE_DIR}/lib/3rdparty
-	sudo ln -s ${PARENT}/arena2/lib/classes ${BASE_DIR}/lib/classes
-	#sudo ln -s ${PARENT}/arena2/lib/enterprise ${BASE_DIR}/lib/enterprise
-	sudo ln -s ${PARENT}/arena2/lib/fonts ${BASE_DIR}/lib/fonts
-	sudo ln -s ${PARENT}/arena2/lib/functions ${BASE_DIR}/lib/functions
-	sudo ln -s ${PARENT}/arena2/lib/help ${BASE_DIR}/lib/help
-	sudo ln -s ${PARENT}/arena2/lib/icons ${BASE_DIR}/lib/icons
-	sudo ln -s ${PARENT}/arena2/lib/include ${BASE_DIR}/lib/include
-	sudo ln -s ${PARENT}/arena2/lib/javascript ${BASE_DIR}/lib/javascript
-	sudo ln -s ${PARENT}/arena2/lib/locale ${BASE_DIR}/lib/locale
-	sudo ln -s ${PARENT}/arena2/lib/plugins ${BASE_DIR}/lib/plugins
-	sudo ln -s ${PARENT}/arena2/lib/skeleton ${BASE_DIR}/lib/skeleton
-	sudo ln -s ${PARENT}/arena2/lib/templates ${BASE_DIR}/lib/templates
-	sudo ln -s ${PARENT}/arena2/lib/themes ${BASE_DIR}/lib/themes
+	sudo ln -s ${PARENT}/${ARENA}/lib/3rdparty ${BASE_DIR}/lib/3rdparty
+	sudo ln -s ${PARENT}/${ARENA}/lib/classes ${BASE_DIR}/lib/classes
+	#sudo ln -s ${PARENT}/${ARENA}/lib/enterprise ${BASE_DIR}/lib/enterprise
+	sudo ln -s ${PARENT}/${ARENA}/lib/fonts ${BASE_DIR}/lib/fonts
+	sudo ln -s ${PARENT}/${ARENA}/lib/functions ${BASE_DIR}/lib/functions
+	sudo ln -s ${PARENT}/${ARENA}/lib/help ${BASE_DIR}/lib/help
+	sudo ln -s ${PARENT}/${ARENA}/lib/icons ${BASE_DIR}/lib/icons
+	sudo ln -s ${PARENT}/${ARENA}/lib/include ${BASE_DIR}/lib/include
+	sudo ln -s ${PARENT}/${ARENA}/lib/javascript ${BASE_DIR}/lib/javascript
+	sudo ln -s ${PARENT}/${ARENA}/lib/locale ${BASE_DIR}/lib/locale
+	sudo ln -s ${PARENT}/${ARENA}/lib/plugins ${BASE_DIR}/lib/plugins
+	sudo ln -s ${PARENT}/${ARENA}/lib/skeleton ${BASE_DIR}/lib/skeleton
+	sudo ln -s ${PARENT}/${ARENA}/lib/templates ${BASE_DIR}/lib/templates
+	sudo ln -s ${PARENT}/${ARENA}/lib/themes ${BASE_DIR}/lib/themes
 	
-	sudo ln -s ${PARENT}/arena2/lib/core_config.php.example ${BASE_DIR}/lib/core_config.php.example
-	sudo ln -s ${PARENT}/arena2/lib/error.html ${BASE_DIR}/lib/error.html
-	sudo ln -s ${PARENT}/arena2/lib/error.jpg ${BASE_DIR}/lib/error.jpg
-	sudo ln -s ${PARENT}/arena2/lib/htaccess ${BASE_DIR}/lib/htaccess
-	sudo ln -s ${PARENT}/arena2/lib/index.html ${BASE_DIR}/lib/index.html
-	sudo ln -s ${PARENT}/arena2/lib/install.php ${BASE_DIR}/lib/install.php
-	sudo ln -s ${PARENT}/arena2/lib/lib.php ${BASE_DIR}/lib/lib.php
-	sudo ln -s ${PARENT}/arena2/lib/resources.php ${BASE_DIR}/lib/resources.php
+	sudo ln -s ${PARENT}/${ARENA}/lib/core_config.php.example ${BASE_DIR}/lib/core_config.php.example
+	sudo ln -s ${PARENT}/${ARENA}/lib/error.html ${BASE_DIR}/lib/error.html
+	sudo ln -s ${PARENT}/${ARENA}/lib/error.jpg ${BASE_DIR}/lib/error.jpg
+	sudo ln -s ${PARENT}/${ARENA}/lib/htaccess ${BASE_DIR}/lib/htaccess
+	sudo ln -s ${PARENT}/${ARENA}/lib/index.html ${BASE_DIR}/lib/index.html
+	sudo ln -s ${PARENT}/${ARENA}/lib/install.php ${BASE_DIR}/lib/install.php
+	sudo ln -s ${PARENT}/${ARENA}/lib/lib.php ${BASE_DIR}/lib/lib.php
+	sudo ln -s ${PARENT}/${ARENA}/lib/resources.php ${BASE_DIR}/lib/resources.php
 	
-	sudo ln -s ${PARENT}/arena2/MPL.txt ${BASE_DIR}/MPL.txt
-	sudo ln -s ${PARENT}/arena2/README ${BASE_DIR}/README
+	sudo ln -s ${PARENT}/${ARENA}/MPL.txt ${BASE_DIR}/MPL.txt
+	sudo ln -s ${PARENT}/${ARENA}/README ${BASE_DIR}/README
 	
-	sudo ln -s ${PARENT}/arena2/config.php.example ${BASE_DIR}/config.php.example
-	sudo ln -s ${PARENT}/arena2/lib/htaccess ${BASE_DIR}/.htaccess
+	sudo ln -s ${PARENT}/${ARENA}/config.php.example ${BASE_DIR}/config.php.example
+	sudo ln -s ${PARENT}/${ARENA}/lib/htaccess ${BASE_DIR}/.htaccess
 	
-	sudo ln -s ${PARENT}/treeroot/upload/template ${BASE_DIR}/upload/template
+	sudo ln -s ${PARENT}/${SUBETHER}/upload/template ${BASE_DIR}/upload/template
 	
-	sudo ln -s ${PARENT}/treeroot/extensions/sbook ${BASE_DIR}/extensions/sbook
-	sudo ln -s ${PARENT}/treeroot/extensions/templates ${BASE_DIR}/extensions/templates
-	sudo ln -s ${PARENT}/treeroot/subether/applications ${BASE_DIR}/subether/applications
-	sudo ln -s ${PARENT}/treeroot/subether/classes ${BASE_DIR}/subether/classes
-	sudo ln -s ${PARENT}/treeroot/subether/components ${BASE_DIR}/subether/components
-	sudo ln -s ${PARENT}/treeroot/subether/css ${BASE_DIR}/subether/css
-	sudo ln -s ${PARENT}/treeroot/subether/functions ${BASE_DIR}/subether/functions
-	sudo ln -s ${PARENT}/treeroot/subether/gfx ${BASE_DIR}/subether/gfx
-	sudo ln -s ${PARENT}/treeroot/subether/include ${BASE_DIR}/subether/include
-	sudo ln -s ${PARENT}/treeroot/subether/javascript ${BASE_DIR}/subether/javascript
-	sudo ln -s ${PARENT}/treeroot/subether/locale ${BASE_DIR}/subether/locale
-	sudo ln -s ${PARENT}/treeroot/subether/modules ${BASE_DIR}/subether/modules
-	sudo ln -s ${PARENT}/treeroot/subether/plugins ${BASE_DIR}/subether/plugins
-	sudo ln -s ${PARENT}/treeroot/subether/restapi ${BASE_DIR}/subether/restapi
-	sudo ln -s ${PARENT}/treeroot/subether/themes ${BASE_DIR}/subether/themes
-	sudo ln -s ${PARENT}/treeroot/subether/thirdparty ${BASE_DIR}/subether/thirdparty
+	sudo ln -s ${PARENT}/${SUBETHER}/extensions/sbook ${BASE_DIR}/extensions/sbook
+	sudo ln -s ${PARENT}/${SUBETHER}/extensions/templates ${BASE_DIR}/extensions/templates
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/applications ${BASE_DIR}/subether/applications
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/classes ${BASE_DIR}/subether/classes
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/components ${BASE_DIR}/subether/components
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/css ${BASE_DIR}/subether/css
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/functions ${BASE_DIR}/subether/functions
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/gfx ${BASE_DIR}/subether/gfx
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/include ${BASE_DIR}/subether/include
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/javascript ${BASE_DIR}/subether/javascript
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/locale ${BASE_DIR}/subether/locale
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/modules ${BASE_DIR}/subether/modules
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/plugins ${BASE_DIR}/subether/plugins
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/restapi ${BASE_DIR}/subether/restapi
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/themes ${BASE_DIR}/subether/themes
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/thirdparty ${BASE_DIR}/subether/thirdparty
 	
-	sudo ln -s ${PARENT}/treeroot/subether/install.php ${BASE_DIR}/subether/install.php
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/standardemail.php ${BASE_DIR}/subether/templates/standardemail.php
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/install.php ${BASE_DIR}/subether/install.php
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/standardemail.php ${BASE_DIR}/subether/templates/standardemail.php
 	
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/about.html ${BASE_DIR}/upload/about.html
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/terms.html ${BASE_DIR}/upload/terms.html
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/copyright.html ${BASE_DIR}/upload/copyright.html
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/advertising.html ${BASE_DIR}/upload/advertising.html
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/privacy.html ${BASE_DIR}/upload/privacy.html
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/policy.html ${BASE_DIR}/upload/policy.html
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/creators.html ${BASE_DIR}/upload/creators.html
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/developers.html ${BASE_DIR}/upload/developers.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/about.html ${BASE_DIR}/upload/about.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/terms.html ${BASE_DIR}/upload/terms.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/copyright.html ${BASE_DIR}/upload/copyright.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/advertising.html ${BASE_DIR}/upload/advertising.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/privacy.html ${BASE_DIR}/upload/privacy.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/policy.html ${BASE_DIR}/upload/policy.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/creators.html ${BASE_DIR}/upload/creators.html
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/developers.html ${BASE_DIR}/upload/developers.html
 	
-	#sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/logo_white.png ${BASE_DIR}/upload/images-master/logo_white.png
-	#sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/logo_symbol_white.png ${BASE_DIR}/upload/images-master/logo_symbol_white.png
-	#sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/logo_black.png ${BASE_DIR}/upload/images-master/logo_black.png
-	#sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/logo_symbol_black.png ${BASE_DIR}/upload/images-master/logo_symbol_black.png
+	#sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/logo_white.png ${BASE_DIR}/upload/images-master/logo_white.png
+	#sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/logo_symbol_white.png ${BASE_DIR}/upload/images-master/logo_symbol_white.png
+	#sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/logo_black.png ${BASE_DIR}/upload/images-master/logo_black.png
+	#sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/logo_symbol_black.png ${BASE_DIR}/upload/images-master/logo_symbol_black.png
 	
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/robots.txt ${BASE_DIR}/robots.txt
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/arenadefault.sql ${BASE_DIR}/subether/arenadefault.sql
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/defaultdb.sql ${BASE_DIR}/subether/defaultdb.sql
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/info.txt ${BASE_DIR}/subether/info.txt
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/version.txt ${BASE_DIR}/subether/version.txt
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/verification.txt ${BASE_DIR}/subether/verification.txt
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/README.txt ${BASE_DIR}/subether/README.txt
-	sudo ln -s ${PARENT}/treeroot/distro/${DISTRO}/${LICENSE}.txt ${BASE_DIR}/subether/${LICENSE}.txt
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/robots.txt ${BASE_DIR}/robots.txt
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/arenadefault.sql ${BASE_DIR}/subether/arenadefault.sql
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/defaultdb.sql ${BASE_DIR}/subether/defaultdb.sql
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/info.txt ${BASE_DIR}/subether/info.txt
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/version.txt ${BASE_DIR}/subether/version.txt
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/verification.txt ${BASE_DIR}/subether/verification.txt
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/README.txt ${BASE_DIR}/subether/README.txt
+	sudo ln -s ${PARENT}/${SUBETHER}/distro/${DISTRO}/${LICENSE}.txt ${BASE_DIR}/subether/${LICENSE}.txt
 	
 fi
 

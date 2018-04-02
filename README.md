@@ -50,9 +50,9 @@ Prior to installation, check that 'bash', or a compatible shell is installed on 
 Just clone this and the Arena2 repository, run the install.sh script and follow the on screen instructions. 
 This script should run on most modern linux distributions. Post to the Developer Community if you run into any problems here.
 ```
-git clone https://github.com/FriendStudios/arena2
-git clone https://github.com/FriendStudios/treeroot
-cd treeroot/
+git clone https://github.com/FriendUPCloud/ArenaCM
+git clone https://github.com/FriendUPCloud/SubEther
+cd SubEther/
 sh install.sh
 ```
 We recommend setting up a dedicated user for your SubEther installation. Other then that a standard webhotell with MySQL should also work fine. 
@@ -72,7 +72,7 @@ Updating SubEther
 
 When you want to update SubEther after a git pull to get the newest changes (if you don't have everything allready symlinked), do this:
 ```
-cd treeroot/
+cd SubEther/
 sh update.sh
 ```
 SubEther installes default in /var/www/html/ and can be installed in any directory or moved wherever you wish. 
@@ -84,7 +84,7 @@ If you choose to do a manual update there is two current available methods:
 1. Symlink from where you have installed Arena2 and treeroot repo on the machine, for full list of current symlinks look in the update.sh file.
 2. Other method is to create a zip file of the updates by using makezipupdate.sh and unzipping the files to your new directory:
 ```
-cd treeroot/distro/subether/
+cd SubEther/distro/subether/
 sh makezipupdate.sh
 cd ../../../
 sudo unzip -q subether[UPDATE_VERSION].zip -d [YOUR_CUSTOM_PATH]/

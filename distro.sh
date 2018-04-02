@@ -4,6 +4,9 @@
 
 PROJECT=$(pwd)
 
+SUBETHER="SubEther"
+ARENA="ArenaCM"
+
 # PARENT LOCATION
 
 PARENT=$(dirname "$PROJECT")
@@ -14,26 +17,26 @@ DISTRO="treeroot"
 
 # --- STEP 1: ---------------------------------------------------------------------
 
-#git clone git@pal.ideverket.no:/home/git/arena2
-#git clone git@pal.ideverket.no:/home/git/treeroot
+#git clone https://github.com/FriendUPCloud/ArenaCM
+#git clone https://github.com/FriendUPCloud/SubEther
 
 # --- STEP 2: ---------------------------------------------------------------------
 
-if [ ! -d ${PARENT}"/arena2" ]; then
+if [ ! -d ${PARENT}"/"${ARENA} ]; then
 
-	echo ${PARENT}"/arena2 doesn't exist, copy/clone arena2 repo first, aborting installation."
+	echo ${PARENT}"/"${ARENA}" doesn't exist, copy/clone "${ARENA}" repo first, aborting installation."
 	exit 1
 
 fi
 
-if [ ! -d ${PARENT}"/treeroot" ]; then
+if [ ! -d ${PARENT}"/"${SUBETHER} ]; then
 
-	echo ${PARENT}"/treeroot doesn't exist, copy/clone treeroot repo first, aborting installation."
+	echo ${PARENT}"/"${SUBETHER}" doesn't exist, copy/clone "${SUBETHER}" repo first, aborting installation."
 	exit 1
 
 fi
 
-if [ ! -d ${PARENT}"/treeroot/distro/"${DISTRO} ]; then
+if [ ! -d ${PARENT}"/"${SUBETHER}"/distro/"${DISTRO} ]; then
 
 	DISTRO="subether"
 	
@@ -49,9 +52,9 @@ else
 	
 fi
 
-if [ ! -d ${PARENT}"/treeroot/distro/"${DISTRO} ]; then
+if [ ! -d ${PARENT}"/"${SUBETHER}"/distro/"${DISTRO} ]; then
 		
-	echo ${PARENT}"/treeroot/distro/"${DISTRO}" doesn't exist, contact support, aborting installation."
+	echo ${PARENT}"/"${SUBETHER}"/distro/"${DISTRO}" doesn't exist, contact support, aborting installation."
 	exit 1
 	
 fi
