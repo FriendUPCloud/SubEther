@@ -47,7 +47,7 @@ Getting started
 
 Prior to installation, check that 'bash', or a compatible shell is installed on your machine.
 
-Just clone this and the Arena2 repository, run the install.sh script and follow the on screen instructions. 
+Just clone this and the ArenaCM repository, run the install.sh script and follow the on screen instructions. 
 This script should run on most modern linux distributions. Post to the Developer Community if you run into any problems here.
 ```
 git clone https://github.com/FriendUPCloud/ArenaCM
@@ -81,7 +81,7 @@ so you would have to update SubEther manually if you choose another directory.
 
 If you choose to do a manual update there is two current available methods:
 
-1. Symlink from where you have installed Arena2 and treeroot repo on the machine, for full list of current symlinks look in the update.sh file.
+1. Symlink from where you have installed ArenaCM and SubEther repo on the machine, for full list of current symlinks look in the update.sh file.
 2. Other method is to create a zip file of the updates by using makezipupdate.sh and unzipping the files to your new directory:
 ```
 cd SubEther/distro/subether/
@@ -94,7 +94,7 @@ much like the wordpress updating system from the backend, for ease of use in com
 
 If you wish to move SubEther make sure these are correct:
 - BaseUrl and BaseDir in the MySQL table called "Sites" (this will be dynamic in coming releases)
-- Symlinks from treeroot and arena2 repo to new path if your using symlinks
+- Symlinks from SubEther and arenaCM repo to new path if your using symlinks
 - Webserver (Apache2) config, check if the new path is in the config
 
 Config files if manually edits are needed are located in your installed directory:
@@ -104,7 +104,7 @@ Config files if manually edits are needed are located in your installed director
 Documentation
 -------------
 
-You can find the various developer documentation by going to https://your-subether-node.example/developers/ after installation. 
+You can find the various developer documentation on any node by going to https://your-subether-node.example/developers/ after installation. 
 Some more will be added soon.
 
 Chat room
