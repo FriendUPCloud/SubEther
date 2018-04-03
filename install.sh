@@ -492,5 +492,5 @@ sudo a2enmod rewrite
 
 sudo service apache2 restart
 
-xdg-open http://localhost/treeroot/
+xdg-open http://localhost/${SUBETHER}/
 
