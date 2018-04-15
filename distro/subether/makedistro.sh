@@ -33,19 +33,19 @@ cp defaultdb.sql release.treeroot/subether/
 cp arenadefault.sql release.treeroot/subether/
 cp standardemail.php release.treeroot/subether/templates/
 
-cp -r ../../../arena2/admin release.treeroot/
-cp -r ../../../arena2/lib release.treeroot/
-cp -r ../../../arena2/web release.treeroot/
-cp -r ../../../arena2/extensions release.treeroot/
-cp -r ../../../arena2/friend release.treeroot/
-cp ../../../arena2/index.php release.treeroot/
-cp ../../../arena2/admin.php release.treeroot/
-cp ../../../arena2/config.php.example release.treeroot/
-cp ../../../arena2/MPL.txt release.treeroot/
-cp ../../../arena2/README release.treeroot/
+cp -r ../../../ArenaCM/admin release.treeroot/
+cp -r ../../../ArenaCM/lib release.treeroot/
+cp -r ../../../ArenaCM/web release.treeroot/
+cp -r ../../../ArenaCM/extensions release.treeroot/
+cp -r ../../../ArenaCM/friend release.treeroot/
+cp ../../../ArenaCM/index.php release.treeroot/
+cp ../../../ArenaCM/admin.php release.treeroot/
+cp ../../../ArenaCM/config.php.example release.treeroot/
+cp ../../../ArenaCM/MPL.txt release.treeroot/
+cp ../../../ArenaCM/README release.treeroot/
 
-cp -d ../../../arena2/.htaccess release.treeroot/
-ln -s ../../../arena2/lib/htaccess release.treeroot/.htaccess
+cp -d ../../../ArenaCM/.htaccess release.treeroot/
+ln -s ../../../ArenaCM/lib/htaccess release.treeroot/.htaccess
 
 cd release.treeroot
 
