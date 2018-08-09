@@ -81,9 +81,19 @@ body.main {
 	box-sizing: border-box; 
 }
 
-#Main
+body.messages #Main, body.messages.chat #Main
 {
-  width: calc( 100% - 210px);	
+	width:100%;
+}
+
+body.chat #Main
+{
+	width: calc( 100% - 210px);	
+}
+
+body.messages.chat #ChatBox
+{
+	display: none;
 }
 
 #Field1 > #Main

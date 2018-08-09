@@ -110,9 +110,10 @@ Some more will be added soon.
 Chat room
 ---------
 
-You will find many of our developers and users on our IRC channel / chat room. Please choose a unique nick and join using the link below.
+You will find many of our developers and users on our Discord / IRC channel / chat room. Please choose a unique nick and join using the links below.
 
-https://developers.friendup.cloud/irc-channel/
+Discord: https://discord.gg/HQ93NFG
+IRC: https://developers.friendup.cloud/irc-channel/
 
 Licensing
 =========

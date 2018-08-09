@@ -681,5 +681,88 @@ function handleFileSelect( _file )
 		binary.readAsBinaryString(f);*/
 	}
 }
+
+/*window.addEventListener( 'paste', function( evt )
+{
+	var pastedItems = (evt.clipboardData || evt.originalEvent.clipboardData).items;
+	
+	for( var i in pastedItems ) 
+	{
+		var item = pastedItems[i];
+		
+		console.log( 'item ', item );
+	}
+} );*/
+
+function paste( _this, e )
+{
+	//alert( 'testing ...' );
+	
+	var evt = ( window.event || e );
+	
+	if( evt )
+	{
+		var pastedItems = (evt.clipboardData || evt.originalEvent.clipboardData).items;
+		
+		if( pastedItems )
+		{
+			for( i in pastedItems )
+			{
+				var item = pastedItems[i];
+				
+				if( item.kind === 'file' ) 
+				{
+					var blob = item.getAsFile();
+					filetype = ( blob.type == '' ? 'application/octet-stream' : blob.type );
+					
+					var reader = new FileReader();
+					
+					// Closure to capture the file information.
+					reader.onload = ( function( theFile, ele )
+					{
+						return function(e)
+						{
+							var a = ele.parentNode.getElementsByTagName( 'a' )[0];
+				
+							// Only process image files.
+							if ( theFile.type.match( 'image.*' ) )
+							{
+								// Render thumbnail.
+								a.innerHTML = ['<img style="max-width:50%;" class="thumb" src="', e.target.result, '" title="', theFile.name, '"/>'].join('');
+							}
+							else
+							{
+								a.innerHTML = escape(theFile.name);
+							}
+				
+							a.setAttribute( 'href', e.target.result );
+							a.setAttribute( 'download', theFile.name );
+				
+							ge( 'plainfile' ).value = e.target.result;
+						};
+					})( blob, _this );
+					
+					// Read in the image file as a data URL.
+					reader.readAsDataURL( blob );
+					
+					console.log( 'item ', { filetype : filetype, blob : blob, item : item } );
+					
+					//evt.preventDefault();
+					//evt.stopPropagation();
+					
+					break;
+				}
+			}
+		}
+		else
+		{
+			console.log( 'nothing to paste ...' );
+		}
+	}
+	else
+	{
+		console.log( 'no events ... ', evt );
+	}
+}
 	
 </script>

@@ -534,8 +534,11 @@ $str .= '<textarea id="crypted" name="crypted" rows="17" style="width: 100%"></t
 $str .= '<h1>RSA File Encryption Test</h1>';
 
 $str .= '<label for="plainfile">File to encrypt:</label><br/>';
-$str .= '<div><input id="FileInput" type="file" onchange="handleFileSelect(this)"><br><a id="FileEncryption" href="" download=""></a></div>';
-$str .= '<textarea id="plainfile" name="input" rows="17" style="width: 100%"></textarea>';
+$str .= '<div>';
+$str .= '<input id="FileInput" type="file" onchange="handleFileSelect(this)">';
+$str .= '<br><a id="FileEncryption" href="" download=""></a>';
+$str .= '<textarea id="plainfile" name="input" rows="17" style="width: 100%" onpaste="paste(this,event)"></textarea>';
+$str .= '</div>';
 
 $str .= '<button id="encryptfile">Encrypt / Decrypt</button><br>';
 

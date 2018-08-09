@@ -1,4 +1,4 @@
-.library #Main 
+/*.library #Main 
 { 
 	width: calc(100% - 103px); 
 }
@@ -6,7 +6,7 @@
 .profile #Files
 {
 	width: calc(100% + 203px);
-}
+}*/
 
 #Files a { white-space: nowrap; }
 

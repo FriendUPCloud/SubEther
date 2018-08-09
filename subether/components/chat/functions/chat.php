@@ -99,7 +99,7 @@ if( isset( $_POST[ 'u' ] ) )
 		SELECT 
 			m.*,
 			m.EncryptionKey AS CryptoKey, 
-			m.ContactID AS PosterID,
+			c.ID AS PosterID,
 			c.ImageID,
 			c.Username,
 			i.UniqueID AS ImageUniqueID,
@@ -108,7 +108,7 @@ if( isset( $_POST[ 'u' ] ) )
 			SBookMail m 
 				LEFT JOIN SBookContact c ON 
 				(
-					c.ID = m.ContactID 
+					c.ID = m.SenderID OR c.ID = m.ContactID 
 				) 
 				LEFT JOIN Image i ON
 				(
@@ -122,16 +122,26 @@ if( isset( $_POST[ 'u' ] ) )
 			(
 				(
 						m.SenderID = \'' . $webuser->ContactID . '\' 
+					AND m.ReceiverID = \'' . $sc->ID . '\' 
 					AND m.Type IN ( "im", "vm" ) 
 				) 
 				OR 
-				(		m.ReceiverID = \'' . $webuser->ContactID . '\' 
+				(	
+						m.SenderID = \'' . $sc->ID . '\'
+					AND m.ReceiverID = \'' . $webuser->ContactID . '\' 
 					AND m.Type IN ( "im", "vm" ) 
 				)
 				OR
 				(
-						m.ReceiverID = \'' . $webuser->ContactID . '\' 
+						m.SenderID = \'' . $sc->ID . '\' 
+					AND m.ReceiverID = \'' . $webuser->ContactID . '\' 
 					AND m.Type IN ( "cm" ) 
+					AND c.ID = m.ContactID 
+				)
+				OR
+				(
+						m.SenderID = "0" 
+					AND m.ReceiverID = \'' . $webuser->ContactID . '\' 
 				)
 			) 
 			AND m.Message != "" 

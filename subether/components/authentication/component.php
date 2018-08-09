@@ -33,6 +33,7 @@ include_once ( $cbase . '/include/functions.php' );
 // Setup resources -------------------------------------------------------------
 $document->addResource ( 'stylesheet', $cbase . '/css/authentication.css' );
 $document->addResource ( 'javascript', $root . '/javascript/md5.js' );
+$document->addResource ( 'javascript', $root . '/javascript/messagehandler.js' );
 $document->addResource ( 'javascript', $cbase . '/javascript/authentication.js' );
 
 // Check for user actions ------------------------------------------------------

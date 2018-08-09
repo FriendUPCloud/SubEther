@@ -59,6 +59,11 @@ if( isset( $Component ) )
 	//}
 }
 
+if( !strstr( $document->_bodyClasses, 'chat' ) )
+{
+	$document->_bodyClasses = ( $document->_bodyClasses ? $document->_bodyClasses . ' chat' : 'chat' );
+}
+
 // Check for user actions ------------------------------------------------------
 if ( isset( $_REQUEST[ 'action' ] ) )
 {

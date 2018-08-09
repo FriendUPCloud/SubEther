@@ -37,22 +37,22 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `UserID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `ClientID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `ProjectID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Type` varchar(255) DEFAULT NULL,
-			  `Name` varchar(255) DEFAULT NULL,
+			  `Type` text DEFAULT NULL,
+			  `Name` text DEFAULT NULL,
 			  `Description` text,
 			  `Comments` text NOT NULL,
 			  `Events` text NOT NULL,
 			  `Products` text NOT NULL,
 			  `Files` text NOT NULL,
 			  `History` text NOT NULL,
-			  `Status` varchar(255) NOT NULL,
+			  `Status` text NOT NULL,
 			  `IsFinished` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Progress` varchar(255) DEFAULT \'0%\',
+			  `Progress` text DEFAULT \'0%\',
 			  `Deadline` datetime NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -97,11 +97,11 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookCategory`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
-			  `Type` varchar(255) DEFAULT NULL,
-			  `Name` varchar(255) DEFAULT NULL,
-			  `Privacy` varchar(255) DEFAULT NULL,
+			  `Type` text DEFAULT NULL,
+			  `Name` text DEFAULT NULL,
+			  `Privacy` text DEFAULT NULL,
 			  `Settings` text,
 			  `Description` text,
 			  `Owner` bigint(20) NOT NULL DEFAULT \'0\',
@@ -111,7 +111,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -159,7 +159,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookCategory
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID`
 			' );
 		}
@@ -183,12 +183,12 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `CategoryID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `ObjectType` varchar(255) NOT NULL DEFAULT \'\',
+			  `ObjectType` text NOT NULL DEFAULT \'\',
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Permission` varchar(255) NOT NULL DEFAULT \'\',
+			  `Permission` text NOT NULL DEFAULT \'\',
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -204,14 +204,14 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `CategoryID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `UserID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `ContactID` bigint(20) NOT NULL,
-			  `Access` varchar(255) NOT NULL,
+			  `Access` text NOT NULL,
 			  `Read` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `Write` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `Delete` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `Admin` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `Owner` tinyint(4) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -233,7 +233,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookCategoryAccess
-				ADD `Access` varchar(255) NOT NULL 
+				ADD `Access` text NOT NULL 
 				AFTER `ContactID`
 			' );
 		}
@@ -260,11 +260,11 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `Message` text NOT NULL,
 			  `Date` datetime NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Type` varchar(255) NOT NULL,
-			  `Status` varchar(255) NOT NULL,
+			  `Type` text NOT NULL,
+			  `Status` text NOT NULL,
 			  PRIMARY KEY (`ID`),
 			  UNIQUE KEY `ID` (`ID`,`SenderID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -280,30 +280,30 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `ImageID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `UserID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `SortOrder` int(11) NOT NULL DEFAULT \'0\',
-			  `Username` varchar(255) DEFAULT NULL,
-			  `AuthKey` varchar(255) DEFAULT NULL,
-			  `Firstname` varchar(255) DEFAULT NULL,
-			  `Middlename` varchar(255) DEFAULT NULL,
-			  `Lastname` varchar(255) DEFAULT NULL,
-			  `Gender` varchar(255) DEFAULT NULL,
+			  `Username` text DEFAULT NULL,
+			  `AuthKey` text DEFAULT NULL,
+			  `Firstname` text DEFAULT NULL,
+			  `Middlename` text DEFAULT NULL,
+			  `Lastname` text DEFAULT NULL,
+			  `Gender` text DEFAULT NULL,
 			  `Languages` text,
-			  `Alternate` varchar(255) DEFAULT NULL,
-			  `ScreenName` varchar(255) DEFAULT NULL,
-			  `Website` varchar(255) DEFAULT NULL,
-			  `Address` varchar(255) DEFAULT NULL,
-			  `Country` varchar(255) DEFAULT NULL,
-			  `City` varchar(255) DEFAULT NULL,
-			  `Postcode` varchar(255) DEFAULT NULL,
-			  `Telephone` varchar(255) DEFAULT NULL,
-			  `Mobile` varchar(255) DEFAULT NULL,
-			  `Email` varchar(255) DEFAULT NULL,
+			  `Alternate` text DEFAULT NULL,
+			  `ScreenName` text DEFAULT NULL,
+			  `Website` text DEFAULT NULL,
+			  `Address` text DEFAULT NULL,
+			  `Country` text DEFAULT NULL,
+			  `City` text DEFAULT NULL,
+			  `Postcode` text DEFAULT NULL,
+			  `Telephone` text DEFAULT NULL,
+			  `Mobile` text DEFAULT NULL,
+			  `Email` text DEFAULT NULL,
 			  `Work` text,
 			  `College` text,
 			  `HighSchool` text,
 			  `Interests` text,
-			  `Philosophy` varchar(255) DEFAULT NULL,
-			  `Religion` varchar(255) DEFAULT NULL,
-			  `Political` varchar(255) DEFAULT NULL,
+			  `Philosophy` text DEFAULT NULL,
+			  `Religion` text DEFAULT NULL,
+			  `Political` text DEFAULT NULL,
 			  `About` text,
 			  `Quotations` text,
 			  `Data` text,
@@ -320,7 +320,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -376,7 +376,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookContact
-				ADD `UniqueID` varchar(255) DEFAULT NULL
+				ADD `UniqueID` text DEFAULT NULL
 				AFTER `ID`
 			' );
 		}
@@ -392,7 +392,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `ContactID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `ObjectType` varchar(255) NOT NULL DEFAULT \'\',
+			  `ObjectType` text NOT NULL DEFAULT \'\',
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `IsApproved` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsNoticed` tinyint(4) NOT NULL DEFAULT \'0\',
@@ -402,7 +402,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `DateCreated` datetime DEFAULT NULL, 
 			  `DateModified` datetime DEFAULT NULL, 
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -448,14 +448,14 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookEvents`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
-			  `Component` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `Place` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
+			  `Component` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Name` text NOT NULL,
+			  `Place` text NOT NULL,
 			  `Details` text NOT NULL,
-			  `Price` varchar(255) NOT NULL,
-			  `ExternalUrl` varchar(255) NOT NULL,
+			  `Price` text NOT NULL,
+			  `ExternalUrl` text NOT NULL,
 			  `DateStart` datetime NOT NULL,
 			  `DateEnd` datetime NOT NULL,
 			  `Slots` bigint(20) NOT NULL,
@@ -472,7 +472,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -517,7 +517,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookEvents
-				ADD `Price` varchar(255) NOT NULL 
+				ADD `Price` text NOT NULL 
 				AFTER `Details`
 			' );
 		}
@@ -541,7 +541,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookEvents
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID` 
 			' );
 		}
@@ -557,9 +557,9 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			  `UserID` bigint(20) NOT NULL,
-			  `Title` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Role` varchar(255) NOT NULL,
+			  `Title` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Role` text NOT NULL,
 			  `ProjectID` bigint(20) NOT NULL,
 			  `DateStart` datetime NOT NULL,
 			  `DateEnd` datetime NOT NULL,
@@ -587,7 +587,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `F3` text NOT NULL,
 			  `F4` text NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -734,7 +734,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookHours 
-				ADD `GroupID` varchar(255) NOT NULL 
+				ADD `GroupID` text NOT NULL 
 				AFTER `ProjectID` 
 			' );
 		}
@@ -750,22 +750,22 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `Parent` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Title` varchar(128) DEFAULT NULL,
-			  `Filename` varchar(255) DEFAULT NULL,
+			  `Title` text DEFAULT NULL,
+			  `Filename` text DEFAULT NULL,
 			  `ContentData` text,
 			  `Tags` text NOT NULL,
 			  `FileFolder` int(11) DEFAULT \'0\',
 			  `Filesize` int(11) DEFAULT NULL,
-			  `Fileduration` varchar(255) NOT NULL,
+			  `Fileduration` text NOT NULL,
 			  `DateCreated` datetime DEFAULT NULL,
 			  `DateModified` datetime DEFAULT NULL,
 			  `SortOrder` bigint(20) DEFAULT \'0\',
-			  `Filetype` varchar(16) DEFAULT NULL,
+			  `Filetype` text DEFAULT NULL,
 			  `MediaID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `MediaType` varchar(255) NOT NULL,
-			  `Rating` varchar(255) NOT NULL DEFAULT \'0/0\',
+			  `MediaType` text NOT NULL,
+			  `Rating` text NOT NULL DEFAULT \'0/0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -778,15 +778,15 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookMail`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
-			  `UniqueKey` varchar(255) NOT NULL, 
+			  `UniqueID` text NOT NULL,
+			  `UniqueKey` text NOT NULL, 
 			  `ContactID` bigint(20) NOT NULL,
 			  `SenderID` bigint(20) NOT NULL,
 			  `ReceiverID` bigint(20) NOT NULL,
 			  `Message` text NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Type` varchar(255) NOT NULL,
-			  `Encryption` varchar(255) NOT NULL,
+			  `Type` text NOT NULL,
+			  `Encryption` text NOT NULL,
 			  `EncryptionKey` text NOT NULL,
 			  `PublicKey` text NOT NULL,
 			  `IsCrypto` tinyint(4) NOT NULL,
@@ -802,7 +802,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -899,7 +899,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookMail
-				ADD `Encryption` varchar(255) NOT NULL 
+				ADD `Encryption` text NOT NULL 
 				AFTER `Type`
 			' );
 		}
@@ -915,7 +915,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookMail
-				ADD `UniqueID` varchar(255) NOT NULL
+				ADD `UniqueID` text NOT NULL
 				AFTER `ID`
 			' );
 		}
@@ -939,7 +939,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookMail
-				ADD `UniqueKey` varchar(255) NOT NULL 
+				ADD `UniqueKey` text NOT NULL 
 				AFTER `UniqueID`
 			' );
 		}
@@ -979,15 +979,15 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `MediaID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `MediaType` varchar(255) NOT NULL DEFAULT \'\',
+			  `MediaType` text NOT NULL DEFAULT \'\',
 			  `UserID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `CategoryID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Title` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `Tags` varchar(255) NOT NULL DEFAULT \'\',
+			  `Title` text NOT NULL,
+			  `Name` text NOT NULL,
+			  `Tags` text NOT NULL DEFAULT \'\',
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1000,12 +1000,12 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookMessage`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
-			  `Component` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
+			  `Component` text NOT NULL,
 			  `SenderID` bigint(20) NOT NULL,
 			  `ReceiverID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
-			  `Subject` varchar(255) NOT NULL,
+			  `Subject` text NOT NULL,
 			  `Leadin` text NOT NULL,
 			  `Message` text NOT NULL,
 			  `Data` text NOT NULL,
@@ -1020,8 +1020,8 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `SeenBy` text NOT NULL,
 			  `ReadBy` text NOT NULL,
 			  `Tags` text NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Status` varchar(255) NOT NULL,
+			  `Type` text NOT NULL,
+			  `Status` text NOT NULL,
 			  `RateDownBy` text NOT NULL,
 			  `RateUpBy` text NOT NULL,
 			  `Rating` text NOT NULL,
@@ -1030,7 +1030,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`),
 			  UNIQUE KEY `ID` (`ID`,`SenderID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -1117,7 +1117,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookMessage
-				ADD `Component` varchar(255) NOT NULL 
+				ADD `Component` text NOT NULL 
 				AFTER `ID`
 			' );
 		}
@@ -1125,7 +1125,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookMessage
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID`
 			' );
 		}
@@ -1144,18 +1144,18 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `SenderID` bigint(20) NOT NULL,
 			  `ReceiverID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
-			  `Component` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Action` varchar(255) NOT NULL,
+			  `Component` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Action` text NOT NULL,
 			  `Counter` bigint(20) NOT NULL,
-			  `DataSource` varchar(255) NOT NULL,
+			  `DataSource` text NOT NULL,
 			  `Data` text NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1168,16 +1168,16 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookSettings`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `Component` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `Counter` varchar(255) NOT NULL,
+			  `Component` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Name` text NOT NULL,
+			  `Counter` text NOT NULL,
 			  `ImageID` bigint(20) NOT NULL,
 			  `Data` text NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1190,14 +1190,14 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookNews`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `Title` varchar(255) NOT NULL,
+			  `Title` text NOT NULL,
 			  `Leadin` text NOT NULL,
 			  `Article` text NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Tags` varchar(255) NOT NULL,
+			  `Type` text NOT NULL,
+			  `Tags` text NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
 			  `PostedID` bigint(20) NOT NULL,
-			  `MediaType` varchar(255) NOT NULL,
+			  `MediaType` text NOT NULL,
 			  `MediaID` bigint(20) NOT NULL,
 			  `DateAdded` datetime NOT NULL,
 			  `DateModified` datetime NOT NULL,
@@ -1208,7 +1208,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `SortOrder` bigint(20) NOT NULL,
 			  `Rating` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1222,16 +1222,16 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Type` varchar(255) NOT NULL DEFAULT \'\',
-			  `Command` varchar(255) NOT NULL,
+			  `Type` text NOT NULL DEFAULT \'\',
+			  `Command` text NOT NULL,
 			  `SenderID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `ReceiverID` varchar(1000) NOT NULL DEFAULT \'0\',
+			  `ReceiverID` text NOT NULL DEFAULT \'0\',
 			  `IsRead` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsNoticed` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsOnline` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsAccepted` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -1263,13 +1263,13 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookRelation`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `Type` varchar(255) NOT NULL,
+			  `Type` text NOT NULL,
 			  `ObjectID` bigint(20) NOT NULL,
-			  `ObjectType` varchar(255) NOT NULL,
+			  `ObjectType` text NOT NULL,
 			  `ConnectedID` bigint(20) NOT NULL,
-			  `ConnectedType` varchar(255) NOT NULL,
+			  `ConnectedType` text NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1283,14 +1283,14 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `UserID` bigint(20) DEFAULT NULL,
-			  `Status` varchar(255) DEFAULT NULL,
-			  `Component` varchar(255) DEFAULT NULL,
-			  `Module` varchar(255) DEFAULT NULL,
+			  `Status` text DEFAULT NULL,
+			  `Component` text DEFAULT NULL,
+			  `Module` text DEFAULT NULL,
 			  `CategoryID` bigint(20) DEFAULT NULL,
 			  `UserAgent` text,
 			  `LastActivity` datetime DEFAULT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -1338,7 +1338,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookStatus 
-				ADD `Token` varchar(255) DEFAULT NULL 
+				ADD `Token` text DEFAULT NULL 
 				AFTER `ID` 
 			' );
 		}
@@ -1362,10 +1362,10 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Type` varchar(255) NOT NULL DEFAULT \'\',
+			  `Type` text NOT NULL DEFAULT \'\',
 			  `VoteID` text,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1378,12 +1378,12 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SEngineContent`
 			(
 			  `ID` bigint(255) NOT NULL AUTO_INCREMENT,
-			  `Link` varchar(255) NOT NULL,
+			  `Link` text NOT NULL,
 			  `Content` text NOT NULL,
 			  `DateModified` datetime DEFAULT NULL,
 			  `DateCreated` datetime DEFAULT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1396,10 +1396,10 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SEngineLinks`
 			(
 			  `ID` bigint(255) NOT NULL AUTO_INCREMENT,
-			  `Link` varchar(255) DEFAULT NULL,
+			  `Link` text DEFAULT NULL,
 			  `Links` text,
 			  `KeyWords` text,
-			  `Status` varchar(255) DEFAULT NULL,
+			  `Status` text DEFAULT NULL,
 			  `ContentID` bigint(255) DEFAULT \'0\',
 			  `IsParsed` tinyint(4) DEFAULT \'0\',
 			  `IsBroken` tinyint(4) DEFAULT \'0\',
@@ -1407,7 +1407,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `DateModified` datetime DEFAULT NULL,
 			  `DateCreated` datetime DEFAULT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1420,8 +1420,8 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SEngineSearch`
 			(
 			  `ID` bigint(255) NOT NULL AUTO_INCREMENT,
-			  `Title` varchar(255) NOT NULL,
-			  `Link` varchar(255) NOT NULL,
+			  `Title` text NOT NULL,
+			  `Link` text NOT NULL,
 			  `Description` text NOT NULL,
 			  `Leadin` text NOT NULL,
 			  `Links` text,
@@ -1432,7 +1432,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `DateModified` datetime DEFAULT NULL,
 			  `DateCreated` datetime DEFAULT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1445,15 +1445,15 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SComponents`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `Name` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Module` varchar(255) NOT NULL,
-			  `Position` varchar(255) NOT NULL,
-			  `UserLevels` varchar(255) NOT NULL,
-			  `Categories` varchar(255) NOT NULL,
+			  `Name` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Module` text NOT NULL,
+			  `Position` text NOT NULL,
+			  `UserLevels` text NOT NULL,
+			  `Categories` text NOT NULL,
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1466,16 +1466,16 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SModules`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `Name` varchar(255) NOT NULL,
-			  `DisplayName` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Position` varchar(255) NOT NULL,
-			  `UserLevels` varchar(255) NOT NULL,
+			  `Name` text NOT NULL,
+			  `DisplayName` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Position` text NOT NULL,
+			  `UserLevels` text NOT NULL,
 			  `Visible` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsMain` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1488,16 +1488,16 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `STabs`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `Tab` varchar(255) NOT NULL,
-			  `DisplayName` varchar(255) NOT NULL,
-			  `Component` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Module` varchar(255) NOT NULL,
-			  `Position` varchar(255) NOT NULL,
-			  `Permission` varchar(255) NOT NULL,
+			  `Tab` text NOT NULL,
+			  `DisplayName` text NOT NULL,
+			  `Component` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Module` text NOT NULL,
+			  `Position` text NOT NULL,
+			  `Permission` text NOT NULL,
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1512,25 +1512,25 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `IsMain` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsIndex` tinyint(4) NOT NULL DEFAULT \'0\',
-			  `UniqueID` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
 			  `PublicKey` text NOT NULL,
 			  `UserID` bigint(20) NOT NULL,
-			  `Url` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `Version` varchar(255) NOT NULL,
-			  `Owner` varchar(255) NOT NULL,
-			  `Email` varchar(255) NOT NULL,
-			  `Uptime` varchar(255) NOT NULL,
-			  `Location` varchar(255) NOT NULL,
-			  `Users` varchar(255) NOT NULL,
+			  `Url` text NOT NULL,
+			  `Name` text NOT NULL,
+			  `Version` text NOT NULL,
+			  `Owner` text NOT NULL,
+			  `Email` text NOT NULL,
+			  `Uptime` text NOT NULL,
+			  `Location` text NOT NULL,
+			  `Users` text NOT NULL,
 			  `Modules` text NOT NULL,
 			  `Components` text NOT NULL,
 			  `Plugins` text NOT NULL,
 			  `Themes` text NOT NULL,
 			  `Release` text NOT NULL,
-			  `AuthKey` varchar(255) NOT NULL,
-			  `SessionID` varchar(255) NOT NULL,
-			  `Rating` varchar(255) NOT NULL,
+			  `AuthKey` text NOT NULL,
+			  `SessionID` text NOT NULL,
+			  `Rating` text NOT NULL,
 			  `Open` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  `IsPending` tinyint(4) NOT NULL DEFAULT \'0\',
@@ -1541,7 +1541,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `DateLogin` datetime NOT NULL,
 			  `DateCreated` datetime DEFAULT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -1629,7 +1629,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SNodes 
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `IsMain` 
 			' );
 		}
@@ -1669,7 +1669,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SNodes 
-				ADD `Name` varchar(255) NOT NULL 
+				ADD `Name` text NOT NULL 
 				AFTER `Url` 
 			' );
 		}
@@ -1716,15 +1716,15 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SNodesRelation`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `Field` varchar(255) NOT NULL,
+			  `Field` text NOT NULL,
 			  `NodeID` bigint(20) NOT NULL,
-			  `NodeType` varchar(255) NOT NULL,
-			  `NodeValue` varchar(255) NOT NULL,
+			  `NodeType` text NOT NULL,
+			  `NodeValue` text NOT NULL,
 			  `ConnectedID` bigint(20) NOT NULL,
-			  `ConnectedType` varchar(255) NOT NULL,
-			  `ConnectedValue` varchar(255) NOT NULL,
+			  `ConnectedType` text NOT NULL,
+			  `ConnectedValue` text NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1738,14 +1738,14 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `UserID` bigint(20) NOT NULL,
-			  `Component` varchar(255) NOT NULL,
+			  `Component` text NOT NULL,
 			  `Bookmarks` text NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1758,14 +1758,14 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookAccounts`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
 			  `UserID` bigint(20) NOT NULL,
 			  `Security` bigint(20) NOT NULL,
 			  `Account` bigint(20) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Balance` varchar(255) NOT NULL DEFAULT \'0\',
-			  `Disposable` varchar(255) NOT NULL DEFAULT \'0\',
+			  `Name` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Balance` text NOT NULL DEFAULT \'0\',
+			  `Disposable` text NOT NULL DEFAULT \'0\',
 			  `Verified` tinyint(4) NOT NULL,
 			  `IsFrozen` tinyint(4) NOT NULL,
 			  `DateFrozen` datetime NOT NULL,
@@ -1774,7 +1774,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -1791,7 +1791,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookAccounts 
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID` 
 			' );
 		}
@@ -1806,11 +1806,11 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookTransaction`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
 			  `CID` bigint(20) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `From` varchar(255) NOT NULL,
-			  `To` varchar(255) NOT NULL,
+			  `Name` text NOT NULL,
+			  `From` text NOT NULL,
+			  `To` text NOT NULL,
 			  `Details` text NOT NULL,
 			  `Message` text NOT NULL,
 			  `Amount` bigint(20) NOT NULL,
@@ -1821,7 +1821,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -1838,7 +1838,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookTransaction 
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID` 
 			' );
 		}
@@ -1853,19 +1853,19 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookApiAccounts`
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
 			  `UserID` bigint(20) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `App` varchar(255) NOT NULL,
-			  `Url` varchar(255) NOT NULL,
-			  `SessionID` varchar(255) NOT NULL,
-			  `Username` varchar(255) NOT NULL,
-			  `Password` varchar(255) NOT NULL,
+			  `Name` text NOT NULL,
+			  `App` text NOT NULL,
+			  `Url` text NOT NULL,
+			  `SessionID` text NOT NULL,
+			  `Username` text NOT NULL,
+			  `Password` text NOT NULL,
 			  `IsGlobal` tinyint(4) NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1880,13 +1880,13 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `VisualID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
+			  `Name` text NOT NULL,
+			  `Type` text NOT NULL,
 			  `Amount` bigint(20) NOT NULL DEFAULT \'0\',
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -1899,9 +1899,9 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookProducts`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Name` text NOT NULL,
 			  `Info` text NOT NULL,
 			  `Details` text NOT NULL,
 			  `Images` text NOT NULL,
@@ -1916,7 +1916,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -1946,7 +1946,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookProducts 
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID` 
 			' );
 		}
@@ -1961,9 +1961,9 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookCrowdfunding`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Name` text NOT NULL,
 			  `Location` text NOT NULL,
 			  `Info` text NOT NULL,
 			  `Details` text NOT NULL,
@@ -1971,7 +1971,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `Goal` text NOT NULL,
 			  `Donated` text NOT NULL,
 			  `Backers` text NOT NULL,
-			  `Currency` varchar(255) NOT NULL,
+			  `Currency` text NOT NULL,
 			  `DateEnd` timestamp NOT NULL,
 			  `UserID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
@@ -1984,7 +1984,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -2017,16 +2017,16 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookDonations`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
-			  `Component` varchar(255) NOT NULL,
-			  `ComponentID` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
+			  `Component` text NOT NULL,
+			  `ComponentID` text NOT NULL,
+			  `Name` text NOT NULL,
 			  `UserID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
-			  `PaymentType` varchar(255) NOT NULL,
-			  `PaymentID` varchar(255) NOT NULL,
-			  `Donation` varchar(255) NOT NULL,
-			  `Currency` varchar(255) NOT NULL,
+			  `PaymentType` text NOT NULL,
+			  `PaymentID` text NOT NULL,
+			  `Donation` text NOT NULL,
+			  `Currency` text NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  `SortOrder` bigint(20) NOT NULL,
@@ -2035,7 +2035,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `NodeID` bigint(20) NOT NULL,
 			  `NodeMainID` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -2048,12 +2048,12 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `SBookStorage` 
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `UniqueID` varchar(255) NOT NULL,
+			  `UniqueID` text NOT NULL,
 			  `UnlockID` bigint(20) NOT NULL,
 			  `UserID` bigint(20) NOT NULL,
 			  `ContactID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
-			  `Relation` varchar(255) NOT NULL,
+			  `Relation` text NOT NULL,
 			  `IDs` text NOT NULL,
 			  `EncryptionKey` text NOT NULL,
 			  `PublicKey` text NOT NULL,
@@ -2061,7 +2061,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `DateCreated` datetime NOT NULL,
 			  `IsDeleted` tinyint(4) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );	
 	}
 	else
@@ -2095,14 +2095,14 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			  `UserID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
-			  `Relation` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
+			  `Relation` text NOT NULL,
+			  `Name` text NOT NULL,
+			  `Type` text NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  `IsDeleted` tinyint(4) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -2116,22 +2116,22 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			  `TemplateID` bigint(20) NOT NULL,
-			  `Relation` varchar(255) NOT NULL,
-			  `Function` varchar(255) NOT NULL,
-			  `Target` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `Field` varchar(255) NOT NULL,
-			  `Column` varchar(255) NOT NULL,
-			  `Name` varchar(255) NOT NULL,
+			  `Relation` text NOT NULL,
+			  `Function` text NOT NULL,
+			  `Target` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `Field` text NOT NULL,
+			  `Column` text NOT NULL,
+			  `Name` text NOT NULL,
 			  `Data` text NOT NULL,
-			  `Placeholder` varchar(255) NOT NULL,
+			  `Placeholder` text NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  `Access` tinyint(4) NOT NULL DEFAULT \'0\', 
 			  `SortOrder` bigint(20) NOT NULL,
 			  `IsDeleted` tinyint(4) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -2166,7 +2166,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookTemplateFields 
-				ADD `Placeholder` varchar(255) NOT NULL 
+				ADD `Placeholder` text NOT NULL 
 				AFTER `Data` 
 			' );
 		}
@@ -2174,7 +2174,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookTemplateFields 
-				ADD `Value` varchar(255) NOT NULL 
+				ADD `Value` text NOT NULL 
 				AFTER `Data` 
 			' );
 		}
@@ -2189,26 +2189,26 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			  `SortOrder` bigint(20) NOT NULL,
 			  `TemplateID` bigint(20) NOT NULL,
-			  `Resource` varchar(255) NOT NULL,
-			  `Target` varchar(255) NOT NULL,
-			  `Function` varchar(255) NOT NULL,
-			  `Heading` varchar(255) NOT NULL,
-			  `Element` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL,
-			  `rName` varchar(255) NOT NULL,
-			  `tName` varchar(255) NOT NULL,
-			  `Value` varchar(255) NOT NULL,
-			  `Title` varchar(255) NOT NULL,
-			  `Placeholder` varchar(255) NOT NULL,
+			  `Resource` text NOT NULL,
+			  `Target` text NOT NULL,
+			  `Function` text NOT NULL,
+			  `Heading` text NOT NULL,
+			  `Element` text NOT NULL,
+			  `Type` text NOT NULL,
+			  `rName` text NOT NULL,
+			  `tName` text NOT NULL,
+			  `Value` text NOT NULL,
+			  `Title` text NOT NULL,
+			  `Placeholder` text NOT NULL,
 			  `Data` text NOT NULL,
-			  `JS` varchar(255) NOT NULL,
-			  `Mode` varchar(255) NOT NULL,
+			  `JS` text NOT NULL,
+			  `Mode` text NOT NULL,
 			  `Access` tinyint(4) NOT NULL DEFAULT \'0\', 
 			  `IsDeleted` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -2222,15 +2222,15 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			  `TemplateID` bigint(20) NOT NULL,
-			  `OrderID` varchar(255) NOT NULL,
-			  `JobID` varchar(255) NOT NULL,
-			  `CustomerID` varchar(255) NOT NULL,
+			  `OrderID` text NOT NULL,
+			  `JobID` text NOT NULL,
+			  `CustomerID` text NOT NULL,
 			  `UserID` bigint(20) NOT NULL,
 			  `CategoryID` bigint(20) NOT NULL,
 			  `Participants` text NOT NULL,
-			  `Status` varchar(255) NOT NULL,
-			  `Progress` varchar(255) NOT NULL,
-			  `Price` varchar(255) NOT NULL,
+			  `Status` text NOT NULL,
+			  `Progress` text NOT NULL,
+			  `Price` text NOT NULL,
 			  `Deadline` datetime NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
@@ -2253,7 +2253,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `F11` text NOT NULL,
 			  `F12` text NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -2350,7 +2350,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookOrders 
-				ADD `OrderID` varchar(255) NOT NULL 
+				ADD `OrderID` text NOT NULL 
 				AFTER `TemplateID` 
 			' );
 		}
@@ -2358,7 +2358,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookOrders 
-				ADD `JobID` varchar(255) NOT NULL 
+				ADD `JobID` text NOT NULL 
 				AFTER `OrderID` 
 			' );
 		}
@@ -2374,7 +2374,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookOrders 
-				ADD `ParentID` varchar(255) NOT NULL 
+				ADD `ParentID` text NOT NULL 
 				AFTER `OrderID` 
 			' );
 		}
@@ -2405,7 +2405,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `F11` text NOT NULL,
 			  `F12` text NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	
@@ -2419,16 +2419,16 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			  `MinDelay` bigint(20) NOT NULL,
-			  `Filename` varchar(255) NOT NULL,
+			  `Filename` text NOT NULL,
 			  `LastExec` datetime NOT NULL,
 			  `Error` text NOT NULL,
-			  `Type` varchar(255) NOT NULL,
+			  `Type` text NOT NULL,
 			  `IsRunning` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsActive` tinyint(4) NOT NULL DEFAULT \'1\',
 			  `IsMaintenance` bigint(20) NOT NULL DEFAULT \'0\',
 			  `SortOrder` bigint(20) NOT NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -2458,7 +2458,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE SBookCronJobs 
-				ADD `Type` varchar(255) NOT NULL 
+				ADD `Type` text NOT NULL 
 				AFTER `Error` 
 			' );
 		}
@@ -2507,7 +2507,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE Log 
-				ADD `ConnectedType` varchar(255) NOT NULL 
+				ADD `ConnectedType` text NOT NULL 
 				AFTER `ObjectID` 
 			' );
 		}
@@ -2522,15 +2522,15 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			CREATE TABLE IF NOT EXISTS `UserActivity`
 			(
 			  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-			  `Component` varchar(255) NOT NULL,
-			  `Type` varchar(255) NOT NULL, 
+			  `Component` text NOT NULL,
+			  `Type` text NOT NULL, 
 			  `TypeID` bigint(20) NULL,
 			  `UserID` bigint(20) NULL,
 			  `ContactID` bigint(20) NULL,
 			  `Data` text NOT NULL,
 			  `LastUpdate` bigint(20) NULL,
 			  PRIMARY KEY (`ID`)
-			)
+			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
 	}
 	else
@@ -2608,7 +2608,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE UserLogin 
-				ADD `IP` varchar(255) DEFAULT NULL 
+				ADD `IP` text DEFAULT NULL 
 				AFTER `ID` 
 			' );
 		}
@@ -2738,7 +2738,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE Folder
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID`
 			' );
 		}
@@ -2865,7 +2865,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE Image
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID`
 			' );
 		}
@@ -2992,7 +2992,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE File
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID`
 			' );
 		}
@@ -3065,7 +3065,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE Users
-				ADD `AuthKey` varchar(255) NOT NULL 
+				ADD `AuthKey` text NOT NULL 
 				AFTER `Password`
 			' );
 		}
@@ -3121,7 +3121,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 		{
 			$database->query ( '
 				ALTER TABLE Users 
-				ADD `UniqueID` varchar(255) NOT NULL 
+				ADD `UniqueID` text NOT NULL 
 				AFTER `ID` 
 			' );
 		}

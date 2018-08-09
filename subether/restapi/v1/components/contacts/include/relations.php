@@ -426,6 +426,9 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 				c.Lastname, 
 				c.Display, 
 				c.Username,
+				c.Email,
+				c.Telephone,
+				c.Mobile,
 				c.NodeID,
 				c.NodeMainID,
 				c.DateModified AS ContactModified, 
@@ -610,6 +613,9 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 				$xml .= '<PublicKey><![CDATA[' . $row->PublicKey . ']]></PublicKey>';
 				$xml .= '<Username><![CDATA[' . $row->Username . ']]></Username>';
 				$xml .= '<Name><![CDATA[' . $row->Name . ']]></Name>';
+				$xml .= '<Email><![CDATA[' . $row->Email . ']]></Email>';
+				$xml .= '<Telephone><![CDATA[' . $row->Telephone . ']]></Telephone>';
+				$xml .= '<Mobile><![CDATA[' . $row->Mobile . ']]></Mobile>';
 				$xml .= '<UserID>' . $row->UserID . '</UserID>';
 				$xml .= '<ImageID>' . $row->ImageID . '</ImageID>';
 				
@@ -624,6 +630,9 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 				$obj->PublicKey = $row->PublicKey;
 				$obj->Username  = $row->Username;
 				$obj->Name      = $row->Name;
+				$obj->Email     = $row->Email;
+				$obj->Telephone = $row->Telephone;
+				$obj->Mobile    = $row->Mobile;
 				$obj->UserID    = $row->UserID;
 				$obj->ImageID   = $row->ImageID;
 			
