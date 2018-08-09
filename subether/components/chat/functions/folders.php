@@ -43,6 +43,7 @@ if( $_POST['lastmessage'] > 0 && !$database->fetchObjectRow( '
 			m.ID > ' . $_POST['lastmessage'] . ' 
 		AND m.Type = "im" 
 		AND m.Message != "" 
+		AND m.SenderID > 0 
 		AND m.ReceiverID > 0 
 		AND ( m.SenderID = \'' . $webuser->ContactID . '\' 
 		OR  m.ReceiverID = \'' . $webuser->ContactID . '\' ) 
@@ -67,30 +68,35 @@ if( $lmsg && $contacts = $database->fetchObjectRows( /*'
 		AND m.Message != ""
 		AND m.SenderID > 0
 		AND m.ReceiverID > 0					 
-'*/$qy = '
+'*/'
 	SELECT 
-		m.ContactID, 
+		c.ID, 
 		MAX(m.ID) AS MessageID 
 	FROM 
-		SBookMail m 
+		SBookMail m
+			LEFT JOIN SBookContact c ON 
+			(
+				c.ID = m.SenderID 
+			)  
 	WHERE 
 		( 
 			( 
-				m.ReceiverID = ' . $webuser->ContactID . ' 
+					m.ReceiverID = ' . $webuser->ContactID . ' 
+				AND c.ID = m.SenderID 
 			) 
 			OR 
 			( 
 					m.SenderID = ' . $webuser->ContactID . ' 
 				AND m.Type != "cm" 
+				AND c.ID = m.ContactID 
 			) 
 		) 
 		AND m.Message != "" 
 		AND m.ReceiverID > 0 
 	GROUP BY 
-		m.ContactID 
+		c.ID 
 ' ) )
 {
-	
 	// Loop through all contacts
 	foreach( $contacts as $cd )
 	{
@@ -128,13 +134,13 @@ if( $lmsg && $contacts = $database->fetchObjectRows( /*'
 		)
 		';*/
 		
-		if( $cd->ID > 0 ) $usrs[$cd->ID] = $cd->ID;
-		if( $cd->MessageID > 0 ) $msgs[$cd->ID] = $cd->MessageID;
+		$usrs[$cd->ID] = $cd->ID;
+		$msgs[$cd->ID] = $cd->MessageID;
 	}
 	
 	$q = '
 		SELECT 
-			m.ContactID AS ID, 
+			c.ID, 
 			c.UserID, 
 			c.Username, 
 			m.Message, 
@@ -148,11 +154,11 @@ if( $lmsg && $contacts = $database->fetchObjectRows( /*'
 			i.Filename, 
 			f.DiskPath 
 		FROM 
-			SBookMail m	 
+			SBookMail m 
 				LEFT JOIN SBookContact c ON 
 				(
-					c.ID = m.ContactID 
-				)
+					c.ID = m.SenderID 
+				) 
 				LEFT JOIN Image i ON 
 				( 
 					i.ID = c.ImageID 
@@ -168,12 +174,13 @@ if( $lmsg && $contacts = $database->fetchObjectRows( /*'
 			AND 
 			( 
 				( 
-					m.ReceiverID = ' . $webuser->ContactID . ' 
+						m.ReceiverID = ' . $webuser->ContactID . ' 
 				) 
 				OR 
 				( 
 						m.SenderID = ' . $webuser->ContactID . ' 
 					AND m.Type != "cm" 
+					AND c.ID = m.ReceiverID 
 				) 
 			) 
 		ORDER BY
@@ -186,20 +193,18 @@ if( $lmsg && $contacts = $database->fetchObjectRows( /*'
 	//$q = 'SELECT * FROM ( ' . $q . ' ) z ORDER BY z.Date DESC, z.MessageID DESC';
 }
 
-
-
 $fstr = ''; $lastmessage = ''; $i = 0;
 
 if( $lmsg && $sm = $database->fetchObjectRows ( $q ) )
 {
-	$unam = array( '0' => 'Anonymous' ); $uonl = array();
+	$unam = array( '0' => 'Anonymous' ); $uonl = array();	
 	
 	if( $usrs )
 	{
 		$unam = GetUserDisplayname( $usrs );
 	}
 	
-	if ( $usrs > 0 && ( $usr = $database->fetchObjectRows ( '
+	if ( $usr = $database->fetchObjectRows ( '
 		SELECT
 			UserID
 		FROM
@@ -208,7 +213,7 @@ if( $lmsg && $sm = $database->fetchObjectRows ( $q ) )
 			ID IN ( ' . implode( ',', $usrs ) . ' )
 		ORDER BY
 			ID ASC
-	' ) ) ) 
+	' ) ) 
 	{
 		$usrs = array();
 		
@@ -218,10 +223,7 @@ if( $lmsg && $sm = $database->fetchObjectRows ( $q ) )
 		}
 	}
 	
-	if( $usrs )
-	{
-		$uonl = IsUserOnline( $usrs );
-	}
+	$uonl = IsUserOnline( $usrs );
 	
 	$defimg = 'admin/gfx/arenaicons/user_johndoe_32.png';
 	

@@ -33,14 +33,12 @@ if( $parent && is_numeric( end( $parent->url ) ) )
 // Get chat log for a user and you! --------------------------------------------
 if( isset( $_POST[ 'u' ] ) || isset( $cid ) )
 {
-	$unam = array( '0' => 'Anonymous' ); $uonl = array();	
-	
 	$cid = ( $_POST[ 'u' ] ? $_POST[ 'u' ] : $cid );
 	
 	$defimg = 'admin/gfx/arenaicons/user_johndoe_32.png';
 	
 	// TODO: update notification to support cid
-	if( !$sc = $database->fetchObjectRow ( '
+	$sc = $database->fetchObjectRow ( '
 		SELECT 
 			c.*,
 			i.UniqueID AS ImageUniqueID,
@@ -52,10 +50,7 @@ if( isset( $_POST[ 'u' ] ) || isset( $cid ) )
 				LEFT JOIN Folder f ON ( i.ImageFolder = f.ID ) 
 		WHERE 
 			c.ID = \'' . $cid . '\' 
-	' ) )
-	{
-		$sc = new stdClass();
-	}
+	' );
 	
 	//$sc->Image = ( $sc->ImageID > 0 && $sc->DiskPath && $sc->Filename ? str_replace( ' ', '%20', $sc->DiskPath . $sc->Filename ) : $defimg );
 	$sc->Image = ( $sc->ImageID > 0 && $sc->DiskPath && $sc->Filename ? ( BASE_URL . 'secure-files/images/' . ( $sc->ImageUniqueID ? $sc->ImageUniqueID : $sc->ImageID ) . '/' ) : $defimg );
@@ -63,37 +58,27 @@ if( isset( $_POST[ 'u' ] ) || isset( $cid ) )
 	$q1 = '
 		SELECT 
 			m.*,
-			m.ContactID AS PosterID,
+			c.ID AS PosterID,
 			c.ImageID,
 			c.Username,
 			i.UniqueID AS ImageUniqueID,
 			i.Filename,
 			f.DiskPath
 		FROM 
-			SBookMail m 
-				LEFT JOIN SBookContact c ON 
-				(
-					c.ID = m.ContactID 
-				) 
-				LEFT JOIN Image i ON 
-				( 
-					c.ImageID = i.ID 
-				) 
-				LEFT JOIN Folder f ON 
-				( 
-					i.ImageFolder = f.ID 
-				)
+			SBookMail m, 
+			SBookContact c 
+				LEFT JOIN Image i ON ( c.ImageID = i.ID ) 
+				LEFT JOIN Folder f ON ( i.ImageFolder = f.ID )
 		WHERE 
-			( 
-				( 
-					m.ReceiverID = ' . $webuser->ContactID . ' 
-				) 
-				OR 
-				( 
-						m.SenderID = ' . $webuser->ContactID . ' 
-					AND m.Type != "cm" 
-				)  
-			) 
+			( (	m.SenderID = \'' . $webuser->ContactID . '\' 
+			AND m.ReceiverID = \'' . $sc->ID . '\' 
+			AND m.Type = "im" 
+			AND c.ID = m.SenderID ) 
+			OR 
+			(	m.SenderID = \'' . $sc->ID . '\' 
+			AND m.ReceiverID = \'' . $webuser->ContactID . '\' 
+			AND m.Type = "im" 
+			AND c.ID = m.SenderID ) ) 
 			AND m.Message != "" 
 			' . ( $_POST[ 'lastmessage' ] > 0 ? 'AND m.ID > \'' . $_POST[ 'lastmessage' ] . '\' ' : '' ) . '
 		ORDER BY 
@@ -106,27 +91,23 @@ if( isset( $_POST[ 'u' ] ) || isset( $cid ) )
 		$q2 = '
 			SELECT 
 				m.*,
-				m.ContactID AS PosterID,
+				c.ID AS PosterID,
 				c.ImageID,
 				c.Username 
 			FROM 
-				SBookMail m 
-					LEFT JOIN SBookContact c ON 
-					(
-						c.ID = m.ContactID 
-					)
+				SBookMail m, 
+				SBookContact c 
 			WHERE 
-					m.ID = \'' . $_POST['lastmessage'] . '\'
+					m.ID = \'' . $_POST[ 'lastmessage' ] . '\'
+				AND m.Type = "im"
 				AND m.Message != "" 
+				AND c.ID = m.SenderID 
 			ORDER BY 
 				m.ID DESC
 		';
 	}
 	
-	if( isset( $sc->UserID ) )
-	{
-		$uonl = IsUserOnline( $sc->UserID );
-	}
+	$uonl = IsUserOnline( $sc->UserID );
 	
 	if( $uonl )
 	{
@@ -151,16 +132,10 @@ if( isset( $_POST[ 'u' ] ) || isset( $cid ) )
 		// Assign list of senders id
 		foreach( $sm as $m )
 		{
-			if( $m->PosterID > 0 )
-			{
-				$ids[$m->PosterID] = $m->PosterID;
-			}
+			$ids[$m->PosterID] = $m->PosterID;
 		}
 		
-		if( $ids )
-		{
-			$unam = GetUserDisplayname( $ids );
-		}
+		$unam = GetUserDisplayname( $ids );
 		
 		foreach( $sm as $m )
 		{
