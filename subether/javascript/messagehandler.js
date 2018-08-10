@@ -83,6 +83,9 @@ window.addEventListener( 'message', function( msg )
 			case 'global_settings':
 				document.location.href = '/global/';
 				break;
+			case 'nav_home':
+				document.location.href = '/home/';
+				break;
 			case 'nav_newsfeed':
 				document.location.href = '/wall/';
 				break;
@@ -120,6 +123,8 @@ window.addEventListener( 'message', function( msg )
 			//console.log( decodeURIComponent( msg.data.keys.uniqueid ) );
 			
 			console.log( localStorage );
+			
+			sendMessage( { 'command': 'nav_home', 'data': {} } );
 		}
 	}
 	
@@ -153,3 +158,4 @@ else
 {
 	window.attachEvent ( 'onload', isLoaded );
 }
+

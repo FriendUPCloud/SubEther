@@ -103,7 +103,7 @@
 				</div>
 				<div class="text" style="position:relative;">
 				
-					<div id="ShareBox" class="textarea post" onclick="InitWallEditor(this)" onpaste="setTimeout( function() { parseText( ge( 'ShareBox' ) ); }, 50 )" onkeyup="if( event.keyCode == 13 ){ parseText( ge( 'ShareBox' ) ); }" contenteditable="true" placeholder="<?= i18n( 'i18n_Write post here' ) ?>"></div>
+					<div id="ShareBox" class="textarea post" onclick="InitWallEditor(this)" onpaste="handlePaste('postMediaUpload','wall',event);setTimeout( function() { parseText( ge( 'ShareBox' ) ); }, 50 );" onkeyup="if( event.keyCode == 13 ){ parseText( ge( 'ShareBox' ) ); }" contenteditable="true" placeholder="<?= i18n( 'i18n_Write post here' ) ?>"></div>
 				
 				</div>
 				<div class="toolbar">

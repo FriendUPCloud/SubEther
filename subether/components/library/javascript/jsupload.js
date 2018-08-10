@@ -53,8 +53,16 @@ function desktopselect( e, name, form )
 	}
 }
 
-function fileselect( _file, form )
+function fileselect( _file, form, name )
 {
+	if( _file && !_file.files )
+	{
+		_file = { 
+			files : [ _file ],
+			name : ( name ? name : 'library' ) 
+		};
+	}
+	
 	if( _file.files.length > 0 )
 	{
 		var str;
@@ -261,3 +269,31 @@ function handleDragStart( _file, fid, type, e )
 		e.dataTransfer.setData( 'DownloadURL', details );
 	}
 }
+
+function handlePaste( form, name, e )
+{
+	var evt = ( window.event || e );
+	
+	if( evt )
+	{
+		var pastedItems = (evt.clipboardData || evt.originalEvent.clipboardData).items;
+		
+		if( pastedItems )
+		{
+			for( i in pastedItems )
+			{
+				var item = pastedItems[i];
+				
+				if( item.kind === 'file' ) 
+				{
+					var blob = item.getAsFile();
+					
+					fileselect( blob, form, name );
+					
+					break;
+				}
+			}
+		}
+	}
+}
+

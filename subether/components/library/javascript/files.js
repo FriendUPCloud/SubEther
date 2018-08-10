@@ -953,3 +953,4 @@ else
 	window.attachEvent ( 'onkeydown', checkKeys );
 	window.attachEvent ( 'onmousedown', checkClicks );
 }
+
