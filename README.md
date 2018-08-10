@@ -112,7 +112,7 @@ Chat room
 
 You will find many of our developers and users on our Discord / IRC channel / chat room. Please choose a unique nick and join using the links below.
 
-Discord: https://discord.gg/HQ93NFG
+Discord: https://discord.gg/HQ93NFG 
 IRC: https://developers.friendup.cloud/irc-channel/
 
 Licensing
