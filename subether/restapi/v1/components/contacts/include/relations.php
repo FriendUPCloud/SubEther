@@ -36,7 +36,7 @@ $required = array(
 );
 
 $options = array(
-	'LastActivity', 'Limit', 'Loop', 'Encoding', 'Kill', 'Test'
+	'LastActivity', 'LastActivityID', 'Limit', 'Loop', 'Encoding', 'Kill', 'Test'
 );
 
 
@@ -167,7 +167,7 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 		// PHP caches file data, like requesting the size of a file, by default. clearstatcache() clears that cache
 		clearstatcache();
 		
-		if( isset( $_POST['LastActivity'] ) )
+		if( isset( $_POST['LastActivity'] ) || isset( $_POST['LastActivityID'] ) )
 		{
 			$str = ( $str == 'ping ... ' ? 'pong ... ' : 'ping ... ' );
 			
@@ -199,7 +199,7 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 		
 		$lmsg = array(); $uonl = array();
 		
-		$lastactivity = 0; $typeactivity = ''; $contactactivity = false;
+		$lastactivity = 0; $typeactivity = ''; $lastactivityid = 0; $contactactivity = false; $activitydata = array();
 		
 		
 		
@@ -243,18 +243,20 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 					if( !$online || !in_array( $onl->ContactID, $online ) )
 					{
 						$upids[$onl->ContactID] = $onl->ContactID;
-					
+						
+						$tao = new stdClass();
+						$tao->type = 'Heartbeat';
+						$tao->action = 'online';
+						$tao->id = $onl->ContactID;
+						$tao->timestamp = strtotime( date( 'Y-m-d H:i:s' ) );
+						
 						if( !$contactactivity && $onl->LastHeartbeat && $lastactivity < strtotime( $onl->LastHeartbeat ) )
 						{
-							$tao = new stdClass();
-							$tao->type = 'Heartbeat';
-							$tao->action = 'online';
-							$tao->id = $onl->ContactID;
-							$tao->timestamp = strtotime( date( 'Y-m-d H:i:s' ) );
-							
 							$typeactivity = json_encode( $tao );
 							$lastactivity = strtotime( $onl->LastHeartbeat );
 						}
+						
+						$activitydata[] = $tao;
 					}
 				
 					$online[$onl->ContactID] = $onl->ContactID;
@@ -272,22 +274,24 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 				{
 					$upids[$on] = $on;
 					
+					$tao = new stdClass();
+					$tao->type = 'Heartbeat';
+					$tao->action = 'offline';
+					$tao->id = $on;
+					$tao->timestamp = strtotime( date( 'Y-m-d H:i:s' ) );
+					
 					if( !$contactactivity )
 					{
-						$tao = new stdClass();
-						$tao->type = 'Heartbeat';
-						$tao->action = 'offline';
-						$tao->id = $on;
-						$tao->timestamp = strtotime( date( 'Y-m-d H:i:s' ) );
-						
 						$typeactivity = json_encode( $tao );
 						$lastactivity = strtotime( date( 'Y-m-d H:i:s' ) );
-					
+						
 						if( isset( $online[$on] ) )
 						{
 							unset( $online[$on] );
 						}
 					}
+					
+					$activitydata[] = $tao;
 				}
 			}
 		}
@@ -296,12 +300,15 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 		
 		// 3: LastMessages check ---------------------------------------------------------------------------------------
 		
-		if( isset( $_POST['LastActivity'] ) )
+		// TODO: Make it event ID based as secondary ...
+		// TODO: Get more then one event ...
+		
+		if( isset( $_POST['LastActivity'] ) || isset( $_POST['LastActivityID'] ) )
 		{
 			if( $updates = fetchObjectRows( $q = '
 				SELECT * 
 				FROM UserActivity 
-				WHERE LastUpdate >= ' . $_POST['LastActivity']  . ' 
+				WHERE ' . ( isset( $_POST['LastActivityID'] ) ? 'ID > ' . $_POST['LastActivityID'] : 'LastUpdate >= ' . $_POST['LastActivity'] ) . ' 
 				AND 
 				( 
 					( 
@@ -341,56 +348,71 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 					{
 						case 'relations':
 							
+							$tao = new stdClass();
+							$tao->event = $upt->ID;
+							$tao->type = 'Relation';
+							$tao->action = 'update';
+							$tao->id = $upt->Contact;
+							$tao->typeid = $upt->TypeID;
+							$tao->timestamp = $upt->LastUpdate;
+							
 							if( $upt->LastUpdate && $lastactivity < $upt->LastUpdate )
 							{
-								$tao = new stdClass();
-								$tao->type = 'Relation';
-								$tao->action = 'update';
-								$tao->id = $upt->Contact;
-								//$tao->id = $upt->TypeID;
-								$tao->timestamp = $upt->LastUpdate;
-								
 								$typeactivity = json_encode( $tao );
 								$lastactivity = $upt->LastUpdated;
 								
 								$contactactivity = true;
 							}
 							
+							$activitydata[] = $tao;
+							
+							$lastactivityid = ( $upt->ID > $lastactivityid ? $upt->ID : $lastactivityid );
+							
 							break;
 						
 						case 'contact':
 							
+							$tao = new stdClass();
+							$tao->event = $upt->ID;
+							$tao->type = 'Contact';
+							$tao->action = 'update';
+							$tao->id = $upt->Contact;
+							$tao->typeid = $upt->TypeID;
+							$tao->timestamp = $upt->LastUpdate;
+							
 							if( $upt->LastUpdate && $lastactivity < $upt->LastUpdate )
 							{
-								$tao = new stdClass();
-								$tao->type = 'Contact';
-								$tao->action = 'update';
-								$tao->id = $upt->Contact;
-								//$tao->id = $upt->TypeID;
-								$tao->timestamp = $upt->LastUpdate;
-								
 								$typeactivity = json_encode( $tao );
 								$lastactivity = $upt->LastUpdate;
 					
 								$contactactivity = true;
 							}
 							
+							$activitydata[] = $tao;
+							
+							$lastactivityid = ( $upt->ID > $lastactivityid ? $upt->ID : $lastactivityid );
+							
 							break;
 						
 						case 'lastmessage':
 							
+							$tao = new stdClass();
+							$tao->event = $upt->ID;
+							$tao->type = 'Message';
+							$tao->action = 'new';
+							$tao->id = $upt->Contact;
+							$tao->typeid = $upt->TypeID;
+							$tao->timestamp = $upt->LastUpdate;
+							
 							if( $upt->LastUpdate && $lastactivity < $upt->LastUpdate && !$contactactivity )
 							{
-								$tao = new stdClass();
-								$tao->type = 'Message';
-								$tao->action = 'new';
-								$tao->id = $upt->Contact;
-								//$tao->id = $upt->TypeID;
-								$tao->timestamp = $upt->LastUpdate;
-								
 								$typeactivity = json_encode( $tao );
 								$lastactivity = $upt->LastUpdate;
 							}
+							
+							$activitydata[] = $tao;
+							
+							$lastactivityid = ( $upt->ID > $lastactivityid ? $upt->ID : $lastactivityid );
 							
 							break;
 					}
@@ -398,6 +420,11 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 					$contacts[$upt->Contact] = $upt->Contact;
 					
 					$upids[$upt->Contact] = $upt->Contact;
+				}
+				
+				if( $activitydata )
+				{
+					$activitydata = array_reverse( $activitydata );
 				}
 				
 				//die( print_r( $updates,1 ) . ' [] ' . print_r( $tao,1 ) . ' [] ' . $contactactivity . ' [] ' . $q );
@@ -410,7 +437,7 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 		
 		// Get the list ------------------------------------------------------------------------------------------------
 		
-		if( ( !isset( $_POST['LastActivity'] ) || isset( $_POST['LastActivity'] ) && $upids ) && ( $rows = fetchObjectRows( '
+		if( ( !isset( $_POST['LastActivity'] ) && !isset( $_POST['LastActivityID'] ) || isset( $_POST['LastActivity'] ) && $upids || isset( $_POST['LastActivityID'] ) && $upids ) && ( $rows = fetchObjectRows( '
 			SELECT 
 				r.ID AS RelationID, 
 				r.IsNoticed, 
@@ -455,7 +482,7 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 					u.IsDeleted = "0" 
 				AND u.ID = c.UserID 
 				AND c.UserID > 0 
-				' . ( isset( $_POST['LastActivity'] ) ? '
+				' . ( isset( $_POST['LastActivity'] ) || isset( $_POST['LastActivityID'] ) ? '
 				AND c.ID IN (' . ( $upids ? implode( ',', $upids ) : 'NULL' ) . ') 
 				' : '
 				AND 
@@ -526,10 +553,60 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 					c.ID 
 			' ) ) )
 			{
+				$imsg = array();
+				
 				foreach( $msgs as $msg )
 				{
-					$lmsg[$msg->ID] = $msg->MessageID;
+					// TODO: Make this a message object ... not just ID for lastmessage
+					
+					$imsg[$msg->ID] = $msg->MessageID;
+					
 				}
+				
+				
+				
+				if( $imsg && ( $mgs = $database->fetchObjectRows ( '
+					SELECT 
+						m.*, 
+						m.EncryptionKey AS CryptoKey, 
+						c.ID AS PosterID, 
+						c.ImageID, 
+						c.Firstname, 
+						c.Middlename, 
+						c.Lastname, 
+						c.Display, 
+						c.Username 
+					FROM 
+						SBookMail m, 
+						SBookContact c  
+					WHERE 
+							m.ID IN ( ' . ( $imsg ? implode( ',', $imsg ) : 'NULL' ) . ' ) 
+						AND m.Message != "" 
+						AND m.SenderID > 0 
+						AND m.ReceiverID > 0 
+						AND
+						( 
+							( 
+									m.ReceiverID = ' . $u->ID . ' 
+								AND c.ID = m.SenderID 
+							) 
+							OR 
+							( 
+									m.SenderID = ' . $u->ID . ' 
+								AND m.Type != "cm" 
+								AND c.ID = m.ReceiverID 
+							) 
+						) 
+					ORDER BY
+						m.Date DESC 
+				' ) ) ) 
+				{
+					foreach( $mgs as $mg )
+					{
+						$lmsg[$mg->PosterID] = $mg;
+					}
+				}
+				
 			}
 			
 			// If this slows things down then move to the union where you have a limit on how much unread messages you can show pr user ...
@@ -658,11 +735,87 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 				
 				$obj->UnSeenMessages = ( $unm ? count( $unm ) : 0 );
 				
-				if( $lms )
+				if( $lms && is_object( $lms ) )
 				{
-					$xml .= '<LastMessage>' . $lms . '</LastMessage>';
-				
-					$obj->LastMessage = $lms;
+					$xml .= '<LastMessage>' . $lms->ID . '</LastMessage>';
+					
+					$obj->LastMessage = $lms->ID;
+					
+					switch ( $lms->Display )
+					{
+						case 1:
+							$lms->Poster = trim( $lms->Firstname . ' ' . $lms->Middlename . ' ' . $lms->Lastname );
+							break;
+						case 2:
+							$lms->Poster = trim( $lms->Firstname . ' ' . $lms->Lastname );
+							break;
+						case 3:
+							$lms->Poster = trim( $lms->Lastname . ' ' . $lms->Firstname );
+							break;
+						default:
+							$lms->Poster = $lms->Username;
+							break;
+					}
+					
+					$xml .= '<LastMessageData>';
+					$xml .= '<ID>' . $lms->ID . '</ID>';
+					$xml .= '<UniqueID>' . $lms->UniqueID . '</UniqueID>';
+					$xml .= '<ImageID>' . $lms->ImageID . '</ImageID>';
+					$xml .= '<PosterID>' . $lms->PosterID . '</PosterID>';
+					$xml .= '<Poster><![CDATA[' . $lms->Poster . ']]></Poster>';
+					$xml .= '<Message><![CDATA[' . $lms->Message . ']]></Message>';
+					$xml .= '<CategoryID>' . $lms->CategoryID . '</CategoryID>';
+					$xml .= '<Type>' . $lms->Type . '</Type>';
+					$xml .= '<Encryption>' . $lms->Encryption . '</Encryption>';
+					$xml .= '<CryptoID>' . $lms->UniqueKey . '</CryptoID>';
+					
+					$olm = new stdClass();
+					$olm->ID         = $lms->ID;
+					$olm->UniqueID   = $lms->UniqueID;
+					$olm->ImageID    = $lms->ImageID;
+					$olm->PosterID   = $lms->PosterID;
+					$olm->Poster     = $lms->Poster;
+					$olm->Message    = $lms->Message;
+					$olm->CategoryID = $lms->CategoryID;
+					$olm->Type       = $lms->Type;
+					$olm->Encryption = $lms->Encryption;
+					$olm->CryptoID   = $lms->UniqueKey;
+					
+					if( $lms->Type == 'cm' )
+					{
+						$xml .= '<CryptoKey><![CDATA[' . $lms->CryptoKey . ']]></CryptoKey>';
+						$xml .= '<PublicKey><![CDATA[' . $lms->PublicKey . ']]></PublicKey>';
+						
+						$olm->CryptoKey = $lms->CryptoKey;
+						$olm->PublicKey = $lms->PublicKey;
+					}
+					
+					$xml .= '<IsCrypto>' . $lms->IsCrypto . '</IsCrypto>';
+					$xml .= '<IsTyping>' . $lms->IsTyping . '</IsTyping>';
+					$xml .= '<IsRead>' . $lms->IsRead . '</IsRead>';
+					$xml .= '<IsNoticed>' . $lms->IsNoticed . '</IsNoticed>';
+					$xml .= '<IsAlerted>' . $lms->IsAlerted . '</IsAlerted>';
+					$xml .= '<IsAccepted>' . $lms->IsAccepted . '</IsAccepted>';
+					$xml .= '<IsConnected>' . $lms->IsConnected . '</IsConnected>';
+					$xml .= '<Date>' . $lms->Date . '</Date>';
+					$xml .= '<DateModified>' . $lms->DateModified . '</DateModified>';
+					$xml .= '<TimeCreated>' . strtotime( $lms->Date ) . '</TimeCreated>';
+					$xml .= '<TimeModified>' . strtotime( $lms->DateModified ) . '</TimeModified>';
+					$xml .= '</LastMessageData>';
+					
+					$olm->IsCrypto     = $lms->IsCrypto;
+					$olm->IsTyping     = $lms->IsTyping;
+					$olm->IsRead       = $lms->IsRead;
+					$olm->IsNoticed    = $lms->IsNoticed;
+					$olm->IsAlerted    = $lms->IsAlerted;
+					$olm->IsAccepted   = $lms->IsAccepted;
+					$olm->IsConnected  = $lms->IsConnected;
+					$olm->Date         = $lms->Date;
+					$olm->DateModified = $lms->DateModified;
+					$olm->TimeCreated  = strtotime( $lms->Date );
+					$olm->TimeModified = strtotime( $lms->DateModified );
+					
+					$obj->LastMessageData = $olm;
 				}
 				
 				if( $row->OnlineStatus )
@@ -717,14 +870,20 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 			$xml .= '<Listed>' . $listed . '</Listed>';
 			$xml .= '<LastActivity>' . ( $lastactivity ? (int)$lastactivity : 0 ) . '</LastActivity>';
 			$xml .= '<TypeActivity>' . $typeactivity . '</TypeActivity>';
+			$xml .= '<LastActivityID>' . $lastactivityid . '</LastActivityID>';
+			$xml .= '<LastActivityData>' . ( $activitydata ? json_encode( $activitydata ) : '' ) . '</LastActivityData>';
 			$xml .= '<Online>' . ( $online ? count( $online ) : 0 ) . '</Online>';
 			$xml .= '<ID>' . $u->ID . '</ID>';
 			
-			$json->Listed       = $listed;
-			$json->LastActivity = ( $lastactivity ? (int)$lastactivity : 0 );
-			$json->TypeActivity = $typeactivity;
-			$json->Online       = ( $online ? count( $online ) : 0 );
-			$json->ID           = $u->ID;
+			$json->Listed           = $listed;
+			$json->LastActivity     = ( $lastactivity ? (int)$lastactivity : 0 );
+			$json->TypeActivity     = $typeactivity;
+			$json->LastActivityID   = $lastactivityid;
+			$json->LastActivityData = ( $activitydata ? $activitydata : '' );
+			$json->Online           = ( $online ? count( $online ) : 0 );
+			$json->ID               = $u->ID;
+			
+			
 			
 			ob_end_clean();
 			
@@ -733,7 +892,7 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 			break;
 		}
 		
-		if( isset( $_POST['LastActivity'] ) )
+		if( isset( $_POST['LastActivity'] ) || isset( $_POST['LastActivityID'] ) )
 		{
 			// 1 sec loop delay ...
 			sleep( 1 );

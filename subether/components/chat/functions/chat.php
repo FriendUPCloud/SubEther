@@ -266,6 +266,11 @@ if( isset( $_POST[ 'u' ] ) )
 					$notify = '0'; $alert = '0';
 				}
 				
+				if( ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 && ( $liveurl || $liveconnect ) )
+				{
+					$liveurl = ''; $liveconnect = '';
+				}
+				
 				$read = ( $m->IsRead == '1' && $m->ReceiverID == $webuser->ContactID ? '1' : '0' );
 			}
 			
@@ -346,6 +351,12 @@ if( isset( $_POST[ 'u' ] ) )
 		
 		$notify = ( $us && $m->ReceiverID == $webuser->ContactID && $m->IsNoticed == '0' ? ( $m->Message ? $m->Message : '1' ) : '0' );
 		
+		// Message the sender if receiver has accepted or declined
+		if ( ( $m->Type == 'vm' || strstr( $m->Message, '&zwnj;&zwnj;&zwnj;' ) ) && $m->PosterID == $webuser->ContactID && $m->IsAccepted != '0' && $m->IsConnected == '0' )
+		{
+			$liveconnect = $m->IsAccepted;
+		}
+		
 		// TODO: Look at the code and find out why IsNoticed and IsAlerted is not set correctly for API messages outside of TR ... 
 		
 		// If the message is older then 10min and haven't been noticed yet, don't alert about it.
@@ -354,10 +365,9 @@ if( isset( $_POST[ 'u' ] ) )
 			$notify = '0';
 		}
 		
-		// Message the sender if receiver has accepted or declined
-		if ( ( $m->Type == 'vm' || strstr( $m->Message, '&zwnj;&zwnj;&zwnj;' ) ) && $m->PosterID == $webuser->ContactID && $m->IsAccepted != '0' && $m->IsConnected == '0' )
+		if( ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 && $liveconnect )
 		{
-			$liveconnect = $m->IsAccepted;
+			$liveconnect = '';
 		}
 		
 		// If last message is sent to current user and is read and datemodified is over 2min in delay from date set seen date

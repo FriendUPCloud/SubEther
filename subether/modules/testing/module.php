@@ -70,15 +70,7 @@ $document->addResource ( 'javascript', 'lib/javascript/arena-lib.js' );
 $document->addResource ( 'javascript', 'lib/javascript/bajax.js' );
 $document->addResource ( 'javascript', 'lib/javascript/gui.js' );
 
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptojs/rollups/aes.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptojs/rollups/pbkdf2.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jsencrypt.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/base64.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/hash.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jsbn.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/random.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/rsa.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jscrypto.js' );
+$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptodeps.js' );
 $document->addResource ( 'javascript', 'subether/javascript/fcrypto.js' );
 
 $document->addResource ( 'javascript', 'subether/javascript/php.js' );

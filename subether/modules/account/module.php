@@ -58,15 +58,7 @@ $document->addResource ( 'stylesheet', 'subether/css/windowslideshow.css' );
 $document->addResource ( 'stylesheet', 'subether/components/events/css/events.css' );
 $document->addResource ( 'stylesheet', 'subether/components/groups/css/group.css' );
 
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptojs/rollups/aes.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptojs/rollups/pbkdf2.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jsencrypt.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/base64.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/hash.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jsbn.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/random.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/rsa.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jscrypto.js' );
+$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptodeps.js' );
 $document->addResource ( 'javascript', 'subether/javascript/fcrypto.js' );
 
 $document->addResource ( 'javascript', 'subether/javascript/jsdate.js' );

@@ -151,6 +151,13 @@ if( isset( $_POST[ 'u' ] ) || isset( $cid ) )
 				
 				// If last message is sent to current user and is read and datemodified is over 2min in delay from date set seen date
 				$seen = ( $m->IsRead == '1' && $m->SenderID == $webuser->ContactID && $m->DateModified > 0 ? ( 'Seen ' . date( 'D H:i', strtotime( $m->DateModified ) ) ) : '' );
+				
+				
+				
+				if( $notify && ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 )
+				{
+					$notify = '0'; $alert = '0';
+				}
 			}
 			
 			// Assign some extra vars
@@ -184,6 +191,13 @@ if( isset( $_POST[ 'u' ] ) || isset( $cid ) )
 		
 		// If last message is sent to current user and is read and datemodified is over 2min in delay from date set seen date
 		$seen = ( $m->IsRead == '1' && $m->SenderID == $webuser->ContactID && $m->DateModified > 0 ? ( 'Seen ' . date( 'D H:i', strtotime( $m->DateModified ) ) ) : '' );
+		
+		
+		
+		if( $notify && ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 )
+		{
+			$notify = '0';
+		}
 	}
 	
 	//die( $q1 . ' -- ' . print_r( $sm,1 ) );

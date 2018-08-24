@@ -570,20 +570,43 @@ if( !function_exists( 'UserActivity' ) )
 {
 	function UserActivity( $component, $type, $userid, $contactid = null, $typeid = null, $data = '' )
 	{
+		global $database;
+		
 		// 
 	
 		if( $component && $type && $userid )
 		{
+			// Store every activity ...
+			
 			$ua = new dbObject ( 'UserActivity' );
 			$ua->Component  = $component;
 			$ua->Type       = $type;
 			$ua->UserID     = $userid;
 			$ua->ContactID  = $contactid;
-			$ua->Load();
+			//$ua->Load();
 			$ua->TypeID     = $typeid;
 			$ua->Data       = $data;
 			$ua->LastUpdate = time();
 			$ua->Save();
+			
+			// Cleanup old activity that is 24 hours old ...
+			
+			if( $rows = $database->fetchObjectRow ( $q = '
+				SELECT ID 
+				FROM UserActivity 
+				WHERE UserID = \'' . $userid . '\' AND LastUpdate <= ' . ( time() - ( 60 * 60 * 24 ) ) . '
+				ORDER BY ID ASC 
+			', false, 'restapi/functions.php' ) ) 
+			{
+				// Delete code ... 
+				
+				$database->query ( '
+					DELETE FROM UserActivity 
+					WHERE UserID = \'' . $userid . '\' AND LastUpdate <= ' . ( time() - ( 60 * 60 * 24 ) ) . ' 
+					ORDER BY ID ASC 
+					LIMIT 50 
+				' );
+			}
 			
 			return true;
 		}

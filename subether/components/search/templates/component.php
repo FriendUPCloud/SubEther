@@ -80,4 +80,3 @@
 	</table>
 </div>
 
-<script> search( getHash( 'q' ), getHash( 'p' ) ); </script>

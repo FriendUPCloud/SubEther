@@ -66,15 +66,7 @@ $document->addResource ( 'javascript', 'lib/javascript/arena-lib.js' );
 $document->addResource ( 'javascript', 'lib/javascript/bajax.js' );
 $document->addResource ( 'javascript', 'lib/javascript/gui.js' );
 
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptojs/rollups/aes.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptojs/rollups/pbkdf2.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jsencrypt.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/base64.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/hash.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jsbn.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/random.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/rsa.js' );
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/jscrypto.js' );
+$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptodeps.js' );
 $document->addResource ( 'javascript', 'subether/javascript/fcrypto.js' );
 
 $document->addResource ( 'javascript', 'subether/javascript/virtualcronjobs.js' );
@@ -301,13 +293,18 @@ $parent->cuser = setupUserData( $cuser, 1 );
 		}
 		else
 		{
-			if( $_SERVER['HTTP_HOST'] )
+			//die( 'No access ... <pre>' . print_r( $_SESSION,1 ) . '</pre> [] <pre>' . print_r( $webuser,1 ) . '</pre> [] <pre>' . print_r( $_COOKIE,1 ) . '</pre> ...' );
+			if( defined( 'BASE_URL' ) && BASE_URL )
 			{
-				header( 'Location: http://' . $_SERVER['HTTP_HOST'] );
+				header( 'Location: ' . BASE_URL );
 			}
-			if( $_SERVER['HTTPS_HOST'] )
+			else if( $_SERVER['HTTPS_HOST'] )
 			{
 				header( 'Location: https://' . $_SERVER['HTTPS_HOST'] );
+			}
+			else if( $_SERVER['HTTP_HOST'] )
+			{
+				header( 'Location: http://' . $_SERVER['HTTP_HOST'] );
 			}
 			die( 'No access ...' );
 		}

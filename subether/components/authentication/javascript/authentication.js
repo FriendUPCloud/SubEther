@@ -340,6 +340,8 @@ function reauthenticate()
 							{
 								authenticated = true;
 								
+								console.log( '[1] reauthenticate() ' + t[2] );
+								
 								if ( ge( 'LoginForm' ) && !ge( 'UserMenu' ) )
 								{
 									document.location = t[1];
@@ -364,6 +366,8 @@ function reauthenticate()
 			}
 			else if ( authenticated && r[0] == 'fail' && r[1] )
 			{
+				//console.log( '[2] reauthenticate() ' + r[1] );
+				
 				authenticated = false;
 				setBrowserStorage( 'uniqueid', '' );
 				
@@ -374,6 +378,8 @@ function reauthenticate()
 			}
 			else if ( r[0] == 'authenticated' )
 			{
+				//console.log( '[3] reauthenticate() ' + r[2] );
+				
 				// If we have session encrypted, decrypt it and store it
 				if( r[2] && m && typeof API !== 'undefined' )
 				{

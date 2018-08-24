@@ -53,12 +53,13 @@ function sendMessage( msg )
 	{
 		//window.parent.postMessage( JSON.stringify( msg ), '*' );
 		window.parent.postMessage( msg, '*' );
+		console.log( 'sendMessage( msg ) ', msg );
 	}
 }
 
 function isLoaded()
 {
-	sendMessage( { 'derp': 'localstorage', 'data': { 'type': 'treeroot', 'loaded' : 'true' } } );
+	sendMessage( { 'derp': 'localstorage', 'data': { 'type': 'treeroot', 'loaded' : document.location.href } } );
 }
 
 // Handle messages
@@ -122,9 +123,12 @@ window.addEventListener( 'message', function( msg )
 			//console.log( decodeURIComponent( msg.data.keys.publickey ) );
 			//console.log( decodeURIComponent( msg.data.keys.uniqueid ) );
 			
-			console.log( localStorage );
+			console.log( 'Stored to localStorage: ', localStorage );
 			
-			sendMessage( { 'command': 'nav_home', 'data': {} } );
+			//sendMessage( { 'command': 'nav_home', 'data': { 'command': 'nav_home' } } );
+			
+			console.log( 'READY TO LOGIN BECAUSE I HAVE PRIVATEKEY IN LOCALSTORAGE !!!! RUNNING: reauthenticate(); ' );
+			reauthenticate();
 		}
 	}
 	

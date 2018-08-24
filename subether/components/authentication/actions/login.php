@@ -171,7 +171,9 @@ if ( $_REQUEST['action'] == 'login' )
 							{
 								//die( $webuser->ID . ' -- ' . $webuser->GetToken() . ' [] ' . print_r( $_SESSION,1 ) );
 								
-								die( 'ok<!--separate-->' . BASE_URL . 'home/' );
+								die( 'ok<!--separate-->' . BASE_URL . 'home/<!--separate-->' . print_r( $_SESSION,1 ) );
+								
+								//die( 'ok<!--separate-->' . BASE_URL . 'home/' );
 							}
 							else
 							{

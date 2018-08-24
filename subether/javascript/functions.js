@@ -19,6 +19,11 @@
 
 function getPath ()
 {
+	if( baseUrl() )
+	{
+		return baseUrl();
+	}
+	
 	var http = location.protocol + '//';
 	var host = location.hostname;
 	var path = location.pathname

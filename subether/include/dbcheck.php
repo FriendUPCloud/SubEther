@@ -47,7 +47,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `History` text NOT NULL,
 			  `Status` text NOT NULL,
 			  `IsFinished` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Progress` text DEFAULT \'0%\',
+			  `Progress` varchar(255) DEFAULT \'0%\',
 			  `Deadline` datetime NOT NULL,
 			  `DateModified` datetime NOT NULL,
 			  `DateCreated` datetime NOT NULL,
@@ -183,9 +183,9 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `CategoryID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `ObjectType` text NOT NULL DEFAULT \'\',
+			  `ObjectType` varchar(255) NOT NULL DEFAULT \'\',
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Permission` text NOT NULL DEFAULT \'\',
+			  `Permission` varchar(255) NOT NULL DEFAULT \'\',
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
 			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -392,7 +392,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `ContactID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `ObjectType` text NOT NULL DEFAULT \'\',
+			  `ObjectType` varchar(255) NOT NULL DEFAULT \'\',
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `IsApproved` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsNoticed` tinyint(4) NOT NULL DEFAULT \'0\',
@@ -763,7 +763,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `Filetype` text DEFAULT NULL,
 			  `MediaID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `MediaType` text NOT NULL,
-			  `Rating` text NOT NULL DEFAULT \'0/0\',
+			  `Rating` varchar(255) NOT NULL DEFAULT \'0/0\',
 			  PRIMARY KEY (`ID`)
 			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 		' );
@@ -979,12 +979,12 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `MediaID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `MediaType` text NOT NULL DEFAULT \'\',
+			  `MediaType` varchar(255) NOT NULL DEFAULT \'\',
 			  `UserID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `CategoryID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `Title` text NOT NULL,
 			  `Name` text NOT NULL,
-			  `Tags` text NOT NULL DEFAULT \'\',
+			  `Tags` text NOT NULL,
 			  `SortOrder` bigint(20) NOT NULL DEFAULT \'0\',
 			  PRIMARY KEY (`ID`)
 			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1222,10 +1222,10 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Type` text NOT NULL DEFAULT \'\',
+			  `Type` text NOT NULL,
 			  `Command` text NOT NULL,
 			  `SenderID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `ReceiverID` text NOT NULL DEFAULT \'0\',
+			  `ReceiverID` bigint(20) NOT NULL DEFAULT \'0\',
 			  `IsRead` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsNoticed` tinyint(4) NOT NULL DEFAULT \'0\',
 			  `IsOnline` tinyint(4) NOT NULL DEFAULT \'0\',
@@ -1362,7 +1362,7 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			(
 			  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
 			  `ObjectID` bigint(20) NOT NULL DEFAULT \'0\',
-			  `Type` text NOT NULL DEFAULT \'\',
+			  `Type` text NOT NULL,
 			  `VoteID` text,
 			  PRIMARY KEY (`ID`)
 			) ENGINE=INNODB CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1764,8 +1764,8 @@ if ( !$_SESSION[ 'dbchecked' ] || $_SESSION['dbchecked'] == 1 )
 			  `Account` bigint(20) NOT NULL,
 			  `Name` text NOT NULL,
 			  `Type` text NOT NULL,
-			  `Balance` text NOT NULL DEFAULT \'0\',
-			  `Disposable` text NOT NULL DEFAULT \'0\',
+			  `Balance` varchar(255) NOT NULL DEFAULT \'0\',
+			  `Disposable` varchar(255) NOT NULL DEFAULT \'0\',
 			  `Verified` tinyint(4) NOT NULL,
 			  `IsFrozen` tinyint(4) NOT NULL,
 			  `DateFrozen` datetime NOT NULL,
