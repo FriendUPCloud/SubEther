@@ -25,7 +25,7 @@ $required = array(
 );
 
 $options = array(
-	/*'UserType', */'SessionID', 'Date', 'Encryption', 'IsCrypto', 'CryptoID', 'CryptoKeys'
+	/*'UserType', */'SessionID', 'UniqueID', 'Date', 'Encryption', 'IsCrypto', 'CryptoID', 'CryptoKeys'
 );
 
 // Temporary to view data in browser for development
@@ -109,39 +109,49 @@ if ( isset( $_POST ) )
 							AND u.ID = c.UserID 
 					', false, 'components/chat/action/chat.php' ) )
 					{
-						$m = new dbObject( 'SBookMail' );
-						$m->UniqueID = $uniqueid;
-						$m->ContactID = ( $u->ID > 0 ? $u->ID : 0 );
-						$m->SenderID = $reciever;
-						$m->ReceiverID = $contact;
-						$m->CategoryID = 0;
-						$m->Type = 'cm';
-						$m->Encryption = ( isset( $_POST['Encryption'] ) ? $_POST['Encryption'] : '' );
-						$m->UniqueKey = ( isset( $_POST['CryptoID'] ) ? $_POST['CryptoID'] : '' );
-						$m->EncryptionKey = $key;
-						$m->PublicKey = $usr->PublicKey;
-						$m->IsCrypto = 1;
-						$m->Message = str_replace ( array ( '<', '>' ), array ( '&lt;', '&gt;' ), stripslashes ( $_POST['Message'] ) );
-						$m->Date = date( 'Y-m-d H:i:s' );
-						$m->DateModified = date( 'Y-m-d H:i:s' );
-						$m->Save();
+						if( isset( $_POST['UniqueID'] ) )
+						{
+							// Edit Message ...
+							
+							$m = new dbObject( 'SBookMail' );
+							$m->UniqueID = $_POST['UniqueID'];
+							$m->SenderID = $reciever;
+							$m->ReceiverID = $contact;
+							if( $m->Load() )
+							{
+								$m->Type = 'cm';
+								$m->Encryption = ( isset( $_POST['Encryption'] ) ? $_POST['Encryption'] : '' );
+								$m->UniqueKey = ( isset( $_POST['CryptoID'] ) ? $_POST['CryptoID'] : '' );
+								$m->EncryptionKey = $key;
+								$m->PublicKey = $usr->PublicKey;
+								$m->IsCrypto = 1;
+								$m->Message = str_replace ( array ( '<', '>' ), array ( '&lt;', '&gt;' ), stripslashes ( $_POST['Message'] ) );
+								$m->DateModified = date( 'Y-m-d H:i:s' );
+								$m->Save();
+							}
+						}
+						else
+						{
+							// New Message ...
+							
+							$m = new dbObject( 'SBookMail' );
+							$m->UniqueID = $uniqueid;
+							$m->ContactID = ( $u->ID > 0 ? $u->ID : 0 );
+							$m->SenderID = $reciever;
+							$m->ReceiverID = $contact;
+							$m->CategoryID = 0;
+							$m->Type = 'cm';
+							$m->Encryption = ( isset( $_POST['Encryption'] ) ? $_POST['Encryption'] : '' );
+							$m->UniqueKey = ( isset( $_POST['CryptoID'] ) ? $_POST['CryptoID'] : '' );
+							$m->EncryptionKey = $key;
+							$m->PublicKey = $usr->PublicKey;
+							$m->IsCrypto = 1;
+							$m->Message = str_replace ( array ( '<', '>' ), array ( '&lt;', '&gt;' ), stripslashes ( $_POST['Message'] ) );
+							$m->Date = date( 'Y-m-d H:i:s' );
+							$m->DateModified = date( 'Y-m-d H:i:s' );
+							$m->Save();
+						}
 						
-						// Not using the old method anymore ...
-						/*$s = new dbObject( 'SBookStorage' );
-						$s->Relation = 'SBookContact';
-						$s->ContactID = $usr->ID;
-						$s->PublicKey = $usr->PublicKey;
-						$s->IDs = $reciever;
-						$s->EncryptionKey = $key;
-						$s->UniqueID = $encryptionid = ( $encryptionid ? $encryptionid : UniqueKey() );
-						$s->UserID = $usr->UserID;
-						$s->DateCreated = date( 'Y-m-d H:i:s' );
-						$s->DateModified = date( 'Y-m-d H:i:s' );
-						$s->Save();*/
-					
-						// TODO: Add stats for saved chat messages for long-poll
-						//LogStats( 'chat', 'save', $m->Type, $m->SenderID, $m->ReceiverID, $m->CategoryID, 'api' );
-					
 						UserActivity( 'messages', 'lastmessage', $m->SenderID, $m->ReceiverID, $m->ID, '' );
 					}
 				}
@@ -150,20 +160,43 @@ if ( isset( $_POST ) )
 	}
 	else
 	{
-		$m = new dbObject( 'SBookMail' );
-		$m->UniqueID = UniqueKey();
-		$m->SenderID = ( $u->ID > 0 ? $u->ID : 0 );
-		$m->ReceiverID = $_POST['ContactID'];
-		$m->CategoryID = 0;
-		$m->Type = 'im';
-		$m->Encryption = ( isset( $_POST['Encryption'] ) ? $_POST['Encryption'] : '' );
-		$m->UniqueKey = ( isset( $_POST['CryptoID'] ) ? $_POST['CryptoID'] : '' );
-		$m->IsCrypto = ( isset( $_POST['IsCrypto'] ) ? $_POST['IsCrypto'] : 0 );
-		$m->Message = str_replace ( array ( '<', '>' ), array ( '&lt;', '&gt;' ), stripslashes ( $_POST['Message'] ) );
-		//$m->Date = date( 'Y-m-d H:i:s', strtotime( $_POST['Date'] ) );
-		$m->Date = date( 'Y-m-d H:i:s' );
-		$m->DateModified = date( 'Y-m-d H:i:s' );
-		$m->Save();
+		if( isset( $_POST['UniqueID'] ) )
+		{
+			// Edit Message ...
+			
+			$m = new dbObject( 'SBookMail' );
+			$m->UniqueID = $_POST['UniqueID'];
+			$m->SenderID = ( $u->ID > 0 ? $u->ID : 0 );
+			$m->ReceiverID = $_POST['ContactID'];
+			if( $m->Load() )
+			{
+				$m->Type = 'im';
+				$m->Encryption = ( isset( $_POST['Encryption'] ) ? $_POST['Encryption'] : '' );
+				$m->UniqueKey = ( isset( $_POST['CryptoID'] ) ? $_POST['CryptoID'] : '' );
+				$m->IsCrypto = ( isset( $_POST['IsCrypto'] ) ? $_POST['IsCrypto'] : 0 );
+				$m->Message = str_replace ( array ( '<', '>' ), array ( '&lt;', '&gt;' ), stripslashes ( $_POST['Message'] ) );
+				$m->DateModified = date( 'Y-m-d H:i:s' );
+				$m->Save();
+			}
+		}
+		else
+		{
+			// New Message ...
+			
+			$m = new dbObject( 'SBookMail' );
+			$m->UniqueID = UniqueKey();
+			$m->ContactID = ( $u->ID > 0 ? $u->ID : 0 );
+			$m->SenderID = ( $u->ID > 0 ? $u->ID : 0 );
+			$m->ReceiverID = $_POST['ContactID'];
+			$m->CategoryID = 0;
+			$m->Type = 'im';
+			$m->Encryption = ( isset( $_POST['Encryption'] ) ? $_POST['Encryption'] : '' );
+			$m->UniqueKey = ( isset( $_POST['CryptoID'] ) ? $_POST['CryptoID'] : '' );
+			$m->IsCrypto = ( isset( $_POST['IsCrypto'] ) ? $_POST['IsCrypto'] : 0 );
+			$m->Message = str_replace ( array ( '<', '>' ), array ( '&lt;', '&gt;' ), stripslashes ( $_POST['Message'] ) );
+			$m->DateModified = date( 'Y-m-d H:i:s' );
+			$m->Save();
+		}
 		
 		UserActivity( 'messages', 'lastmessage', $m->SenderID, $m->ReceiverID, $m->ID, '' );
 	}

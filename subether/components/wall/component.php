@@ -31,6 +31,7 @@ $cbase = 'subether/components/wall';
 i18nAddLocalePath ( $cbase . '/locale' );
 
 include_once ( $root . '/components/notification/include/functions.php' );
+include_once ( $root . '/classes/library.class.php' );
 include_once ( $cbase . '/include/functions.php' );
 
 

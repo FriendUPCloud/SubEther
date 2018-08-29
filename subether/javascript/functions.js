@@ -19,10 +19,10 @@
 
 function getPath ()
 {
-	if( baseUrl() )
-	{
-		return baseUrl();
-	}
+	//if( baseUrl() )
+	//{
+	//	return baseUrl();
+	//}
 	
 	var http = location.protocol + '//';
 	var host = location.hostname;

@@ -594,7 +594,7 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 							( 
 									m.SenderID = ' . $u->ID . ' 
 								AND m.Type != "cm" 
-								AND c.ID = m.ReceiverID 
+								AND c.ID = m.SenderID 
 							) 
 						) 
 					ORDER BY
@@ -603,7 +603,9 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 				{
 					foreach( $mgs as $mg )
 					{
-						$lmsg[$mg->PosterID] = $mg;
+						$cnt = ( $mg->SenderID == $u->ID ? $mg->ReceiverID : $mg->SenderID );
+						
+						$lmsg[$cnt] = $mg;
 					}
 				}
 				

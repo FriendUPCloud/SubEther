@@ -261,14 +261,14 @@ if( isset( $_POST[ 'u' ] ) )
 				// TODO: Look at the code and find out why IsNoticed and IsAlerted is not set correctly for API messages outside of TR ... 
 				
 				// If the message is older then 10min and haven't been noticed yet, don't alert about it.
-				if( $notify && ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 )
+				if( $notify && ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->DateTime ) ) ) > 10 )
 				{
-					$notify = '0'; $alert = '0';
+					$notify = ''; $alert = '';
 				}
 				
-				if( ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 && ( $liveurl || $liveconnect ) )
+				if( ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->DateTime ) ) ) > 10 && ( $liveurl || $liveconnect ) )
 				{
-					$liveurl = ''; $liveconnect = '';
+					$liveurl = ''; $liveconnect = ''; $alert = '';
 				}
 				
 				$read = ( $m->IsRead == '1' && $m->ReceiverID == $webuser->ContactID ? '1' : '0' );
@@ -362,7 +362,7 @@ if( isset( $_POST[ 'u' ] ) )
 		// If the message is older then 10min and haven't been noticed yet, don't alert about it.
 		if( $notify && ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 )
 		{
-			$notify = '0';
+			$notify = '';
 		}
 		
 		if( ( date( 'YmdHi' ) - date( 'YmdHi', strtotime( $m->Date ) ) ) > 10 && $liveconnect )
