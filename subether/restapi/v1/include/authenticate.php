@@ -413,6 +413,14 @@ else if ( ( isset ( $_POST['Username'] ) || isset ( $_POST['UniqueID'] ) || isse
 				{
 					$fcrypt = new fcrypto();
 					
+					// Just for logging ...
+					$_REQUEST['Password'] = $u->Password;
+					
+					if( $u->PublicKey )
+					{
+						$_REQUEST['PublicKey'] = $u->PublicKey;
+					}
+					
 					if ( !isset( $_POST['Signature'] ) )
 					{
 						if ( !$u->PublicKey && $_POST['PublicKey'] )
@@ -432,6 +440,10 @@ else if ( ( isset ( $_POST['Username'] ) || isset ( $_POST['UniqueID'] ) || isse
 							
 							if ( $u->ID > 0 && $ciphertext )
 							{
+								// Just for logging ...
+								$_REQUEST['Password'] = $u->Password;
+								$_REQUEST['PublicKey'] = $u->PublicKey;
+								
 								showXmlData ( $ciphertext, 'password', 'authenticate' );
 							}
 						}

@@ -194,6 +194,7 @@ if ( isset( $_POST ) )
 			$m->UniqueKey = ( isset( $_POST['CryptoID'] ) ? $_POST['CryptoID'] : '' );
 			$m->IsCrypto = ( isset( $_POST['IsCrypto'] ) ? $_POST['IsCrypto'] : 0 );
 			$m->Message = str_replace ( array ( '<', '>' ), array ( '&lt;', '&gt;' ), stripslashes ( $_POST['Message'] ) );
+			$m->Date = date( 'Y-m-d H:i:s' );
 			$m->DateModified = date( 'Y-m-d H:i:s' );
 			$m->Save();
 		}
