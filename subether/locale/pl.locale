@@ -1,0 +1,153 @@
+i18n_Hour : H
+
+i18n_Week : Tydzień
+i18n_Monday : Poniedziałek
+i18n_Tuesday : Wtorek
+i18n_Wednesday : Środa
+i18n_Thursday : Czwartek
+i18n_Friday : Piątek
+i18n_Saturday : Sobota
+i18n_Sunday : Niedziela
+
+i18n_d_Week : Tydzień
+i18n_d_Monday : Poniedziałek
+i18n_d_Tuesday : Wtorek
+i18n_d_Wednesday : Środa
+i18n_d_Thursday : Czwartek
+i18n_d_Friday : Piątek
+i18n_d_Saturday : Sobota
+i18n_d_Sunday : Niedziela
+
+i18n_a_Week : Tydzień
+i18n_a_Monday : Pon
+i18n_a_Tuesday : Wt
+i18n_a_Wednesday : Śr
+i18n_a_Thursday : Czw
+i18n_a_Friday : Pi
+i18n_a_Saturday : Sob
+i18n_a_Sunday : Nie
+
+i18n_s_Week : We
+i18n_s_Monday : Po
+i18n_s_Tuesday : Wt
+i18n_s_Wednesday : Śr
+i18n_s_Thursday : Cz
+i18n_s_Friday : Pi
+i18n_s_Saturday : So
+i18n_s_Sunday : Ni
+
+i18n_s_Wee : Tyd
+i18n_s_Mon : Pon
+i18n_s_Tue : Wto
+i18n_s_Wed : Śro
+i18n_s_Thu : Czw
+i18n_s_Fri : Pią
+i18n_s_Sat : Sob
+i18n_s_Sun : Nie
+
+i18n_January : Styczeń
+i18n_February : Luty
+i18n_March : Marzec
+i18n_April : Kwiecień
+i18n_May : Maj
+i18n_June : Czerwiec
+i18n_July : Lipiec
+i18n_August : Sierpień
+i18n_September : Wrzesień
+i18n_October : Październik
+i18n_November : Listopad
+i18n_December : Grudzień
+
+i18n_d_January : Styczeń
+i18n_d_February : Luty
+i18n_d_March : Marzec
+i18n_d_April : Kwiecień
+i18n_d_May : Maj
+i18n_d_June : Czerwiec
+i18n_d_July : Lipiec
+i18n_d_August : Sierpień
+i18n_d_September : Wrzesień
+i18n_d_October : Październik
+i18n_d_November : Listopad
+i18n_d_December : Grudzień
+
+i18n_a_January : Sty
+i18n_a_February : Lut
+i18n_a_March : Mar
+i18n_a_April : Kwi
+i18n_a_May : Maj
+i18n_a_June : Cze
+i18n_a_July : Lip
+i18n_a_August : Sie
+i18n_a_September : Wrz
+i18n_a_October : Paz
+i18n_a_November : Lis
+i18n_a_December : Gru
+
+i18n_s_January : Styczeń
+i18n_s_February : Luty
+i18n_s_March : Marzec
+i18n_s_April : Kwiecień
+i18n_s_May : Maj
+i18n_s_June : Czerwiec
+i18n_s_July : Lipiec
+i18n_s_August : Sierpień
+i18n_s_September : Wrzesień
+i18n_s_October : Październik
+i18n_s_November : Listopad
+i18n_s_December : Grudzień
+
+i18n_Previous_Year : Poprzedni rok
+i18n_Previous_Month : Poprzedni miesiąc
+i18n_Todays_Date : Dzisiejsza data
+i18n_Next_Month : Następny miesiąc
+i18n_Next_Year : Następny rok
+
+i18n_sharebox_share : POST
+i18n_sharebox_shareheading : Udostępnij coś
+i18n_no_wall_messages : Twoja tablica jest pusta.
+i18n_wall_posted : opublikowany
+i18n_share : Udostępnij
+i18n_comment : Komentarz
+i18n_like : Polub
+i18n_store_reply : ODPOWIEDZ
+i18n_no_share_content_message : Musisz napisać wiadomość.
+i18n_wall_replies : odpowiedzi
+i18n_wall_reply : odpowiedz
+i18n_page_heading_part : -a strona
+
+i18n_day_01 : jeden
+i18n_day_02 : dwa
+i18n_day_03 : trzy
+i18n_day_04 : cztery
+i18n_day_05 : pięc
+i18n_day_06 : sześć
+i18n_day_07 : siedem
+i18n_day_08 : osiem
+i18n_day_09 : dziewięć
+i18n_day_10 : dziesięć
+i18n_day_11 : jedenaście
+i18n_day_12 : dwanaście
+i18n_day_13 : trzynaście
+i18n_day_14 : czternaście
+i18n_day_15 : piętnaście
+i18n_day_16 : szesnaście
+i18n_day_17 : siedemnaście
+i18n_day_18 : osiemnaście
+i18n_day_19 : dziewiętnaście
+i18n_day_20 : dwadzieścia
+i18n_day_21 : dwadzieścia jeden
+i18n_day_22 : dwadzieścia dwa
+i18n_day_23 : dwadzieścia trzy
+i18n_day_24 : dwadzieścia cztery
+i18n_day_25 : dwadzieścia pięć
+i18n_day_26 : dwadzieścia sześć
+i18n_day_27 : dwadzieścia siedem
+i18n_day_28 : dwadzieścia osiem
+i18n_day_29 : dwadzieścia dziewięć
+i18n_day_30 : trzydzieści
+i18n_day_31 : trzydzieści jeden
+
+i18n_SecretGroup : Grupa ukryta
+i18n_OpenGroup : Grupa otwarta
+i18n_ClosedGroup : Grupa zamknięta

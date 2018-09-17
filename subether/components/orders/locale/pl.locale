@@ -1,0 +1,67 @@
+Start : Start
+End : Koniec
+Hours : Czas
+Extra (50%) : Bonus (50%)
+Extra (100%) : Bonus (100%)
+Description : Opis
+Create : Stwórz
+Create_suborder : Utwórz podrzędny
+Name : Nazwa
+Projects : Projekt
+Members : Członkowie
+Participants : Uczestnicy
+Date : Data
+Add hours : Dodaj czas
+
+Hour description : Opis czasu
+
+Timeoff : Czas wolny
+Toll : Podatek
+Parking : Parkering
+Km : Km
+
+Entry : Wejście
+Price : Cena
+
+h : h
+
+Mon : Pon
+Tue : Wto
+Wed : Śro
+Thu : Czw
+Fri : Pią
+Sat : Sob
+Sun : Nie
+
+Pending : W oczekiwaniu
+Active : Aktywny
+OnHold : Zatrzymany
+Canceled : Anulowany
+Finished : Zakończony
+Archived : Zarchiwizowane
+
+OrderID : ID zamówienia
+JobID : Identyfikator zadania
+OperationID : ID operacji
+Deadline : Ostateczny termin
+Project : Projekt
+Jobtext : Tekst zadania
+Assigned : Przydzielony
+Participants : Uczestnicy
+Customer : Klient
+Contact : Kontakt
+Billing : Dane do faktury
+Delivery : Dostawa
+Mobile : Mobil
+Email : Email
+Total Price : Cena całkowita
+
+Save   : Zapisz
+Open   : Otwórz
+Close  : Zamknij
+Delete : Usuń
+
+i18n_h_Active 	: Aktywny
+i18n_h_Pending 	: Oczekuje
+i18n_h_Finished : Zakończony
+i18n_h_Archived : Arkivert

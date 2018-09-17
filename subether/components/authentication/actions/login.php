@@ -64,7 +64,8 @@ if ( $_REQUEST['action'] == 'login' )
 					// --- Phase1: Create random key based on sha256 and send it to be signed -------------------------------
 					if ( !$_REQUEST['Signature'] && !$_REQUEST['SessionID'] )
 					{
-						$u->Password = UniqueKey();
+						//$u->Password = UniqueKey();
+						$u->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
 						$u->InActive = 0;
 						$u->IsDisabled = 0;
 						$u->AuthKey = '';
