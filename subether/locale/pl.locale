@@ -204,7 +204,12 @@ i18n_Write question here : Napisz pytanie tutaj
 i18n_Add Poll Options : Dodaj opcje ankiety
 
 i18n_Public : Publiczny
-i18n_Contacts : Kontakt
+i18n_Contacts : Kontakty
 i18n_Only Me : Tylko ja
 i18n_Custom : Niestandardowy
 i18n_Admin : Admin
+
+i18n_Write a comment : Napisz komentarz
+i18n_Reply : Odpowiedz
+
+i18n_Seen by : Widziany przez
