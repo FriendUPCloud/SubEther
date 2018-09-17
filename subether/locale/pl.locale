@@ -149,5 +149,5 @@ i18n_day_30 : trzydzieści
 i18n_day_31 : trzydzieści jeden
 
 i18n_SecretGroup : Tajna grupa
-i18n_OpenGroup : Otwórz grupę
-i18n_ClosedGroup : Zamknięta grupa
+i18n_OpenGroup : Grupa otwarta
+i18n_ClosedGroup : Grupa zamknięta
