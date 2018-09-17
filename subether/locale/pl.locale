@@ -1,3 +1,18 @@
+i18n_W : T
+i18n_M : P
+i18n_T : W
+i18n_W : Ś
+i18n_T : C
+i18n_F : P
+i18n_S : S
+i18n_S : N
+
+i18n_Previous_Year : Poprzedni rok
+i18n_Previous_Month : Poprzedni miesiąc
+i18n_Todays_Date : Dzisiejsza data
+i18n_Next_Month : Następny miesiąc
+i18n_Next_Year : Następny rok
+
 i18n_Hour : H
 
 i18n_Week : Tydzień
@@ -97,12 +112,6 @@ i18n_s_October : Październik
 i18n_s_November : Listopad
 i18n_s_December : Grudzień
 
-i18n_Previous_Year : Poprzedni rok
-i18n_Previous_Month : Poprzedni miesiąc
-i18n_Todays_Date : Dzisiejsza data
-i18n_Next_Month : Następny miesiąc
-i18n_Next_Year : Następny rok
-
 i18n_sharebox_share : POST
 i18n_sharebox_shareheading : Udostępnij coś
 i18n_no_wall_messages : Twoja tablica jest pusta.
@@ -151,3 +160,40 @@ i18n_day_31 : trzydzieści jeden
 i18n_SecretGroup : Grupa ukryta
 i18n_OpenGroup : Grupa otwarta
 i18n_ClosedGroup : Grupa zamknięta
+
+i18n_News Feed : Kanał wiadomości
+i18n_Orders : Zlecenia pracy
+i18n_Messages : Wiadomości
+i18n_Calendar : Kalendarz
+i18n_Library : Biblioteka
+i18n_Bookmarks : Zakładki
+i18n_Browse : Przeglądać
+i18n_About : O mnie
+i18n_Members : Członkowie
+i18n_Subgroups : Podgrupy
+
+i18n_Accounting : Rachunkowość
+i18n_Import : Import
+i18n_Clients : Klienci
+i18n_Mailing : Mailing
+
+i18n_Favorites : Ulubione
+
+i18n_Groups : Grupy
+i18n_Create Group : Stwórz grupę
+
+i18n_Events : Wydarzenia
+i18n_Create Event : Wtwórz wydarzenie
+
+i18n_Edit Profile : Edytuj profil
+
+i18n_Account Settings : Ustawienia konta
+i18n_Global Settings : Ustawienia ogólne
+i18n_Log Out : Wyloguj
+i18n_Report a Problem : Zgłoś problem
+
+i18n_Home : Home
+i18n_Profile : Profil
+
+i18n_Write Post : Napisz post
+i18n_Ask Question : Zadaj pytanie
