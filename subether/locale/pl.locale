@@ -359,3 +359,38 @@ i18n_Write : Zapis
 i18n_Admin : Admin
 i18n_Owner : Właściciel
 i18n_Close : Zamknij
+
+i18n_Main Group : Główna grupa
+i18n_Select a main group : Wybierz grupę główną
+i18n_No main group : Brak głównej grupy
+i18n_Privacy setting : Ustawienia prywatności
+i18n_Wall mode : Tryb tablicy
+
+i18n_Work And Education : Praca i Edukacja
+i18n_Work : Praca
+i18n_College : Szkoła Wyższa
+i18n_High School : Liceum
+i18n_Basic Information :Imię
+i18n_Middlename : Drugie imie
+i18n_Lastname : Nazwisko
+i18n_Birthdate : Data urodzenia
+i18n_Gender : Płeć
+i18n_Languages : Języki
+i18n_Interests : Zainteresowania
+i18n_Philosophy : Filozofia
+i18n_Religious view : Religia
+i18n_Political view : Poglądy polityczne
+i18n_Contact Information : Informacje kontaktowe
+i18n_Mobile : Mobil
+i18n_Address : Adresse
+i18n_Screen Name : Kallenavn
+i18n_Website : Webside
+i18n_Quotations : Sitater
+i18n_Extended Information : Utvidet Informasjon
+
+i18n_No orders in list : Ingen prosjekter listet
+
+i18n_Amount : Beløp
+
+i18n_Fullscreen view : Fullskjerm modus
+i18n_Default view : Standard modus
