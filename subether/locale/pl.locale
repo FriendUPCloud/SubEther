@@ -1,3 +1,18 @@
+i18n_W : T
+i18n_M : P
+i18n_T : W
+i18n_W : Ś
+i18n_T : C
+i18n_F : P
+i18n_S : S
+i18n_S : N
+
+i18n_Previous_Year : Poprzedni rok
+i18n_Previous_Month : Poprzedni miesiąc
+i18n_Todays_Date : Dzisiejsza data
+i18n_Next_Month : Następny miesiąc
+i18n_Next_Year : Następny rok
+
 i18n_Hour : H
 
 i18n_Week : Tydzień
@@ -97,12 +112,6 @@ i18n_s_October : Październik
 i18n_s_November : Listopad
 i18n_s_December : Grudzień
 
-i18n_Previous_Year : Poprzedni rok
-i18n_Previous_Month : Poprzedni miesiąc
-i18n_Todays_Date : Dzisiejsza data
-i18n_Next_Month : Następny miesiąc
-i18n_Next_Year : Następny rok
-
 i18n_sharebox_share : POST
 i18n_sharebox_shareheading : Udostępnij coś
 i18n_no_wall_messages : Twoja tablica jest pusta.
@@ -151,3 +160,237 @@ i18n_day_31 : trzydzieści jeden
 i18n_SecretGroup : Grupa ukryta
 i18n_OpenGroup : Grupa otwarta
 i18n_ClosedGroup : Grupa zamknięta
+
+i18n_News Feed : Kanał wiadomości
+i18n_Orders : Zlecenia pracy
+i18n_Messages : Wiadomości
+i18n_Calendar : Kalendarz
+i18n_Library : Biblioteka
+i18n_Bookmarks : Zakładki
+i18n_Browse : Przeglądać
+i18n_About : O mnie
+i18n_Members : Członkowie
+i18n_Subgroups : Podgrupy
+
+i18n_Accounting : Rachunkowość
+i18n_Import : Import
+i18n_Clients : Klienci
+i18n_Mailing : Mailing
+
+i18n_Favorites : Ulubione
+
+i18n_Groups : Grupy
+i18n_Create Group : Stwórz grupę
+
+i18n_Events : Wydarzenia
+i18n_Create Event : Wtwórz wydarzenie
+
+i18n_Edit Profile : Edytuj profil
+
+i18n_Account Settings : Ustawienia konta
+i18n_Global Settings : Ustawienia ogólne
+i18n_Log Out : Wyloguj
+i18n_Report a Problem : Zgłoś problem
+
+i18n_Home : Home
+i18n_Profile : Profil
+
+i18n_Write Post : Napisz post
+i18n_Ask Question : Zadaj pytanie
+
+i18n_Post : Opublikuj
+i18n_Write post here : Napisz post tutaj
+i18n_Write question here : Napisz pytanie tutaj
+i18n_Add Poll Options : Dodaj opcje ankiety
+
+i18n_Public : Publiczny
+i18n_Contacts : Kontakty
+i18n_Only Me : Tylko ja
+i18n_Custom : Niestandardowy
+i18n_Admin : Admin
+
+i18n_Write a comment : Napisz komentarz
+i18n_Reply : Odpowiedz
+
+i18n_Seen by : Widziany przez
+
+i18n_at : w
+i18n_Yesterday at : Wczoraj o godz
+i18n_about an hour ago : około godziny temu
+i18n_about a minute ago : około minutę temu
+i18n_a few seconds ago : kilka sekund temu
+
+i18n_January : Styczeń
+i18n_February : Luty
+i18n_March : Marzec
+i18n_April : Kwiecień
+i18n_May : Maj
+i18n_June : Czerwiec
+i18n_July : Lipiec
+i18n_August : Sierpień
+i18n_September : Wrzesień
+i18n_October : Październik
+i18n_November : Listopad
+i18n_December : Grudzień
+
+i18n_Web : Sieć
+i18n_Network : Sieć
+i18n_Images : Obrazy
+i18n_Files : Pliki
+i18n_Videos : Widea
+i18n_Wall : Ściana
+
+i18n_Create New Event : Nowe wydarzenie
+i18n_Name : Nazwa
+i18n_Details : Opis
+i18n_Place : Miejsce
+i18n_Start : Start
+i18n_End : Koniec
+i18n_Slots : Imość miejsc
+i18n_Access : Wstęp
+i18n_EventName : Nazwa wydarzenia
+i18n_EventDetails : Szczegóły wydarzenia
+i18n_EventPlace : Miejsce wydarzenia
+i18n_TimeStart : Rozpoczęcie
+i18n_TimeEnd : Zakończenie
+
+i18n_Edit : Edytuj
+i18n_Delete : Usuń
+
+i18n_Report a Problem : Zgłoś problem
+i18n_Type : Typ
+i18n_Description : Opis
+i18n_Bug : Błąd
+i18n_Feature : Cecha
+i18n_Other : Inny
+i18n_Report : Raport
+i18n_Cancel : Anuluj
+
+i18n_Email : Email
+i18n_Password : Hasło
+i18n_Keep me logged in : Nie wylogowywuj mnie
+i18n_Login : Zaloguj
+i18n_Forgot your password : Zapomniałeś hasła
+
+i18n_Account Recovery : Odzyskiwanie konta
+i18n_Email, Phone or Username : Tmail, telefon lub nazwa użytkownika
+i18n_Recover : Odzyskaj
+
+i18n_Create New Group : Stwórz Nową Grupę
+i18n_Group Name : Nazwa grupy
+i18n_Members : Członkowie
+i18n_Who do you want to add to the group : Kogo chcesz dodać do grupy
+i18n_Privacy : Prywatność
+i18n_Open : Otwarta
+i18n_Closed : Zamknięta
+i18n_Secret : Ukryta
+i18n_Create : Stwórz
+
+i18n_commented on your post in : skomentował twój wpis w
+i18n_made an event in : wydarzenie w
+i18n_posted in : opublikowany w
+i18n_commented on your post : skomentował twój wpis
+i18n_wrote on : napisał na
+i18n_\'s wall : tablisa
+i18n_wrote on your wall : napisał na twojej tablicy
+i18n_invited you to : zaprosił cię do
+i18n_accept : zaakceptuj
+i18n_decline : odrzuć
+i18n_made an event : zrobił wydarzenie
+i18n_wrote a post : napisał post
+
+i18n_See All : Pokaż wszystko
+
+i18n_Allow : Zazwól
+i18n_Deny : Odrzuć
+
+i18n_General : Ogólne
+i18n_General Account Settings : Ogólne ustawienia konta
+i18n_Save : Zapisz
+i18n_First : Imię
+i18n_Middle : Drupie imie
+i18n_Last : Nazwisko
+i18n_Alternate name : Alternatywna nazwa
+i18n_Display as : Wyświetl jako
+i18n_Include this on my profile : Dodaj to do mojego profilu
+i18n_Username : Nazwa Użytkownika
+i18n_Your public username is the same as your address for : Twoja publiczna nazwa użytkownika jest taka sama jak Twój adres
+i18n_Primary email : Główny email
+i18n_Primary : Podstawowy
+i18n_New email : Nowy e-mail
+i18n_email : email
+i18n_Optional : Opcjonalny
+i18n_Password last changed : Hasło ostatnio zmienione
+i18n_Current : Obecne
+i18n_New : Nowe
+i18n_Re-type New : Ponownie wpisz nowe
+i18n_Language : Język
+i18n_Choose primary : Wybierz główny
+i18n_Theme : Motyw
+i18n_Default : Domyślna
+
+i18n_View Album : Obejrz album
+i18n_Change Cover : Zmienić okładkę
+i18n_Message : Wiadomość
+i18n_Contact : Kontakt
+i18n_Pending : W oczekiwaniu
+i18n_Add Contact : Dodaj kontakt
+i18n_Call : Połączenie
+
+i18n_This user has not : Ten użytkownik nie ma
+i18n_updated his or her : zaktualizował swoją
+i18n_profile yet : jeszcze profilu
+
+i18n_Leave Group : Opuścić grupę
+i18n_Delete Group : Usuń grupę
+i18n_Group Settings : Ustawienia grupy
+
+i18n_Options : Opcje
+i18n_Download : Pobieranie
+i18n_Delete This Photo : Usuń to zdjęcie
+i18n_Cover Photos : Zdjęcia na okładce
+i18n_Profile Photos : Zdjęcia profilowe
+
+i18n_Access Levels : Poziomy dostępu
+i18n_Display : Wyświetl
+i18n_Addition : Dodatek
+i18n_Read : Odczyt
+i18n_Write : Zapis
+i18n_Admin : Admin
+i18n_Owner : Właściciel
+i18n_Close : Zamknij
+
+i18n_Main Group : Główna grupa
+i18n_Select a main group : Wybierz grupę główną
+i18n_No main group : Brak głównej grupy
+i18n_Privacy setting : Ustawienia prywatności
+i18n_Wall mode : Tryb tablicy
+
+i18n_Work And Education : Praca i Edukacja
+i18n_Work : Praca
+i18n_College : Szkoła Wyższa
+i18n_High School : Liceum
+i18n_Basic Information :Imię
+i18n_Middlename : Drugie imie
+i18n_Lastname : Nazwisko
+i18n_Birthdate : Data urodzenia
+i18n_Gender : Płeć
+i18n_Languages : Języki
+i18n_Interests : Zainteresowania
+i18n_Philosophy : Filozofia
+i18n_Religious view : Religia
+i18n_Political view : Poglądy polityczne
+i18n_Contact Information : Informacje kontaktowe
+i18n_Mobile : Telefon Kom.
+i18n_Address : Adres
+i18n_Screen Name : Nick
+i18n_Website : Strona internetowa
+i18n_Quotations : Cytaty
+i18n_Extended Information : Informacje rozszerzone
+
+i18n_No orders in list : Brak zamówień na liście
+
+i18n_Amount : Ilość
+
+i18n_Fullscreen view : Widok pełnoekranowy
+i18n_Default view : Widok domyślny

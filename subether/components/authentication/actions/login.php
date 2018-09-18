@@ -65,7 +65,8 @@ if ( $_REQUEST['action'] == 'login' )
 					if ( !$_REQUEST['Signature'] && !$_REQUEST['SessionID'] )
 					{
 						//$u->Password = UniqueKey();
-						$u->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
+						//$u->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
+						$u->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
 						$u->InActive = 0;
 						$u->IsDisabled = 0;
 						$u->AuthKey = '';
