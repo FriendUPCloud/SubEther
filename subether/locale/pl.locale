@@ -282,6 +282,49 @@ i18n_Members : Członkowie
 i18n_Who do you want to add to the group : Kogo chcesz dodać do grupy
 i18n_Privacy : Prywatność
 i18n_Open : Otwarta
-i18n_Closed : Ukryta
+i18n_Closed : Zamknięta
+i18n_Secret : Ukryta
 i18n_Create : Stwórz
 
+i18n_commented on your post in : skomentował twój wpis w
+i18n_made an event in : wydarzenie w
+i18n_posted in : opublikowany w
+i18n_commented on your post : skomentował twój wpis
+i18n_wrote on : napisał na
+i18n_\'s wall : tablisa
+i18n_wrote on your wall : napisał na twojej tablicy
+i18n_invited you to : zaprosił cię do
+i18n_accept : zaakceptuj
+i18n_decline : odrzuć
+i18n_made an event : zrobił wydarzenie
+i18n_wrote a post : napisał post
+
+i18n_See All : Pokaż wszystko
+
+i18n_Allow : Zazwól
+i18n_Deny : Odrzuć
+
+i18n_General : Ogólne
+i18n_General Account Settings : Ogólne ustawienia konta
+i18n_Save : Zapisz
+i18n_First : Imię
+i18n_Middle : Drupie imie
+i18n_Last : Nazwisko
+i18n_Alternate name : Alternatywna nazwa
+i18n_Display as : Wyświetl jako
+i18n_Include this on my profile : Dodaj to do mojego profilu
+i18n_Username : Nazwa Użytkownika
+i18n_Your public username is the same as your address for : Ditt offentlige brukernavn er det samme som adressen din for
+i18n_Primary email : Primær Epost
+i18n_Primary : Primær
+i18n_New email : Ny Epost
+i18n_email : epost
+i18n_Optional : Alternativt
+i18n_Password last changed : Passord sist endret
+i18n_Current : Nåværende
+i18n_New : Nytt
+i18n_Re-type New : Gjenta Nytt
+i18n_Language : Språk
+i18n_Choose primary : Velg primært
+i18n_Theme : Tema
+i18n_Default : Standard
