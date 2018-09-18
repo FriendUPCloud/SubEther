@@ -239,3 +239,35 @@ i18n_Images : Obrazy
 i18n_Files : Pliki
 i18n_Videos : Widea
 i18n_Wall : Ściana
+
+i18n_Create New Event : Nowe wydarzenie
+i18n_Name : Nazwa
+i18n_Details : Opis
+i18n_Place : Miejsce
+i18n_Start : Start
+i18n_End : Koniec
+i18n_Slots : Imość miejsc
+i18n_Access : Wstęp
+i18n_EventName : Nazwa wydarzenia
+i18n_EventDetails : Szczegóły wydarzenia
+i18n_EventPlace : Miejsce wydarzenia
+i18n_TimeStart : Rozpoczęcie
+i18n_TimeEnd : Zakończenie
+
+i18n_Edit : Edytuj
+i18n_Delete : Usuń
+
+i18n_Report a Problem : Zgłoś problem
+i18n_Type : Typ
+i18n_Description : Opis
+i18n_Bug : Błąd
+i18n_Feature : Cecha
+i18n_Other : Inny
+i18n_Report : Raport
+i18n_Cancel : Anuluj
+
+i18n_Email : Email
+i18n_Password : Hasło
+i18n_Keep me logged in : Nie wylogowywuj mnie
+i18n_Login : Zaloguj
+i18n_Forgot your password : Glemt passordet
