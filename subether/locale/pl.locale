@@ -314,17 +314,17 @@ i18n_Alternate name : Alternatywna nazwa
 i18n_Display as : Wyświetl jako
 i18n_Include this on my profile : Dodaj to do mojego profilu
 i18n_Username : Nazwa Użytkownika
-i18n_Your public username is the same as your address for : Ditt offentlige brukernavn er det samme som adressen din for
-i18n_Primary email : Primær Epost
-i18n_Primary : Primær
-i18n_New email : Ny Epost
-i18n_email : epost
-i18n_Optional : Alternativt
-i18n_Password last changed : Passord sist endret
-i18n_Current : Nåværende
-i18n_New : Nytt
-i18n_Re-type New : Gjenta Nytt
-i18n_Language : Språk
-i18n_Choose primary : Velg primært
-i18n_Theme : Tema
-i18n_Default : Standard
+i18n_Your public username is the same as your address for : Twoja publiczna nazwa użytkownika jest taka sama jak Twój adres
+i18n_Primary email : Główny email
+i18n_Primary : Podstawowy
+i18n_New email : Nowy e-mail
+i18n_email : email
+i18n_Optional : Opcjonalny
+i18n_Password last changed : Hasło ostatnio zmienione
+i18n_Current : Obecne
+i18n_New : Nowe
+i18n_Re-type New : Ponownie wpisz nowe
+i18n_Language : Język
+i18n_Choose primary : Wybierz główny
+i18n_Theme : Motyw
+i18n_Default : Domyślna
