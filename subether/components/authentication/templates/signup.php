@@ -39,35 +39,35 @@
 					<form name="Signup" action="?component=authentication&action=signup" method="post">
 						<table>
 							<tr>
-								<td class="head" colspan="2"><h2>Sign Up</h2></td>
+								<td class="head" colspan="2"><h2><?= i18n( 'i18n_Sign Up' ) ?></h2></td>
 							</tr>
 							<!--<tr>
 								<td class="Col1"><input name="Firstname" placeholder="First Name"/></td>
 								<td class="Col2"><input name="Lastname" placeholder="Last Name"/></td>
 							</tr>-->
 							<tr>
-								<td>Username: </td>
-								<td><input type="text" name="Username" class="obl" placeholder="Your Username"/></td>
+								<td><?= i18n( 'i18n_Username' ) ?>: </td>
+								<td><input type="text" name="Username" class="obl" placeholder="<?= i18n( 'i18n_Your Username' ) ?>"/></td>
 							</tr>
 							<tr>
-								<td>Email: </td>
-								<td><input type="email" name="Email" class="obl" placeholder="Your Email"/></td>
+								<td><?= i18n( 'i18n_Email' ) ?>: </td>
+								<td><input type="email" name="Email" class="obl" placeholder="<?= i18n( 'i18n_Your Email' ) ?>"/></td>
 							</tr>
 							<tr>
-								<td>Confirm Email: </td>
-								<td><input type="email" name="ConfirmEmail" class="obl" placeholder="Re-enter Email"/></td>
+								<td><?= i18n( 'i18n_Confirm Email' ) ?>: </td>
+								<td><input type="email" name="ConfirmEmail" class="obl" placeholder="<?= i18n( 'i18n_Re-enter Email' ) ?>"/></td>
 							</tr>
 							<tr>
-								<td>Password: </td>
-								<td><input type="password" name="Password" class="obl" placeholder="Password"/></td>
+								<td><?= i18n( 'i18n_Password' ) ?>: </td>
+								<td><input type="password" name="Password" class="obl" placeholder="<?= i18n( 'i18n_Password' ) ?>"/></td>
 							</tr>
 							<tr class="disabled">
-								<td>AuthKey: </td>
-								<td><input id="AuthKey" type="text" name="AuthKey" class="disabled" placeholder="Your AuthKey"/></td>
+								<td><?= i18n( 'i18n_AuthKey' ) ?>: </td>
+								<td><input id="AuthKey" type="text" name="AuthKey" class="disabled" placeholder="<?= i18n( 'i18n_Your AuthKey' ) ?>"/></td>
 							</tr>
 							<tr>
 								<td class="buttons" colspan="2">
-									<button type="button" onclick="checkform( document.Signup, '?component=authentication&action=signup' )"><span>Sign Up</span></button>
+									<button type="button" onclick="checkform( document.Signup, '?component=authentication&action=signup' )"><span><?= i18n( 'i18n_Sign Up' ) ?></span></button>
 								</td>
 							</tr>
 						</table>

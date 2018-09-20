@@ -38,37 +38,37 @@
 				<div id="SignupBox">
 					<form id="ActivateForm" name="Activate" action="<?= $this->parent->mpath ?>?component=register&action=activate" method="post">
 						<div class="heading">
-							<h2>Activate</h2>
+							<h2><?= i18n( 'i18n_Activate' ) ?></h2>
 						</div>
 						<table>
 							<tr class="Row1">
-								<td class="Col1">AuthKey: </td>
+								<td class="Col1"><?= i18n( 'i18n_AuthKey' ) ?>: </td>
 								<td class="Col2">
-									<input type="text" name="AuthKey" placeholder="AuthKey here" <?= $_REQUEST['authkey'] ? ( 'value="' . $_REQUEST['authkey'] . '"' ) : '' ?>/>
+									<input type="text" name="AuthKey" placeholder="<?= i18n( 'i18n_AuthKey here' ) ?>" <?= $_REQUEST['authkey'] ? ( 'value="' . $_REQUEST['authkey'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="Row2">
-								<td class="Col1">Email: </td>
+								<td class="Col1"><?= i18n( 'i18n_Email' ) ?>: </td>
 								<td class="Col2">
 									<input type="hidden" name="UniqueID" value="<?= $_REQUEST['activate'] ?>"/>
-									<input type="email" name="Email" placeholder="Email here" <?= $_REQUEST['email'] ? ( 'value="' . $_REQUEST['email'] . '"' ) : '' ?>/>
+									<input type="email" name="Email" placeholder="<?= i18n( 'i18n_Email here' ) ?>" <?= $_REQUEST['email'] ? ( 'value="' . $_REQUEST['email'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="Row3">
-								<td class="Col1">Password: </td>
+								<td class="Col1"><?= i18n( 'i18n_Password' ) ?>: </td>
 								<td class="Col2">
-									<input type="password" name="Password" placeholder="Password here" <?= $_REQUEST['authkey'] ? ( 'value="' . $_REQUEST['authkey'] . '"' ) : '' ?>/>
+									<input type="password" name="Password" placeholder="<?= i18n( 'i18n_Password here' ) ?>" <?= $_REQUEST['authkey'] ? ( 'value="' . $_REQUEST['authkey'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="Row4">
-								<td class="Col1">Re-type: </td>
+								<td class="Col1"><?= i18n( 'i18n_Re-type' ) ?>: </td>
 								<td class="Col2">
-									<input type="password" name="Confirmed" placeholder="Re-type Password here" <?= $_REQUEST['authkey'] ? ( 'value="' . $_REQUEST['authkey'] . '"' ) : '' ?>/>
+									<input type="password" name="Confirmed" placeholder="<?= i18n( 'i18n_Re-type Password here' ) ?>" <?= $_REQUEST['authkey'] ? ( 'value="' . $_REQUEST['authkey'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="ButtonRow">
 								<td class="buttons" colspan="2">
-									<button type="button"><span>Activate</span></button>
+									<button type="button"><span><?= i18n( 'i18n_Activate' ) ?></span></button>
 								</td>
 							</tr>
 						</table>

@@ -1,0 +1,30 @@
+
+i18n_Sign Up                 : Registrering
+i18n_Username                : Brukernavn
+i18n_Email                   : Epost
+i18n_Join Network            : Bli med i Nettverket 
+
+i18n_Activate                : Aktiver
+i18n_AuthKey                 : Auth-nøkkel
+i18n_AuthKey here            : Auth-nøkkel her
+i18n_Email here              : Epost her
+i18n_Password                : Passord
+i18n_Password here           : Passord her
+i18n_Re-type                 : Skriv på ny
+i18n_Re-type Password here   : Skriv på ny Passord her
+
+i18n_Invite                  : Inviter
+i18n_Group                   : Gruppe
+i18n_Store key in database   : Lagre nøkkel i database
+
+i18n_Create Limited Accounts : Opprett begrenset kontoer
+i18n_Receiver Email          : Mottaker Epost
+i18n_Account Numbers         : Antall Kontoer
+i18n_Expiry Date             : Utløpsdato 
+i18n_Create                  : Opprett
+
+i18n_Recover Account         : Gjenopprett konto
+i18n_RecoveryKey             : Gjenoppretts nøkkel
+i18n_RecoveryKey here        : Gjenoppretts nøkkel her
+i18n_Username here           : Brukernavn her
+i18n_Recover                 : Gjenopprett

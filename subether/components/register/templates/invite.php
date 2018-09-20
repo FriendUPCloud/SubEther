@@ -38,26 +38,26 @@
 				<div id="SignupBox">
 					<form id="InviteForm" name="Invite" action="<?= $this->parent->mpath ?>?component=register&action=invite" method="post">
 						<div class="heading">
-							<h2>Invite</h2>
+							<h2><?= i18n( 'i18n_Invite' ) ?></h2>
 						</div>
 						<table>
 							<?if( isset( $this->Groups ) && $this->Groups ) { ?>
 							<tr class="Row1">
-								<td class="Col1">Group: </td>
+								<td class="Col1"><?= i18n( 'i18n_Group' ) ?>: </td>
 								<td class="Col2"><select name="Group"><?= $this->Groups ?></select></td>
 							</tr>
 							<? } ?>
 							<tr class="Row2">
-								<td class="Col1">Email: </td>
-								<td class="Col2"><input type="email" name="Email" placeholder="Email here" <?= ( $_REQUEST['invite'] && strstr( $_REQUEST['invite'], '@' ) && strstr( $_REQUEST['invite'], '.' ) ) ? ( 'value="' . $_REQUEST['invite'] . '"' ) : '' ?>/></td>
+								<td class="Col1"><?= i18n( 'i18n_Email' ) ?>: </td>
+								<td class="Col2"><input type="email" name="Email" placeholder="<?= i18n( 'i18n_Email here' ) ?>" <?= ( $_REQUEST['invite'] && strstr( $_REQUEST['invite'], '@' ) && strstr( $_REQUEST['invite'], '.' ) ) ? ( 'value="' . $_REQUEST['invite'] . '"' ) : '' ?>/></td>
 							</tr>
 							<tr class="ButtonRow">
 								<!--<td class="Col1"></td>-->
 								<td class="Col2 buttons" colspan="2" style="text-align:left;">
 									<?if( IsSystemAdmin() ) { ?>
-									<input type="checkbox" name="StoreKey" style="width:auto;margin-right:5px;position:relative;top:1px;margin-top:12px;"/><span style="margin-top:12px;">Store key in database</span>
+									<input type="checkbox" name="StoreKey" style="width:auto;margin-right:5px;position:relative;top:1px;margin-top:12px;"/><span style="margin-top:12px;"><?= i18n( 'i18n_Store key in database' ) ?></span>
 									<? } ?>
-									<button type="button" style="float:right;"><span>Invite</span></button>
+									<button type="button" style="float:right;"><span><?= i18n( 'i18n_Invite' ) ?></span></button>
 								</td>
 							</tr>
 						</table>

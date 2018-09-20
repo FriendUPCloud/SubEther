@@ -216,7 +216,9 @@ i18n_Seen by : Widziany przez
 
 i18n_at : w
 i18n_Yesterday at : Wczoraj o godz
+i18n_hours ago : godzin temu
 i18n_about an hour ago : około godziny temu
+i18n_minutes ago : minut temu
 i18n_about a minute ago : około minutę temu
 i18n_a few seconds ago : kilka sekund temu
 
@@ -273,7 +275,7 @@ i18n_Login : Zaloguj
 i18n_Forgot your password : Zapomniałeś hasła
 
 i18n_Account Recovery : Odzyskiwanie konta
-i18n_Email, Phone or Username : Tmail, telefon lub nazwa użytkownika
+i18n_Email, Phone or Username : email, telefon lub nazwa użytkownika
 i18n_Recover : Odzyskaj
 
 i18n_Create New Group : Stwórz Nową Grupę

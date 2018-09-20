@@ -1,0 +1,30 @@
+
+i18n_Sign Up                 : Zarejestruj się
+i18n_Username                : Nazwa użytkownika
+i18n_Email                   : Email
+i18n_Join Network            : Dołącz do sieci
+
+i18n_Activate                : Aktywuj
+i18n_AuthKey                 : Kod autoryzacji
+i18n_AuthKey here            : Kod autoryzacji tutaj
+i18n_Email here              : Email tutaj
+i18n_Password                : Hasło 
+i18n_Password here           : Hasło tutaj 
+i18n_Re-type                 : Powtórz 
+i18n_Re-type Password here   : Powtórz haslo
+
+i18n_Invite                  : Zaproś 
+i18n_Group                   : Grupa
+i18n_Store key in database   : Zapisz klucz w bazie
+
+i18n_Create Limited Accounts : Utwórz konto z ograniczeniem 
+i18n_Receiver Email          : Odzyskaj Email 
+i18n_Account Numbers         : Numery kont
+i18n_Expiry Date             : Data wygaśnięcia 
+i18n_Create                  : Utworz
+
+i18n_Recover Account         : Odzyskaj konto
+i18n_RecoveryKey             : Klucz odzyskiwania
+i18n_RecoveryKey here        : Klucz odzyskiwania tutaj
+i18n_Username here           : Nazwa użytkownika tutaj
+i18n_Recover                 : Odzyskaj
