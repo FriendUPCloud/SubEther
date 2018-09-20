@@ -25,6 +25,8 @@ statistics( $parent->module, 'register' );
 $root = 'subether/';
 $cbase = 'subether/components/register';
 
+i18nAddLocalePath ( $cbase . '/locale' );
+
 include_once ( 'subether/classes/mail.class.php' );
 include_once ( 'subether/include/functions.php' );
 include_once ( $cbase . '/include/functions.php' );

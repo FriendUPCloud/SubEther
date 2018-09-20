@@ -1,0 +1,31 @@
+
+i18n_Sign Up                 : Sign Up
+i18n_Username                : Username
+i18n_Email                   : Email
+i18n_Join Network            : Join Network
+
+i18n_Activate                : Activate
+i18n_AuthKey                 : AuthKey
+i18n_AuthKey here            : AuthKey here
+i18n_Email here              : Email here
+i18n_Password                : Password
+i18n_Password here           : Password here
+i18n_Re-type                 : Re-type
+i18n_Re-type Password here   : Re-type Password here
+
+i18n_Invite                  : Invite
+i18n_Group                   : Group
+i18n_Store key in database   : Store key in database
+
+i18n_Create Limited Accounts : Create Limited Accounts
+i18n_Receiver Email          : Receiver Email 
+i18n_Account Numbers         : Account Numbers
+i18n_Expiry Date             : Expiry Date
+i18n_Create                  : Create
+
+i18n_Recover Account         : Recover Account
+i18n_RecoveryKey             : RecoveryKey
+i18n_RecoveryKey here        : RecoveryKey here
+i18n_Username here           : Username here
+i18n_Recover                 : Recover
+

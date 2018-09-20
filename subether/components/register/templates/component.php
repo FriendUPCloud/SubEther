@@ -38,7 +38,7 @@
 				<div id="SignupBox">
 					<form id="SignupForm" name="Signup" action="<?= $this->parent->mpath ?>?component=register&action=signup" method="post">
 						<div class="heading">
-							<h2>Sign Up</h2>
+							<h2><?= i18n( 'i18n_Sign Up' ) ?></h2>
 						</div>
 						<table>
 							<!--<tr>
@@ -50,20 +50,20 @@
 								<td><input type="text" name="Lastname" placeholder="Your Lastname"/></td>
 							</tr>-->
 							<tr class="Row1">
-								<td class="Col1">Username: </td>
-								<td class="Col2"><input type="text" name="Username" placeholder="Username"/></td>
+								<td class="Col1"><?= i18n( 'i18n_Username' ) ?>: </td>
+								<td class="Col2"><input type="text" name="Username" placeholder="<?= i18n( 'i18n_Username' ) ?>"/></td>
 							</tr>
 							<tr class="Row2">
-								<td class="Col1">Email: </td>
-								<td class="Col2"><input type="email" name="Email" placeholder="Email"/></td>
+								<td class="Col1"><?= i18n( 'i18n_Email' ) ?>: </td>
+								<td class="Col2"><input type="email" name="Email" placeholder="<?= i18n( 'i18n_Email' ) ?>"/></td>
 							</tr>
 							<tr class="ButtonRow">
 								<!--<td class="Col1"></td>-->
 								<td class="Col2 buttons" colspan="2" style="text-align:left;">
 									<?if( IsSystemAdmin() ) { ?>
-									<input type="checkbox" name="StoreKey" style="width:auto;margin-right:5px;position:relative;top:1px;margin-top:12px;"/><span style="margin-top:12px;">Store key in database</span>
+									<input type="checkbox" name="StoreKey" style="width:auto;margin-right:5px;position:relative;top:1px;margin-top:12px;"/><span style="margin-top:12px;"><?= i18n( 'i18n_Store key in database' ) ?></span>
 									<? } ?>
-									<button type="button" id="SignupButton" style="float:right;"><span>Join Network</span></button>
+									<button type="button" id="SignupButton" style="float:right;"><span><?= i18n( 'i18n_Join Network' ) ?></span></button>
 								</td>
 							</tr>
 						</table>

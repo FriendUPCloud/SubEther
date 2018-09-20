@@ -38,37 +38,37 @@
 				<div id="SignupBox">
 					<form id="RecoverForm">
 						<div class="heading">
-							<h2>Recover Account</h2>
+							<h2><?= i18n( 'i18n_Recover Account' ) ?></h2>
 						</div>
 						<table>
 							<tr class="Row1">
-								<td class="Col1">RecoveryKey: </td>
+								<td class="Col1"><?= i18n( 'i18n_RecoveryKey' ) ?>: </td>
 								<td class="Col2">
 									<input type="hidden" id="UniqueID" value="<?= $_REQUEST['recover'] ?>"/>
-									<input type="text" id="Key" placeholder="RecoveryKey here" <?= $_REQUEST['key'] ? ( 'value="' . $_REQUEST['key'] . '"' ) : '' ?>/>
+									<input type="text" id="Key" placeholder="<?= i18n( 'i18n_RecoveryKey here' ) ?>" <?= $_REQUEST['key'] ? ( 'value="' . $_REQUEST['key'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="Row2">
-								<td class="Col1">Username: </td>
+								<td class="Col1"><?= i18n( 'i18n_Username' ) ?>: </td>
 								<td class="Col2">
-									<input type="text" id="Username" placeholder="Username here" <?= $_REQUEST['user'] ? ( 'value="' . $_REQUEST['user'] . '"' ) : '' ?>/>
+									<input type="text" id="Username" placeholder="<?= i18n( 'i18n_Username here' ) ?>" <?= $_REQUEST['user'] ? ( 'value="' . $_REQUEST['user'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="Row3">
-								<td class="Col1">Password: </td>
+								<td class="Col1"><?= i18n( 'i18n_Password' ) ?>: </td>
 								<td class="Col2">
-									<input type="password" id="Password" placeholder="New Password here" <?= $_REQUEST['key'] ? ( 'value="' . $_REQUEST['key'] . '"' ) : '' ?>/>
+									<input type="password" id="Password" placeholder="<?= i18n( 'i18n_New Password here' ) ?>" <?= $_REQUEST['key'] ? ( 'value="' . $_REQUEST['key'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="Row4">
-								<td class="Col1">Re-type: </td>
+								<td class="Col1"><?= i18n( 'i18n_Re-type' ) ?>: </td>
 								<td class="Col2">
-									<input type="password" id="Confirmed" placeholder="Re-type Password here" <?= $_REQUEST['key'] ? ( 'value="' . $_REQUEST['key'] . '"' ) : '' ?>/>
+									<input type="password" id="Confirmed" placeholder="<?= i18n( 'i18n_Re-type Password here' ) ?>" <?= $_REQUEST['key'] ? ( 'value="' . $_REQUEST['key'] . '"' ) : '' ?>/>
 								</td>
 							</tr>
 							<tr class="ButtonRow">
 								<td class="buttons" colspan="2">
-									<button type="button"><span>Recover</span></button>
+									<button type="button"><span><?= i18n( 'i18n_Recover' ) ?></span></button>
 								</td>
 							</tr>
 						</table>

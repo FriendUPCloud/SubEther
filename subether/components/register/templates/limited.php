@@ -38,34 +38,34 @@
 				<div id="SignupBox">
 					<form id="LimitedForm" name="Limited" action="<?= $this->parent->mpath ?>?component=register&action=limited" method="post">
 						<div class="heading">
-							<h2>Create Limited Accounts</h2>
+							<h2><?= i18n( 'i18n_Create Limited Accounts' ) ?></h2>
 						</div>
 						<table>
 							<?if( isset( $this->Groups ) && $this->Groups ) { ?>
 							<tr class="Row1">
-								<td class="Col1">Group: </td>
+								<td class="Col1"><?= i18n( 'i18n_Group' ) ?>: </td>
 								<td class="Col2"><select name="Group"><?= $this->Groups ?></select></td>
 							</tr>
 							<? } ?>
 							<tr class="Row2">
-								<td class="Col1">Receiver Email: </td>
-								<td class="Col2"><input type="email" name="Email" placeholder="Email here"/></td>
+								<td class="Col1"><?= i18n( 'i18n_Receiver Email' ) ?>: </td>
+								<td class="Col2"><input type="email" name="Email" placeholder="<?= i18n( 'i18n_Email here' ) ?>"/></td>
 							</tr>
 							<tr class="Row3">
-								<td class="Col1">Account Numbers: </td>
+								<td class="Col1"><?= i18n( 'i18n_Account Numbers' ) ?>: </td>
 								<td class="Col2"><select name="Accounts"><? $str = ''; for( $a = 1; $a <= 100; $a++ ) $str .= '<option value="' . $a . '">' . $a . '</option>'; return $str; ?></select></td>
 							</tr>
 							<tr class="Row4">
-								<td class="Col1">Expiry Date: </td>
+								<td class="Col1"><?= i18n( 'i18n_Expiry Date' ) ?>: </td>
 								<td class="Col2"><input name="Expiry" value="<?= date( 'Y-m-d H:i:s', mktime( 0, 0, 0, date('m'), date('d')+1, date('Y') ) ) ?>"/></select></td>
 							</tr>
 							<tr class="ButtonRow">
 								<!--<td class="Col1"></td>-->
 								<td class="Col2 buttons" colspan="2" style="text-align:left;">
 									<?if( IsSystemAdmin() ) { ?>
-									<input type="checkbox" name="StoreKey" style="width:auto;margin-right:5px;position:relative;top:1px;margin-top:12px;"/><span style="margin-top:12px;">Store key in database</span>
+									<input type="checkbox" name="StoreKey" style="width:auto;margin-right:5px;position:relative;top:1px;margin-top:12px;"/><span style="margin-top:12px;"><?= i18n( 'i18n_Store key in database' ) ?></span>
 									<? } ?>
-									<button type="button" style="float:right;"><span>Create</span></button>
+									<button type="button" style="float:right;"><span><?= i18n( 'i18n_Create' ) ?></span></button>
 								</td>
 							</tr>
 						</table>
