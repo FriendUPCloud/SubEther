@@ -119,7 +119,7 @@ function convertToTags( $str )
 // Blacklist executed!
 function sanitizeText( $str )
 {
-	$str = preg_replace( array( '/\<\/p\>/i', '/\<br[^>]*?\>\<\/div\>/i', '/\<\/div\>/i', '/\<br[^>]*?\>/i' ), "\r\n", $str );
+	$str = preg_replace( array( '/\<\/p\>/i', '/\<div\>\<br[^>]*?\>/i', '/\<div\>/i', '/\<br[^>]*?\>/i' ), "\r\n", $str );
 	$str = strip_tags( $str );
 	$str = str_replace( "\r\n", "<br>", $str );
 	$str = preg_replace_hashtags( $str );
@@ -1080,7 +1080,7 @@ function WallMetaData ( $type, $source, $thumb, $filetype, $title, $description,
 }
 
 
-function WallAlbum( $files, $pid, $images = false )
+function WallAlbum( $files, $pid, $images = false, $parent = false )
 {
 	$str = '';
 	
@@ -1100,7 +1100,7 @@ function WallAlbum( $files, $pid, $images = false )
 		{
 			if( $i > $limit ) continue;
 			
-			$image = ''; $thumb = ''; $onclick = ''; $format = ''; $widthlimit = ''; $heightlimit = ''; $controls = ''; $bg = '';
+			$image = ''; $thumb = ''; $onclick = ''; $format = ''; $widthlimit = ''; $heightlimit = ''; $controls = ''; $bg = ''; $nail = '';
 			
 			$title = $f->FileName;
 			$file = $f->FileID;
@@ -1168,8 +1168,8 @@ function WallAlbum( $files, $pid, $images = false )
 					break;
 			}
 			
-			
-			if( $pattern != $mediapattern )
+			// Not use this contain method for now ...
+			if( 1!=1 && $pattern != $mediapattern )
 			{
 				$bg = ' contain';
 				$mode = 'max-width:100%;max-height:100%;width:100%;height:100%;background-position:left top;background-repeat:no-repeat;background-size:contain;';
@@ -1207,10 +1207,23 @@ function WallAlbum( $files, $pid, $images = false )
 				
 				$str .= '<div class="image ' . $type . $format . $bg . ( $filetype ? ( ' ' . $filetype ) : '' ) . ( $image ? ( ' thumb' ) : '' ) . ' nr' . $i . ' total' . ( count( $files ) > $limit ? $limit : count( $files ) ) . '" link="' . $source . '" ' . ( $onclick ? ( 'onclick="' . $onclick . '"' ) : '' ) . '>';
 				
+				if( $parent )
+				{
+					if( strstr( $parent->agent, 'mobile' ) )
+					{
+						$nail = '500x500';
+					}
+					
+					if( isset( $_REQUEST['christesting'] ) )
+					{
+						die( print_r( $parent->agent,1 ) . ' -- 500x500' );
+					}
+				}
+				
 				if( $thumb )
 				{
-					$str .= '<div class="imagecontainer" style="background-image:url(\'' . $thumb . '\');' . $mode . '">';
-					$str .= '<img style="visibility:hidden;max-width:100%;max-height:100%;height:auto;' . ( $width ? ( 'width:' . $width . 'px;' ) : '' ) . '" class="hidden" src="' . $thumb . '"/>';
+					$str .= '<div class="imagecontainer" style="background-image:url(\'' . $thumb . $nail . '\');' . $mode . '">';
+					$str .= '<img style="visibility:hidden;max-width:100%;max-height:100%;height:auto;' . ( $width ? ( 'width:' . $width . 'px;' ) : '' ) . '" class="hidden" src="' . $thumb . $nail . '"/>';
 					if( count( $files ) > $limit && $i == $limit )
 					{
 						$str .= '<div class="morenum">+' . ( count( $files ) - $limit ) . '</div>';

@@ -28,8 +28,8 @@
 
 $bstr  = '<div class="topcontrols">';
 $bstr .= '<ul id="ThumbView" mid="' . $_POST['mid'] . '" ' . ( $view == 1 ? 'value="1"' : 'value="0"' ) . '>';
-$bstr .= '<li value="0" ' . ( $view == 0 ? 'class="selected"' : '' ) . ' onclick="refreshFilesDirectory(this.parentNode.getAttribute(\'mid\'),false,\'0\')"><span>Icon View</span></li>';
-$bstr .= '<li value="1" ' . ( $view == 1 ? 'class="selected"' : '' ) . ' onclick="refreshFilesDirectory(this.parentNode.getAttribute(\'mid\'),false,\'1\')"><span>List View</span></li>';
+$bstr .= '<li value="0" ' . ( $view == 0 ? 'class="selected"' : '' ) . ' onclick="refreshFilesDirectory(this.parentNode.getAttribute(\'mid\'),false,\'0\')"><span>' . i18n( 'i18n_Icon View' ) . '</span></li>';
+$bstr .= '<li value="1" ' . ( $view == 1 ? 'class="selected"' : '' ) . ' onclick="refreshFilesDirectory(this.parentNode.getAttribute(\'mid\'),false,\'1\')"><span>' . i18n( 'i18n_List View' ) . '</span></li>';
 $bstr .= '</ul>';
 $bstr .= '<div class="clearboth" style="clear:both"></div>';
 $bstr .= '</div>';

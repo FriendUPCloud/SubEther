@@ -31,24 +31,24 @@ if( $folders )
 		// --- Home Folders ------------------------------------------------------------------------------------------------------------------- //
 		
 		$dstr .= '<h4 class="mainfolder ' . strtolower( $mfolder->Name ) . '"><div>';
-		$dstr .= '<span class="foldername" id="FolderID_' . $mfolder->ID . '" foldername="' . $mfolder->Name . '">' . $mfolder->Name . '</span>';
+		$dstr .= '<span class="foldername" id="FolderID_' . $mfolder->ID . '" foldername="' . $mfolder->Name . '">' . i18n( 'i18n_' . $mfolder->Name ) . '</span>';
 		if( $mfolder->HasAccess )
 		{
 			$dstr .= '<div class="edit_icons">';
 			$dstr .= '<span class="sorting">';
-			$dstr .= '<div class="sortUp" onclick="sortDown( \'' . $mfolder->ID . '\', \'' . ( $mfolder->SortOrder > 0 ? ( $mfolder->SortOrder - 1 ) : 0 ) . '\', \'folder\', \'' . $fid . '\' )" title="Up"><img class="Icon" src="admin/gfx/icons/bullet_up.png"></div>';
-			$dstr .= '<div class="sortDown" onclick="sortUp( \'' . $mfolder->ID . '\', \'' . ( $mfolder->SortOrder + 1 ) . '\', \'folder\', \'' . $fid . '\' )" title="Down"><img class="Icon" src="admin/gfx/icons/bullet_down.png"></div>';
+			$dstr .= '<div class="sortUp" onclick="sortDown( \'' . $mfolder->ID . '\', \'' . ( $mfolder->SortOrder > 0 ? ( $mfolder->SortOrder - 1 ) : 0 ) . '\', \'folder\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Up' ) . '"><img class="Icon" src="admin/gfx/icons/bullet_up.png"></div>';
+			$dstr .= '<div class="sortDown" onclick="sortUp( \'' . $mfolder->ID . '\', \'' . ( $mfolder->SortOrder + 1 ) . '\', \'folder\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Down' ) . '"><img class="Icon" src="admin/gfx/icons/bullet_down.png"></div>';
 			$dstr .= '</span>';
-			$dstr .= '<span class="newfile" onclick="createNewFile( \'' . ( $_POST['mid'] > 0 ? $_POST['mid'] : $mfolder->SubFolders[0]->ID ) . '\', \'' . $fid . '\' )" title="Create New File"><img class="Icon" src="admin/gfx/icons/page_add.png"></span>';
-			$dstr .= '<span class="parsefile" onclick="openWindow( \'Library\', \'' . $fid . '\', \'parse\' )" title="Create File By Url"><img class="Icon" src="admin/gfx/icons/page_world.png"></span>';
+			$dstr .= '<span class="newfile" onclick="createNewFile( \'' . ( $_POST['mid'] > 0 ? $_POST['mid'] : $mfolder->SubFolders[0]->ID ) . '\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Create New File' ) . '"><img class="Icon" src="admin/gfx/icons/page_add.png"></span>';
+			$dstr .= '<span class="parsefile" onclick="openWindow( \'Library\', \'' . $fid . '\', \'parse\' )" title="' . i18n( 'i18n_Create File By Url' ) . '"><img class="Icon" src="admin/gfx/icons/page_world.png"></span>';
 			if( !in_array( strtolower( $mfolder->Name ), array( 'library', 'album' ) ) ) 
 			{
-				$dstr .= '<span class="editfolder" onclick="editFolder( \'' . $mfolder->ID . '\', event )" title="Edit Folder"><img class="Icon" src="admin/gfx/icons/folder_edit.png"></span>';
+				$dstr .= '<span class="editfolder" onclick="editFolder( \'' . $mfolder->ID . '\', event )" title="' . i18n( 'i18n_Edit Folder' ) . '"><img class="Icon" src="admin/gfx/icons/folder_edit.png"></span>';
 			}
-			$dstr .= '<span class="newfolder" onclick="createNewFolder( \'' . $mfolder->ID . '\', \'' . $fid . '\' )" title="Create New Folder"><img class="Icon" src="admin/gfx/icons/folder_add.png"></span>';
+			$dstr .= '<span class="newfolder" onclick="createNewFolder( \'' . $mfolder->ID . '\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Create New Folder' ) . '"><img class="Icon" src="admin/gfx/icons/folder_add.png"></span>';
 			if( !in_array( strtolower( $mfolder->Name ), array( 'library', 'album' ) ) ) 
 			{
-				$dstr .= '<span class="deletefolder" onclick="deleteFolder( \'' . $mfolder->ID . '\', \'' . $fid . '\' )" title="Delete Folder"><img class="Icon" src="admin/gfx/icons/folder_delete.png"></span>';
+				$dstr .= '<span class="deletefolder" onclick="deleteFolder( \'' . $mfolder->ID . '\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Delete Folder' ) . '"><img class="Icon" src="admin/gfx/icons/folder_delete.png"></span>';
 			}
 			//$dstr .= '<span>';
 			//$dstr .= '</span>';
@@ -67,25 +67,25 @@ if( $folders )
 				$dstr .= '<li class="subfolder ' . strtolower( $sfolder->Name ) . '">';
 				$dstr .= '<div class="subfolder' . ( $sfolder->Current > 0 ? ' current' : '' ) . '" onclick="refreshFilesDirectory( \'' . $sfolder->ID . '\', false, false, event )">';
 				$dstr .= '<span class="toggle" onclick="openSubList( this, \'' . $sfolder->ID . '\', event )"><img class="Icon" src="lib/icons/bullet_toggle_' . ( $sfolder->Open > 0 ? 'minus' : 'plus' ) . '.png"></span>';
-				$dstr .= '<span class="foldername" id="FolderID_' . $sfolder->ID . '" ondragover="this.style.fontWeight = \'bold\'; handleDragOver(event); return false" ondragleave="this.style.fontWeight = \'normal\'; handleDragLeave(event); return false" ondrop="handleDrop(window.dragId,window.dragType,' . $sfolder->ID . ',false,false,event); return false;" foldername="' . $sfolder->Name . '">' . dotTrim( $sfolder->Name, 18 ) . '</span>';
+				$dstr .= '<span class="foldername" id="FolderID_' . $sfolder->ID . '" ondragover="this.style.fontWeight = \'bold\'; handleDragOver(event); return false" ondragleave="this.style.fontWeight = \'normal\'; handleDragLeave(event); return false" ondrop="handleDrop(window.dragId,window.dragType,' . $sfolder->ID . ',false,false,event); return false;" foldername="' . $sfolder->Name . '">' . dotTrim( i18n( 'i18n_' . $sfolder->Name ), 18 ) . '</span>';
 				if( $sfolder->HasAccess )
 				{
 					$dstr .= '<div class="edit_icons">';
 					$dstr .= '<span class="sorting">';
-					$dstr .= '<div class="sortUp" onclick="sortDown( \'' . $sfolder->ID . '\', \'' . ( $sfolder->SortOrder > 0 ? ( $sfolder->SortOrder - 1 ) : 0 ) . '\', \'folder\', \'' . $fid . '\' )" title="Up"><img class="Icon" src="admin/gfx/icons/bullet_up.png"></div>';
-					$dstr .= '<div class="sortDown" onclick="sortUp( \'' . $sfolder->ID . '\', \'' . ( $sfolder->SortOrder + 1 ) . '\', \'folder\', \'' . $fid . '\' )" title="Down"><img class="Icon" src="admin/gfx/icons/bullet_down.png"></div>';
+					$dstr .= '<div class="sortUp" onclick="sortDown( \'' . $sfolder->ID . '\', \'' . ( $sfolder->SortOrder > 0 ? ( $sfolder->SortOrder - 1 ) : 0 ) . '\', \'folder\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Up' ) . '"><img class="Icon" src="admin/gfx/icons/bullet_up.png"></div>';
+					$dstr .= '<div class="sortDown" onclick="sortUp( \'' . $sfolder->ID . '\', \'' . ( $sfolder->SortOrder + 1 ) . '\', \'folder\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Down' ) . '"><img class="Icon" src="admin/gfx/icons/bullet_down.png"></div>';
 					$dstr .= '</span>';
-					$dstr .= '<span class="fileupload" onclick="ge(\'FilesUploadBtn\').click();return false;" title="Upload Files"><img class="Icon" src="admin/gfx/icons/derivatives.png"></span>';
-					$dstr .= '<span class="editfolder" onclick="editFolder( \'' . $sfolder->ID . '\', event ); return cancelBubble( event )" title="Edit Folder"><img class="Icon" src="admin/gfx/icons/page_edit.png"></span>';
-					$dstr .= '<span class="deletefolder" onclick="deleteFolder( \'' . $sfolder->ID . '\', \'' . $fid . '\' )" title="Delete Folder"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>';
-					$dstr .= '<span class="folderaccess"> <select title="Folder Access" onclick="cancelBubble(event)" onchange="UpdateAccess(\'' . $sfolder->ID . '\',\'folder\',this.value)">';
-					$dstr .= '<option title="Public" value="0"' . ( $sfolder->FolderAccess == 0 ? ' selected="selected"' : '' ) . '>0 -> Public</option>';
-					$dstr .= '<option title="Contacts" value="1"' . ( $sfolder->FolderAccess == 1 ? ' selected="selected"' : '' ) . '>1 -> Contacts</option>';
-					$dstr .= '<option title="Only Me" value="2"' . ( $sfolder->FolderAccess == 2 ? ' selected="selected"' : '' ) . '>2 -> Only Me</option>';
-					//$dstr .= '<option title="Custom" value="3"' . ( $sfolder->FolderAccess == 3 ? ' selected="selected"' : '' ) . '>3 -> Custom</option>';
+					$dstr .= '<span class="fileupload" onclick="ge(\'FilesUploadBtn\').click();return false;" title="' . i18n( 'i18n_Upload Files' ) . '"><img class="Icon" src="admin/gfx/icons/derivatives.png"></span>';
+					$dstr .= '<span class="editfolder" onclick="editFolder( \'' . $sfolder->ID . '\', event ); return cancelBubble( event )" title="' . i18n( 'i18n_Edit Folder' ) . '"><img class="Icon" src="admin/gfx/icons/page_edit.png"></span>';
+					$dstr .= '<span class="deletefolder" onclick="deleteFolder( \'' . $sfolder->ID . '\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Delete Folder' ) . '"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>';
+					$dstr .= '<span class="folderaccess"> <select title="' . i18n( 'i18n_Folder Access' ) . '" onclick="cancelBubble(event)" onchange="UpdateAccess(\'' . $sfolder->ID . '\',\'folder\',this.value)">';
+					$dstr .= '<option title="' . i18n( 'i18n_Public' ) . '" value="0"' . ( $sfolder->FolderAccess == 0 ? ' selected="selected"' : '' ) . '>0 -> ' . i18n( 'i18n_Public' ) . '</option>';
+					$dstr .= '<option title="' . i18n( 'i18n_Contacts' ) . '" value="1"' . ( $sfolder->FolderAccess == 1 ? ' selected="selected"' : '' ) . '>1 -> ' . i18n( 'i18n_Contacts' ) . '</option>';
+					$dstr .= '<option title="' . i18n( 'i18n_Only Me' ) . '" value="2"' . ( $sfolder->FolderAccess == 2 ? ' selected="selected"' : '' ) . '>2 -> ' . i18n( 'i18n_Only Me' ) . '</option>';
+					//$dstr .= '<option title="' . i18n( 'i18n_Custom' ) . '" value="3"' . ( $sfolder->FolderAccess == 3 ? ' selected="selected"' : '' ) . '>3 -> ' . i18n( 'i18n_Custom' ) . '</option>';
 					if( isset( $parent->access->IsAdmin ) )
 					{
-						$dstr .= '<option title="Admin" value="4"' . ( $sfolder->FolderAccess == 4 ? ' selected="selected"' : '' ) . '>4 -> Admin</option>';
+						$dstr .= '<option title="' . i18n( 'i18n_Admin' ) . '" value="4"' . ( $sfolder->FolderAccess == 4 ? ' selected="selected"' : '' ) . '>4 -> ' . i18n( 'i18n_Admin' ) . '</option>';
 					}
 					$dstr .= '</select></span>';
 					$dstr .= '</div>';
@@ -143,7 +143,7 @@ if( $folders )
 								break;
 							// --- File -----------------------------------------------------------
 							default:
-								$onclick = ( in_array( $file->Filetype, array( 'txt', 'plain', 'css', 'pdf', 'parse', 'meta' ) ) ? ( ( $file->IsEdit == 0 || $file->IsEdit == $webuser->ID ) ? 'openFullscreen( \'Library\', \'' . $file->ID . '\', \'content\', \'' . $fpath . '\' )' : 'alert( \'File is open somewhere else\' )' ) : 'document.location=\'' . $downloadLink . '\'' );
+								$onclick = ( in_array( $file->Filetype, array( 'txt', 'plain', 'css', 'pdf', 'parse', 'meta' ) ) ? ( ( $file->IsEdit == 0 || $file->IsEdit == $webuser->ID ) ? 'openFullscreen( \'Library\', \'' . $file->ID . '\', \'content\', \'' . $fpath . '\' )' : 'alert( \'' . i18n( 'i18n_File is open somewhere else' ) . '\' )' ) : 'document.location=\'' . $downloadLink . '\'' );
 								//$onclick = ( in_array( $file->Filetype, array( 'txt', 'plain', 'pdf', 'parse' ) ) ? ( ( $file->IsEdit == 0 || $file->IsEdit == $webuser->ID ) ? 'refreshFilesDirectory( \'' . $file->FolderID . '\', \'' . $file->ID . '\', false, event )' : 'alert( \'File is open somewhere else\' )' ) : 'document.location=\'' . $downloadLink . '\'' );
 								$icon = '<img class="Icon" src="subether/gfx/icons/' . ( libraryIcons( $file->Filetype, 16 ) ? libraryIcons( $file->Filetype, 16 ) : libraryIcons( 'txt', 16 ) ) . '"> ';
 								break;
@@ -157,19 +157,19 @@ if( $folders )
 						{
 							$sfstr .= '<div class="edit_icons">';
 							$sfstr .= '<span class="sorting">';
-							$sfstr .= '<div class="sortUp" onclick="sortDown( \'' . $file->ID . '\', \'' . ( $file->SortOrder > 0 ? ( $file->SortOrder - 1 ) : 0 ) . '\', \'' . $file->MediaType . '\', \'' . $fid . '\' )" title="Up"><img class="Icon" src="admin/gfx/icons/bullet_up.png"></div>';
-							$sfstr .= '<div class="sortDown" onclick="sortUp( \'' . $file->ID . '\', \'' . ( $file->SortOrder + 1 ) . '\', \'' . $file->MediaType . '\', \'' . $fid . '\' )" title="Down"><img class="Icon" src="admin/gfx/icons/bullet_down.png"></div>';
+							$sfstr .= '<div class="sortUp" onclick="sortDown( \'' . $file->ID . '\', \'' . ( $file->SortOrder > 0 ? ( $file->SortOrder - 1 ) : 0 ) . '\', \'' . $file->MediaType . '\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Up' ) . '"><img class="Icon" src="admin/gfx/icons/bullet_up.png"></div>';
+							$sfstr .= '<div class="sortDown" onclick="sortUp( \'' . $file->ID . '\', \'' . ( $file->SortOrder + 1 ) . '\', \'' . $file->MediaType . '\', \'' . $fid . '\' )" title="' . i18n( 'i18n_Down' ) . '"><img class="Icon" src="admin/gfx/icons/bullet_down.png"></div>';
 							$sfstr .= '</span>';
-							$sfstr .= '<span class="editfile" onclick="editFile( \'' . $file->ID . '\', event );return false;" title="Edit File"><img class="Icon" src="admin/gfx/icons/page_edit.png"></span>';
-							$sfstr .= '<span class="deletefile" onclick="deleteFile( \'' . $file->ID . '\', \'' . $file->MediaType . '\', \'' . $fid . '\' );return false;" title="Delete File"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>';
-							$sfstr .= '<span class="fileaccess"> <select title="File Access" onclick="cancelBubble(event)" onchange="UpdateAccess(\'' . $file->ID . '\',\'' . ( $file->MediaType == 'image' ? 'image' : 'file' ) . '\',this.value)">';
-							$sfstr .= '<option title="Public" value="0"' . ( $file->FileAccess == 0 ? ' selected="selected"' : '' ) . '>0 -> Public</option>';
-							$sfstr .= '<option title="Contacts" value="1"' . ( $file->FileAccess == 1 ? ' selected="selected"' : '' ) . '>1 -> Contacts</option>';
-							$sfstr .= '<option title="Only Me" value="2"' . ( $file->FileAccess == 2 ? ' selected="selected"' : '' ) . '>2 -> Only Me</option>';
-							//$sfstr .= '<option title="Custom" value="3"' . ( $file->FileAccess == 3 ? ' selected="selected"' : '' ) . '>3 -> Custom</option>';
+							$sfstr .= '<span class="editfile" onclick="editFile( \'' . $file->ID . '\', event );return false;" title="' . i18n( 'i18n_Edit File' ) . '"><img class="Icon" src="admin/gfx/icons/page_edit.png"></span>';
+							$sfstr .= '<span class="deletefile" onclick="deleteFile( \'' . $file->ID . '\', \'' . $file->MediaType . '\', \'' . $fid . '\' );return false;" title="' . i18n( 'i18n_Delete File' ) . '"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>';
+							$sfstr .= '<span class="fileaccess"> <select title="' . i18n( 'i18n_File Access' ) . '" onclick="cancelBubble(event)" onchange="UpdateAccess(\'' . $file->ID . '\',\'' . ( $file->MediaType == 'image' ? 'image' : 'file' ) . '\',this.value)">';
+							$sfstr .= '<option title="' . i18n( 'i18n_Public' ) . '" value="0"' . ( $file->FileAccess == 0 ? ' selected="selected"' : '' ) . '>0 -> ' . i18n( 'i18n_Public' ) . '</option>';
+							$sfstr .= '<option title="' . i18n( 'i18n_Contacts' ) . '" value="1"' . ( $file->FileAccess == 1 ? ' selected="selected"' : '' ) . '>1 -> ' . i18n( 'i18n_Contacts' ) . '</option>';
+							$sfstr .= '<option title="' . i18n( 'i18n_Only Me' ) . '" value="2"' . ( $file->FileAccess == 2 ? ' selected="selected"' : '' ) . '>2 -> ' . i18n( 'i18n_Only Me' ) . '</option>';
+							//$sfstr .= '<option title="' . i18n( 'i18n_Custom' ) . '" value="3"' . ( $file->FileAccess == 3 ? ' selected="selected"' : '' ) . '>3 -> ' . i18n( 'i18n_Custom' ) . '</option>';
 							if( isset( $parent->access->IsAdmin ) )
 							{
-								$sfstr .= '<option title="Admin" value="4"' . ( $file->FileAccess == 4 ? ' selected="selected"' : '' ) . '>4 -> Admin</option>';
+								$sfstr .= '<option title="' . i18n( 'i18n_Admin' ) . '" value="4"' . ( $file->FileAccess == 4 ? ' selected="selected"' : '' ) . '>4 -> ' . i18n( 'i18n_Admin' ) . '</option>';
 							}
 							$sfstr .= '</select></span>';
 							$sfstr .= '</div>';

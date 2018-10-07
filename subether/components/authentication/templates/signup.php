@@ -14,7 +14,6 @@
 *                                                                              *
 *   You should have received a copy of the GNU Affero General Public License   *
 *   along with this program.  If not, see <https://www.gnu.org/licenses/>.     *
-<<<<<<< HEAD
 *******************************************************************************/ ?>
 <div class="signupbox">
 	<table>
@@ -78,68 +77,3 @@
 		</tr>
 	</table>
 </div>
-=======
-*******************************************************************************/ ?>
-<div class="signupbox">
-	<table>
-		<tr>
-			<td class="Col1">
-				<div id="InfoBox">
-					<div>
-						<h2>Decentralization</h2>
-						<p>Instead of everyone’s data being contained on huge central servers owned by a large organization, local servers (“nodes”) can be set up anywhere in the world. You choose which node to register with - perhaps your local node - and seamlessly connect with the subether community worldwide.</p>
-					</div>
-					<div>
-						<h2>Freedom</h2>
-						<p>You can be whoever you want to be in subether. Unlike some networks, you don’t have to use your real identity. You can interact with whomever you choose in whatever way you want. The only limit is your imagination. subether is also Free Software, giving you liberty to use it as you wish.</p>
-					</div>
-					<div>
-						<h2>Privacy</h2>
-						<p>In subether you own your data. You do not sign over any rights to a corporation or other interest who could use it. With subether, your friends, your habits, and your content is your business ... not ours! In addition, you choose who sees what you share, using Permissions.</p>
-					</div>
-				</div>
-			</td>
-			<td class="Col2">
-				<div id="SignupForm">
-					<form name="Signup" action="?component=authentication&action=signup" method="post">
-						<table>
-							<tr>
-								<td class="head" colspan="2"><h2><?= i18n( 'i18n_Sign Up' ) ?></h2></td>
-							</tr>
-							<!--<tr>
-								<td class="Col1"><input name="Firstname" placeholder="First Name"/></td>
-								<td class="Col2"><input name="Lastname" placeholder="Last Name"/></td>
-							</tr>-->
-							<tr>
-								<td><?= i18n( 'i18n_Username' ) ?>: </td>
-								<td><input type="text" name="Username" class="obl" placeholder="<?= i18n( 'i18n_Your Username' ) ?>"/></td>
-							</tr>
-							<tr>
-								<td><?= i18n( 'i18n_Email' ) ?>: </td>
-								<td><input type="email" name="Email" class="obl" placeholder="<?= i18n( 'i18n_Your Email' ) ?>"/></td>
-							</tr>
-							<tr>
-								<td><?= i18n( 'i18n_Confirm Email' ) ?>: </td>
-								<td><input type="email" name="ConfirmEmail" class="obl" placeholder="<?= i18n( 'i18n_Re-enter Email' ) ?>"/></td>
-							</tr>
-							<tr>
-								<td><?= i18n( 'i18n_Password' ) ?>: </td>
-								<td><input type="password" name="Password" class="obl" placeholder="<?= i18n( 'i18n_Password' ) ?>"/></td>
-							</tr>
-							<tr class="disabled">
-								<td><?= i18n( 'i18n_AuthKey' ) ?>: </td>
-								<td><input id="AuthKey" type="text" name="AuthKey" class="disabled" placeholder="<?= i18n( 'i18n_Your AuthKey' ) ?>"/></td>
-							</tr>
-							<tr>
-								<td class="buttons" colspan="2">
-									<button type="button" onclick="checkform( document.Signup, '?component=authentication&action=signup' )"><span><?= i18n( 'i18n_Sign Up' ) ?></span></button>
-								</td>
-							</tr>
-						</table>
-					</form>
-				</div>
-			</td>
-		</tr>
-	</table>
-</div>
->>>>>>> 77261cf5f1ea77e1f1f7fac1156c81540f0a0cf0

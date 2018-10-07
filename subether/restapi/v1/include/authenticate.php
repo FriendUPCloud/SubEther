@@ -380,7 +380,8 @@ else if ( ( isset ( $_POST['Username'] ) || isset ( $_POST['UniqueID'] ) || isse
 					$u->AuthKey = '';
 					//$u->Password = UniqueKey();
 					//$u->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
-					$u->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+					//$u->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+					$u->Password = makeHumanPassword();
 					$u->PublicKey = $_POST['PublicKey'];
 					$u->DateModified = date( 'Y-m-d H:i:s' );
 					$u->Save();
@@ -432,7 +433,8 @@ else if ( ( isset ( $_POST['Username'] ) || isset ( $_POST['UniqueID'] ) || isse
 						
 						//$u->Password = UniqueKey();
 						//$u->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
-						$u->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+						//$u->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+						$u->Password = makeHumanPassword();
 						$u->InActive = 0;
 						$u->IsDisabled = 0;
 						$u->AuthKey = '';

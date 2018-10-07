@@ -17,7 +17,7 @@
 *******************************************************************************/ ?>
 <div id="libraryparse">
     <div class="head">
-        <h1>Parse</h1>
+        <h1><?= i18n( 'i18n_Parse' ) ?></h1>
     </div>
 	<div class="post">
 			<!--
@@ -35,8 +35,8 @@
     <div class="content" id="ParseContent"></div>
     <div class="bottom">
         <div class="buttons">
-            <button class="submit" onclick="saveParseData( '<?= $this->ParentID ?>' )"><span>Save</span></button>
-			<button class="cancel" onclick="closeWindow()"><span>Cancel</span></button>
+            <button class="submit" onclick="saveParseData( '<?= $this->ParentID ?>' )"><span><?= i18n( 'i18n_Save' ) ?></span></button>
+			<button class="cancel" onclick="closeWindow()"><span><?= i18n( 'i18n_Cancel' ) ?></span></button>
         </div>
     </div>
 </div>

@@ -25,6 +25,8 @@ statistics( $parent->module, 'notification' );
 $root = 'subether';
 $cbase = 'subether/components/notification';
 
+i18nAddLocalePath ( $cbase . '/locale' );
+
 include_once ( $root . '/components/wall/include/functions.php' );
 include_once ( $cbase . '/include/functions.php' );
 

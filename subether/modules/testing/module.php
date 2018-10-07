@@ -70,8 +70,8 @@ $document->addResource ( 'javascript', 'lib/javascript/arena-lib.js' );
 $document->addResource ( 'javascript', 'lib/javascript/bajax.js' );
 $document->addResource ( 'javascript', 'lib/javascript/gui.js' );
 
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptodeps.js' );
-$document->addResource ( 'javascript', 'subether/javascript/fcrypto.js' );
+$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptodeps_1.js' );
+$document->addResource ( 'javascript', 'subether/javascript/fcrypto_1.js' );
 
 $document->addResource ( 'javascript', 'subether/javascript/php.js' );
 $document->addResource ( 'javascript', 'subether/javascript/utf8.js' );

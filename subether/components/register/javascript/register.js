@@ -438,7 +438,7 @@ function recover( btn )
 						if ( r[0] == 'ok' )
 						{
 							setBrowserStorage( 'privatekey', fcrypt.stripHeader( keys.privatekey ) );
-							setBrowserStorage( 'publickey',fcrypt.stripHeader( keys.publickey ) );
+							setBrowserStorage( 'publickey', fcrypt.stripHeader( keys.publickey ) );
 							setBrowserStorage( 'uniqueid', uniqueid );
 							if ( r[1] )
 							{

@@ -43,7 +43,10 @@ if ( $parent && $_REQUEST['UniqueID'] && $_REQUEST['AuthKey'] && $_REQUEST['Publ
 			// Save new password
 			$us->InActive = 0;
 			$us->AuthKey = '';
-			$us->Password = UniqueKey();
+			//$us->Password = UniqueKey();
+			//$us->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
+			//$us->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+			$us->Password = makeHumanPassword();
 			$us->PublicKey = $_REQUEST['PublicKey'];
 			$us->DateModified = date( 'Y-m-d H:i:s' );
 			$us->Expires = date( '0000-00-00 00:00:00.000000' );

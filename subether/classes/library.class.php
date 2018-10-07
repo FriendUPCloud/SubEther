@@ -2824,6 +2824,226 @@ class Library
 		return false;
 	}
 	
+	function GetCacheImageUrl ( $filepath, $width = false, $height = false, $imagetype = false, $mode = false, $bgcolor = false )
+	{
+		$_width = false;
+		$_height = false;
+		
+		$processed = false;
+		
+		if( !$filepath ) return false;
+		
+		$filename = explode( '/', $filepath );
+		
+		list ( $fn, $ex ) = explode ( ".", end( $filename ) );
+		
+		$imagetype = ( $imagetype ? explode( '/', $imagetype ) : false );
+		
+		$filetype = strtolower( $imagetype ? end( $imagetype ) : $ex );
+		
+		if ( !$bgcolor ) $bgcolor = 0x000000;
+		$bcol = hex2string ( $bgcolor );		
+		
+		$cacheFilename = "upload/images-cache/{$width}x{$height}_{$fn}_0x{$bcol}.{$filetype}";
+		
+		// Check Master image
+		if( !file_exists ( $filepath ) ) return false;
+		
+		// TODO: Find a way to remove old cache files not in use anymore ...
+		
+		
+		
+		// Get already existing cache-image 
+		if ( file_exists ( BASE_DIR . '/' . $cacheFilename ) )
+		{
+			return ( BASE_DIR . '/' . $cacheFilename );
+		}
+		// Generate image
+		else
+		{
+			list ( $w, $h, ) = @getimagesize ( $filepath );
+			if ( $w && $h )
+			{
+				$_width = $w;
+				$_height = $h;
+			}
+			else return false;
+			
+			if ( !$width ) $width = $_width;
+			if ( !$height ) $height = $_height;
+			
+			/**
+			 * Carry out scale modes
+			**/
+			switch ( $mode )
+			{
+				case 'proximity':
+					$w = $width;
+					$h = $_height / $_width * $width;
+					if ( $h > $height )
+					{
+						$h = $height;
+						$w = $_width / $_height * $height;
+					}
+					$height = $h;
+					$width = $w;
+					$ox = 0;
+					$oy = 0;
+					break;
+					
+				case 'centered':
+					
+					$w = $width;
+					$h = $_height / $_width * $width;
+					if ( $h > $height )
+					{
+						$h = $height;
+						$w = $_width / $_height * $height;
+					}
+					// Center image
+					$ox = $width / 2 - ( $w / 2 );
+					$oy = $height / 2 - ( $h / 2 );
+					break;
+					
+				// Default is to center and cut image
+				default:	
+					// Scale
+					$w = $width;
+					$h = $_height / $_width * $width;
+					if ( $h < $height )
+					{
+						$h = $height;
+						$w = $_width / $_height * $height;
+					}
+					
+					// Variations
+					switch ( $mode )
+					{
+						case 'cutalignright':
+							$ox = $width - $w;
+							$oy = $height / 2 - ( $h / 2 );
+							break;
+						case 'cutalignleft':
+							$ox = 0;
+							$oy = $height / 2 - ( $h / 2 );
+							break;
+						default:
+							// Center image
+							$ox = $width / 2 - ( $w / 2 );
+							$oy = $height / 2 - ( $h / 2 );
+							break;
+					}
+					break;
+			}
+			
+			// Round
+			$h = floor ( $h );
+			$w = floor ( $w );
+			
+			// Get info about image
+			list ( , , $type ) = getimagesize ( $filepath );
+			switch ( $type )
+			{
+				case IMAGETYPE_JPEG:
+					$image = imagecreatefromjpeg ( $filepath );
+					break;
+				case IMAGETYPE_PNG:
+					if ( function_exists ( "imagecreatefrompng" ) )
+						$image = imagecreatefrompng ( $filepath );
+					else return false;
+					break;
+				case IMAGETYPE_GIF:
+					if ( function_exists ( "imagecreatefromgif" ) )
+						$image = imagecreatefromgif ( $filepath );
+					else return false;
+					break;
+				case IMAGETYPE_BMP:
+					if ( function_exists ( "imagecreatefrombmp" ) )
+						$image = imagecreatefrombmp ( $filepath );
+					else return false;
+					break;
+				// Remove unsupported image!
+				default:
+					return false;
+					break;
+			}
+			
+			if ( $image )
+			{
+				// We can't have float values!
+				$width = floor ( $width );
+				$height = floor ( $height );
+				
+				if ( $width <= 0 ) $width = 1;
+				if ( $height <= 0 ) $height = 1;
+				
+				$image2 = imagecreatetruecolor ( $width, $height );
+				
+				if ( $filetype == 'png' )
+				{
+					imagealphablending ( $image2, false );
+					imagesavealpha ( $image2, true );
+				}
+				
+				// From effects arguments
+				$color = false;
+				if ( $bgcolor )	
+				{
+					$r = ( $bgcolor >> 16 ) & 0xFF;
+					$g = ( ( $bgcolor << 8 ) >> 16 ) & 0xFF;
+					$b = ( ( $bgcolor << 16 ) >> 16 ) & 0xFF;
+					$color = imagecolorallocate ( $image2, $r, $g, $b );
+				}
+				// Internal background color
+				else if ( $filetype != 'png' )
+				{
+					$r = ( $this->_bgcolor >> 16 ) & 0xFF;
+					$g = ( ( $this->_bgcolor << 8 ) >> 16 ) & 0xFF;
+					$b = ( ( $this->_bgcolor << 16 ) >> 16 ) & 0xFF;
+					$color = imagecolorallocate ( $image2, $r, $g, $b );
+				}
+				if ( $color ) 
+				{
+					imagefilledrectangle ( $image2, 0, 0, $width, $height, $color );
+				}
+				imagecopyresampled ( $image2, $image, $ox, $oy, 0, 0, $w, $h, $_width, $_height );
+				unset ( $image );
+				
+				$processed = $cacheFilename;
+				$data = $image2;
+			}
+			
+			if ( $data )
+			{
+				switch ( $filetype )
+				{
+					case 'gif':
+						preg_match ( '/(^.*?)(\.[a-zA-Z]*?)$/', $processed, $matches );
+						if ( !trim ( $matches[ 1 ] ) ) return false;
+						$processed = $matches[ 1 ] . '.gif';
+						imagegif ( $data, BASE_DIR . '/' . $processed );
+						break;
+					case 'png':
+						preg_match ( '/(^.*?)(\.[a-zA-Z]*?)$/', $processed, $matches );
+						if ( !trim ( $matches[ 1 ] ) ) return false;
+						$processed = $matches[ 1 ] . '.png';
+						imagealphablending ( $data, true );
+						imagesavealpha ( $data, true );
+						imagepng ( $data, BASE_DIR . '/' . $processed );
+						break;
+					default:
+						preg_match ( '/(^.*?)(\.[a-zA-Z]*?)$/', $processed, $matches );
+						if ( !trim ( $matches[ 1 ] ) ) return false;
+						$processed = $matches[ 1 ] . '.jpg';
+						imagejpeg ( $data, BASE_DIR . '/' . $processed );
+						break;
+				}
+			}
+			
+			return $processed ? ( BASE_DIR . '/' . $processed ) : false;
+		}
+	}
+	
 	function RSync( $src, $dst, $opt = false, $list = false )
 	{
 		if ( !$src || !file_exists( $src ) ) return false;

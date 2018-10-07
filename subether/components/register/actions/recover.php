@@ -46,7 +46,10 @@ if ( $parent && $_REQUEST['UniqueID'] && $_REQUEST['RecoveryKey'] && $_REQUEST['
 			$us->InActive = 0;
             $us->IsDisabled = 0;
 			$us->AuthKey = '';
-			$us->Password = UniqueKey();
+			//$us->Password = UniqueKey();
+			//$us->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
+			//$us->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+			$us->Password = makeHumanPassword();
 			$us->PublicKey = $_REQUEST['PublicKey'];
 			$us->DateModified = date( 'Y-m-d H:i:s' );
 			$us->Expires = date( '0000-00-00 00:00:00.000000' );

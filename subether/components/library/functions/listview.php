@@ -21,9 +21,9 @@
 if( isset( $folders['thumbs'] ) )
 {
 	$istr .= '<div class="library_component listview"><table><tr class="heading">';
-	$istr .= '<th><h4 class="name">Name</h4></th>';
-	$istr .= '<th><h4 class="type">Type</h4></th>';
-	$istr .= '<th><h4 class="modified">Modified</h4></th>';
+	$istr .= '<th><h4 class="name">' . i18n( 'i18n_Name' ) . '</h4></th>';
+	$istr .= '<th><h4 class="type">' . i18n( 'i18n_Type' ) . '</h4></th>';
+	$istr .= '<th><h4 class="modified">' . i18n( 'i18n_Modified' ) . '</h4></th>';
 	$istr .= '<th></th></tr>';
 	
 	$imgs = 0; $lib = new Library();
@@ -36,7 +36,7 @@ if( isset( $folders['thumbs'] ) )
 		$verifyIcon = ' <img src="admin/gfx/icons/page_edit.png"/>';
 		$verifiedIcon = ' <img src="admin/gfx/icons/accept.png"/>';
 		
-		$deleteIcon = ( $thumb->ID > 0 ? '<span class="deletefile" style="float:left;cursor:pointer;margin-right:10px;" onclick="deleteFile( \'' . $thumb->ID . '\', \'' . $thumb->MediaType . '\', \'mid_' . $thumb->FolderID . '\' ); return cancelBubble( event )" title="Delete File"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>' : '' );
+		$deleteIcon = ( $thumb->ID > 0 ? '<span class="deletefile" style="float:left;cursor:pointer;margin-right:10px;" onclick="deleteFile( \'' . $thumb->ID . '\', \'' . $thumb->MediaType . '\', \'mid_' . $thumb->FolderID . '\' ); return cancelBubble( event )" title="' . i18n( 'i18n_Delete File' ) . '"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>' : '' );
 		
 		$mimetype = $lib->MimeType( $thumb->Filename, ( BASE_DIR.'/'.$thumb->FolderPath ) );
 		$dlurl = ( $mimetype . ':' . $thumb->Filename . ':' . BASE_URL . $thumb->FolderPath . $thumb->Filename );
@@ -72,7 +72,7 @@ if( isset( $folders['thumbs'] ) )
 				break;
 			// --- File -----------------------------------------------------------
 			default:
-				$onclick = ( in_array( $thumb->Filetype, array( 'txt', 'plain', 'css', 'pdf', 'parse', 'meta' ) ) ? ( ( $thumb->IsEdit == 0 || $thumb->IsEdit == $webuser->ID ) ? 'refreshFilesDirectory( \'' . $thumb->FolderID . '\', \'' . $thumb->ID . '\', false, event, false, \'' . $fpath . '\' )' : 'alert( \'File is open somewhere else\' )' ) : 'document.location=\'' . $downloadLink . '\'' );
+				$onclick = ( in_array( $thumb->Filetype, array( 'txt', 'plain', 'css', 'pdf', 'parse', 'meta' ) ) ? ( ( $thumb->IsEdit == 0 || $thumb->IsEdit == $webuser->ID ) ? 'refreshFilesDirectory( \'' . $thumb->FolderID . '\', \'' . $thumb->ID . '\', false, event, false, \'' . $fpath . '\' )' : 'alert( \'' . i18n( 'i18n_File is open somewhere else' ) . '\' )' ) : 'document.location=\'' . $downloadLink . '\'' );
 				$icon = '<img class="Icon" src="subether/gfx/icons/' . ( libraryIcons( $thumb->Filetype, 16 ) ? libraryIcons( $thumb->Filetype, 16 ) : libraryIcons( 'txt', 16 ) ) . '"> ';
 				break;
 		}

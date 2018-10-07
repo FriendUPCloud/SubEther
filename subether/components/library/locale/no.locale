@@ -1,0 +1,63 @@
+
+i18n_Icon View                   : Ikonvisning
+i18n_List View                   : Listevisning
+
+i18n_Download                    : Nedlastning
+i18n_Delete This Photo           : Slett dette bildet
+
+i18n_Group libraries             : Gruppebiblioteker
+i18n_Profil library              : Profil bibliotek
+
+i18n_Up                          : Opp
+i18n_Down                        : Ned
+i18n_Create New File             : Opprett ny fil
+i18n_Create File By Url          : Opprett fil via Url
+i18n_Edit Folder                 : Rediger mappe
+i18n_Create New Folder           : Opprett ny mappe
+i18n_Delete Folder               : Slett mappe
+
+i18n_Folder Access               : Mappe tilgang
+i18n_Public                      : Offentlig
+i18n_Contacts                    : Kontakter
+i18n_Only Me                     : Bare meg
+i18n_Custom                      : Tilpasset
+i18n_Admin                       : Admin
+
+i18n_Share Folder                : Del mappe
+
+i18n_File is open somewhere else : Filen er åpen et annet sted
+
+i18n_Edit File                   : Endre fil
+i18n_Delete File                 : Slett fil
+
+i18n_File Access                 : Fil tilgang
+
+i18n_Documents                   : Dokumenter
+i18n_Events                      : Hendelser
+
+i18n_Posts                       : Inlegg
+i18n_Photos                      : Bilder
+i18n_Audio                       : Lyd
+i18n_Video                       : Video
+i18n_Bookmarks                   : Bokmerker
+i18n_Unsorted                    : Usortert
+i18n_Profile Pictures            : Profil bilder
+i18n_Cover Photos                : Forsidebilder
+i18n_Wall                        : Vegg
+i18n_Theme                       : Tema
+i18n_Default                     : Standard
+
+i18n_Name                        : Navn
+i18n_Type                        : Type
+i18n_Modified                    : Modifisert
+
+i18n_Upload Files                : Last opp filer
+
+i18n_Close                       : Lukk
+i18n_Fullscreen                  : Fullskjerm
+i18n_Options                     : Alternativer
+i18n_Parse                       : Analyser
+i18n_Save                        : Lagre
+i18n_Cancel                      : Avbryt
+i18n_Share link                  : Del link
+

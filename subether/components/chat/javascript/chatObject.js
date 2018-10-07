@@ -105,13 +105,14 @@ chatObject = {
 	
 	// Public variables: _______________________________________________________
 	
-	currentFilter: '',             // Filter on contact list
-	timeoutContactlist: false,     // Refreshes contact list
-	timeoutContactlistTime: 10000, // Every N seconds
-	timeoutFolderlist: false,      // Refreshes folder list
-	timeoutFolderlistTime: 10000,  // Every N seconds
-	timeoutChatlogs: false,        // Refreshes all the private chats
-	timeoutChatlogsTime: 3000,     // Every N seconds
+	currentFilter: '',              // Filter on contact list
+	timeoutContactlist: false,      // Refreshes contact list
+	timeoutContactlistTime: 10000,  // Every N seconds
+	timeoutContactlistRetries: 0,   // Retries
+	timeoutFolderlist: false,       // Refreshes folder list
+	timeoutFolderlistTime: 10000,   // Every N seconds
+	timeoutChatlogs: false,         // Refreshes all the private chats
+	timeoutChatlogsTime: 3000,      // Every N seconds
 	openChats: [],                  // Every userid of open chats
 	lineLimit: 50,                  // How many lines to list in the chat
 	
@@ -136,9 +137,16 @@ chatObject = {
 	windowonload: function()
 	{
 		// Quickly scramble to run!
-		if( !this.get( 'Chat' ) )
+		if( this.timeoutContactlistRetries > 10 )
+		{
+			return false;
+		}
+		else if( !this.get( 'Chat' ) )
+		{
+			//console.log( 'windowonload() retries [' + this.timeoutContactlistRetries + ']' );
 			return setTimeout( 'chatObject.windowonload()', 10 );
-			
+		}
+		
 		// Find earlier states
 		if( getCookie( 'ChatContactlistOpen' ) == '1' )
 		{
@@ -218,6 +226,18 @@ chatObject = {
 	refreshContactlist: function()
 	{
 		var o = this;
+		
+		if( o.timeoutContactlistRetries > 10 )
+		{
+			return false;
+		}
+		else if( !o.get( 'Chat' ) )
+		{
+			o.timeoutContactlistRetries++;
+			//console.log( 'refreshContactlist() retries [' + o.timeoutContactlistRetries + ']' );
+			return setTimeout( 'chatObject.refreshContactlist()', 10 );
+		}
+		
 		var j = new bajax();
 		j.openUrl( '?component=chat&function=chat&fastlane=1', 'post', true );
 		
@@ -1964,3 +1984,4 @@ chatObject = {
 
 // Initialize the chat object!
 chatObject.init();
+

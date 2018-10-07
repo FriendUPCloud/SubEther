@@ -25,6 +25,8 @@ statistics( $parent->module, 'events' );
 $root = 'subether/';
 $cbase = 'subether/components/events';
 
+i18nAddLocalePath ( $cbase . '/locale' );
+
 include_once ( $cbase . '/include/functions.php' );
 include_once ( $root . 'components/orders/include/functions.php' );
 

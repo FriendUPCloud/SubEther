@@ -41,7 +41,7 @@ if ( $_REQUEST['action'] == 'login' )
 				ID DESC 
 		' ) )
 		{
-			if ( /*$usr->InActive == 0 && $usr->IsDisabled == 0 && */$usr->IsDeleted == 0 )
+			if ( /*$usr->InActive == 0 && */$usr->IsDisabled == 0 && $usr->IsDeleted == 0 )
 			{
 				$fcrypt = new fcrypto();
 				
@@ -66,7 +66,8 @@ if ( $_REQUEST['action'] == 'login' )
 					{
 						//$u->Password = UniqueKey();
 						//$u->Password = md5(rand(0,9999).rand(0,9999).rand(0,9999).microtime());
-						$u->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+						//$u->Password = hash( 'sha1', rand(0,9999).rand(0,9999).rand(0,9999).microtime() );
+						$u->Password = makeHumanPassword();
 						$u->InActive = 0;
 						$u->IsDisabled = 0;
 						$u->AuthKey = '';
@@ -283,6 +284,10 @@ if ( $_REQUEST['action'] == 'login' )
 			{
 				die( 'locked<!--separate-->Your account isn\'t activated, activate it first' . ( $usr->AuthKey ? ( '<!--separate-->' . BASE_URL . 'register/?activate=' . $usr->UniqueID . '&email=' . $usr->Username ) : '' ) );
 			}*/
+			else if ( $usr->IsDisabled == 1 )
+			{
+				die( 'locked<!--separate-->Your account is disabled, contact an administrator' );
+			}
 			else if ( /*$usr->IsDisabled == 1 || */$usr->IsDeleted == 1 )
 			{
 				die( 'locked<!--separate-->Your account is disabled, recover it first' . ( $usr->AuthKey ? ( '<!--separate-->' . BASE_URL . 'register/?recover=' . $usr->UniqueID . '&user=' . $usr->Username ) : '' ) );

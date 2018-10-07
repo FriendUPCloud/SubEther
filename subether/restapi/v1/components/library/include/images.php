@@ -32,11 +32,13 @@ include_once ( 'subether/functions/userfuncs.php' );
 
 // Find fileid in database based on sha256 id string
 
-if ( preg_match ( '/\/secure-files\/images\/([a-z0-9]*?)\/.*/i', $_SERVER['REQUEST_URI'], $uniqueid ) )
+if ( preg_match ( '/\/secure-files\/images\/([a-z0-9_]*?)\/.*/i', $_SERVER['REQUEST_URI'], $uniqueid ) )
 {
 	// If we found uniqueid continue
 	
 	// TODO: Add cache possibility to not check everything in the database, maybe on the query
+	
+	$ress = false;
 	
 	$data = explode( '/', $_SERVER['REQUEST_URI'] );
 	
@@ -46,7 +48,20 @@ if ( preg_match ( '/\/secure-files\/images\/([a-z0-9]*?)\/.*/i', $_SERVER['REQUE
 	$tokn = ( is_array( $token ) && isset( $token[1] ) ? $token[1] : false );
 	$sess = ( $tokn ? $tokn : ( $webuser->ID > 0 ? $webuser->GetToken() : false ) );
 	
+	if( $unid && strstr( $unid, '_' ) )
+	{
+		$unid = explode( '_', $unid );
+		$ress = $unid[1];
+		$unid = $unid[0];
+	}
+	
 	$filename = ( is_array( $data ) ? end( $data ) : false );
+	
+	if( $filename && strstr( $filename, 'x' ) && !strstr( $filename, '.' ) )
+	{
+		$ress = $filename;
+	}
+	
 	$filename = ( $filename && strstr( $filename, '.' ) ? $filename : false );
 	
 	$usr  = verifySessionId( $sess, true );
@@ -254,6 +269,15 @@ if ( preg_match ( '/\/secure-files\/images\/([a-z0-9]*?)\/.*/i', $_SERVER['REQUE
 			
 			if ( file_exists( $filePath ) )
 			{
+				// Testing ....
+				
+				if( $ress && $mimetype )
+				{
+					$ress = explode( 'x', $ress );
+					
+					$filePath = $lib->GetCacheImageUrl( $filePath, $ress[0], $ress[1], $mimetype, 'proximity' );
+				}
+				
 				ob_clean();
 				
 				header( 'Content-Type: ' . ( $mimetype ? $mimetype : 'application/octet-stream' ) . '' );

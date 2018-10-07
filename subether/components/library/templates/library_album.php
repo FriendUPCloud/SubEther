@@ -20,11 +20,11 @@
 		<div class="buttons">
 			<?if ( $this->Mode == 'fullscreen' ){ ?>
 			<!--<div class="close" title="Exit Fullscreen" onclick="openWindow( 'Library', '<?= $this->ParentID ?>', 'album', function(){ Showroom.init( 'Album_Showroom' ); } )"><span>X</span></div>-->
-			<div class="close" title="Close" onclick="closeWindow()"><span>X</span></div>
+			<div class="close" title="<?= i18n( 'i18n_Close' ) ?>" onclick="closeWindow()"><span>X</span></div>
 			<?}?>
 			<?if ( $this->Mode == 'default' ){ ?>
-			<div class="fullscreen" title="Fullscreen" onclick="openFullscreen( 'Library', '<?= $this->ParentID ?>', 'album', function(){ Showroom.init( 'Album_Showroom' ); } )"><span>[ ]</span></div>
-			<div class="close" title="Close" onclick="closeWindow()"><span>X</span></div>
+			<div class="fullscreen" title="<?= i18n( 'i18n_Fullscreen' ) ?>" onclick="openFullscreen( 'Library', '<?= $this->ParentID ?>', 'album', function(){ Showroom.init( 'Album_Showroom' ); } )"><span>[ ]</span></div>
+			<div class="close" title="<?= i18n( 'i18n_Close' ) ?>" onclick="closeWindow()"><span>X</span></div>
 			<?}?>
 		</div>
 	</div>

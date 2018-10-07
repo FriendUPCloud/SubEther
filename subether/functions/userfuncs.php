@@ -1434,8 +1434,8 @@ function TimeToHuman ( $date, $mode = false, $current = false, $timezone = false
 	else $current = strtotime( date( 'Y-m-d H:i:s' ) );
 	
 	// Get out date
-	list( $year, $month, $week, $name, $day, $time, $date ) = 
-		explode( ',', date( 'Y,F j,W,D,j/n,H:i,Y-m-d H:i:s', $unix ) );
+	list( $year, $month1, $month2, $week, $name, $day, $time, $date ) = 
+		explode( ',', date( 'Y,F,j,W,D,j/n,H:i,Y-m-d H:i:s', $unix ) );
 	
 	// Time differing
 	$difference = $current - $unix;
@@ -1456,13 +1456,13 @@ function TimeToHuman ( $date, $mode = false, $current = false, $timezone = false
 	if( !$mode )
 	{
 		// Years ago
-		if( $y >= 2 ) return ( i18n( 'i18n_' . $month ) . ', ' . $year );
-		if( $y == 1 ) return ( i18n( 'i18n_' . $month ) . ', ' . $year );
+		if( $y >= 2 ) return ( i18n( 'i18n_' . $month1 ) . ' ' . $month2 . ', ' . $year );
+		if( $y == 1 ) return ( i18n( 'i18n_' . $month1 ) . ' ' . $month2 . ', ' . $year );
 		// Months ago
-		if( $m >= 2 ) return ( i18n( 'i18n_' . $month ) . ' ' . i18n( 'i18n_at' ) . ' ' . $time );
-		if( $m == 1 ) return ( i18n( 'i18n_' . $month ) . ' ' . i18n( 'i18n_at' ) . ' ' . $time );
+		if( $m >= 2 ) return ( i18n( 'i18n_' . $month1 ) . ' ' . $month2 . ' ' . i18n( 'i18n_at' ) . ' ' . $time );
+		if( $m == 1 ) return ( i18n( 'i18n_' . $month1 ) . ' ' . $month2 . ' ' . i18n( 'i18n_at' ) . ' ' . $time );
 		// Days ago
-		if( $d >= 2 ) return ( i18n( 'i18n_' . $month ) . ' ' . i18n( 'i18n_at' ) . ' ' . $time );
+		if( $d >= 2 ) return ( i18n( 'i18n_' . $month1 ) . ' ' . $month2 . ' ' . i18n( 'i18n_at' ) . ' ' . $time );
 		if( $d == 1 ) return ( i18n( 'i18n_Yesterday at' ) . ' ' . $time );
 		// Hours ago
 		if( $h >= 2 ) return ( $h . ' ' . i18n( 'i18n_hours ago' ) );
@@ -1509,7 +1509,7 @@ function TimeToHuman ( $date, $mode = false, $current = false, $timezone = false
 		// Years ago
 		if( $y > 0 ) return ( date( 'm/d/y', $unix ) );
 		// Months ago
-		if( $m > 0 ) return ( i18n( 'i18n_' . $month ) );
+		if( $m > 0 ) return ( i18n( 'i18n_' . $month1 ) . ' ' . $month2 );
 		// Weeks ago
 		if( $w > 0 ) return ( $name );
 		// Days ago

@@ -58,8 +58,8 @@ $document->addResource ( 'stylesheet', 'subether/css/windowslideshow.css' );
 $document->addResource ( 'stylesheet', 'subether/components/events/css/events.css' );
 $document->addResource ( 'stylesheet', 'subether/components/groups/css/group.css' );
 
-$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptodeps.js' );
-$document->addResource ( 'javascript', 'subether/javascript/fcrypto.js' );
+$document->addResource ( 'javascript', 'subether/thirdparty/javascript/cryptodeps_1.js' );
+$document->addResource ( 'javascript', 'subether/javascript/fcrypto_1.js' );
 
 $document->addResource ( 'javascript', 'subether/javascript/jsdate.js' );
 $document->addResource ( 'javascript', 'subether/javascript/functions.js' );

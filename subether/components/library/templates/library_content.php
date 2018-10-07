@@ -19,7 +19,7 @@
 	<div class="top">
 		<div class="buttons">
 			<?if ( $this->Mode == 'fullscreen' ){ ?>
-			<div class="close" title="Close" onclick="closeWindow()"><span>X</span></div>
+			<div class="close" title="<?= i18n( 'i18n_Close' ) ?>" onclick="closeWindow()"><span>X</span></div>
 			<?}?>
 		</div>
 	</div>

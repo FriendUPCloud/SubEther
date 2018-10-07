@@ -17,6 +17,12 @@
 *   along with this program.  If not, see <https://www.gnu.org/licenses/>.     *
 *******************************************************************************/
 
+if( typeof console == "undefined" ) 
+{
+    this.console = { log: function() {} };
+    console.log( 'console.log init' );
+}
+
 function bottomFix ()
 {
 	if ( !document.getElementById ( 'Footer__' ) )

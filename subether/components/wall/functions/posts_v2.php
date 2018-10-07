@@ -325,7 +325,7 @@ if( $posts )
 				// Album ( File / Image ) --------------------------------------------------------------------------------------------------------
 				case 'album':
 					$type = 'Album';
-					$cont = WallAlbum( $pos->Data->LibraryFiles, $pos->ID, $imgs );
+					$cont = WallAlbum( $pos->Data->LibraryFiles, $pos->ID, $imgs, $parent );
 					break;
 				// Library ------------------------------------------------------------------------------------------------------------------------
 				case 'library':
@@ -401,7 +401,7 @@ $str .= 			'<div class="avatar">';
 $str .= 				'<a href="'/* . $path*/ . $p->Name . '">';
 if( $imgs[$p->Image] )
 {
-	$str .= 				'<div style="background-image:url(\'' . $imgs[$p->Image]->DiskPath . '\');"></div>';
+	$str .= 				'<div style="background-image:url(\'' . $imgs[$p->Image]->DiskPath . '100x100\');"></div>';
 }
 else
 {
@@ -605,7 +605,7 @@ if( $p->Comments )
 		$str .= 				'<a href="'/* . $path*/ . $c->Name . '">';
 		if( $imgs[$c->Image] )
 		{
-			$str .= 				'<div style="background-image:url(\'' . $imgs[$c->Image]->DiskPath . '\');"></div>';
+			$str .= 				'<div style="background-image:url(\'' . $imgs[$c->Image]->DiskPath . '100x100\');"></div>';
 		}
 		else
 		{

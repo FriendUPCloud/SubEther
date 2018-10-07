@@ -17,7 +17,7 @@
 *******************************************************************************/ ?>
 <div id="libraryshare">
     <div class="head">
-        <h1>Share link</h1>
+        <h1><?= i18n( 'i18n_Share link' ) ?></h1>
     </div>
 	<div class="post">
 		<textarea class="textarea" id="LibraryShareUrl" onclick="this.select();"><?= $this->obj->ShareUrl ?></textarea>
@@ -26,7 +26,7 @@
     <div class="content"></div>
     <div class="bottom">
         <div class="buttons">
-			<button class="cancel" onclick="closeWindow()"><span>Cancel</span></button>
+			<button class="cancel" onclick="closeWindow()"><span><?= i18n( 'i18n_Cancel' ) ?></span></button>
         </div>
     </div>
 </div>

@@ -27,6 +27,8 @@ $cbase = 'subether/components/library';
 $cfolder = getCategoryID( 'library' );
 $url = strtolower( $_REQUEST['route'] );
 
+i18nAddLocalePath ( $cbase . '/locale' );
+
 include_once ( $cbase . '/include/functions.php' );
 
 include_once ( 'subether/classes/library.class.php' );

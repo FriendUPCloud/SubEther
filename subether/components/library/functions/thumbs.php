@@ -40,7 +40,7 @@ if( isset( $folders['thumbs'] ) )
 		
 		$downloadIcon = ( $thumb->ID > 0 ? '<span class="Download"><a href="' . $downloadLink . '"><img src="admin/gfx/icons/disk.png"/></a></span>' : '' );
 		
-		$deleteIcon = ( $thumb->ID > 0 ? '<span class="Delete" onclick="deleteFile( \'' . $thumb->ID . '\', \'' . $thumb->MediaType . '\', \'mid_' . $thumb->FolderID . '\' ); return cancelBubble( event )" title="Delete File"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>' : '' );
+		$deleteIcon = ( $thumb->ID > 0 ? '<span class="Delete" onclick="deleteFile( \'' . $thumb->ID . '\', \'' . $thumb->MediaType . '\', \'mid_' . $thumb->FolderID . '\' ); return cancelBubble( event )" title="' . i18n( 'i18n_Delete File' ) . '"><img class="Icon" src="admin/gfx/icons/page_delete.png"></span>' : '' );
 		
 		$fpath = ( !$thumb->ID && $thumb->FilePath ? $thumb->FilePath : false );
 		
@@ -89,7 +89,7 @@ if( isset( $folders['thumbs'] ) )
 				break;
 			// --- Files -----------------------------------------------------------
 			default:
-				$onclick = ( in_array( $thumb->Filetype, array( 'txt', 'plain', 'css', 'pdf', 'parse', 'meta' ) ) ? ( ( $thumb->IsEdit == 0 || $thumb->IsEdit == $webuser->ID ) ? 'refreshFilesDirectory( \'' . $thumb->FolderID . '\', \'' . $thumb->ID . '\', false, event, false, \'' . $fpath . '\' )' : 'alert( \'File is open somewhere else\' )' ) : 'document.location=\'' . $downloadLink . '\'' );
+				$onclick = ( in_array( $thumb->Filetype, array( 'txt', 'plain', 'css', 'pdf', 'parse', 'meta' ) ) ? ( ( $thumb->IsEdit == 0 || $thumb->IsEdit == $webuser->ID ) ? 'refreshFilesDirectory( \'' . $thumb->FolderID . '\', \'' . $thumb->ID . '\', false, event, false, \'' . $fpath . '\' )' : 'alert( \'' . i18n( 'i18n_File is open somewhere else' ) . '\' )' ) : 'document.location=\'' . $downloadLink . '\'' );
 				//$icon = '<img class="Icon" style="width:90px;height:90px;background-image:url(\'subether/gfx/icons/' . ( libraryIcons( $thumb->Filetype, 128 ) ? libraryIcons( $thumb->Filetype, 128 ) : libraryIcons( 'txt', 128 ) ) . '\')" src="subether/gfx/icons/' . ( libraryIcons( $thumb->Filetype, 128 ) ? libraryIcons( $thumb->Filetype, 128 ) : libraryIcons( 'txt', 128 ) ) . '"/> ';
 				break;
 		}

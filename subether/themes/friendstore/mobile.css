@@ -2493,19 +2493,33 @@
 		/*padding: 0;*/
 	}
 
-	#Wall .ParseContent.Album > .filewrapper.wide.nr1
+	#Wall .ParseContent.Album > .filewrapper.wide,
+	#Wall .ParseContent.Album > .filewrapper.long,
+	#Wall .ParseContent.Album > .filewrapper.match
+	{
+		max-width: 48% !important;
+		width: 48% !important;
+		max-height: 200px !important
+	}
+	
+	#Wall .ParseContent.Album > .filewrapper.wide.nr1,
+	#Wall .ParseContent.Album > .filewrapper.long.nr1,
+	#Wall .ParseContent.Album > .filewrapper.match.nr1
 	{
 		max-height: 420px !important;
 		max-width: 100% !important;
 		width: 100% !important;
 	}
-
-	#Wall .ParseContent.Album > .filewrapper.wide
+	
+	#Wall .ParseContent.Album > .filewrapper.wide.total2,
+	#Wall .ParseContent.Album > .filewrapper.long.total2,
+	#Wall .ParseContent.Album > .filewrapper.match.total2
 	{
-		max-width: 32% !important;
-		width: 32% !important;
+		max-height: 420px !important;
+		max-width: 100% !important;
+		width: 100% !important;
 	}
-
+	
 	#Wall .ParseContent .filewrapper
 	{
 		float: none !important;

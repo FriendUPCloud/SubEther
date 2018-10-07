@@ -346,7 +346,7 @@ if( ( $user && $folder->CategoryID > 0 ) || $folder->ID > 0 )
 			}
 		}
 		
-		$userimage = '<img style="background-image:url(\'' . ( $obj->DiskPath ? $obj->DiskPath : $defaultimg ) . '\');background-position: center center;background-repeat: no-repeat;background-size: cover;width:100%;height:100%;" src="' . ( $obj->DiskPath ? $obj->DiskPath : $defaultimg ) . '"/>';
+		$userimage = '<img style="background-image:url(\'' . ( $obj->DiskPath ? $obj->DiskPath : $defaultimg ) . '100x100\');background-position: center center;background-repeat: no-repeat;background-size: cover;width:100%;height:100%;" src="' . ( $obj->DiskPath ? $obj->DiskPath : $defaultimg ) . '"/>';
 		$userimg = ( $obj->DiskPath ? $obj->DiskPath : $defaultimg );
 		$username = $user->Username;
 		$userdisplay = $user->DisplayName;

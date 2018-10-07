@@ -124,26 +124,26 @@ if( $events )
 		
 		if( isset( $hours[$e->ID]['Available'] ) && !isset( $hours[$e->ID]['Mine'] ) )
 		{
-			$str .= '<span><button onclick="SignupEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">Sign up</button></span>';
+			$str .= '<span><button onclick="SignupEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">' . i18n( 'i18n_Sign up' ) . '</button></span>';
 		}
 		else if( isset( $hours[$e->ID]['Pending'] ) )
 		{
-			$str .= '<span><button onclick="SignupEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">Accept</button>';
-			$str .= '<button onclick="SignoffEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">Decline</button></span>';
+			$str .= '<span><button onclick="SignupEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">' . i18n( 'i18n_Accept' ) . '</button>';
+			$str .= '<button onclick="SignoffEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">' . i18n( 'i18n_Decline' ) . '</button></span>';
 		}
 		else if( isset( $hours[$e->ID]['Mine'] ) )
 		{
-			$str .= '<span><button onclick="SignoffEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">Sign off</button></span>';
+			$str .= '<span><button onclick="SignoffEvent(\'' . $hours[$e->ID]['HourID'] . '\',this)">' . i18n( 'i18n_Sign off' ) . '</button></span>';
 		}
 		
-		$str .= '<button onclick="EditEvent(this.parentNode.parentNode,event,\'' . $e->DateStart . '\',\'' . $e->ID . '\',false,\'extended\')">Edit</button>';
-		$str .= '<button onclick="DeleteEvent(' . $e->ID . ')">Delete</button>';
+		$str .= '<button onclick="EditEvent(this.parentNode.parentNode,event,\'' . $e->DateStart . '\',\'' . $e->ID . '\',false,\'extended\')">' . i18n( 'i18n_Edit' ) . '</button>';
+		$str .= '<button onclick="DeleteEvent(' . $e->ID . ')">' . i18n( 'i18n_Delete' ) . '</button>';
 		$str .= '</div>';
 		
 		$str .= '<div class="eventinfo">';
 		$str .= '<div class="name"><h3>' . $e->Name . ( $hasAccess ? ' <a href="javascript:void(0)" onclick="InviteByICS(' . $e->ID . ')">[ics]</a>' : '' ) . '</h3></div>';
-		$str .= '<div class="timedate">' . date( 'l, F j', strtotime( $e->DateStart ) ) . ' at ' . date( 'H:i', strtotime( $e->DateStart ) ) . ' - ';
-		$str .= date( 'l, F j', strtotime( $e->DateEnd ) ) . ' at ' . date( 'H:i', strtotime( $e->DateEnd ) ) . '</div>';
+		$str .= '<div class="timedate">' . i18n( 'i18n_' . date( 'l', strtotime( $e->DateStart ) ) ) . ', ' . i18n( 'i18n_' . date( 'F', strtotime( $e->DateStart ) ) ) . ' ' . date( 'j', strtotime( $e->DateStart ) ) . ' ' . i18n( 'i18n_at' ) . ' ' . date( 'H:i', strtotime( $e->DateStart ) ) . ' - ';
+		$str .= i18n( 'i18n_' . date( 'l', strtotime( $e->DateEnd ) ) ) . ', ' . i18n( 'i18n_' . date( 'F', strtotime( $e->DateEnd ) ) ) . ' ' . date( 'j', strtotime( $e->DateEnd ) ) . ' ' . i18n( 'i18n_at' ) . ' ' . date( 'H:i', strtotime( $e->DateEnd ) ) . '</div>';
 		$str .= '<div class="place">' . $e->Place . '</div>';
 		$str .= '<div class="moreinfo"></div>';
 		$str .= '<div class="description">' . $e->Details . '</div>';
@@ -162,7 +162,7 @@ if( $events )
 	if( $hasAccess )
 	{
 		$str .= '<div class="upload_btn">';
-		$str .= '<div><span>Upload Image</span></div>';
+		$str .= '<div><span>' . i18n( 'i18n_Upload Image' ) . '</span></div>';
 		$str .= '<form method="post" target="fileIframe" name="FilesUpload_' . $e->ID . '" enctype="multipart/form-data" action="' . /*$parent->route . */'?component=library&action=uploadfile">';
 		$str .= '<input type="file" class="file_upload_btn" id="FilesUploadBtn_' . $e->ID . '" name="events" onchange="fileselect( this, \'FilesUpload_' . $e->ID . '\' )"/>';
 		$str .= '<input type="hidden" id="EventID_' . $e->ID . '" name="eventid" value="' . $e->ID . '">';

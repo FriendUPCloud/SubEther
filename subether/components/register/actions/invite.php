@@ -35,7 +35,7 @@ if( $webuser->ID > 0 )
 	}
 	
 	// Check if email exists
-	if( $database->fetchObjectRow( 'SELECT Username FROM `Users` WHERE Username = \'' . trim( $_POST['Email'] ) . '\' ' ) )
+	if( $database->fetchObjectRow( 'SELECT Username FROM `Users` WHERE InActive = "0" AND Username = \'' . trim( $_POST['Email'] ) . '\' ' ) )
 	{
 		die( 'fail<!--separate-->This email allready exists choose another' );
 	}
@@ -52,55 +52,57 @@ if( $webuser->ID > 0 )
 	
 	$u = new dbObject( 'Users' );
 	$u->Username = trim( $_POST['Email'] );
-	if ( !$u->Load() )
+	
+	if( $authkey = makeHumanPassword() )
 	{
-		if( $authkey = makeHumanPassword() )
+		$expiry = mktime( 0, 0, 0, date('m'), date('d')+3, date('Y') );
+		
+		// Save new user for activation
+		
+		if( !$u->Load() )
 		{
-			$expiry = mktime( 0, 0, 0, date('m'), date('d')+3, date('Y') );
-			
-			// Save new user for activation
-			
 			$u->UniqueID 		= UniqueKey( $u->Username );
 			$u->Name 			= trim( $username );
 			$u->AuthKey 		= md5( trim( $authkey ) );
 			$u->Email	 		= trim( $_POST['Email'] );
 			$u->DateCreated		= date( 'Y-m-d H:i:s' );
-			$u->DateModified	= date( 'Y-m-d H:i:s' );
-			$u->Expires 		= date( 'Y-m-d H:i:s', $expiry );
-			$u->InActive		= 1;
-			
-			if( isset( $_POST['StoreKey'] ) && $_POST['StoreKey'] )
-			{
-				$u->StoreKey = 1;
-			}
-			
-			$u->Save();
-			
-			if( $u->ID > 0 )
-			{
-				// Create user or update user when activated
-				$c = new dbObject( 'SBookContact' );
-				$c->UserID = $u->ID;
-				if( !$c->Load() )
-				{
-					$c->DateCreated = date( 'Y-m-d H:i:s' );
-				}
-				$c->Username = $u->Name;
-				$c->Email = $u->Email;
-				$c->DateModified = date( 'Y-m-d H:i:s' );
-				$c->Save();
-				
-				if( function_exists( 'assignToNewMembers' ) )
-				{
-					// Assign to an admin user/group
-					assignToNewMembers( $c->ID, ( isset( $_POST['Group'] ) ? $_POST['Group'] : false ), $webuser->Name, false );
-				}
-			}
 		}
-		else
+		
+		$u->DateModified	= date( 'Y-m-d H:i:s' );
+		$u->Expires 		= date( 'Y-m-d H:i:s', $expiry );
+		$u->InActive		= 1;
+		
+		if( isset( $_POST['StoreKey'] ) && $_POST['StoreKey'] )
 		{
-			die( 'fail<!--separate-->Couldn\'t make AuthKey, contact support' );	
+			$u->StoreKey = 1;
 		}
+		
+		$u->Save();
+		
+		if( $u->ID > 0 )
+		{
+			// Create user or update user when activated
+			$c = new dbObject( 'SBookContact' );
+			$c->UserID = $u->ID;
+			if( !$c->Load() )
+			{
+				$c->DateCreated = date( 'Y-m-d H:i:s' );
+			}
+			$c->Username = $u->Name;
+			$c->Email = $u->Email;
+			$c->DateModified = date( 'Y-m-d H:i:s' );
+			$c->Save();
+			
+			if( function_exists( 'assignToNewMembers' ) )
+			{
+				// Assign to an admin user/group
+				assignToNewMembers( $c->ID, ( isset( $_POST['Group'] ) ? $_POST['Group'] : false ), $webuser->Name, false );
+			}
+		}
+	}
+	else
+	{
+		die( 'fail<!--separate-->Couldn\'t make AuthKey, contact support' );	
 	}
 	
 	if ( $u->ID && $u->Email && $u->AuthKey )
