@@ -1,0 +1,64 @@
+
+i18n_Icon View                   : Widok ikon
+i18n_List View                   : Widok listy
+
+i18n_Download                    : Pobierane
+i18n_Delete This Photo           : Usuń to zdjęcie
+
+i18n_Group libraries             : Biblioteki grup
+i18n_Profil library              : Biblioteka profili
+
+i18n_Up                          : W górę
+i18n_Down                        : Do dołu
+i18n_Create New File             : Utwórz nowy plik
+i18n_Create File By Url          : Utwórz plik według adresu URL
+i18n_Edit Folder                 : Edytuj folder
+i18n_Create New Folder           : Stwórz nowy folder
+i18n_Delete Folder               : Usuń folder
+
+i18n_Folder Access               : Dostęp do folderów
+
+i18n_Public                      : Publiczny
+i18n_Contacts                    : Kontakty
+i18n_Only Me                     : Tylko ja
+i18n_Custom                      : Niestandardowy
+i18n_Admin                       : Admin
+
+i18n_Share Folder                : Udostępnij folder
+
+i18n_File is open somewhere else : Plik jest otwarty gdzie indziej
+
+i18n_Edit File                   : Edytuj plik
+i18n_Delete File                 : Usunąć plik
+
+i18n_File Access                 : Dostęp do pliku
+
+i18n_Documents                   : Dokumenty
+i18n_Events                      : Wydarzenia
+
+i18n_Posts                       : Posty
+i18n_Photos                      : Zdjęcia
+i18n_Audio                       : Audio
+i18n_Video                       : Wideo
+i18n_Bookmarks                   : Zakładki
+i18n_Unsorted                    : Nieposortowany
+i18n_Profile Pictures            : Zdjęcia profilowe
+i18n_Cover Photos                : Zdjęcia na okładce
+i18n_Wall                        : Tablica
+i18n_Theme                       : Motyw
+i18n_Default                     : Domyślny
+
+i18n_Name                        : Nazwa
+i18n_Type                        : Typ
+i18n_Modified                    : Zmodyfikowany
+
+i18n_Upload Files                : Prześlij pliki
+
+i18n_Close                       : Zamknij
+i18n_Fullscreen                  : Pełny ekran
+i18n_Options                     : Opcje
+i18n_Parse                       : Analiza
+i18n_Save                        : Zapisz
+i18n_Cancel                      : Anuluj
+i18n_Share link                  : Udostępnij link
+
