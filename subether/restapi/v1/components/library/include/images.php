@@ -75,7 +75,8 @@ if ( preg_match ( '/\/secure-files\/images\/([a-z0-9_]*?)\/.*/i', $_SERVER['REQU
 		
 		// Check if we have webuser object and it is authenticated
 		
-		if ( $sysadmin )
+		// TODO: Set this back after debugging, but sysadmin needs to see how the user see it ...
+		if ( 1!=1 && $sysadmin )
 		{
 			$fq = '
 				SELECT 
@@ -263,6 +264,7 @@ if ( preg_match ( '/\/secure-files\/images\/([a-z0-9_]*?)\/.*/i', $_SERVER['REQU
 			$filePath = ( ( $file->FolderPath != '' ? ( BASE_DIR . '/' . $file->FolderPath ) : ( BASE_DIR . '/upload/images-master/' ) ) . $file->Filename );
 			
 			$lib = new Library();
+			$lib->FileID = $file->ID;
 			$mimetype = $lib->MimeType( $file->Filename, ( BASE_DIR . '/' . $file->FolderPath ) );
 			
 			//if( $webuser->ID == 103 ) die( $fq . ' -- ' . print_r( $file,1 ) . ' [] ' );

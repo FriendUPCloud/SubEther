@@ -35,7 +35,7 @@ class Library
 	var $FolderName;
 	var $FolderPath;
 	var $FolderChmod = 777;
-	var $FolderAccess = 1;
+	var $FolderAccess = 0;
 	var $Folders;
 	var $FileID;
 	var $FileUniqueID;
@@ -327,6 +327,8 @@ class Library
 			$rfolder = new dbFolder();
 			$rfolder = $rfolder->getRootFolder();
 			
+			$i = 1;
+			
 			foreach( $this->Folders as $folder )
 			{
 				if( $folder->PathFolders && is_array( $folder->PathFolders ) )
@@ -351,6 +353,7 @@ class Library
 							$db->Access = $this->FolderAccess;
 							$db->DateCreated = date( 'Y-m-d H:i:s' );
 							$db->DateModified = date( 'Y-m-d H:i:s' );
+							$db->SortOrder = $i++;
 							$db->Save();
 						}
 						$fparent = $db->ID;
@@ -542,6 +545,8 @@ class Library
 	{
 		if( $this->Folders && is_array( $this->Folders ) )
 		{
+			$i = 1;
+			
 			foreach( $this->Folders as $folder )
 			{
 				if( $folder->PathFolders && is_array( $folder->PathFolders ) )
@@ -566,7 +571,7 @@ class Library
 							}
 							$db->Name = $obj->Name;
 							$db->Title = $obj->Name;
-							$db->SortOrder = $this->SortOrder;
+							$db->SortOrder = ( $this->SortOrder ? $this->SortOrder : $i++ );
 						}
 						$db->Save();
 						
@@ -2844,7 +2849,7 @@ class Library
 		if ( !$bgcolor ) $bgcolor = 0x000000;
 		$bcol = hex2string ( $bgcolor );		
 		
-		$cacheFilename = "upload/images-cache/{$width}x{$height}_{$fn}_0x{$bcol}.{$filetype}";
+		$cacheFilename = "upload/images-cache/{$width}x{$height}_{$fn}_0x{$bcol}_{$this->FileID}.{$filetype}";
 		
 		// Check Master image
 		if( !file_exists ( $filepath ) ) return false;

@@ -159,7 +159,7 @@ if ( $rows = $database->fetchObjectRows ( '
 			if( $r->ImageID > 0 && $r->Filename )
 			{
 				//$img = ' style="background-image: url(\'' . $r->DiskPath . '/' . $r->Filename . '\')"';
-				$img = ' style="background-image: url(\'' . ( BASE_URL . 'secure-files/images/' . ( $r->UniqueID ? $r->UniqueID : $r->ImageID ) . '/' ) . '\')"';
+				$img = ' style="background-image: url(\'' . ( BASE_URL . 'secure-files/images/' . ( $r->UniqueID ? $r->UniqueID : $r->ImageID ) . '/' ) . '100x100\')"';
 			}
 			else
 			{

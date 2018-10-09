@@ -1211,7 +1211,11 @@ function WallAlbum( $files, $pid, $images = false, $parent = false )
 				{
 					if( strstr( $parent->agent, 'mobile' ) )
 					{
-						$nail = '500x500';
+						$nail = '500x1000';
+					}
+					else
+					{
+						$nail = '1500x2000';
 					}
 					
 					if( isset( $_REQUEST['christesting'] ) )

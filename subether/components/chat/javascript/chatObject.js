@@ -137,7 +137,7 @@ chatObject = {
 	windowonload: function()
 	{
 		// Quickly scramble to run!
-		if( this.timeoutContactlistRetries > 10 )
+		if( this.timeoutContactlistRetries > 50 )
 		{
 			return false;
 		}
@@ -227,7 +227,7 @@ chatObject = {
 	{
 		var o = this;
 		
-		if( o.timeoutContactlistRetries > 10 )
+		if( o.timeoutContactlistRetries > 50 )
 		{
 			return false;
 		}

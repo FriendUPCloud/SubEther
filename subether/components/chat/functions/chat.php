@@ -49,7 +49,7 @@ if( isset( $_POST[ 'u' ] ) )
 			$sc->DiskPath = false;
 		}
 		
-		$sc->Image = ( $sc->ImageID > 0 && $sc->DiskPath && $sc->Filename ? ( BASE_URL . 'secure-files/images/' . ( $sc->ImageUniqueID ? $sc->ImageUniqueID : $sc->ImageID ) . '/' ) : $defimg );
+		$sc->Image = ( $sc->ImageID > 0 && $sc->DiskPath && $sc->Filename ? ( BASE_URL . 'secure-files/images/' . ( $sc->ImageUniqueID ? $sc->ImageUniqueID : $sc->ImageID ) . '/100x100' ) : $defimg );
 	}
 	else
 	{
@@ -288,7 +288,7 @@ if( isset( $_POST[ 'u' ] ) )
 				{
 					$m->Filename = false;
 				}
-				$imgurl = ( $m->Filename ? ( 'secure-files/images/' . ( $m->ImageUniqueID ? $m->ImageUniqueID : $m->ImageID ) . '/' ) : 'admin/gfx/arenaicons/user_johndoe_32.png' );
+				$imgurl = ( $m->Filename ? ( 'secure-files/images/' . ( $m->ImageUniqueID ? $m->ImageUniqueID : $m->ImageID ) . '/100x100' ) : 'admin/gfx/arenaicons/user_johndoe_32.png' );
 				$chatImage = '<img src="' . $imgurl . '"/>';
 				$str .= '<div class="ChatRow" rowid="' . $m->ID . '" userid="' . $m->PosterID . '" datetime="' . $m->DateTime . '">';
 				$str .= '<div class="ChatInfo">';
@@ -497,7 +497,7 @@ else
 					$obj->DiskPath = str_replace( ' ', '%20', ( $i->DiskPath != '' ? $i->DiskPath : ( BASE_URL . 'upload/images-master/' ) ) . $i->Filename );
 					if ( $i->Filename )
 					{
-						$obj->DiskPath = ( BASE_URL . 'secure-files/images/' . ( $i->UniqueID ? $i->UniqueID : $i->ID ) . '/' );
+						$obj->DiskPath = ( BASE_URL . 'secure-files/images/' . ( $i->UniqueID ? $i->UniqueID : $i->ID ) . '/100x100' );
 					}
 					
 					$imgs[$i->ID] = $obj;

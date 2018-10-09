@@ -109,16 +109,51 @@ bNzXaUzeDKFi01r3AgED
 	
 	//die( print_r( $signed,1 ) . ' -- ' . ( $valid ? 'Valid' : 'Not Valid' ) );
 	
-	$signature = $fcrypt->signString( '9d781c37aefe4a2e2c7827a606af6493d41714aa2b2cc60d48214e96f51ec547', $privateKey );
+	$array = array(
+		array(
+			'privateKey' => '-----BEGIN RSA PRIVATE KEY-----MIICWgIBAAKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAwKBgFl4p7Bflr8QwG/ZApV1grC6fZapkZ3O+iQurMlxgCZrtAJe/KOsQ2FvVG7Nm4+atS3+AXQYZnr6ZqoT7FI2ZlJ0sIduF14AbUy5fXSVz60U0FSCxJ92oYcPx1anD6RoZVkXjZf7GyMyxbDxLyANbRIRF5J6uvCSQWquDPqHcOj7AkEAw/YyhI38JbzFZAp6xZRyQyrseCf47O3DFNYOyp9eToYgMcAKe6bWXQZ//NA+u7b3x9h5gbmPTqtp6nEH8rn0DQJBAK9TMd/4foG2VBh6RIWa2x1zK+nd0TG5ogb6XkRKbyuEFl2wy1zeXnSNRjo0Zd0E81ggY3/n/fuySqBI2dhvkcsCQQCCpCGts/1ufdjtXFHZDaGCHJ2lb/tInoIN5Ancaj7fBBV2gAb9GeQ+BFVTNX8nz0/akFEBJl+Jx5vxoK/3JqKzAkB04iE/+v8BJDgQUYMDvJIToh1Gk+DL0RavUZQthvTHrWQ+ddzolD74Xi7ReEPorfeQFZeqmqlSdtxq2zvln7aHAkA8yVfKC6jP20mPQtjWwHd95DhNwEXhYAw+dY6gDV+/9M/PS/WMCn/n6pn+CxWZVA5+qOAcwZPr6QoE0PdSveer-----END RSA PRIVATE KEY-----',
+			'publicKey' => '-----BEGIN PUBLIC KEY-----MIGdMA0GCSqGSIb3DQEBAQUAA4GLADCBhwKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAw==-----END PUBLIC KEY-----',
+			'password' => '3c30c5aa42e1511e87975f3584a3d7da8ba4abfd54ea7e76c5d47185d3a0f18d',
+			'signature' => 'mcbFWm27d/YwmnenCdyvc5Nh4wINJFNUphjQ5Al5YULCEHr4RPoazUHAjhXHjivy+hryQC/Ub1fFzBeWOSyjfW8+rqeG1bICsf0HRVlpHZLys7b6Fw8wlx9A4ggoKkoyk2VKwbT8NsT967g5JZKmXkQC+i2D+X/0VBkK/D6Ghw==',
+			'result' => false
+		),
+		array(
+			'privateKey' => '-----BEGIN RSA PRIVATE KEY-----MIICWgIBAAKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAwKBgFl4p7Bflr8QwG/ZApV1grC6fZapkZ3O+iQurMlxgCZrtAJe/KOsQ2FvVG7Nm4+atS3+AXQYZnr6ZqoT7FI2ZlJ0sIduF14AbUy5fXSVz60U0FSCxJ92oYcPx1anD6RoZVkXjZf7GyMyxbDxLyANbRIRF5J6uvCSQWquDPqHcOj7AkEAw/YyhI38JbzFZAp6xZRyQyrseCf47O3DFNYOyp9eToYgMcAKe6bWXQZ//NA+u7b3x9h5gbmPTqtp6nEH8rn0DQJBAK9TMd/4foG2VBh6RIWa2x1zK+nd0TG5ogb6XkRKbyuEFl2wy1zeXnSNRjo0Zd0E81ggY3/n/fuySqBI2dhvkcsCQQCCpCGts/1ufdjtXFHZDaGCHJ2lb/tInoIN5Ancaj7fBBV2gAb9GeQ+BFVTNX8nz0/akFEBJl+Jx5vxoK/3JqKzAkB04iE/+v8BJDgQUYMDvJIToh1Gk+DL0RavUZQthvTHrWQ+ddzolD74Xi7ReEPorfeQFZeqmqlSdtxq2zvln7aHAkA8yVfKC6jP20mPQtjWwHd95DhNwEXhYAw+dY6gDV+/9M/PS/WMCn/n6pn+CxWZVA5+qOAcwZPr6QoE0PdSveer-----END RSA PRIVATE KEY-----',
+			'publicKey' => '-----BEGIN PUBLIC KEY-----MIGdMA0GCSqGSIb3DQEBAQUAA4GLADCBhwKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAw==-----END PUBLIC KEY-----',
+			'password' => 'bfb9efb416b148a846e5f5e8b22bc2bf765b53359a4e492ded8d347bcda3fdf1',
+			'signature' => 'LITWqlYk+vUdegHk4h3ACjc7TQD4Sjtm5ASwLd1v/HRVIt4wp1AcrFVFV4wWFpNXKRoGg/3xoFoktuR+Q59+FFn22S+t0xn/NHAVUaz/ROX43elAtuBJi3V3hB8aF59SFBrXPqqN0bUqKL9E8tD8R1vHStBKWsdCgwcZUshh2pc=',
+			'result' => false
+		),
+		array(
+			'privateKey' => '-----BEGIN RSA PRIVATE KEY-----MIICWgIBAAKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAwKBgFl4p7Bflr8QwG/ZApV1grC6fZapkZ3O+iQurMlxgCZrtAJe/KOsQ2FvVG7Nm4+atS3+AXQYZnr6ZqoT7FI2ZlJ0sIduF14AbUy5fXSVz60U0FSCxJ92oYcPx1anD6RoZVkXjZf7GyMyxbDxLyANbRIRF5J6uvCSQWquDPqHcOj7AkEAw/YyhI38JbzFZAp6xZRyQyrseCf47O3DFNYOyp9eToYgMcAKe6bWXQZ//NA+u7b3x9h5gbmPTqtp6nEH8rn0DQJBAK9TMd/4foG2VBh6RIWa2x1zK+nd0TG5ogb6XkRKbyuEFl2wy1zeXnSNRjo0Zd0E81ggY3/n/fuySqBI2dhvkcsCQQCCpCGts/1ufdjtXFHZDaGCHJ2lb/tInoIN5Ancaj7fBBV2gAb9GeQ+BFVTNX8nz0/akFEBJl+Jx5vxoK/3JqKzAkB04iE/+v8BJDgQUYMDvJIToh1Gk+DL0RavUZQthvTHrWQ+ddzolD74Xi7ReEPorfeQFZeqmqlSdtxq2zvln7aHAkA8yVfKC6jP20mPQtjWwHd95DhNwEXhYAw+dY6gDV+/9M/PS/WMCn/n6pn+CxWZVA5+qOAcwZPr6QoE0PdSveer-----END RSA PRIVATE KEY-----',
+			'publicKey' => '-----BEGIN PUBLIC KEY-----MIGdMA0GCSqGSIb3DQEBAQUAA4GLADCBhwKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAw==-----END PUBLIC KEY-----',
+			'password' => 'bfb9efb416b148a846e5f5e8b22bc2bf765b53359a4e492ded8d347bcda3fdf1',
+			'signature' => 'TN/yTJOnwN8g6jzHs6HueXykAA2E1s3T8LPwj8Wyx0/MttEM4DL8pUi0RgrYZ88eZTR+5Dx5duHCWqQYd+MzOkI8jos+yAF7Q8yXsR1vZgVLDxBZf4LqJNHBW4hNcJyC6AvLMApNXChgE08Z4A98h8RbuY518C41/EBYBguZE1Q=',
+			'result' => false
+		)
+	);
 	
-	//$sign1 = $signature;
-	//$signature = 'aoN01N+UR0St3U5CyRFZeTYxlgiObxQc0kEV0ru+ystoakWJ79m9S24PjX8EvqygbZz954Ln33J4McXPm9B/M0SBDYSqbG+cEgQ+maxwXA5UXzaKy8TxHlco4IApH8IJse4tqGni4fFc+37Sd+FJUmSYET3pKjWL6zSgD7m2768=';
-	//$signature = 'kMtk4LiHp2xy/3gacNPIEni+zUDFix9TC1UnhgDWD8eH36WPi3v3vJfTE3KbS5ws2Jwnlas2giLULpt+LpCZV5vih6GbfKnycT86UAjTpoOOXpVI5dEWsb7+B8kF986I9RkTr5s/C4PcIXdkkJY6L9Gc9m7MIlwmoulpTlPGyHo=';
-	//$signature = 'epZXF8VRGMYhH8LFJfFH2ORRC73l4mfNC0Hx7bjfZRdpUZZQanWOM/oAuvWHcdMWVkVikkjVPIBDJQX+g/TCxPXh3ewSweewQ4q03JX84ZpRiboRF9VHIyMHsZxIcK3yCBqrgSg3ijyjHIuJaly7K3lSukupBCvhvb5JexaT05k=';
+	foreach( $array as $k=>$v )
+	{
 	
-	$valid = $fcrypt->verifyString( '9d781c37aefe4a2e2c7827a606af6493d41714aa2b2cc60d48214e96f51ec547', $signature, $publicKey );
+		/*$privateKey = '-----BEGIN RSA PRIVATE KEY-----MIICWgIBAAKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAwKBgFl4p7Bflr8QwG/ZApV1grC6fZapkZ3O+iQurMlxgCZrtAJe/KOsQ2FvVG7Nm4+atS3+AXQYZnr6ZqoT7FI2ZlJ0sIduF14AbUy5fXSVz60U0FSCxJ92oYcPx1anD6RoZVkXjZf7GyMyxbDxLyANbRIRF5J6uvCSQWquDPqHcOj7AkEAw/YyhI38JbzFZAp6xZRyQyrseCf47O3DFNYOyp9eToYgMcAKe6bWXQZ//NA+u7b3x9h5gbmPTqtp6nEH8rn0DQJBAK9TMd/4foG2VBh6RIWa2x1zK+nd0TG5ogb6XkRKbyuEFl2wy1zeXnSNRjo0Zd0E81ggY3/n/fuySqBI2dhvkcsCQQCCpCGts/1ufdjtXFHZDaGCHJ2lb/tInoIN5Ancaj7fBBV2gAb9GeQ+BFVTNX8nz0/akFEBJl+Jx5vxoK/3JqKzAkB04iE/+v8BJDgQUYMDvJIToh1Gk+DL0RavUZQthvTHrWQ+ddzolD74Xi7ReEPorfeQFZeqmqlSdtxq2zvln7aHAkA8yVfKC6jP20mPQtjWwHd95DhNwEXhYAw+dY6gDV+/9M/PS/WMCn/n6pn+CxWZVA5+qOAcwZPr6QoE0PdSveer-----END RSA PRIVATE KEY-----';*/
+		
+		$signature = $fcrypt->signString( $v['password'], $v['privateKey'] );
 	
-	//die( $signature . ' -- ' . ( $valid ? 'Valid' : 'Not Valid' ) . ' -- '/* . print_r( $keys,1 )*/ . ' [||] ' . "\r\n" . $sign1 );
+		//$sign1 = $signature;
+	
+		//$signature = 'mcbFWm27d/YwmnenCdyvc5Nh4wINJFNUphjQ5Al5YULCEHr4RPoazUHAjhXHjivy+hryQC/Ub1fFzBeWOSyjfW8+rqeG1bICsf0HRVlpHZLys7b6Fw8wlx9A4ggoKkoyk2VKwbT8NsT967g5JZKmXkQC+i2D+X/0VBkK/D6Ghw==';
+	
+		/*$publicKey = '-----BEGIN PUBLIC KEY-----MIGdMA0GCSqGSIb3DQEBAQUAA4GLADCBhwKBgQCGNPuIj2IemSCnxYPgMEQJF7xh/lpstnc2RgMuKkA5oY4Djnr1gmUSJv6mNGlXaA/E/QIuJJm4d5n/HeJ7UZl9IlIviamHqBcMksDuK+bQ/9aXJiy5UJmvs3tvCYFEFqI8MsU50S3pnbxPoMtUrN+GOZw4ubn2Jb/Uj81ZllLjTwIBAw==-----END PUBLIC KEY-----';*/
+	
+		$valid = $fcrypt->verifyString( $v['password'], $v['signature'], $v['publicKey'] );
+		
+		//die( $signature . ' -- ' . ( $valid ? 'Valid' : 'Not Valid' ) . ' -- ' . '3c30c5aa42e1511e87975f3584a3d7da8ba4abfd54ea7e76c5d47185d3a0f18d' . ' [||] ' . $publicKey . "\r\n\r\n" . $sign1 . ' [||] ' . $privateKey );
+		
+		$array[$k]['result'] = ( $signature . ' -- ' . ( $valid ? 'Valid' : 'Not Valid' ) );
+	}
+	
+	die( print_r( $array, 1 ) );
 	
 	$key = $fcrypt->generateKey( 'ideverket' );
 	
