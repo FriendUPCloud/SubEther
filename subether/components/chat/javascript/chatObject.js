@@ -1668,10 +1668,14 @@ chatObject = {
 						privkey = keypairs.privateKey;
 						pubkey = keypairs.publicKey;
 						
-						keys = ( privkey + '<!--split-->' + pubkey );
+						encryptionid = o.generateCryptoKey();
+						
+						keys = ( privkey + '<!--split-->' + pubkey + ( encryptionid ? ( '<!--split-->' + encryptionid ) : '' ) );
 						
 						// Encrypt the message private and public keys with the users public key
 						sender = o.encryptData( privkey );
+						
+						console.log( { sender: sender, keys: keys } );
 					}
 				}
 				
@@ -1743,15 +1747,26 @@ chatObject = {
 		return false;
 	},
 	
+	// Generate new random crypto key
+	generateCryptoKey: function( seedKey )
+	{
+		var key = fcrypt.generateKey( seedKey, 32, 256, 'sha256' );
+		
+		if( key )
+		{
+			return key;
+		}
+		
+		return false;
+	},
+	
 	// Generate new random crypto keys
 	generateCryptoKeys: function()
 	{
-		var o = this;
+		var keysObject = fcrypt.generateKeys();
 		
-		fcrypt.generateKeys();
-		
-		var privkey = fcrypt.getPrivateKey();
-		var pubkey  = fcrypt.getPublicKey();
+		var privkey = fcrypt.getPrivateKey( keysObject );
+		var pubkey  = fcrypt.getPublicKey( keysObject );
 		
 		if( privkey && pubkey )
 		{

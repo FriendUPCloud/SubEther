@@ -62,6 +62,7 @@ if( isset( $_POST[ 'u' ] ) )
 	if( $st = $database->fetchObjectRow( '
 		SELECT 
 			m.*,
+			m.UniqueKey AS CryptoID,
 			u.PublicKey AS UserPublicKey 
 		FROM 
 			SBookMail m, 
@@ -80,6 +81,7 @@ if( isset( $_POST[ 'u' ] ) )
 	else if( $st = $database->fetchObjectRow( '
 		SELECT 
 			s.*, 
+			s.UniqueID AS CryptoID,
 			u.PublicKey AS UserPublicKey 
 		FROM 
 			Users u, 
@@ -148,6 +150,8 @@ if( isset( $_POST[ 'u' ] ) )
 			' . ( $_POST[ 'lastmessage' ] > 0 ? '
 			AND m.ID > \'' . $_POST[ 'lastmessage' ] . '\'
 			' : '' ) . '
+		GROUP BY 
+			m.UniqueID
 		ORDER BY 
 			m.ID DESC
 		LIMIT ' . $limit . '
@@ -180,7 +184,7 @@ if( isset( $_POST[ 'u' ] ) )
 	// TODO: Connect encryptionkey to every message.
 	
 	$pubkey = ( $sc->PublicKey ? fcrypto::stripHeader( $sc->PublicKey ) : '' );
-	$enckey = ( $st->EncryptionKey ? ( fcrypto::stripHeader( $st->EncryptionKey ) . ( $st->UniqueID ? ( '<!--encryptionid-->' . $st->UniqueID ) : '' ) ) : '' );
+	$enckey = ( $st->EncryptionKey ? ( fcrypto::stripHeader( $st->EncryptionKey ) . ( $st->CryptoID ? ( '<!--encryptionid-->' . $st->CryptoID ) : '' ) ) : '' );
 	
 	$str = ''; $img = '';
 
@@ -342,6 +346,8 @@ if( isset( $_POST[ 'u' ] ) )
 					AND c.ID = m.ContactID 
 				) 
 			)
+		GROUP BY 
+			m.UniqueID
 		ORDER BY 
 			m.ID DESC
 	', false, 'components/chat/functions/chat.php' ) ) )

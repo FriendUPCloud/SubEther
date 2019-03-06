@@ -216,6 +216,8 @@ if ( isset( $_REQUEST ) || isset( $_POST ) )
 				' . ( isset( $_POST['LastActivity'] ) && $_POST['LastActivity'] > 0 ? '
 				AND m.Date > \'' . date( 'Y-m-d H:i:s', $_POST['LastActivity'] ) . '\' 
 				' : '' ) . '
+			GROUP BY 
+				m.UniqueID
 			ORDER BY 
 				m.ID DESC
 			LIMIT ' . ( isset( $_POST['Limit'] ) && $_POST['Limit'] ? $_POST['Limit'] : $limit ) . '
