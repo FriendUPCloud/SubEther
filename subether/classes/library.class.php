@@ -2857,7 +2857,6 @@ class Library
 		// TODO: Find a way to remove old cache files not in use anymore ...
 		
 		
-		
 		// Get already existing cache-image 
 		if ( file_exists ( BASE_DIR . '/' . $cacheFilename ) )
 		{
@@ -2866,6 +2865,14 @@ class Library
 		// Generate image
 		else
 		{
+			// If image is to big for the server memory return master image
+			$memory_limit = $this->FilesizeToBytes( ini_get( 'memory_limit' ) );
+			if( $memory_limit && ( $memory_limit < filesize( $filepath ) ) ) 
+			{
+				// Memory insufficient
+				return $filepath;
+			}
+			
 			list ( $w, $h, ) = @getimagesize ( $filepath );
 			if ( $w && $h )
 			{
@@ -2945,15 +2952,6 @@ class Library
 			$h = floor ( $h );
 			$w = floor ( $w );
 			
-			// If image is to big for the server memory return master image
-			$memory_limit = $this->FilesizeToBytes( ini_get( 'memory_limit' ) );
-			if( $memory_limit && ( $memory_limit < filesize( $filepath ) ) ) 
-			{
-				// Memory insufficient
-				
-				return $filepath;
-			}
-			
 			// Get info about image
 			list ( , , $type ) = getimagesize ( $filepath );
 			switch ( $type )
@@ -3020,14 +3018,21 @@ class Library
 				{
 					imagefilledrectangle ( $image2, 0, 0, $width, $height, $color );
 				}
+				
 				imagecopyresampled ( $image2, $image, $ox, $oy, 0, 0, $w, $h, $_width, $_height );
-				unset ( $image );
+				
+				imagedestroy( $image );
+				
+				if( $image )
+				{
+					unset ( $image );
+				}
 				
 				$processed = $cacheFilename;
 				$data = $image2;
 			}
 			
-			if ( $data )
+			if ( $image2 )
 			{
 				switch ( $filetype )
 				{
@@ -3045,12 +3050,25 @@ class Library
 						imagesavealpha ( $data, true );
 						imagepng ( $data, BASE_DIR . '/' . $processed );
 						break;
+					case 'jpeg':
+						preg_match ( '/(^.*?)(\.[a-zA-Z]*?)$/', $processed, $matches );
+						if ( !trim ( $matches[ 1 ] ) ) return false;
+						$processed = $matches[ 1 ] . '.jpeg';
+						imagejpeg ( $data, BASE_DIR . '/' . $processed );
+						break;
 					default:
 						preg_match ( '/(^.*?)(\.[a-zA-Z]*?)$/', $processed, $matches );
 						if ( !trim ( $matches[ 1 ] ) ) return false;
 						$processed = $matches[ 1 ] . '.jpg';
 						imagejpeg ( $data, BASE_DIR . '/' . $processed );
 						break;
+				}
+				
+				imagedestroy( $data );
+				
+				if( $data )
+				{
+					unset ( $data );
 				}
 			}
 			
