@@ -2945,6 +2945,15 @@ class Library
 			$h = floor ( $h );
 			$w = floor ( $w );
 			
+			// If image is to big for the server memory return master image
+			$memory_limit = $this->FilesizeToBytes( ini_get( 'memory_limit' ) );
+			if( $memory_limit && ( $memory_limit < filesize( $filepath ) ) ) 
+			{
+				// Memory insufficient
+				
+				return $filepath;
+			}
+			
 			// Get info about image
 			list ( , , $type ) = getimagesize ( $filepath );
 			switch ( $type )
@@ -3659,6 +3668,27 @@ class Library
 		}
 		
 		return ( $size . 'b' );
+	}
+	
+	function FilesizeToBytes( $val ) 
+	{
+		if( $val )
+		{
+			$val = trim( $val );
+			$last = strtolower( $val[strlen($val)-1] );
+			switch( $last ) 
+			{
+				// The 'G' modifier is available since PHP 5.1.0
+				case 'g':
+				    $val *= 1024;
+				case 'm':
+				    $val *= 1024;
+				case 'k':
+				    $val *= 1024;
+			}
+			return $val;
+		}
+		return false;
 	}
 	
 	function SanitizeFilename( $filename )
