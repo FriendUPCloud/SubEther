@@ -1,7 +1,7 @@
 SubEther - The Decentralized Network (version 1.0.0)
 ====================================================
 
-![SubEther Home](https://treeroot.org/upload/subether-home.png "SubEther Home")
+![SubEther Home](https://friendup.world/upload/subether-home.png "SubEther Home")
 
 Vision
 ------
