@@ -250,7 +250,7 @@ class CalendarMonth
 			$week = new DateTime();
 			$week->setISODate( $year, $this->week+$w, 1 );
 			$this->numbers[$w] = intval( date ( 'W', strtotime( $week->format( 'Y-m-d' ) ) ), 10 );
-			$this->weeks[$this->numbers[$w]] = new CalendarWeek( $date, $this->week+$w );
+			$this->weeks[$this->numbers[$w]] = new CalendarWeek( $this->current, $this->week+$w );
 		}
 	}
 	
