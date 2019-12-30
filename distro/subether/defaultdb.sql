@@ -163,5 +163,5 @@ INSERT INTO `STabs` (`ID`,`Tab`,`DisplayName`,`Component`,`Type`,`Module`,`Posit
 INSERT INTO `SBookCronJobs` (`ID`,`MinDelay`,`Filename`,`LastExec`,`Error`,`Type`,`IsRunning`,`IsActive`,`IsMaintenance`,`SortOrder`) VALUES (2,30,'information_cron.php','0000-00-00 00:00:00','','',0,1,0,0),
 (3,30,'maintenance_cron.php','0000-00-00 00:00:00','','',0,0,1,0),
 (4,30,'authenticate_cron.php','0000-00-00 00:00:00','','',0,1,0,0),
-(5,30,'contacts_cron.php','0000-00-00 00:00:00','','',0,1,0,0);
+(5,30,'contacts_cron.php','0000-00-00 00:00:00','','',0,0,0,0);
 
