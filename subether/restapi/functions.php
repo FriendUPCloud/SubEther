@@ -646,7 +646,7 @@ function getPathDir( $back = '', $type = 'config' )
 			return $dirname;
 		}
 	}
-	else if ( $back && __FILE__ && $type == 'treeroot' )
+	else if ( $back && __FILE__ && $type == 'subether' )
 	{
 		if ( $back == '../../..' )
 		{
@@ -656,6 +656,10 @@ function getPathDir( $back = '', $type = 'config' )
 			$dirname = dirname( $dirname );
 			//$dirname = dirname( $dirname );
 			
+			if ( file_exists( "$dirname/SubEther" ) )
+			{
+				return "$dirname/SubEther";
+			}
 			if ( file_exists( "$dirname/treeroot" ) )
 			{
 				return "$dirname/treeroot";
@@ -668,6 +672,10 @@ function getPathDir( $back = '', $type = 'config' )
 			$dirname = dirname( $dirname );
 			$dirname = dirname( $dirname );
 			
+			if ( file_exists( "$dirname/SubEther" ) )
+			{
+				return "$dirname/SubEther";
+			}
 			if ( file_exists( "$dirname/treeroot" ) )
 			{
 				return "$dirname/treeroot";
@@ -679,13 +687,17 @@ function getPathDir( $back = '', $type = 'config' )
 			$dirname = dirname( $dirname );
 			$dirname = dirname( $dirname );
 			
+			if ( file_exists( "$dirname/SubEther" ) )
+			{
+				return "$dirname/SubEther";
+			}
 			if ( file_exists( "$dirname/treeroot" ) )
 			{
 				return "$dirname/treeroot";
 			}
 		}
 	}
-	else if ( $back && __FILE__ && $type == 'arena2' )
+	else if ( $back && __FILE__ && $type == 'arenacm' )
 	{
 		if ( $back == '../../..' )
 		{
@@ -695,6 +707,10 @@ function getPathDir( $back = '', $type = 'config' )
 			$dirname = dirname( $dirname );
 			//$dirname = dirname( $dirname );
 			
+			if ( file_exists( "$dirname/ArenaCM" ) )
+			{
+				return "$dirname/ArenaCM";
+			}
 			if ( file_exists( "$dirname/arena2" ) )
 			{
 				return "$dirname/arena2";
@@ -707,6 +723,10 @@ function getPathDir( $back = '', $type = 'config' )
 			$dirname = dirname( $dirname );
 			$dirname = dirname( $dirname );
 			
+			if ( file_exists( "$dirname/ArenaCM" ) )
+			{
+				return "$dirname/ArenaCM";
+			}
 			if ( file_exists( "$dirname/arena2" ) )
 			{
 				return "$dirname/arena2";
@@ -718,6 +738,10 @@ function getPathDir( $back = '', $type = 'config' )
 			$dirname = dirname( $dirname );
 			$dirname = dirname( $dirname );
 			
+			if ( file_exists( "$dirname/ArenaCM" ) )
+			{
+				return "$dirname/ArenaCM";
+			}
 			if ( file_exists( "$dirname/arena2" ) )
 			{
 				return "$dirname/arena2";
@@ -733,8 +757,8 @@ function getBasicResources( $root = false )
 	if ( !file_exists( "config.php" ) )
 	{
 		$path1 = getPathDir( ( $root ? $root : '../..' ), 'config' );
-		$path2 = getPathDir( ( $root ? $root : '../..' ), 'arena2' );
-		$path3 = getPathDir( ( $root ? $root : '../..' ), 'treeroot' );
+		$path2 = getPathDir( ( $root ? $root : '../..' ), 'arenacm' );
+		$path3 = getPathDir( ( $root ? $root : '../..' ), 'subether' );
 	}
 	else
 	{

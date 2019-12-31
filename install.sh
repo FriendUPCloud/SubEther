@@ -352,7 +352,9 @@ if [ "$SYMLINKS" = "yes" ]; then
 	sudo rm -rf ${BASE_DIR}/subether/modules
 	sudo rm -rf ${BASE_DIR}/subether/plugins
 	sudo rm -rf ${BASE_DIR}/subether/restapi
-	sudo rm -rf ${BASE_DIR}/subether/themes
+	#sudo rm -rf ${BASE_DIR}/subether/themes
+	sudo rm -rf ${BASE_DIR}/subether/themes/subether
+	sudo rm -rf ${BASE_DIR}/subether/themes/friendstore
 	sudo rm -rf ${BASE_DIR}/subether/thirdparty
 	
 	sudo rm -f ${BASE_DIR}/MPL.txt
@@ -451,7 +453,9 @@ if [ "$SYMLINKS" = "yes" ]; then
 	sudo ln -s ${PARENT}/${SUBETHER}/subether/modules ${BASE_DIR}/subether/modules
 	sudo ln -s ${PARENT}/${SUBETHER}/subether/plugins ${BASE_DIR}/subether/plugins
 	sudo ln -s ${PARENT}/${SUBETHER}/subether/restapi ${BASE_DIR}/subether/restapi
-	sudo ln -s ${PARENT}/${SUBETHER}/subether/themes ${BASE_DIR}/subether/themes
+	#sudo ln -s ${PARENT}/${SUBETHER}/subether/themes ${BASE_DIR}/subether/themes
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/themes/subether ${BASE_DIR}/subether/themes/subether
+	sudo ln -s ${PARENT}/${SUBETHER}/subether/themes/friendstore ${BASE_DIR}/subether/themes/friendstore
 	sudo ln -s ${PARENT}/${SUBETHER}/subether/thirdparty ${BASE_DIR}/subether/thirdparty
 	
 	sudo ln -s ${PARENT}/${SUBETHER}/subether/install.php ${BASE_DIR}/subether/install.php
