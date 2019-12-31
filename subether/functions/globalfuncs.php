@@ -1427,7 +1427,8 @@ if( !function_exists( 'mailNow_' ) )
 		$email->setPort ( defined ( 'MAIL_SMTP_PORT' ) ? MAIL_SMTP_PORT : '25' );
 		$email->setFrom ( $from );
 		$email->_error_report = true;
-		$email->_recipients = array ( $receiver );
+		//$email->_recipients = array ( $receiver );
+		$email->_recipients = ( $receiver );
 		$email->addHeader ( "Content-type", "text/" . $type . "; charset=iso-8859-1" );
 		
 		$Article = utf8_decode ( $message );
