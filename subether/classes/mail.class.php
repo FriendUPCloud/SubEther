@@ -200,15 +200,18 @@ class eMail
 				
 				$mail->IsSMTP(); // telling the class to use SMTP
 				
-				if( defined( 'MAIL_SMTP_HOST' ) )
-					$mail->Host = MAIL_SMTP_HOST;
-				else $mail->Host = MAIL_SMTP_SERVER;
+				$mail->Host = $this->_smtpHostname;
 				
 				$mail->helo = 'helo';
-				$mail->SMTPAuth = TRUE;
-				$mail->Username = MAIL_USERNAME;
-				$mail->Password = MAIL_PASSWORD;
-				$mail->From = $mail->Username;
+				//$mail->SMTPDebug = 2;  // debugging: 1 = errors and messages, 2 = messages only
+				$mail->SMTPAuth = TRUE; // turn on SMTP authentication
+				$mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for GMail
+				//$mail->SMTPAutoTLS = false;
+				$mail->Port = $this->_smtpPort;
+				$mail->Username = $this->_smtpUsername;
+				$mail->Password = $this->_smtpPassword;
+				$mail->From = $this->_from;
+
 				$mail->FromName = MAIL_FROMNAME;
 				$mail->AddReplyTo ( MAIL_REPLYTO, MAIL_FROMNAME );
 				
