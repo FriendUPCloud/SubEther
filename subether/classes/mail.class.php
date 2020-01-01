@@ -205,7 +205,7 @@ class eMail
 				$mail->helo = 'helo';
 				//$mail->SMTPDebug = 2;  // debugging: 1 = errors and messages, 2 = messages only
 				$mail->SMTPAuth = TRUE; // turn on SMTP authentication
-				$mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for GMail
+				$mail->SMTPSecure = ( defined( 'MAIL_SECURITY' ) ? strtolower( MAIL_SECURITY ) : 'tls' ); // secure transfer enabled REQUIRED for GMail
 				//$mail->SMTPAutoTLS = false;
 				$mail->Port = $this->_smtpPort;
 				$mail->Username = $this->_smtpUsername;
@@ -333,7 +333,7 @@ class eMail
 					
 					if( $this->_error_report )
 					{
-						$this->_error_reponse = 'Sending mail failed. The SMTP server is not set up correctly.';
+						$this->_error_reponse = 'Sending mail failed. The SMTP server is not set up correctly. ' . $mail->ErrorInfo;
 						return false;
 					}
 					return ArenaDie( 'Sending mail failed. The SMTP server is not set up correctly.' );
