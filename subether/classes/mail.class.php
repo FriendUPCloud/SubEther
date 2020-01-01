@@ -205,7 +205,12 @@ class eMail
 				$mail->helo = 'helo';
 				//$mail->SMTPDebug = 2;  // debugging: 1 = errors and messages, 2 = messages only
 				$mail->SMTPAuth = TRUE; // turn on SMTP authentication
-				$mail->SMTPSecure = ( defined( 'MAIL_SECURITY' ) ? strtolower( MAIL_SECURITY ) : 'tls' ); // secure transfer enabled REQUIRED for GMail
+				
+				if( defined( 'MAIL_SECURITY' ) && MAIL_SECURITY || !defined( 'MAIL_SECURITY' ) )
+				{
+					$mail->SMTPSecure = ( defined( 'MAIL_SECURITY' ) ? strtolower( MAIL_SECURITY ) : 'tls' ); // secure transfer enabled REQUIRED for GMail
+				}
+				
 				//$mail->SMTPAutoTLS = false;
 				$mail->Port = $this->_smtpPort;
 				$mail->Username = $this->_smtpUsername;
