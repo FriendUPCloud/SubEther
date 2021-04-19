@@ -1,7 +1,7 @@
 SubEther - The Decentralized Network (version 1.0.0)
 ====================================================
 
-![SubEther Home](https://friendup.world/upload/subether-home.png "SubEther Home")
+![SubEther Home](https://sub-ether.org/upload/subether-home.png "SubEther Home")
 
 Vision
 ------
@@ -113,7 +113,7 @@ Chat room
 You will find many of our developers and users on our Discord / IRC channel / chat room. Please choose a unique nick and join using the links below.
 
 Discord: https://discord.gg/HQ93NFG 
-IRC: https://developers.friendup.cloud/irc-channel/
+E-mail: cas@friendup.cloud
 
 Licensing
 =========
@@ -124,7 +124,7 @@ License.
 Developer Community
 ===================
 
-We invite everybody to join our developer community node at https://friendup.world.
+We invite everybody to join our developer community node at https://friendup.world or https://sub-ether.org.
 
 List of dependencies
 ====================
