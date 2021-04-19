@@ -110,7 +110,7 @@ Some more will be added soon.
 Chat room
 ---------
 
-You will find many of our developers and users on our Discord / IRC channel / chat room. Please choose a unique nick and join using the links below.
+You will find many of our developers and users on our Discord.
 
 Discord: https://discord.gg/HQ93NFG 
 E-mail: cas@friendup.cloud
